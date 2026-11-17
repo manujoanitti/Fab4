@@ -1,0 +1,252 @@
+{
+  "versao": 1,
+  "lote": {
+    "id": "icones-ui-2",
+    "titulo": "Ícones da interface 2 — Navegação",
+    "tipo": "prancha",
+    "prioridade": "P1",
+    "lote": 1,
+    "ordem": 9,
+    "dependeDe": [
+      "piloto-marcos-regiao-1"
+    ],
+    "ids": [
+      "ui.icon.mode-child",
+      "ui.icon.mode-guardian",
+      "ui.tab.map",
+      "ui.tab.goals",
+      "ui.tab.achievements",
+      "ui.tab.games"
+    ],
+    "pacote": "v1",
+    "referencias": [
+      {
+        "arquivo": "art-work/referencias/folha-de-estilo.png",
+        "descricao": "Folha de estilo visual aprovada (traço, paleta, atmosfera)",
+        "obrigatoria": true
+      },
+      {
+        "arquivo": "guia-prancha.png",
+        "obrigatoria": true,
+        "gerada": true,
+        "descricao": "Guia de posições desta prancha (gerado; usar só como referência de posição)"
+      }
+    ],
+    "folha": {
+      "aspecto": [
+        3,
+        4
+      ],
+      "largura": 1,
+      "fundo": "#FF00FF",
+      "fundoNome": "magenta puro",
+      "margemSeguranca": 0.1,
+      "celulas": [
+        {
+          "id": "ui.icon.mode-child",
+          "ordem": 1,
+          "linha": 1,
+          "coluna": 1,
+          "rect": {
+            "x": 0.125,
+            "y": 0.04749999999999995,
+            "w": 0.36,
+            "h": 0.27
+          },
+          "descricao": "Alternar para o modo da Bianca.",
+          "saida": {
+            "arquivo": "ui/icon-mode-child@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 128,
+              "h": 128
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 40,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "ui.icon.mode-guardian",
+          "ordem": 2,
+          "linha": 1,
+          "coluna": 2,
+          "rect": {
+            "x": 0.515,
+            "y": 0.04749999999999995,
+            "w": 0.36,
+            "h": 0.27
+          },
+          "descricao": "Alternar para o modo responsável (cadeado).",
+          "saida": {
+            "arquivo": "ui/icon-mode-guardian@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 128,
+              "h": 128
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 40,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "ui.tab.map",
+          "ordem": 3,
+          "linha": 2,
+          "coluna": 1,
+          "rect": {
+            "x": 0.125,
+            "y": 0.36499999999999994,
+            "w": 0.36,
+            "h": 0.27
+          },
+          "descricao": "Aba \"Mapa\".",
+          "saida": {
+            "arquivo": "ui/tab-map@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 128,
+              "h": 128
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 40,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "ui.tab.goals",
+          "ordem": 4,
+          "linha": 2,
+          "coluna": 2,
+          "rect": {
+            "x": 0.515,
+            "y": 0.36499999999999994,
+            "w": 0.36,
+            "h": 0.27
+          },
+          "descricao": "Aba \"Metas\".",
+          "saida": {
+            "arquivo": "ui/tab-goals@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 128,
+              "h": 128
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 40,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "ui.tab.achievements",
+          "ordem": 5,
+          "linha": 3,
+          "coluna": 1,
+          "rect": {
+            "x": 0.125,
+            "y": 0.6825,
+            "w": 0.36,
+            "h": 0.27
+          },
+          "descricao": "Aba \"Conquistas\".",
+          "saida": {
+            "arquivo": "ui/tab-achievements@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 128,
+              "h": 128
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 40,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "ui.tab.games",
+          "ordem": 6,
+          "linha": 3,
+          "coluna": 2,
+          "rect": {
+            "x": 0.515,
+            "y": 0.6825,
+            "w": 0.36,
+            "h": 0.27
+          },
+          "descricao": "Aba \"Jogos\".",
+          "saida": {
+            "arquivo": "ui/tab-games@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 128,
+              "h": 128
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 40,
+            "dimMode": "aspect"
+          }
+        }
+      ],
+      "linhas": [
+        {
+          "y": 0.04749999999999995,
+          "celulas": [
+            "ui.icon.mode-child",
+            "ui.icon.mode-guardian"
+          ]
+        },
+        {
+          "y": 0.36499999999999994,
+          "celulas": [
+            "ui.tab.map",
+            "ui.tab.goals"
+          ]
+        },
+        {
+          "y": 0.6825,
+          "celulas": [
+            "ui.tab.achievements",
+            "ui.tab.games"
+          ]
+        }
+      ]
+    },
+    "observacoes": []
+  }
+}

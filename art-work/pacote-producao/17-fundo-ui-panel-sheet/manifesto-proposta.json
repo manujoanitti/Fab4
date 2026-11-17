@@ -1,0 +1,9 @@
+{
+  "pacote": "v1",
+  "lote": "fundo-ui-panel-sheet",
+  "assets": {
+    "ui.panel.sheet": {
+      "file": "ui/panel-sheet@2x.webp"
+    }
+  }
+}

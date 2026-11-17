@@ -1,0 +1,42 @@
+{
+  "versao": 1,
+  "lote": {
+    "id": "fundo-ui-button-primary",
+    "titulo": "Fundo — ui.button.primary",
+    "tipo": "individual",
+    "prioridade": "P2",
+    "lote": 8,
+    "ordem": 22,
+    "dependeDe": [
+      "piloto-marcos-regiao-1"
+    ],
+    "ids": [
+      "ui.button.primary"
+    ],
+    "pacote": "v1",
+    "referencias": [
+      {
+        "arquivo": "art-work/referencias/folha-de-estilo.png",
+        "descricao": "Folha de estilo visual aprovada (traço, paleta, atmosfera)",
+        "obrigatoria": true
+      }
+    ],
+    "individual": {
+      "id": "ui.button.primary",
+      "arquivo": "ui/button-primary@2x.webp",
+      "px": {
+        "w": 640,
+        "h": 128
+      },
+      "formato": "webp",
+      "maxKB": 350,
+      "aspecto": [
+        16,
+        9
+      ]
+    },
+    "observacoes": [
+      "Fundo do botão principal (esticado, sem 9-slice nesta versão): sem texto, bordas arredondadas completas."
+    ]
+  }
+}

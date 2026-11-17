@@ -1,0 +1,33 @@
+{
+  "pacote": "v1",
+  "lote": "jogos-l6-2",
+  "assets": {
+    "game.crystals.back": {
+      "file": "game/crystals-back@2x.webp"
+    },
+    "game.crystals.symbol.crystal": {
+      "file": "game/crystals-symbol-crystal@2x.webp"
+    },
+    "game.crystals.symbol.orb": {
+      "file": "game/crystals-symbol-orb@2x.webp"
+    },
+    "game.crystals.symbol.moon": {
+      "file": "game/crystals-symbol-moon@2x.webp"
+    },
+    "game.crystals.symbol.star": {
+      "file": "game/crystals-symbol-star@2x.webp"
+    },
+    "game.crystals.symbol.unicorn": {
+      "file": "game/crystals-symbol-unicorn@2x.webp"
+    },
+    "game.crystals.symbol.blossom": {
+      "file": "game/crystals-symbol-blossom@2x.webp"
+    },
+    "game.crystals.symbol.mushroom": {
+      "file": "game/crystals-symbol-mushroom@2x.webp"
+    },
+    "game.crystals.symbol.butterfly": {
+      "file": "game/crystals-symbol-butterfly@2x.webp"
+    }
+  }
+}

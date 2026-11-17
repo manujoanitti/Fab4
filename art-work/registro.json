@@ -184,230 +184,420 @@
     },
     {
       "id": "bianca-estatica",
-      "estado": "planejado",
+      "estado": "aguardando_geracao",
       "historico": [
         {
           "estado": "planejado",
           "em": "2026-11-17T15:17:56.852Z"
+        },
+        {
+          "estado": "aguardando_geracao",
+          "em": "2026-11-17T21:04:15.231Z",
+          "nota": "prompt gerado"
         }
       ],
-      "etapas": {},
+      "etapas": {
+        "prompt": {
+          "em": "2026-11-17T21:04:32.643Z",
+          "chave": "65ee79827bd609f5d844e2804477cd81e40c97deeb6f7ea74a2fe77412710cfb"
+        }
+      },
       "aprovacao": {}
     },
     {
       "id": "icones-ui-1",
-      "estado": "planejado",
+      "estado": "aguardando_geracao",
       "historico": [
         {
           "estado": "planejado",
           "em": "2026-11-17T15:17:56.852Z"
+        },
+        {
+          "estado": "aguardando_geracao",
+          "em": "2026-11-17T21:04:15.273Z",
+          "nota": "prompt gerado"
         }
       ],
-      "etapas": {},
+      "etapas": {
+        "prompt": {
+          "em": "2026-11-17T21:04:32.712Z",
+          "chave": "510560b7435ebb2ddde14bd9454cceaba2904b13b5eee871e12fd2fa97cb1c76"
+        }
+      },
       "aprovacao": {}
     },
     {
       "id": "icones-ui-2",
-      "estado": "planejado",
+      "estado": "aguardando_geracao",
       "historico": [
         {
           "estado": "planejado",
           "em": "2026-11-17T15:17:56.852Z"
+        },
+        {
+          "estado": "aguardando_geracao",
+          "em": "2026-11-17T21:04:15.549Z",
+          "nota": "prompt gerado"
         }
       ],
-      "etapas": {},
+      "etapas": {
+        "prompt": {
+          "em": "2026-11-17T21:04:33.051Z",
+          "chave": "31c0e7dd324490cc50f204e4fef29dbf94dce0ac4e0d99752f4e4b949c4aaf2a"
+        }
+      },
       "aprovacao": {}
     },
     {
       "id": "icones-ui-3",
-      "estado": "planejado",
+      "estado": "aguardando_geracao",
       "historico": [
         {
           "estado": "planejado",
           "em": "2026-11-17T15:17:56.852Z"
+        },
+        {
+          "estado": "aguardando_geracao",
+          "em": "2026-11-17T21:04:15.313Z",
+          "nota": "prompt gerado"
         }
       ],
-      "etapas": {},
+      "etapas": {
+        "prompt": {
+          "em": "2026-11-17T21:04:32.763Z",
+          "chave": "1b32a2fd907a81fa11a437d8cc5b06c5d5791a448aa0c8ecdff4bdf1fcf76bc7"
+        }
+      },
       "aprovacao": {}
     },
     {
       "id": "icones-ui-4",
-      "estado": "planejado",
+      "estado": "aguardando_geracao",
       "historico": [
         {
           "estado": "planejado",
           "em": "2026-11-17T15:17:56.852Z"
+        },
+        {
+          "estado": "aguardando_geracao",
+          "em": "2026-11-17T21:04:15.594Z",
+          "nota": "prompt gerado"
         }
       ],
-      "etapas": {},
+      "etapas": {
+        "prompt": {
+          "em": "2026-11-17T21:04:33.107Z",
+          "chave": "71b95a8379f57a8b6f4cfc43cb3b668fd142dc271ea552e563cd4a4de6e31fa5"
+        }
+      },
       "aprovacao": {}
     },
     {
       "id": "faixas-regioes-2-5",
-      "estado": "planejado",
+      "estado": "aguardando_geracao",
       "historico": [
         {
           "estado": "planejado",
           "em": "2026-11-17T15:17:56.852Z"
+        },
+        {
+          "estado": "aguardando_geracao",
+          "em": "2026-11-17T21:04:15.337Z",
+          "nota": "prompt gerado"
         }
       ],
-      "etapas": {},
+      "etapas": {
+        "prompt": {
+          "em": "2026-11-17T21:04:32.796Z",
+          "chave": "e982a4cb3df2686d36d8b2bbded91f3059498075ded943eaaa6a331cef653173"
+        }
+      },
       "aprovacao": {}
     },
     {
       "id": "bonus-final",
-      "estado": "planejado",
+      "estado": "aguardando_geracao",
       "historico": [
         {
           "estado": "planejado",
           "em": "2026-11-17T15:17:56.852Z"
+        },
+        {
+          "estado": "aguardando_geracao",
+          "em": "2026-11-17T21:04:15.356Z",
+          "nota": "prompt gerado"
         }
       ],
-      "etapas": {},
+      "etapas": {
+        "prompt": {
+          "em": "2026-11-17T21:04:32.834Z",
+          "chave": "5117cb4d080079ad6ae90be24b99753fa85e636c9331e4ddbbb9f9b03a6101aa"
+        }
+      },
       "aprovacao": {}
     },
     {
       "id": "jogos-l6-1",
-      "estado": "planejado",
+      "estado": "aguardando_geracao",
       "historico": [
         {
           "estado": "planejado",
           "em": "2026-11-17T15:17:56.852Z"
+        },
+        {
+          "estado": "aguardando_geracao",
+          "em": "2026-11-17T21:04:15.379Z",
+          "nota": "prompt gerado"
         }
       ],
-      "etapas": {},
+      "etapas": {
+        "prompt": {
+          "em": "2026-11-17T21:04:32.864Z",
+          "chave": "0ad685bd28d399796799311acd9f275f86e030e0276a206e5efffefc8f3c2ac6"
+        }
+      },
       "aprovacao": {}
     },
     {
       "id": "jogos-l6-2",
-      "estado": "planejado",
+      "estado": "aguardando_geracao",
       "historico": [
         {
           "estado": "planejado",
           "em": "2026-11-17T15:17:56.852Z"
+        },
+        {
+          "estado": "aguardando_geracao",
+          "em": "2026-11-17T21:04:15.416Z",
+          "nota": "prompt gerado"
         }
       ],
-      "etapas": {},
+      "etapas": {
+        "prompt": {
+          "em": "2026-11-17T21:04:32.902Z",
+          "chave": "d23e21f0908e34e351b0682ead4b221075bf4c84d0004190abcd02cb5724af8d"
+        }
+      },
       "aprovacao": {}
     },
     {
       "id": "jogos-l7-1",
-      "estado": "planejado",
+      "estado": "aguardando_geracao",
       "historico": [
         {
           "estado": "planejado",
           "em": "2026-11-17T15:17:56.852Z"
+        },
+        {
+          "estado": "aguardando_geracao",
+          "em": "2026-11-17T21:04:15.474Z",
+          "nota": "prompt gerado"
         }
       ],
-      "etapas": {},
+      "etapas": {
+        "prompt": {
+          "em": "2026-11-17T21:04:32.958Z",
+          "chave": "4ad6b66f41907a379886dc7650b7f3674bcef0ff51a69cd4089018410d4c43aa"
+        }
+      },
       "aprovacao": {}
     },
     {
       "id": "jogos-l7-2",
-      "estado": "planejado",
+      "estado": "aguardando_geracao",
       "historico": [
         {
           "estado": "planejado",
           "em": "2026-11-17T15:17:56.852Z"
+        },
+        {
+          "estado": "aguardando_geracao",
+          "em": "2026-11-17T21:04:15.513Z",
+          "nota": "prompt gerado"
         }
       ],
-      "etapas": {},
+      "etapas": {
+        "prompt": {
+          "em": "2026-11-17T21:04:33.000Z",
+          "chave": "957ba4fc0cd4277db18a4971aee88e5c5c129350c9cd111d59e3e5e7557978c5"
+        }
+      },
       "aprovacao": {}
     },
     {
       "id": "fundo-game-stars-bg",
-      "estado": "planejado",
+      "estado": "aguardando_geracao",
       "historico": [
         {
           "estado": "planejado",
           "em": "2026-11-17T15:17:56.852Z"
+        },
+        {
+          "estado": "aguardando_geracao",
+          "em": "2026-11-17T21:04:15.516Z",
+          "nota": "prompt gerado"
         }
       ],
-      "etapas": {},
+      "etapas": {
+        "prompt": {
+          "em": "2026-11-17T21:04:33.005Z",
+          "chave": "abd016e99b1e1a5029321593e5852693cedcb65468242aa3df960faba7d2fa02"
+        }
+      },
       "aprovacao": {}
     },
     {
       "id": "fundo-game-garden-bg",
-      "estado": "planejado",
+      "estado": "aguardando_geracao",
       "historico": [
         {
           "estado": "planejado",
           "em": "2026-11-17T15:17:56.852Z"
+        },
+        {
+          "estado": "aguardando_geracao",
+          "em": "2026-11-17T21:04:15.519Z",
+          "nota": "prompt gerado"
         }
       ],
-      "etapas": {},
+      "etapas": {
+        "prompt": {
+          "em": "2026-11-17T21:04:33.008Z",
+          "chave": "75649f17e450c97e3fd62112ff724ed8d80839cff74004c455c37c052b48bbb9"
+        }
+      },
       "aprovacao": {}
     },
     {
       "id": "fundo-ui-bg-app",
-      "estado": "planejado",
+      "estado": "aguardando_geracao",
       "historico": [
         {
           "estado": "planejado",
           "em": "2026-11-17T15:17:56.852Z"
+        },
+        {
+          "estado": "aguardando_geracao",
+          "em": "2026-11-17T21:04:15.598Z",
+          "nota": "prompt gerado"
         }
       ],
-      "etapas": {},
+      "etapas": {
+        "prompt": {
+          "em": "2026-11-17T21:04:33.111Z",
+          "chave": "d184c079957aeba6ce9ce0f6496dbb8817d2d6645e81d0364eae7e663aae467d"
+        }
+      },
       "aprovacao": {}
     },
     {
       "id": "fundo-ui-bg-topbar",
-      "estado": "planejado",
+      "estado": "aguardando_geracao",
       "historico": [
         {
           "estado": "planejado",
           "em": "2026-11-17T15:17:56.852Z"
+        },
+        {
+          "estado": "aguardando_geracao",
+          "em": "2026-11-17T21:04:15.602Z",
+          "nota": "prompt gerado"
         }
       ],
-      "etapas": {},
+      "etapas": {
+        "prompt": {
+          "em": "2026-11-17T21:04:33.115Z",
+          "chave": "ab343b62027e956cc9081a178a61a6333867cdc6107504ccbcd4dfe6ee9c8e10"
+        }
+      },
       "aprovacao": {}
     },
     {
       "id": "fundo-ui-button-primary",
-      "estado": "planejado",
+      "estado": "aguardando_geracao",
       "historico": [
         {
           "estado": "planejado",
           "em": "2026-11-17T15:17:56.852Z"
+        },
+        {
+          "estado": "aguardando_geracao",
+          "em": "2026-11-17T21:04:15.607Z",
+          "nota": "prompt gerado"
         }
       ],
-      "etapas": {},
+      "etapas": {
+        "prompt": {
+          "em": "2026-11-17T21:04:33.121Z",
+          "chave": "061620a1315b4760b8d32e814a1a8bf4a9338e630fea15980f4cc1d9a1651f3a"
+        }
+      },
       "aprovacao": {}
     },
     {
       "id": "fundo-ui-panel-sheet",
-      "estado": "planejado",
+      "estado": "aguardando_geracao",
       "historico": [
         {
           "estado": "planejado",
           "em": "2026-11-17T15:17:56.852Z"
+        },
+        {
+          "estado": "aguardando_geracao",
+          "em": "2026-11-17T21:04:15.611Z",
+          "nota": "prompt gerado"
         }
       ],
-      "etapas": {},
+      "etapas": {
+        "prompt": {
+          "em": "2026-11-17T21:04:33.125Z",
+          "chave": "fc188f37c08b6fb561fb83d6817fbcbd73169ad394eb2603eb915e929c8373df"
+        }
+      },
       "aprovacao": {}
     },
     {
       "id": "efeitos-brilho",
-      "estado": "planejado",
+      "estado": "aguardando_geracao",
       "historico": [
         {
           "estado": "planejado",
           "em": "2026-11-17T15:17:56.852Z"
+        },
+        {
+          "estado": "aguardando_geracao",
+          "em": "2026-11-17T21:04:15.626Z",
+          "nota": "prompt gerado"
         }
       ],
-      "etapas": {},
+      "etapas": {
+        "prompt": {
+          "em": "2026-11-17T21:04:33.143Z",
+          "chave": "00bb66e96d744cbbe7b09fb43d744c33373bb884520d447c9eee6ba04786ba07"
+        }
+      },
       "aprovacao": {}
     },
     {
       "id": "celebracoes",
-      "estado": "planejado",
+      "estado": "aguardando_geracao",
       "historico": [
         {
           "estado": "planejado",
           "em": "2026-11-17T15:17:56.852Z"
+        },
+        {
+          "estado": "aguardando_geracao",
+          "em": "2026-11-17T21:04:15.643Z",
+          "nota": "prompt gerado"
         }
       ],
-      "etapas": {},
+      "etapas": {
+        "prompt": {
+          "em": "2026-11-17T21:04:33.164Z",
+          "chave": "7920718d47b1b55eacbaf1cc73ba47c27eba0a11dc13d27fa8917b028b4d0069"
+        }
+      },
       "aprovacao": {}
     }
   ]

@@ -1,0 +1,114 @@
+{
+  "versao": 1,
+  "lote": {
+    "id": "bonus-final",
+    "titulo": "Bônus final (fechado e conquistado)",
+    "tipo": "prancha",
+    "prioridade": "P1",
+    "lote": 5,
+    "ordem": 13,
+    "dependeDe": [
+      "piloto-marcos-regiao-1"
+    ],
+    "ids": [
+      "map.bonus.locked",
+      "map.bonus.unlocked"
+    ],
+    "pacote": "v1",
+    "referencias": [
+      {
+        "arquivo": "art-work/referencias/folha-de-estilo.png",
+        "descricao": "Folha de estilo visual aprovada (traço, paleta, atmosfera)",
+        "obrigatoria": true
+      },
+      {
+        "arquivo": "guia-prancha.png",
+        "obrigatoria": true,
+        "gerada": true,
+        "descricao": "Guia de posições desta prancha (gerado; usar só como referência de posição)"
+      }
+    ],
+    "folha": {
+      "aspecto": [
+        1,
+        1
+      ],
+      "largura": 1,
+      "fundo": "#00FFFF",
+      "fundoNome": "ciano puro",
+      "margemSeguranca": 0.1,
+      "celulas": [
+        {
+          "id": "map.bonus.locked",
+          "ordem": 1,
+          "linha": 1,
+          "coluna": 1,
+          "rect": {
+            "x": 0.125,
+            "y": 0.32000000000000006,
+            "w": 0.36,
+            "h": 0.36
+          },
+          "descricao": "Bônus final ainda bloqueado: presente/baú fechado e discreto. SEM texto.",
+          "saida": {
+            "arquivo": "map/bonus-locked@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 160,
+              "h": 160
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 80,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "map.bonus.unlocked",
+          "ordem": 2,
+          "linha": 1,
+          "coluna": 2,
+          "rect": {
+            "x": 0.515,
+            "y": 0.32000000000000006,
+            "w": 0.36,
+            "h": 0.36
+          },
+          "descricao": "Bônus final conquistado: coroa/baú aberto, radiante. SEM texto.",
+          "saida": {
+            "arquivo": "map/bonus-unlocked@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 160,
+              "h": 160
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 80,
+            "dimMode": "aspect"
+          }
+        }
+      ],
+      "linhas": [
+        {
+          "y": 0.32000000000000006,
+          "celulas": [
+            "map.bonus.locked",
+            "map.bonus.unlocked"
+          ]
+        }
+      ]
+    },
+    "observacoes": []
+  }
+}

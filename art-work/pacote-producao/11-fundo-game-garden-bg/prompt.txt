@@ -1,0 +1,17 @@
+Gere UMA ÚNICA IMAGEM em formato 3:4, na MAIOR resolução disponível: Cenário do Jardim Encantado: céu e gramado vazios (proporção 4:5).
+
+IDENTIDADE ARTÍSTICA (siga a folha de estilo anexa):
+- Fantasia onírica e poética.
+- Aquarela e lápis de cor, com a textura do papel visível e pequenas imperfeições manuais.
+- Formas orgânicas e ligeiramente surreais (proporções suavemente fora do comum, curvas vivas, nada rígido).
+- Paleta delicada, rica e harmoniosa: pastéis com profundidade, nunca neon nem saturação plástica.
+- Atmosfera de livro ilustrado infantil, acolhedora e contemplativa.
+
+EVITE:
+- qualquer aparência genérica de jogo mobile (botões brilhantes de plástico, gemas 3D, brilho metálico, "gloss", contornos grossos de desenho animado vetorial)
+- elementos de interface de jogo desenhados dentro da imagem (barras, molduras, ícones de moeda genéricos)
+- estilo 3D, render, fotografia ou pixel art
+
+- Sem texto, letras, números, molduras ou elementos de interface. Composição calma, com o centro pouco carregado (o app coloca conteúdo por cima).
+
+Responda somente com a imagem.

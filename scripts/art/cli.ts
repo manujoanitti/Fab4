@@ -15,6 +15,7 @@ const AJUDA = `Pipeline de produção gráfica — comandos (npm run art:<comand
   art:status  <lote>               estado, histórico e aprovações de um lote
   art:reopen  <lote>               volta o lote para "aguardando geração" (refazer a imagem)
   art:cenarios pacote|processar     monta o pacote de produção dos 5 cenários / processa as 5 imagens entregues em art-work/entrada-cenarios
+  art:producao pacote|processar     monta o pacote dos 19 lotes restantes / processa as imagens entregues em art-work/entrada-producao
   art:validate                     valida o pacote final (manifesto × catálogo × arquivos)
 `;
 
@@ -62,6 +63,21 @@ async function main() {
         return;
       }
       throw new Error('uso: npm run art:cenarios -- pacote | processar');
+    }
+    case 'producao': {
+      const { cmdProducaoPacote, cmdProducaoProcessar } = await import('./lib/producao');
+      if (positionals[0] === 'pacote') {
+        const r = await cmdProducaoPacote(amb);
+        console.log(`Pacote pronto em ${r.raiz}/ (leia ${r.raiz}/LEIA-ME.md): ${r.passos.length} imagens`);
+        if (r.dependencias.length) console.log(`Dependências: ${r.dependencias.join(', ')}`);
+        return;
+      }
+      if (positionals[0] === 'processar') {
+        for (const x of await cmdProducaoProcessar(amb, undefined, { forcar: values.forcar })) console.log(x.presente ? `  ${x.lote}: ${x.resumo!.ok} ok · ${x.resumo!.revisar} revisar · ${x.resumo!.falha} falha — ${x.relatorio}` : `  ${x.lote}: imagem NÃO entregue`);
+        console.log('\nNada foi aprovado nem integrado.');
+        return;
+      }
+      throw new Error('uso: npm run art:producao -- pacote | processar');
     }
     case 'process': {
       const [a, b] = positionals;

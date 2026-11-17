@@ -20,7 +20,8 @@ const motivoCurto = (m: string) => m.startsWith('Camadas') ? 'camadas (cenário 
 const guiaPacote = (id: string) => { const m = /^cenario-regiao-(\d)$/.exec(id); return m ? existsSync(`art-work/pacote-cenarios/0${m[1]}-regiao-${m[1]}/guia-regiao-${m[1]}.png`) : false; };
 const temPromptGuia = (lote: string) => {
   const p = pastaLote(a.workDir, lote);
-  return existsSync(join(p, 'prompt-gemini.txt')) && (existsSync(join(p, 'guia-prancha.png')) || guiaPacote(lote));
+  const individual = !!plano.lotes.find((l) => l.id === lote)?.individual; // imagem única: não há grade de posições, logo não há guia
+  return existsSync(join(p, 'prompt-gemini.txt')) && (individual || existsSync(join(p, 'guia-prancha.png')) || guiaPacote(lote));
 };
 const integrado = (id: string) => { const p = manifest.packs[manifest.activePack ?? '']; return !!p?.assets[id] && existsSync(join(a.publicDir, p.dir, p.assets[id].file)); };
 const faltas = (lote: string) => plano.lotes.find((l) => l.id === lote)!.referencias.filter((r) => r.obrigatoria && !r.gerada && !existsSync(r.arquivo)).map((r) => r.arquivo);
@@ -103,6 +104,7 @@ out.push('## 5. Plano de produção (minimiza gerações e intervenções)', '',
   '3. **`icones-ui-3`** (P0, 9 recursos).',
   '4. **`bianca-estatica`** (P0, 1 recurso) — depende do modelo da Bianca.',
   '5. **`faixas-regioes-2-5`** (P1, 4 recursos) — resolve a pendência das faixas.', '',
-  '> Antes de gerar qualquer prompt novo desses lotes (2–5), peça `npm run art:prompt -- <lote>` (ou o pacote em lote, como o dos cenários): hoje só o piloto e os cenários têm prompt e guia.');
+  '> **Pacotes prontos (prompts, guias e manifestos):** cenários em `art-work/pacote-cenarios/` (5 imagens) e demais lotes em `art-work/pacote-producao/` (19 imagens, com a ordem de execução no `LEIA-ME.md`). Dependência: `art-work/referencias/modelo-bianca.png` (só afeta `bianca-estatica`).',
+  '', `> **Entregas ao repositório:** imagens dos cenários em \`art-work/entrada-cenarios/\` — ${existsSync('art-work/entrada-cenarios') ? 'presentes' : '**ainda não entregues**'}; imagens dos demais lotes em \`art-work/entrada-producao/\` — ${existsSync('art-work/entrada-producao') ? 'presentes' : '**ainda não entregues**'}. O estado "recebido" só é registrado quando o arquivo chega ao repositório e é processado (\`npm run art:cenarios -- processar\`, \`npm run art:producao -- processar\`).`);
 writeFileSync('docs/arte/INVENTARIO_GRAFICO.md', out.join('\n') + '\n');
 console.log(`inventário: ${n} recursos · ${nInt} integrados · ${n - nInt} pendentes · bases recebidas ${baseRecebidas.length}/${lotes.length}`);

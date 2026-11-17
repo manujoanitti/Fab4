@@ -1,0 +1,24 @@
+{
+  "pacote": "v1",
+  "lote": "icones-ui-1",
+  "assets": {
+    "ui.icon.stamp-small": {
+      "file": "ui/icon-stamp-small@2x.webp"
+    },
+    "ui.icon.coin": {
+      "file": "ui/icon-coin@2x.webp"
+    },
+    "ui.icon.stamp-big": {
+      "file": "ui/icon-stamp-big@2x.webp"
+    },
+    "ui.icon.stamp-day": {
+      "file": "ui/icon-stamp-day@2x.webp"
+    },
+    "ui.icon.credit": {
+      "file": "ui/icon-credit@2x.webp"
+    },
+    "ui.brand.crown": {
+      "file": "ui/brand-crown@2x.webp"
+    }
+  }
+}

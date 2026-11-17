@@ -1,0 +1,348 @@
+{
+  "versao": 1,
+  "lote": {
+    "id": "icones-ui-3",
+    "titulo": "Ícones da interface 3 — Navegação + Estados das metas",
+    "tipo": "prancha",
+    "prioridade": "P0",
+    "lote": 1,
+    "ordem": 10,
+    "dependeDe": [
+      "piloto-marcos-regiao-1"
+    ],
+    "ids": [
+      "ui.tab.review",
+      "ui.tab.prizes",
+      "ui.tab.credits",
+      "ui.tab.history",
+      "ui.tab.more",
+      "ui.status.pending",
+      "ui.status.done",
+      "ui.status.not-done",
+      "ui.status.not-evaluated"
+    ],
+    "pacote": "v1",
+    "referencias": [
+      {
+        "arquivo": "art-work/referencias/folha-de-estilo.png",
+        "descricao": "Folha de estilo visual aprovada (traço, paleta, atmosfera)",
+        "obrigatoria": true
+      },
+      {
+        "arquivo": "guia-prancha.png",
+        "obrigatoria": true,
+        "gerada": true,
+        "descricao": "Guia de posições desta prancha (gerado; usar só como referência de posição)"
+      }
+    ],
+    "folha": {
+      "aspecto": [
+        1,
+        1
+      ],
+      "largura": 1,
+      "fundo": "#00FF00",
+      "fundoNome": "verde puro",
+      "margemSeguranca": 0.1,
+      "celulas": [
+        {
+          "id": "ui.tab.review",
+          "ordem": 1,
+          "linha": 1,
+          "coluna": 1,
+          "rect": {
+            "x": 0.030000000000000027,
+            "y": 0.03,
+            "w": 0.2933333333333333,
+            "h": 0.2933333333333333
+          },
+          "descricao": "Aba \"Hoje (revisão)\".",
+          "saida": {
+            "arquivo": "ui/tab-review@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 128,
+              "h": 128
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 40,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "ui.tab.prizes",
+          "ordem": 2,
+          "linha": 1,
+          "coluna": 2,
+          "rect": {
+            "x": 0.3533333333333333,
+            "y": 0.03,
+            "w": 0.2933333333333333,
+            "h": 0.2933333333333333
+          },
+          "descricao": "Aba \"Prêmios\".",
+          "saida": {
+            "arquivo": "ui/tab-prizes@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 128,
+              "h": 128
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 40,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "ui.tab.credits",
+          "ordem": 3,
+          "linha": 1,
+          "coluna": 3,
+          "rect": {
+            "x": 0.6766666666666665,
+            "y": 0.03,
+            "w": 0.2933333333333333,
+            "h": 0.2933333333333333
+          },
+          "descricao": "Aba \"Créditos\".",
+          "saida": {
+            "arquivo": "ui/tab-credits@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 128,
+              "h": 128
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 40,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "ui.tab.history",
+          "ordem": 4,
+          "linha": 2,
+          "coluna": 1,
+          "rect": {
+            "x": 0.030000000000000027,
+            "y": 0.3533333333333333,
+            "w": 0.2933333333333333,
+            "h": 0.2933333333333333
+          },
+          "descricao": "Aba \"Histórico\".",
+          "saida": {
+            "arquivo": "ui/tab-history@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 128,
+              "h": 128
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 40,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "ui.tab.more",
+          "ordem": 5,
+          "linha": 2,
+          "coluna": 2,
+          "rect": {
+            "x": 0.3533333333333333,
+            "y": 0.3533333333333333,
+            "w": 0.2933333333333333,
+            "h": 0.2933333333333333
+          },
+          "descricao": "Aba \"Mais\".",
+          "saida": {
+            "arquivo": "ui/tab-more@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 128,
+              "h": 128
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 40,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "ui.status.pending",
+          "ordem": 6,
+          "linha": 2,
+          "coluna": 3,
+          "rect": {
+            "x": 0.6766666666666665,
+            "y": 0.3533333333333333,
+            "w": 0.2933333333333333,
+            "h": 0.2933333333333333
+          },
+          "descricao": "Meta pendente.",
+          "saida": {
+            "arquivo": "ui/status-pending@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 128,
+              "h": 128
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 40,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "ui.status.done",
+          "ordem": 7,
+          "linha": 3,
+          "coluna": 1,
+          "rect": {
+            "x": 0.030000000000000027,
+            "y": 0.6766666666666665,
+            "w": 0.2933333333333333,
+            "h": 0.2933333333333333
+          },
+          "descricao": "Meta cumprida.",
+          "saida": {
+            "arquivo": "ui/status-done@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 128,
+              "h": 128
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 40,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "ui.status.not-done",
+          "ordem": 8,
+          "linha": 3,
+          "coluna": 2,
+          "rect": {
+            "x": 0.3533333333333333,
+            "y": 0.6766666666666665,
+            "w": 0.2933333333333333,
+            "h": 0.2933333333333333
+          },
+          "descricao": "Meta não cumprida.",
+          "saida": {
+            "arquivo": "ui/status-not-done@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 128,
+              "h": 128
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 40,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "ui.status.not-evaluated",
+          "ordem": 9,
+          "linha": 3,
+          "coluna": 3,
+          "rect": {
+            "x": 0.6766666666666665,
+            "y": 0.6766666666666665,
+            "w": 0.2933333333333333,
+            "h": 0.2933333333333333
+          },
+          "descricao": "Meta não avaliada.",
+          "saida": {
+            "arquivo": "ui/status-not-evaluated@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 128,
+              "h": 128
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 40,
+            "dimMode": "aspect"
+          }
+        }
+      ],
+      "linhas": [
+        {
+          "y": 0.03,
+          "celulas": [
+            "ui.tab.review",
+            "ui.tab.prizes",
+            "ui.tab.credits"
+          ]
+        },
+        {
+          "y": 0.3533333333333333,
+          "celulas": [
+            "ui.tab.history",
+            "ui.tab.more",
+            "ui.status.pending"
+          ]
+        },
+        {
+          "y": 0.6766666666666665,
+          "celulas": [
+            "ui.status.done",
+            "ui.status.not-done",
+            "ui.status.not-evaluated"
+          ]
+        }
+      ]
+    },
+    "observacoes": []
+  }
+}

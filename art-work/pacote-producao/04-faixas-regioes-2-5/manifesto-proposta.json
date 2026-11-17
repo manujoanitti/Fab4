@@ -1,0 +1,18 @@
+{
+  "pacote": "v1",
+  "lote": "faixas-regioes-2-5",
+  "assets": {
+    "map.ribbon.2": {
+      "file": "map/ribbon-2@2x.webp"
+    },
+    "map.ribbon.3": {
+      "file": "map/ribbon-3@2x.webp"
+    },
+    "map.ribbon.4": {
+      "file": "map/ribbon-4@2x.webp"
+    },
+    "map.ribbon.5": {
+      "file": "map/ribbon-5@2x.webp"
+    }
+  }
+}

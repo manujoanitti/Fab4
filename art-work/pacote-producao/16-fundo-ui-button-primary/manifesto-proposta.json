@@ -1,0 +1,9 @@
+{
+  "pacote": "v1",
+  "lote": "fundo-ui-button-primary",
+  "assets": {
+    "ui.button.primary": {
+      "file": "ui/button-primary@2x.webp"
+    }
+  }
+}

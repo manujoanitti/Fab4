@@ -1,0 +1,27 @@
+{
+  "pacote": "v1",
+  "lote": "jogos-l7-1",
+  "assets": {
+    "game.garden.item.tulip": {
+      "file": "game/garden-item-tulip@2x.webp"
+    },
+    "game.garden.item.blossom": {
+      "file": "game/garden-item-blossom@2x.webp"
+    },
+    "game.garden.item.sunflower": {
+      "file": "game/garden-item-sunflower@2x.webp"
+    },
+    "game.garden.item.tree": {
+      "file": "game/garden-item-tree@2x.webp"
+    },
+    "game.garden.item.mushroom": {
+      "file": "game/garden-item-mushroom@2x.webp"
+    },
+    "game.garden.item.butterfly": {
+      "file": "game/garden-item-butterfly@2x.webp"
+    },
+    "game.icon.garden": {
+      "file": "game/icon-garden@2x.webp"
+    }
+  }
+}

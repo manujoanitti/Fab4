@@ -1,0 +1,348 @@
+{
+  "versao": 1,
+  "lote": {
+    "id": "jogos-l6-2",
+    "titulo": "Minigames (Estrelas e Memória) 2 — Memória dos Cristais",
+    "tipo": "prancha",
+    "prioridade": "P1",
+    "lote": 6,
+    "ordem": 15,
+    "dependeDe": [
+      "piloto-marcos-regiao-1"
+    ],
+    "ids": [
+      "game.crystals.back",
+      "game.crystals.symbol.crystal",
+      "game.crystals.symbol.orb",
+      "game.crystals.symbol.moon",
+      "game.crystals.symbol.star",
+      "game.crystals.symbol.unicorn",
+      "game.crystals.symbol.blossom",
+      "game.crystals.symbol.mushroom",
+      "game.crystals.symbol.butterfly"
+    ],
+    "pacote": "v1",
+    "referencias": [
+      {
+        "arquivo": "art-work/referencias/folha-de-estilo.png",
+        "descricao": "Folha de estilo visual aprovada (traço, paleta, atmosfera)",
+        "obrigatoria": true
+      },
+      {
+        "arquivo": "guia-prancha.png",
+        "obrigatoria": true,
+        "gerada": true,
+        "descricao": "Guia de posições desta prancha (gerado; usar só como referência de posição)"
+      }
+    ],
+    "folha": {
+      "aspecto": [
+        1,
+        1
+      ],
+      "largura": 1,
+      "fundo": "#00FF00",
+      "fundoNome": "verde puro",
+      "margemSeguranca": 0.1,
+      "celulas": [
+        {
+          "id": "game.crystals.back",
+          "ordem": 1,
+          "linha": 1,
+          "coluna": 1,
+          "rect": {
+            "x": 0.030000000000000027,
+            "y": 0.03,
+            "w": 0.2933333333333333,
+            "h": 0.2933333333333333
+          },
+          "descricao": "Verso da carta virada.",
+          "saida": {
+            "arquivo": "game/crystals-back@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 256,
+              "h": 256
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 80,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "game.crystals.symbol.crystal",
+          "ordem": 2,
+          "linha": 1,
+          "coluna": 2,
+          "rect": {
+            "x": 0.3533333333333333,
+            "y": 0.03,
+            "w": 0.2933333333333333,
+            "h": 0.2933333333333333
+          },
+          "descricao": "Símbolo da carta: Cristal.",
+          "saida": {
+            "arquivo": "game/crystals-symbol-crystal@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 256,
+              "h": 256
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 80,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "game.crystals.symbol.orb",
+          "ordem": 3,
+          "linha": 1,
+          "coluna": 3,
+          "rect": {
+            "x": 0.6766666666666665,
+            "y": 0.03,
+            "w": 0.2933333333333333,
+            "h": 0.2933333333333333
+          },
+          "descricao": "Símbolo da carta: Orbe mágico.",
+          "saida": {
+            "arquivo": "game/crystals-symbol-orb@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 256,
+              "h": 256
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 80,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "game.crystals.symbol.moon",
+          "ordem": 4,
+          "linha": 2,
+          "coluna": 1,
+          "rect": {
+            "x": 0.030000000000000027,
+            "y": 0.3533333333333333,
+            "w": 0.2933333333333333,
+            "h": 0.2933333333333333
+          },
+          "descricao": "Símbolo da carta: Lua.",
+          "saida": {
+            "arquivo": "game/crystals-symbol-moon@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 256,
+              "h": 256
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 80,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "game.crystals.symbol.star",
+          "ordem": 5,
+          "linha": 2,
+          "coluna": 2,
+          "rect": {
+            "x": 0.3533333333333333,
+            "y": 0.3533333333333333,
+            "w": 0.2933333333333333,
+            "h": 0.2933333333333333
+          },
+          "descricao": "Símbolo da carta: Estrela.",
+          "saida": {
+            "arquivo": "game/crystals-symbol-star@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 256,
+              "h": 256
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 80,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "game.crystals.symbol.unicorn",
+          "ordem": 6,
+          "linha": 2,
+          "coluna": 3,
+          "rect": {
+            "x": 0.6766666666666665,
+            "y": 0.3533333333333333,
+            "w": 0.2933333333333333,
+            "h": 0.2933333333333333
+          },
+          "descricao": "Símbolo da carta: Unicórnio.",
+          "saida": {
+            "arquivo": "game/crystals-symbol-unicorn@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 256,
+              "h": 256
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 80,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "game.crystals.symbol.blossom",
+          "ordem": 7,
+          "linha": 3,
+          "coluna": 1,
+          "rect": {
+            "x": 0.030000000000000027,
+            "y": 0.6766666666666665,
+            "w": 0.2933333333333333,
+            "h": 0.2933333333333333
+          },
+          "descricao": "Símbolo da carta: Flor de cerejeira.",
+          "saida": {
+            "arquivo": "game/crystals-symbol-blossom@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 256,
+              "h": 256
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 80,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "game.crystals.symbol.mushroom",
+          "ordem": 8,
+          "linha": 3,
+          "coluna": 2,
+          "rect": {
+            "x": 0.3533333333333333,
+            "y": 0.6766666666666665,
+            "w": 0.2933333333333333,
+            "h": 0.2933333333333333
+          },
+          "descricao": "Símbolo da carta: Cogumelo.",
+          "saida": {
+            "arquivo": "game/crystals-symbol-mushroom@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 256,
+              "h": 256
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 80,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "game.crystals.symbol.butterfly",
+          "ordem": 9,
+          "linha": 3,
+          "coluna": 3,
+          "rect": {
+            "x": 0.6766666666666665,
+            "y": 0.6766666666666665,
+            "w": 0.2933333333333333,
+            "h": 0.2933333333333333
+          },
+          "descricao": "Símbolo da carta: Borboleta.",
+          "saida": {
+            "arquivo": "game/crystals-symbol-butterfly@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 256,
+              "h": 256
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 80,
+            "dimMode": "aspect"
+          }
+        }
+      ],
+      "linhas": [
+        {
+          "y": 0.03,
+          "celulas": [
+            "game.crystals.back",
+            "game.crystals.symbol.crystal",
+            "game.crystals.symbol.orb"
+          ]
+        },
+        {
+          "y": 0.3533333333333333,
+          "celulas": [
+            "game.crystals.symbol.moon",
+            "game.crystals.symbol.star",
+            "game.crystals.symbol.unicorn"
+          ]
+        },
+        {
+          "y": 0.6766666666666665,
+          "celulas": [
+            "game.crystals.symbol.blossom",
+            "game.crystals.symbol.mushroom",
+            "game.crystals.symbol.butterfly"
+          ]
+        }
+      ]
+    },
+    "observacoes": []
+  }
+}

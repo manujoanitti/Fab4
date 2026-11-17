@@ -1,0 +1,12 @@
+{
+  "pacote": "v1",
+  "lote": "celebracoes",
+  "assets": {
+    "ui.celebration.stage": {
+      "file": "ui/celebration-stage@2x.webp"
+    },
+    "ui.celebration.final": {
+      "file": "ui/celebration-final@2x.webp"
+    }
+  }
+}

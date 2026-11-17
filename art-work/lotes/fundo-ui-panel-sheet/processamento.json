@@ -1,0 +1,42 @@
+{
+  "versao": 1,
+  "lote": {
+    "id": "fundo-ui-panel-sheet",
+    "titulo": "Fundo — ui.panel.sheet",
+    "tipo": "individual",
+    "prioridade": "P2",
+    "lote": 8,
+    "ordem": 23,
+    "dependeDe": [
+      "piloto-marcos-regiao-1"
+    ],
+    "ids": [
+      "ui.panel.sheet"
+    ],
+    "pacote": "v1",
+    "referencias": [
+      {
+        "arquivo": "art-work/referencias/folha-de-estilo.png",
+        "descricao": "Folha de estilo visual aprovada (traço, paleta, atmosfera)",
+        "obrigatoria": true
+      }
+    ],
+    "individual": {
+      "id": "ui.panel.sheet",
+      "arquivo": "ui/panel-sheet@2x.webp",
+      "px": {
+        "w": 1080,
+        "h": 1440
+      },
+      "formato": "webp",
+      "maxKB": 350,
+      "aspecto": [
+        3,
+        4
+      ]
+    },
+    "observacoes": [
+      "Fundo das folhas (bottom sheet): papel/pergaminho suave."
+    ]
+  }
+}

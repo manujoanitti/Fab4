@@ -1,0 +1,195 @@
+{
+  "versao": 1,
+  "lote": {
+    "id": "faixas-regioes-2-5",
+    "titulo": "Faixas das regiões 2 a 5",
+    "tipo": "prancha",
+    "prioridade": "P1",
+    "lote": 2,
+    "ordem": 12,
+    "dependeDe": [
+      "piloto-marcos-regiao-1"
+    ],
+    "ids": [
+      "map.ribbon.2",
+      "map.ribbon.3",
+      "map.ribbon.4",
+      "map.ribbon.5"
+    ],
+    "pacote": "v1",
+    "referencias": [
+      {
+        "arquivo": "art-work/referencias/folha-de-estilo.png",
+        "descricao": "Folha de estilo visual aprovada (traço, paleta, atmosfera)",
+        "obrigatoria": true
+      },
+      {
+        "arquivo": "guia-prancha.png",
+        "obrigatoria": true,
+        "gerada": true,
+        "descricao": "Guia de posições desta prancha (gerado; usar só como referência de posição)"
+      }
+    ],
+    "folha": {
+      "aspecto": [
+        1,
+        1
+      ],
+      "largura": 1,
+      "fundo": "#00FF00",
+      "fundoNome": "verde puro",
+      "margemSeguranca": 0.1,
+      "celulas": [
+        {
+          "id": "map.ribbon.2",
+          "ordem": 1,
+          "linha": 1,
+          "coluna": 1,
+          "rect": {
+            "x": 0.030000000000000027,
+            "y": 0.04960000000000002,
+            "w": 0.94,
+            "h": 0.188
+          },
+          "descricao": "Faixa/fita horizontal de pontas onduladas na cor lilás-ametista (#9B7FD4) (Castelo das Fadas), mesmo desenho da faixa da Região 1, centro vazio e liso.",
+          "saida": {
+            "arquivo": "map/ribbon-2@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 480,
+              "h": 96
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 60,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "map.ribbon.3",
+          "ordem": 2,
+          "linha": 2,
+          "coluna": 1,
+          "rect": {
+            "x": 0.030000000000000027,
+            "y": 0.2872,
+            "w": 0.94,
+            "h": 0.188
+          },
+          "descricao": "Faixa/fita horizontal de pontas onduladas na cor azul-lago (#4AAEE6) (Lago Cristalino), mesmo desenho da faixa da Região 1, centro vazio e liso.",
+          "saida": {
+            "arquivo": "map/ribbon-3@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 480,
+              "h": 96
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 60,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "map.ribbon.4",
+          "ordem": 3,
+          "linha": 3,
+          "coluna": 1,
+          "rect": {
+            "x": 0.030000000000000027,
+            "y": 0.5248,
+            "w": 0.94,
+            "h": 0.188
+          },
+          "descricao": "Faixa/fita horizontal de pontas onduladas na cor dourado-âmbar (#F0B429) (Montanhas da Coragem), mesmo desenho da faixa da Região 1, centro vazio e liso.",
+          "saida": {
+            "arquivo": "map/ribbon-4@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 480,
+              "h": 96
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 60,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "map.ribbon.5",
+          "ordem": 4,
+          "linha": 4,
+          "coluna": 1,
+          "rect": {
+            "x": 0.030000000000000027,
+            "y": 0.7624000000000001,
+            "w": 0.94,
+            "h": 0.188
+          },
+          "descricao": "Faixa/fita horizontal de pontas onduladas na cor rosa-magenta (#E8548C) (Jardim da Magia), mesmo desenho da faixa da Região 1, centro vazio e liso.",
+          "saida": {
+            "arquivo": "map/ribbon-5@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 480,
+              "h": 96
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 60,
+            "dimMode": "aspect"
+          }
+        }
+      ],
+      "linhas": [
+        {
+          "y": 0.04960000000000002,
+          "celulas": [
+            "map.ribbon.2"
+          ]
+        },
+        {
+          "y": 0.2872,
+          "celulas": [
+            "map.ribbon.3"
+          ]
+        },
+        {
+          "y": 0.5248,
+          "celulas": [
+            "map.ribbon.4"
+          ]
+        },
+        {
+          "y": 0.7624000000000001,
+          "celulas": [
+            "map.ribbon.5"
+          ]
+        }
+      ]
+    },
+    "observacoes": [
+      "Mesmo desenho da faixa da Região 1 (aprovada no piloto), mudando só a cor de cada região."
+    ]
+  }
+}

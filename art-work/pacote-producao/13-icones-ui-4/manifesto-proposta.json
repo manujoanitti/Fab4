@@ -1,0 +1,27 @@
+{
+  "pacote": "v1",
+  "lote": "icones-ui-4",
+  "assets": {
+    "ui.sync.loading": {
+      "file": "ui/sync-loading@2x.webp"
+    },
+    "ui.sync.synced": {
+      "file": "ui/sync-synced@2x.webp"
+    },
+    "ui.sync.syncing": {
+      "file": "ui/sync-syncing@2x.webp"
+    },
+    "ui.sync.pending": {
+      "file": "ui/sync-pending@2x.webp"
+    },
+    "ui.sync.offline": {
+      "file": "ui/sync-offline@2x.webp"
+    },
+    "ui.sync.conflict": {
+      "file": "ui/sync-conflict@2x.webp"
+    },
+    "ui.sync.error": {
+      "file": "ui/sync-error@2x.webp"
+    }
+  }
+}

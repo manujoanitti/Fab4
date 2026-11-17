@@ -1,0 +1,18 @@
+{
+  "pacote": "v1",
+  "lote": "jogos-l6-1",
+  "assets": {
+    "game.stars.star": {
+      "file": "game/stars-star@2x.webp"
+    },
+    "game.stars.star.hit": {
+      "file": "game/stars-star-hit@2x.webp"
+    },
+    "game.icon.stars": {
+      "file": "game/icon-stars@2x.webp"
+    },
+    "game.icon.crystals": {
+      "file": "game/icon-crystals@2x.webp"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "pacote": "v1",
+  "lote": "icones-ui-3",
+  "assets": {
+    "ui.tab.review": {
+      "file": "ui/tab-review@2x.webp"
+    },
+    "ui.tab.prizes": {
+      "file": "ui/tab-prizes@2x.webp"
+    },
+    "ui.tab.credits": {
+      "file": "ui/tab-credits@2x.webp"
+    },
+    "ui.tab.history": {
+      "file": "ui/tab-history@2x.webp"
+    },
+    "ui.tab.more": {
+      "file": "ui/tab-more@2x.webp"
+    },
+    "ui.status.pending": {
+      "file": "ui/status-pending@2x.webp"
+    },
+    "ui.status.done": {
+      "file": "ui/status-done@2x.webp"
+    },
+    "ui.status.not-done": {
+      "file": "ui/status-not-done@2x.webp"
+    },
+    "ui.status.not-evaluated": {
+      "file": "ui/status-not-evaluated@2x.webp"
+    }
+  }
+}

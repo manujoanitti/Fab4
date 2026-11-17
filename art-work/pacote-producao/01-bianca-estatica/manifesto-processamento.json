@@ -1,0 +1,91 @@
+{
+  "versao": 1,
+  "lote": {
+    "id": "bianca-estatica",
+    "titulo": "Bianca — imagem estática (idle)",
+    "tipo": "prancha",
+    "prioridade": "P0",
+    "lote": 0,
+    "ordem": 7,
+    "dependeDe": [],
+    "ids": [
+      "char.bianca.idle"
+    ],
+    "pacote": "v1",
+    "referencias": [
+      {
+        "arquivo": "art-work/referencias/folha-de-estilo.png",
+        "descricao": "Folha de estilo visual aprovada (traço, paleta, atmosfera)",
+        "obrigatoria": true
+      },
+      {
+        "arquivo": "guia-prancha.png",
+        "obrigatoria": true,
+        "gerada": true,
+        "descricao": "Guia de posições desta prancha (gerado; usar só como referência de posição)"
+      },
+      {
+        "arquivo": "art-work/referencias/modelo-bianca.png",
+        "descricao": "Modelo oficial da personagem Bianca",
+        "obrigatoria": true
+      }
+    ],
+    "folha": {
+      "aspecto": [
+        1,
+        1
+      ],
+      "largura": 1,
+      "fundo": "#00FF00",
+      "fundoNome": "verde puro",
+      "margemSeguranca": 0.1,
+      "celulas": [
+        {
+          "id": "char.bianca.idle",
+          "ordem": 1,
+          "linha": 1,
+          "coluna": 1,
+          "rect": {
+            "x": 0.32,
+            "y": 0.32000000000000006,
+            "w": 0.36,
+            "h": 0.36
+          },
+          "descricao": "Bianca — animação \"idle\": respiração/balanço leve em pé. Tira horizontal (6 quadros 256×256).",
+          "saida": {
+            "arquivo": "char/bianca-idle@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 256,
+              "h": 256
+            },
+            "alfa": true,
+            "alinhamento": "base",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.875
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 700,
+            "dimMode": "aspect",
+            "spriteUmQuadro": {
+              "frameW": 256,
+              "frameH": 256
+            }
+          }
+        }
+      ],
+      "linhas": [
+        {
+          "y": 0.32000000000000006,
+          "celulas": [
+            "char.bianca.idle"
+          ]
+        }
+      ]
+    },
+    "observacoes": [
+      "Quadro único (sprite de 1 quadro); pés apoiados na base do quadro. Animação (walk/celebrate) fica para uma etapa posterior."
+    ]
+  }
+}

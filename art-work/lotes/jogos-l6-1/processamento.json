@@ -1,0 +1,183 @@
+{
+  "versao": 1,
+  "lote": {
+    "id": "jogos-l6-1",
+    "titulo": "Minigames (Estrelas e Memória) 1 — Caça às Estrelas + Cartões do hub",
+    "tipo": "prancha",
+    "prioridade": "P1",
+    "lote": 6,
+    "ordem": 14,
+    "dependeDe": [
+      "piloto-marcos-regiao-1"
+    ],
+    "ids": [
+      "game.stars.star",
+      "game.stars.star.hit",
+      "game.icon.stars",
+      "game.icon.crystals"
+    ],
+    "pacote": "v1",
+    "referencias": [
+      {
+        "arquivo": "art-work/referencias/folha-de-estilo.png",
+        "descricao": "Folha de estilo visual aprovada (traço, paleta, atmosfera)",
+        "obrigatoria": true
+      },
+      {
+        "arquivo": "guia-prancha.png",
+        "obrigatoria": true,
+        "gerada": true,
+        "descricao": "Guia de posições desta prancha (gerado; usar só como referência de posição)"
+      }
+    ],
+    "folha": {
+      "aspecto": [
+        1,
+        1
+      ],
+      "largura": 1,
+      "fundo": "#00FF00",
+      "fundoNome": "verde puro",
+      "margemSeguranca": 0.1,
+      "celulas": [
+        {
+          "id": "game.stars.star",
+          "ordem": 1,
+          "linha": 1,
+          "coluna": 1,
+          "rect": {
+            "x": 0.125,
+            "y": 0.09333333333333331,
+            "w": 0.36,
+            "h": 0.36
+          },
+          "descricao": "Estrela tocável.",
+          "saida": {
+            "arquivo": "game/stars-star@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 192,
+              "h": 192
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 60,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "game.stars.star.hit",
+          "ordem": 2,
+          "linha": 1,
+          "coluna": 2,
+          "rect": {
+            "x": 0.515,
+            "y": 0.09333333333333331,
+            "w": 0.36,
+            "h": 0.36
+          },
+          "descricao": "Estrela atingida (brilho/explosão curta).",
+          "saida": {
+            "arquivo": "game/stars-star-hit@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 192,
+              "h": 192
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 60,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "game.icon.stars",
+          "ordem": 3,
+          "linha": 2,
+          "coluna": 1,
+          "rect": {
+            "x": 0.125,
+            "y": 0.5466666666666666,
+            "w": 0.36,
+            "h": 0.36
+          },
+          "descricao": "Ícone do cartão do jogo Caça às Estrelas.",
+          "saida": {
+            "arquivo": "game/icon-stars@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 256,
+              "h": 256
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 80,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "game.icon.crystals",
+          "ordem": 4,
+          "linha": 2,
+          "coluna": 2,
+          "rect": {
+            "x": 0.515,
+            "y": 0.5466666666666666,
+            "w": 0.36,
+            "h": 0.36
+          },
+          "descricao": "Ícone do cartão do jogo Memória dos Cristais.",
+          "saida": {
+            "arquivo": "game/icon-crystals@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 256,
+              "h": 256
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 80,
+            "dimMode": "aspect"
+          }
+        }
+      ],
+      "linhas": [
+        {
+          "y": 0.09333333333333331,
+          "celulas": [
+            "game.stars.star",
+            "game.stars.star.hit"
+          ]
+        },
+        {
+          "y": 0.5466666666666666,
+          "celulas": [
+            "game.icon.stars",
+            "game.icon.crystals"
+          ]
+        }
+      ]
+    },
+    "observacoes": []
+  }
+}

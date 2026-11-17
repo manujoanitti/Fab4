@@ -83,6 +83,8 @@ Pendências não bloqueantes: proximidade marco Início × fase 1.1; possível d
 2. Quando disser "Cenários entregues": `npm run art:cenarios -- processar` (processa as presentes, gera relatórios); depois prévia no mapa real; **aprovação e integração só com ordem do usuário** (`art:approve`, `art:integrate -- --confirmar`).
 3. Regerar o pacote: `npm run art:cenarios -- pacote`.
 
+**Demais 19 lotes:** pacote pronto em `art-work/pacote-producao/` (`LEIA-ME.md`; ordem: Bianca, ícones essenciais, faixas 2–5, bônus, minigames, refinamentos). Imagens entregues em `art-work/entrada-producao/<lote>.png`; processar com `npm run art:producao -- processar`. Dependência: `art-work/referencias/modelo-bianca.png` (só `bianca-estatica`). Inventário: `docs/arte/INVENTARIO_GRAFICO.md` (`npm run art:inventario`).
+
 ## 8. Comandos
 ```
 npm install

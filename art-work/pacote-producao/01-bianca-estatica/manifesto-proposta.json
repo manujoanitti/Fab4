@@ -1,0 +1,16 @@
+{
+  "pacote": "v1",
+  "lote": "bianca-estatica",
+  "assets": {
+    "char.bianca.idle": {
+      "file": "char/bianca-idle@2x.webp",
+      "sprite": {
+        "frames": 1,
+        "fps": 1,
+        "loop": true,
+        "frameW": 256,
+        "frameH": 256
+      }
+    }
+  }
+}

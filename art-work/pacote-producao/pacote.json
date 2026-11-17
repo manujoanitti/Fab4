@@ -1,0 +1,387 @@
+{
+  "versao": 1,
+  "tipo": "producao-restante",
+  "entrada": "art-work/entrada-producao",
+  "dependencias": [
+    "art-work/referencias/modelo-bianca.png"
+  ],
+  "passos": [
+    {
+      "ordem": 1,
+      "lote": "bianca-estatica",
+      "titulo": "Bianca — imagem estática (idle)",
+      "tipo": "prancha",
+      "prioridade": "P0",
+      "recursos": 1,
+      "pasta": "art-work/pacote-producao/01-bianca-estatica",
+      "prompt": "art-work/pacote-producao/01-bianca-estatica/prompt.txt",
+      "guia": "art-work/pacote-producao/01-bianca-estatica/guia-prancha.png",
+      "anexos": [
+        "art-work/pacote-producao/00-anexos-comuns/folha-de-estilo.png",
+        "art-work/pacote-producao/01-bianca-estatica/guia-prancha.png"
+      ],
+      "dependenciasFaltando": [
+        "art-work/referencias/modelo-bianca.png"
+      ],
+      "proporcao": "1:1",
+      "fundo": "#00FF00",
+      "salvarComo": "art-work/entrada-producao/bianca-estatica.png",
+      "sha256Prompt": "8479b190a87bd8f930badcb3855a63a53a2ae19faff916fa74b0f500e7b5e446"
+    },
+    {
+      "ordem": 2,
+      "lote": "icones-ui-1",
+      "titulo": "Ícones da interface 1 — Indicadores + Marca",
+      "tipo": "prancha",
+      "prioridade": "P0",
+      "recursos": 6,
+      "pasta": "art-work/pacote-producao/02-icones-ui-1",
+      "prompt": "art-work/pacote-producao/02-icones-ui-1/prompt.txt",
+      "guia": "art-work/pacote-producao/02-icones-ui-1/guia-prancha.png",
+      "anexos": [
+        "art-work/pacote-producao/00-anexos-comuns/folha-de-estilo.png",
+        "art-work/pacote-producao/02-icones-ui-1/guia-prancha.png"
+      ],
+      "dependenciasFaltando": [],
+      "proporcao": "3:4",
+      "fundo": "#00FF00",
+      "salvarComo": "art-work/entrada-producao/icones-ui-1.png",
+      "sha256Prompt": "ecf21988e9da035debafa5214cc265e04b9970d260ae7658971b6669acaa0173"
+    },
+    {
+      "ordem": 3,
+      "lote": "icones-ui-3",
+      "titulo": "Ícones da interface 3 — Navegação + Estados das metas",
+      "tipo": "prancha",
+      "prioridade": "P0",
+      "recursos": 9,
+      "pasta": "art-work/pacote-producao/03-icones-ui-3",
+      "prompt": "art-work/pacote-producao/03-icones-ui-3/prompt.txt",
+      "guia": "art-work/pacote-producao/03-icones-ui-3/guia-prancha.png",
+      "anexos": [
+        "art-work/pacote-producao/00-anexos-comuns/folha-de-estilo.png",
+        "art-work/pacote-producao/03-icones-ui-3/guia-prancha.png"
+      ],
+      "dependenciasFaltando": [],
+      "proporcao": "1:1",
+      "fundo": "#00FF00",
+      "salvarComo": "art-work/entrada-producao/icones-ui-3.png",
+      "sha256Prompt": "43c41f174c66402fcffeb6619ece8055e8394a65e2fcc84f7a7c490209c86744"
+    },
+    {
+      "ordem": 4,
+      "lote": "faixas-regioes-2-5",
+      "titulo": "Faixas das regiões 2 a 5",
+      "tipo": "prancha",
+      "prioridade": "P1",
+      "recursos": 4,
+      "pasta": "art-work/pacote-producao/04-faixas-regioes-2-5",
+      "prompt": "art-work/pacote-producao/04-faixas-regioes-2-5/prompt.txt",
+      "guia": "art-work/pacote-producao/04-faixas-regioes-2-5/guia-prancha.png",
+      "anexos": [
+        "art-work/pacote-producao/00-anexos-comuns/folha-de-estilo.png",
+        "art-work/pacote-producao/04-faixas-regioes-2-5/faixa-regiao-1-aprovada.png",
+        "art-work/pacote-producao/04-faixas-regioes-2-5/guia-prancha.png"
+      ],
+      "dependenciasFaltando": [],
+      "proporcao": "1:1",
+      "fundo": "#00FF00",
+      "salvarComo": "art-work/entrada-producao/faixas-regioes-2-5.png",
+      "sha256Prompt": "0004e11debf518745037265d7fcb92de415fb194855ba55ac80f7bd958331cdd"
+    },
+    {
+      "ordem": 5,
+      "lote": "bonus-final",
+      "titulo": "Bônus final (fechado e conquistado)",
+      "tipo": "prancha",
+      "prioridade": "P1",
+      "recursos": 2,
+      "pasta": "art-work/pacote-producao/05-bonus-final",
+      "prompt": "art-work/pacote-producao/05-bonus-final/prompt.txt",
+      "guia": "art-work/pacote-producao/05-bonus-final/guia-prancha.png",
+      "anexos": [
+        "art-work/pacote-producao/00-anexos-comuns/folha-de-estilo.png",
+        "art-work/pacote-producao/05-bonus-final/guia-prancha.png"
+      ],
+      "dependenciasFaltando": [],
+      "proporcao": "1:1",
+      "fundo": "#00FFFF",
+      "salvarComo": "art-work/entrada-producao/bonus-final.png",
+      "sha256Prompt": "25b53d5a3776195c493855f3f605b2fb815ee47d35736a82f26ce487bbd231ac"
+    },
+    {
+      "ordem": 6,
+      "lote": "jogos-l6-1",
+      "titulo": "Minigames (Estrelas e Memória) 1 — Caça às Estrelas + Cartões do hub",
+      "tipo": "prancha",
+      "prioridade": "P1",
+      "recursos": 4,
+      "pasta": "art-work/pacote-producao/06-jogos-l6-1",
+      "prompt": "art-work/pacote-producao/06-jogos-l6-1/prompt.txt",
+      "guia": "art-work/pacote-producao/06-jogos-l6-1/guia-prancha.png",
+      "anexos": [
+        "art-work/pacote-producao/00-anexos-comuns/folha-de-estilo.png",
+        "art-work/pacote-producao/06-jogos-l6-1/guia-prancha.png"
+      ],
+      "dependenciasFaltando": [],
+      "proporcao": "1:1",
+      "fundo": "#00FF00",
+      "salvarComo": "art-work/entrada-producao/jogos-l6-1.png",
+      "sha256Prompt": "c4acbfdc691fd834a305614043f7a2f982c5ba3eee7baf2d0e6b581e2c6c4171"
+    },
+    {
+      "ordem": 7,
+      "lote": "jogos-l6-2",
+      "titulo": "Minigames (Estrelas e Memória) 2 — Memória dos Cristais",
+      "tipo": "prancha",
+      "prioridade": "P1",
+      "recursos": 9,
+      "pasta": "art-work/pacote-producao/07-jogos-l6-2",
+      "prompt": "art-work/pacote-producao/07-jogos-l6-2/prompt.txt",
+      "guia": "art-work/pacote-producao/07-jogos-l6-2/guia-prancha.png",
+      "anexos": [
+        "art-work/pacote-producao/00-anexos-comuns/folha-de-estilo.png",
+        "art-work/pacote-producao/07-jogos-l6-2/guia-prancha.png"
+      ],
+      "dependenciasFaltando": [],
+      "proporcao": "1:1",
+      "fundo": "#00FF00",
+      "salvarComo": "art-work/entrada-producao/jogos-l6-2.png",
+      "sha256Prompt": "7d97186e79a1c4d5cef281ae41f08348bb461397e345ed706481fd62735180bb"
+    },
+    {
+      "ordem": 8,
+      "lote": "jogos-l7-1",
+      "titulo": "Minigames (Jardim) 1 — Jardim Encantado + Cartões do hub",
+      "tipo": "prancha",
+      "prioridade": "P1",
+      "recursos": 7,
+      "pasta": "art-work/pacote-producao/08-jogos-l7-1",
+      "prompt": "art-work/pacote-producao/08-jogos-l7-1/prompt.txt",
+      "guia": "art-work/pacote-producao/08-jogos-l7-1/guia-prancha.png",
+      "anexos": [
+        "art-work/pacote-producao/00-anexos-comuns/folha-de-estilo.png",
+        "art-work/pacote-producao/08-jogos-l7-1/guia-prancha.png"
+      ],
+      "dependenciasFaltando": [],
+      "proporcao": "9:16",
+      "fundo": "#FF00FF",
+      "salvarComo": "art-work/entrada-producao/jogos-l7-1.png",
+      "sha256Prompt": "4a15c6997d2cd7bad312daa8c2dc40810da77100ee013135c958b2ed9a8ea7a4"
+    },
+    {
+      "ordem": 9,
+      "lote": "jogos-l7-2",
+      "titulo": "Minigames (Jardim) 2 — Jardim Encantado",
+      "tipo": "prancha",
+      "prioridade": "P1",
+      "recursos": 5,
+      "pasta": "art-work/pacote-producao/09-jogos-l7-2",
+      "prompt": "art-work/pacote-producao/09-jogos-l7-2/prompt.txt",
+      "guia": "art-work/pacote-producao/09-jogos-l7-2/guia-prancha.png",
+      "anexos": [
+        "art-work/pacote-producao/00-anexos-comuns/folha-de-estilo.png",
+        "art-work/pacote-producao/09-jogos-l7-2/guia-prancha.png"
+      ],
+      "dependenciasFaltando": [],
+      "proporcao": "3:4",
+      "fundo": "#FF00FF",
+      "salvarComo": "art-work/entrada-producao/jogos-l7-2.png",
+      "sha256Prompt": "ee25431e08e4223fcf60a1b4bcbccb25f423d19c17e21f92e00c74d63ce3e04f"
+    },
+    {
+      "ordem": 10,
+      "lote": "fundo-game-stars-bg",
+      "titulo": "Fundo — game.stars.bg",
+      "tipo": "individual",
+      "prioridade": "P1",
+      "recursos": 1,
+      "pasta": "art-work/pacote-producao/10-fundo-game-stars-bg",
+      "prompt": "art-work/pacote-producao/10-fundo-game-stars-bg/prompt.txt",
+      "guia": null,
+      "anexos": [
+        "art-work/pacote-producao/00-anexos-comuns/folha-de-estilo.png"
+      ],
+      "dependenciasFaltando": [],
+      "proporcao": "9:16",
+      "fundo": null,
+      "salvarComo": "art-work/entrada-producao/fundo-game-stars-bg.png",
+      "sha256Prompt": "72846e3d30f5fbc40d7025a8f36bece21ea0962bd272c2591ab8092015e393c3"
+    },
+    {
+      "ordem": 11,
+      "lote": "fundo-game-garden-bg",
+      "titulo": "Fundo — game.garden.bg",
+      "tipo": "individual",
+      "prioridade": "P1",
+      "recursos": 1,
+      "pasta": "art-work/pacote-producao/11-fundo-game-garden-bg",
+      "prompt": "art-work/pacote-producao/11-fundo-game-garden-bg/prompt.txt",
+      "guia": null,
+      "anexos": [
+        "art-work/pacote-producao/00-anexos-comuns/folha-de-estilo.png"
+      ],
+      "dependenciasFaltando": [],
+      "proporcao": "3:4",
+      "fundo": null,
+      "salvarComo": "art-work/entrada-producao/fundo-game-garden-bg.png",
+      "sha256Prompt": "a46b8f91d053687a3bee6ebf2a5671370e89c44df745d5178550b637f66f80a8"
+    },
+    {
+      "ordem": 12,
+      "lote": "icones-ui-2",
+      "titulo": "Ícones da interface 2 — Navegação",
+      "tipo": "prancha",
+      "prioridade": "P1",
+      "recursos": 6,
+      "pasta": "art-work/pacote-producao/12-icones-ui-2",
+      "prompt": "art-work/pacote-producao/12-icones-ui-2/prompt.txt",
+      "guia": "art-work/pacote-producao/12-icones-ui-2/guia-prancha.png",
+      "anexos": [
+        "art-work/pacote-producao/00-anexos-comuns/folha-de-estilo.png",
+        "art-work/pacote-producao/12-icones-ui-2/guia-prancha.png"
+      ],
+      "dependenciasFaltando": [],
+      "proporcao": "3:4",
+      "fundo": "#FF00FF",
+      "salvarComo": "art-work/entrada-producao/icones-ui-2.png",
+      "sha256Prompt": "3e6814af62c7e724cdde3cbd72b846fd42107b8cfaadff4dd5851503aeafed3b"
+    },
+    {
+      "ordem": 13,
+      "lote": "icones-ui-4",
+      "titulo": "Ícones da interface 4 — Sincronização",
+      "tipo": "prancha",
+      "prioridade": "P2",
+      "recursos": 7,
+      "pasta": "art-work/pacote-producao/13-icones-ui-4",
+      "prompt": "art-work/pacote-producao/13-icones-ui-4/prompt.txt",
+      "guia": "art-work/pacote-producao/13-icones-ui-4/guia-prancha.png",
+      "anexos": [
+        "art-work/pacote-producao/00-anexos-comuns/folha-de-estilo.png",
+        "art-work/pacote-producao/13-icones-ui-4/guia-prancha.png"
+      ],
+      "dependenciasFaltando": [],
+      "proporcao": "9:16",
+      "fundo": "#FF00FF",
+      "salvarComo": "art-work/entrada-producao/icones-ui-4.png",
+      "sha256Prompt": "ce1424facd22272630b2a58cc5f3caa4935365ce2a3b4902b0cd4cfcb74f1730"
+    },
+    {
+      "ordem": 14,
+      "lote": "fundo-ui-bg-app",
+      "titulo": "Fundo — ui.bg.app",
+      "tipo": "individual",
+      "prioridade": "P2",
+      "recursos": 1,
+      "pasta": "art-work/pacote-producao/14-fundo-ui-bg-app",
+      "prompt": "art-work/pacote-producao/14-fundo-ui-bg-app/prompt.txt",
+      "guia": null,
+      "anexos": [
+        "art-work/pacote-producao/00-anexos-comuns/folha-de-estilo.png"
+      ],
+      "dependenciasFaltando": [],
+      "proporcao": "9:16",
+      "fundo": null,
+      "salvarComo": "art-work/entrada-producao/fundo-ui-bg-app.png",
+      "sha256Prompt": "c4aa58b367385c7fa32484766412aa945bdb82d65302dbbdb64bd394db4feb2a"
+    },
+    {
+      "ordem": 15,
+      "lote": "fundo-ui-bg-topbar",
+      "titulo": "Fundo — ui.bg.topbar",
+      "tipo": "individual",
+      "prioridade": "P2",
+      "recursos": 1,
+      "pasta": "art-work/pacote-producao/15-fundo-ui-bg-topbar",
+      "prompt": "art-work/pacote-producao/15-fundo-ui-bg-topbar/prompt.txt",
+      "guia": null,
+      "anexos": [
+        "art-work/pacote-producao/00-anexos-comuns/folha-de-estilo.png"
+      ],
+      "dependenciasFaltando": [],
+      "proporcao": "16:9",
+      "fundo": null,
+      "salvarComo": "art-work/entrada-producao/fundo-ui-bg-topbar.png",
+      "sha256Prompt": "48b7953290bc2023f15582ef529688dc597e04dfb23bca2d4c6097d8c2484bce"
+    },
+    {
+      "ordem": 16,
+      "lote": "fundo-ui-button-primary",
+      "titulo": "Fundo — ui.button.primary",
+      "tipo": "individual",
+      "prioridade": "P2",
+      "recursos": 1,
+      "pasta": "art-work/pacote-producao/16-fundo-ui-button-primary",
+      "prompt": "art-work/pacote-producao/16-fundo-ui-button-primary/prompt.txt",
+      "guia": null,
+      "anexos": [
+        "art-work/pacote-producao/00-anexos-comuns/folha-de-estilo.png"
+      ],
+      "dependenciasFaltando": [],
+      "proporcao": "16:9",
+      "fundo": null,
+      "salvarComo": "art-work/entrada-producao/fundo-ui-button-primary.png",
+      "sha256Prompt": "50cb9236e5711de01dff158c5fd10f03c2e4a37ace3ad0dab264b05e11713b82"
+    },
+    {
+      "ordem": 17,
+      "lote": "fundo-ui-panel-sheet",
+      "titulo": "Fundo — ui.panel.sheet",
+      "tipo": "individual",
+      "prioridade": "P2",
+      "recursos": 1,
+      "pasta": "art-work/pacote-producao/17-fundo-ui-panel-sheet",
+      "prompt": "art-work/pacote-producao/17-fundo-ui-panel-sheet/prompt.txt",
+      "guia": null,
+      "anexos": [
+        "art-work/pacote-producao/00-anexos-comuns/folha-de-estilo.png"
+      ],
+      "dependenciasFaltando": [],
+      "proporcao": "3:4",
+      "fundo": null,
+      "salvarComo": "art-work/entrada-producao/fundo-ui-panel-sheet.png",
+      "sha256Prompt": "7844dcbc94fd51610a15a3fb2be4490f3124a992106fbd599aba2bfc55831566"
+    },
+    {
+      "ordem": 18,
+      "lote": "efeitos-brilho",
+      "titulo": "Efeito — brilho mágico",
+      "tipo": "prancha",
+      "prioridade": "P2",
+      "recursos": 1,
+      "pasta": "art-work/pacote-producao/18-efeitos-brilho",
+      "prompt": "art-work/pacote-producao/18-efeitos-brilho/prompt.txt",
+      "guia": "art-work/pacote-producao/18-efeitos-brilho/guia-prancha.png",
+      "anexos": [
+        "art-work/pacote-producao/00-anexos-comuns/folha-de-estilo.png",
+        "art-work/pacote-producao/18-efeitos-brilho/guia-prancha.png"
+      ],
+      "dependenciasFaltando": [],
+      "proporcao": "1:1",
+      "fundo": "#00FFFF",
+      "salvarComo": "art-work/entrada-producao/efeitos-brilho.png",
+      "sha256Prompt": "b781d12e1c9cd99a047233bf74c52d1a4e1dcc293e7285c96863a020a594ddd9"
+    },
+    {
+      "ordem": 19,
+      "lote": "celebracoes",
+      "titulo": "Celebrações (etapa e reino)",
+      "tipo": "prancha",
+      "prioridade": "P2",
+      "recursos": 2,
+      "pasta": "art-work/pacote-producao/19-celebracoes",
+      "prompt": "art-work/pacote-producao/19-celebracoes/prompt.txt",
+      "guia": "art-work/pacote-producao/19-celebracoes/guia-prancha.png",
+      "anexos": [
+        "art-work/pacote-producao/00-anexos-comuns/folha-de-estilo.png",
+        "art-work/pacote-producao/19-celebracoes/guia-prancha.png"
+      ],
+      "dependenciasFaltando": [],
+      "proporcao": "1:1",
+      "fundo": "#00FFFF",
+      "salvarComo": "art-work/entrada-producao/celebracoes.png",
+      "sha256Prompt": "9aaa956f52b0dcbfcabc9d7a9abf664e34cf1e168319e38f1b6eab0964778ad0"
+    }
+  ]
+}

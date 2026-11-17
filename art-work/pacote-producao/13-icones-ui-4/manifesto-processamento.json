@@ -1,0 +1,289 @@
+{
+  "versao": 1,
+  "lote": {
+    "id": "icones-ui-4",
+    "titulo": "Ícones da interface 4 — Sincronização",
+    "tipo": "prancha",
+    "prioridade": "P2",
+    "lote": 1,
+    "ordem": 11,
+    "dependeDe": [
+      "piloto-marcos-regiao-1"
+    ],
+    "ids": [
+      "ui.sync.loading",
+      "ui.sync.synced",
+      "ui.sync.syncing",
+      "ui.sync.pending",
+      "ui.sync.offline",
+      "ui.sync.conflict",
+      "ui.sync.error"
+    ],
+    "pacote": "v1",
+    "referencias": [
+      {
+        "arquivo": "art-work/referencias/folha-de-estilo.png",
+        "descricao": "Folha de estilo visual aprovada (traço, paleta, atmosfera)",
+        "obrigatoria": true
+      },
+      {
+        "arquivo": "guia-prancha.png",
+        "obrigatoria": true,
+        "gerada": true,
+        "descricao": "Guia de posições desta prancha (gerado; usar só como referência de posição)"
+      }
+    ],
+    "folha": {
+      "aspecto": [
+        9,
+        16
+      ],
+      "largura": 1,
+      "fundo": "#FF00FF",
+      "fundoNome": "magenta puro",
+      "margemSeguranca": 0.1,
+      "celulas": [
+        {
+          "id": "ui.sync.loading",
+          "ordem": 1,
+          "linha": 1,
+          "coluna": 1,
+          "rect": {
+            "x": 0.125,
+            "y": 0.037999999999999985,
+            "w": 0.36,
+            "h": 0.2025
+          },
+          "descricao": "Carregando.",
+          "saida": {
+            "arquivo": "ui/sync-loading@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 128,
+              "h": 128
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 40,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "ui.sync.synced",
+          "ordem": 2,
+          "linha": 1,
+          "coluna": 2,
+          "rect": {
+            "x": 0.515,
+            "y": 0.037999999999999985,
+            "w": 0.36,
+            "h": 0.2025
+          },
+          "descricao": "Sincronizado.",
+          "saida": {
+            "arquivo": "ui/sync-synced@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 128,
+              "h": 128
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 40,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "ui.sync.syncing",
+          "ordem": 3,
+          "linha": 2,
+          "coluna": 1,
+          "rect": {
+            "x": 0.125,
+            "y": 0.27849999999999997,
+            "w": 0.36,
+            "h": 0.2025
+          },
+          "descricao": "Sincronizando.",
+          "saida": {
+            "arquivo": "ui/sync-syncing@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 128,
+              "h": 128
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 40,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "ui.sync.pending",
+          "ordem": 4,
+          "linha": 2,
+          "coluna": 2,
+          "rect": {
+            "x": 0.515,
+            "y": 0.27849999999999997,
+            "w": 0.36,
+            "h": 0.2025
+          },
+          "descricao": "Alterações pendentes.",
+          "saida": {
+            "arquivo": "ui/sync-pending@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 128,
+              "h": 128
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 40,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "ui.sync.offline",
+          "ordem": 5,
+          "linha": 3,
+          "coluna": 1,
+          "rect": {
+            "x": 0.125,
+            "y": 0.5189999999999999,
+            "w": 0.36,
+            "h": 0.2025
+          },
+          "descricao": "Offline.",
+          "saida": {
+            "arquivo": "ui/sync-offline@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 128,
+              "h": 128
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 40,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "ui.sync.conflict",
+          "ordem": 6,
+          "linha": 3,
+          "coluna": 2,
+          "rect": {
+            "x": 0.515,
+            "y": 0.5189999999999999,
+            "w": 0.36,
+            "h": 0.2025
+          },
+          "descricao": "Conflito a resolver.",
+          "saida": {
+            "arquivo": "ui/sync-conflict@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 128,
+              "h": 128
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 40,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "ui.sync.error",
+          "ordem": 7,
+          "linha": 4,
+          "coluna": 1,
+          "rect": {
+            "x": 0.32,
+            "y": 0.7595,
+            "w": 0.36,
+            "h": 0.2025
+          },
+          "descricao": "Erro de sincronização.",
+          "saida": {
+            "arquivo": "ui/sync-error@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 128,
+              "h": 128
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 40,
+            "dimMode": "aspect"
+          }
+        }
+      ],
+      "linhas": [
+        {
+          "y": 0.037999999999999985,
+          "celulas": [
+            "ui.sync.loading",
+            "ui.sync.synced"
+          ]
+        },
+        {
+          "y": 0.27849999999999997,
+          "celulas": [
+            "ui.sync.syncing",
+            "ui.sync.pending"
+          ]
+        },
+        {
+          "y": 0.5189999999999999,
+          "celulas": [
+            "ui.sync.offline",
+            "ui.sync.conflict"
+          ]
+        },
+        {
+          "y": 0.7595,
+          "celulas": [
+            "ui.sync.error"
+          ]
+        }
+      ]
+    },
+    "observacoes": []
+  }
+}

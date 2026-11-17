@@ -1,0 +1,12 @@
+{
+  "pacote": "v1",
+  "lote": "bonus-final",
+  "assets": {
+    "map.bonus.locked": {
+      "file": "map/bonus-locked@2x.webp"
+    },
+    "map.bonus.unlocked": {
+      "file": "map/bonus-unlocked@2x.webp"
+    }
+  }
+}

@@ -1,0 +1,289 @@
+{
+  "versao": 1,
+  "lote": {
+    "id": "jogos-l7-1",
+    "titulo": "Minigames (Jardim) 1 — Jardim Encantado + Cartões do hub",
+    "tipo": "prancha",
+    "prioridade": "P1",
+    "lote": 7,
+    "ordem": 16,
+    "dependeDe": [
+      "piloto-marcos-regiao-1"
+    ],
+    "ids": [
+      "game.garden.item.tulip",
+      "game.garden.item.blossom",
+      "game.garden.item.sunflower",
+      "game.garden.item.tree",
+      "game.garden.item.mushroom",
+      "game.garden.item.butterfly",
+      "game.icon.garden"
+    ],
+    "pacote": "v1",
+    "referencias": [
+      {
+        "arquivo": "art-work/referencias/folha-de-estilo.png",
+        "descricao": "Folha de estilo visual aprovada (traço, paleta, atmosfera)",
+        "obrigatoria": true
+      },
+      {
+        "arquivo": "guia-prancha.png",
+        "obrigatoria": true,
+        "gerada": true,
+        "descricao": "Guia de posições desta prancha (gerado; usar só como referência de posição)"
+      }
+    ],
+    "folha": {
+      "aspecto": [
+        9,
+        16
+      ],
+      "largura": 1,
+      "fundo": "#FF00FF",
+      "fundoNome": "magenta puro",
+      "margemSeguranca": 0.1,
+      "celulas": [
+        {
+          "id": "game.garden.item.tulip",
+          "ordem": 1,
+          "linha": 1,
+          "coluna": 1,
+          "rect": {
+            "x": 0.125,
+            "y": 0.037999999999999985,
+            "w": 0.36,
+            "h": 0.2025
+          },
+          "descricao": "Item de decoração: Tulipa.",
+          "saida": {
+            "arquivo": "game/garden-item-tulip@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 192,
+              "h": 192
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 80,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "game.garden.item.blossom",
+          "ordem": 2,
+          "linha": 1,
+          "coluna": 2,
+          "rect": {
+            "x": 0.515,
+            "y": 0.037999999999999985,
+            "w": 0.36,
+            "h": 0.2025
+          },
+          "descricao": "Item de decoração: Flor de cerejeira.",
+          "saida": {
+            "arquivo": "game/garden-item-blossom@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 192,
+              "h": 192
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 80,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "game.garden.item.sunflower",
+          "ordem": 3,
+          "linha": 2,
+          "coluna": 1,
+          "rect": {
+            "x": 0.125,
+            "y": 0.27849999999999997,
+            "w": 0.36,
+            "h": 0.2025
+          },
+          "descricao": "Item de decoração: Girassol.",
+          "saida": {
+            "arquivo": "game/garden-item-sunflower@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 192,
+              "h": 192
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 80,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "game.garden.item.tree",
+          "ordem": 4,
+          "linha": 2,
+          "coluna": 2,
+          "rect": {
+            "x": 0.515,
+            "y": 0.27849999999999997,
+            "w": 0.36,
+            "h": 0.2025
+          },
+          "descricao": "Item de decoração: Árvore.",
+          "saida": {
+            "arquivo": "game/garden-item-tree@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 192,
+              "h": 192
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 80,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "game.garden.item.mushroom",
+          "ordem": 5,
+          "linha": 3,
+          "coluna": 1,
+          "rect": {
+            "x": 0.125,
+            "y": 0.5189999999999999,
+            "w": 0.36,
+            "h": 0.2025
+          },
+          "descricao": "Item de decoração: Cogumelo.",
+          "saida": {
+            "arquivo": "game/garden-item-mushroom@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 192,
+              "h": 192
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 80,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "game.garden.item.butterfly",
+          "ordem": 6,
+          "linha": 3,
+          "coluna": 2,
+          "rect": {
+            "x": 0.515,
+            "y": 0.5189999999999999,
+            "w": 0.36,
+            "h": 0.2025
+          },
+          "descricao": "Item de decoração: Borboleta.",
+          "saida": {
+            "arquivo": "game/garden-item-butterfly@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 192,
+              "h": 192
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 80,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "game.icon.garden",
+          "ordem": 7,
+          "linha": 4,
+          "coluna": 1,
+          "rect": {
+            "x": 0.32,
+            "y": 0.7595,
+            "w": 0.36,
+            "h": 0.2025
+          },
+          "descricao": "Ícone do cartão do jogo Jardim Encantado.",
+          "saida": {
+            "arquivo": "game/icon-garden@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 256,
+              "h": 256
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 80,
+            "dimMode": "aspect"
+          }
+        }
+      ],
+      "linhas": [
+        {
+          "y": 0.037999999999999985,
+          "celulas": [
+            "game.garden.item.tulip",
+            "game.garden.item.blossom"
+          ]
+        },
+        {
+          "y": 0.27849999999999997,
+          "celulas": [
+            "game.garden.item.sunflower",
+            "game.garden.item.tree"
+          ]
+        },
+        {
+          "y": 0.5189999999999999,
+          "celulas": [
+            "game.garden.item.mushroom",
+            "game.garden.item.butterfly"
+          ]
+        },
+        {
+          "y": 0.7595,
+          "celulas": [
+            "game.icon.garden"
+          ]
+        }
+      ]
+    },
+    "observacoes": []
+  }
+}

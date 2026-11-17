@@ -1,0 +1,24 @@
+{
+  "pacote": "v1",
+  "lote": "icones-ui-2",
+  "assets": {
+    "ui.icon.mode-child": {
+      "file": "ui/icon-mode-child@2x.webp"
+    },
+    "ui.icon.mode-guardian": {
+      "file": "ui/icon-mode-guardian@2x.webp"
+    },
+    "ui.tab.map": {
+      "file": "ui/tab-map@2x.webp"
+    },
+    "ui.tab.goals": {
+      "file": "ui/tab-goals@2x.webp"
+    },
+    "ui.tab.achievements": {
+      "file": "ui/tab-achievements@2x.webp"
+    },
+    "ui.tab.games": {
+      "file": "ui/tab-games@2x.webp"
+    }
+  }
+}

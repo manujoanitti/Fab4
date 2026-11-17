@@ -18,6 +18,7 @@
     "check:dist": "node scripts/check-dist.mjs",
     "art:cenarios": "vite-node scripts/art/cli.ts cenarios",
     "art:inventario": "vite-node scripts/art/inventario.ts",
+    "art:producao": "vite-node scripts/art/cli.ts producao",
     "art:validate": "node scripts/validate-art.mjs",
     "art:docs": "vite-node scripts/gen-art-docs.ts",
     "art:guides": "vite-node scripts/gen-art-guides.ts",

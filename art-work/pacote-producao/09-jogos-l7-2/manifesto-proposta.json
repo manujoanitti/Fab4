@@ -1,0 +1,21 @@
+{
+  "pacote": "v1",
+  "lote": "jogos-l7-2",
+  "assets": {
+    "game.garden.item.rabbit": {
+      "file": "game/garden-item-rabbit@2x.webp"
+    },
+    "game.garden.item.rainbow": {
+      "file": "game/garden-item-rainbow@2x.webp"
+    },
+    "game.garden.item.unicorn": {
+      "file": "game/garden-item-unicorn@2x.webp"
+    },
+    "game.garden.item.castle": {
+      "file": "game/garden-item-castle@2x.webp"
+    },
+    "game.garden.item.fairy": {
+      "file": "game/garden-item-fairy@2x.webp"
+    }
+  }
+}
