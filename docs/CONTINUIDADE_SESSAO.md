@@ -75,13 +75,13 @@ Não contém o histórico da conversa; só o necessário para retomar.
 - Opcional: PIN no servidor; `art-src/` para originais; Realtime; revogação de selo.
 
 ## 7. PRÓXIMO PASSO EXATO
-**Validar o prompt corrigido do piloto `piloto-marcos-regiao-1`, gerar a prancha no Gemini e processar os seis recursos.**
-1. Ler `art-work/lotes/piloto-marcos-regiao-1/prompt-gemini.txt` e conferir contra `guia-prancha.png` e `processamento.json` (faixa 1: 4 medalhões; faixa 2: marco Início; faixa 3: faixa do título).
-2. O usuário gera a prancha no Gemini (anexa `folha-de-estilo.png` + `guia-prancha.png`, cola o prompt) e entrega a imagem PNG.
-3. `npm run art:process -- piloto-marcos-regiao-1 <imagem.png>` e `npm run art:review -- piloto-marcos-regiao-1`.
-4. Reportar o relatório (`art-work/lotes/piloto-marcos-regiao-1/revisao/relatorio.html`): QA técnico, alertas, cortes, resíduos de fundo, franjas. Sem aprovar em nome do usuário.
-5. Aprovação artística (`art:approve`) e integração (`art:integrate -- --confirmar`) só com ordem do usuário. Se a prancha falhar, ajustar o prompt (não a geometria, salvo necessidade) e pedir nova geração.
-- Atenção: aquarela real é mais difícil que as pranchas sintéticas dos testes (franja nas bordas, sombras, verde dentro do desenho). O processador nunca viu imagem real do Gemini.
+**Piloto `piloto-marcos-regiao-1`: aprovado e integrado** (pacote `v1` ativo; `proposta-app.patch` aplicado; testes, typecheck, build e e2e verdes). Nada publicado nem mergeado na `main`.
+Pendências não bloqueantes: proximidade marco Início × fase 1.1; possível distorção da textura da faixa; adequar as faixas das demais regiões. Sem novas rodadas de refinamento do piloto.
+
+**Agora: cenários das 5 regiões.** Pacote pronto em `art-work/pacote-cenarios/` (leia `LEIA-ME.md`): 5 prompts temáticos + guias + manifestos.
+1. O usuário gera as 5 imagens no Gemini (um único chat, ordem 1→5) e salva em `art-work/entrada-cenarios/regiao-1.png … regiao-5.png`.
+2. Quando disser "Cenários entregues": `npm run art:cenarios -- processar` (processa as presentes, gera relatórios); depois prévia no mapa real; **aprovação e integração só com ordem do usuário** (`art:approve`, `art:integrate -- --confirmar`).
+3. Regerar o pacote: `npm run art:cenarios -- pacote`.
 
 ## 8. Comandos
 ```

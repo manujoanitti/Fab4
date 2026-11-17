@@ -117,7 +117,7 @@ export function planejar(cat: CatalogFile, opcoes: Partial<OpcoesPlano> = {}): P
     lotes.push({
       id: `cenario-regiao-${r}`, titulo: `Cenário da Região ${r} — ${REGIOES[r - 1]}`, tipo: 'cenario', prioridade: es[0].priority, lote: es[0].lot, ordem: ++ordem,
       dependeDe: r === 1 ? [] : [`cenario-regiao-${r - 1}`], ids, pacote: opts.pacote,
-      referencias: [refEstilo(), { ...REFERENCIAS_FIXAS.layout(r), obrigatoria: r === 1 }, { arquivo: `docs/arte/guias/regiao-${r}.png`, obrigatoria: true, descricao: 'Guia de layout com a posição real das 5 casas, o corredor da trilha e as zonas livres' }],
+      referencias: [refEstilo(), { ...REFERENCIAS_FIXAS.layout(r), descricao: `Layout de referência da Região ${r} (opcional: use se você tiver)`, obrigatoria: false }, { arquivo: `docs/arte/guias/regiao-${r}.png`, obrigatoria: true, descricao: 'Guia de layout com a posição real das 5 casas, o corredor da trilha e as zonas livres' }],
       cenario: { regiao: r, comBase, comTopo, px: { w: 800, h: y }, partes },
       observacoes: ['Entrega o cenário como camada de FUNDO: a trilha, as casas, a faixa e o véu continuam sendo desenhados pelo app.', 'A arte NÃO deve conter trilha, casas, números nem texto; deixe livres o corredor e os círculos das casas.'],
     });

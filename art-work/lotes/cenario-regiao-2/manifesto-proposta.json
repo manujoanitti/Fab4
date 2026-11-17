@@ -1,0 +1,9 @@
+{
+  "pacote": "v1",
+  "lote": "cenario-regiao-2",
+  "assets": {
+    "map.region.2.bg": {
+      "file": "map/region-2-bg@2x.webp"
+    }
+  }
+}

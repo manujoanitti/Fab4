@@ -4,7 +4,7 @@
   "lotes": [
     {
       "id": "piloto-marcos-regiao-1",
-      "estado": "em_revisao",
+      "estado": "integrado",
       "historico": [
         {
           "estado": "planejado",
@@ -29,6 +29,16 @@
           "estado": "em_revisao",
           "em": "2026-11-17T17:08:23.822Z",
           "nota": "relatório gerado"
+        },
+        {
+          "estado": "aprovado",
+          "em": "2026-11-17T18:16:50.632Z",
+          "nota": "aprovação artística manual"
+        },
+        {
+          "estado": "integrado",
+          "em": "2026-11-17T18:16:51.280Z",
+          "nota": "copiados 6 arquivo(s); pacote ativado"
         }
       ],
       "etapas": {
@@ -42,12 +52,12 @@
         }
       },
       "aprovacao": {
-        "map.node.locked": "pendente",
-        "map.node.available": "pendente",
-        "map.node.done": "pendente",
-        "map.node.selected": "pendente",
-        "map.start": "pendente",
-        "map.ribbon.1": "pendente"
+        "map.node.locked": "aprovado",
+        "map.node.available": "aprovado",
+        "map.node.done": "aprovado",
+        "map.node.selected": "aprovado",
+        "map.start": "aprovado",
+        "map.ribbon.1": "aprovado"
       },
       "recebido": {
         "arquivo": "art-work/lotes/piloto-marcos-regiao-1/recebido/a125927d-prancha-piloto.jpg",
@@ -64,62 +74,112 @@
     },
     {
       "id": "cenario-regiao-1",
-      "estado": "planejado",
+      "estado": "aguardando_geracao",
       "historico": [
         {
           "estado": "planejado",
           "em": "2026-11-17T15:17:56.852Z"
+        },
+        {
+          "estado": "aguardando_geracao",
+          "em": "2026-11-17T18:20:39.350Z",
+          "nota": "prompt gerado"
         }
       ],
-      "etapas": {},
+      "etapas": {
+        "prompt": {
+          "em": "2026-11-17T18:22:34.534Z",
+          "chave": "59ded03f623c9f59396f535d29c67c089d7f9aa578e2abe3df33efdbda71fd39"
+        }
+      },
       "aprovacao": {}
     },
     {
       "id": "cenario-regiao-2",
-      "estado": "planejado",
+      "estado": "aguardando_geracao",
       "historico": [
         {
           "estado": "planejado",
           "em": "2026-11-17T15:17:56.852Z"
+        },
+        {
+          "estado": "aguardando_geracao",
+          "em": "2026-11-17T18:21:12.100Z",
+          "nota": "prompt gerado"
         }
       ],
-      "etapas": {},
+      "etapas": {
+        "prompt": {
+          "em": "2026-11-17T18:22:34.544Z",
+          "chave": "14c5e8c463dff2d53d95cbbe428adb67feca722696b5f72f76e06733d5a4986d"
+        }
+      },
       "aprovacao": {}
     },
     {
       "id": "cenario-regiao-3",
-      "estado": "planejado",
+      "estado": "aguardando_geracao",
       "historico": [
         {
           "estado": "planejado",
           "em": "2026-11-17T15:17:56.852Z"
+        },
+        {
+          "estado": "aguardando_geracao",
+          "em": "2026-11-17T18:22:34.550Z",
+          "nota": "prompt gerado"
         }
       ],
-      "etapas": {},
+      "etapas": {
+        "prompt": {
+          "em": "2026-11-17T18:22:34.550Z",
+          "chave": "3930e8c2c4ab31250c53f0a9c46e9fd71368c2b1b37fb030edc779eab2e517b7"
+        }
+      },
       "aprovacao": {}
     },
     {
       "id": "cenario-regiao-4",
-      "estado": "planejado",
+      "estado": "aguardando_geracao",
       "historico": [
         {
           "estado": "planejado",
           "em": "2026-11-17T15:17:56.852Z"
+        },
+        {
+          "estado": "aguardando_geracao",
+          "em": "2026-11-17T18:22:34.557Z",
+          "nota": "prompt gerado"
         }
       ],
-      "etapas": {},
+      "etapas": {
+        "prompt": {
+          "em": "2026-11-17T18:22:34.556Z",
+          "chave": "ee7a7175c7dacf08468b5b62f0255f895c8902e962597997d27f6426c3e0357a"
+        }
+      },
       "aprovacao": {}
     },
     {
       "id": "cenario-regiao-5",
-      "estado": "planejado",
+      "estado": "aguardando_geracao",
       "historico": [
         {
           "estado": "planejado",
           "em": "2026-11-17T15:17:56.852Z"
+        },
+        {
+          "estado": "aguardando_geracao",
+          "em": "2026-11-17T18:21:12.792Z",
+          "nota": "prompt gerado"
         }
       ],
-      "etapas": {},
+      "etapas": {
+        "prompt": {
+          "em": "2026-11-17T18:22:34.562Z",
+          "chave": "16216f014c60839c59a92ae2fcc6c9bcf33b5cb48f585b1892c8a0881be24860"
+        }
+      },
       "aprovacao": {}
     },
     {

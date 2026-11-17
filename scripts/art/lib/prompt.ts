@@ -1,7 +1,7 @@
 // Gera o prompt do Gemini, a lista de anexos e o guia visual de posições de cada prancha. Puro (texto) + guia via sharp.
 import sharp from 'sharp';
 import { existsSync } from 'node:fs';
-import { EVITAR, IDENTIDADE } from './style';
+import { EVITAR, IDENTIDADE, REGIAO_TEMA, REGIOES } from './style';
 import { orientacaoTexto, proporcaoTexto } from './grid';
 import type { Folha, LotePlano, Referencia } from './types';
 
@@ -72,7 +72,11 @@ export function textoParaGemini(lote: LotePlano): string {
     const asp: [number, number] = [c.px.w, c.px.h];
     L.push(`Gere UMA ÚNICA ILUSTRAÇÃO de cenário, em formato retrato (proporção próxima de ${c.px.w}:${c.px.h}), na MAIOR resolução disponível: o cenário da Região ${c.regiao} de um jogo infantil que parece um livro de contos.`);
     L.push('', 'IDENTIDADE ARTÍSTICA (siga a folha de estilo anexa):', identidade, '', 'EVITE:', evitar);
-    L.push('', 'COMPOSIÇÃO (siga o layout de referência e o guia anexos):',
+    const tema = REGIAO_TEMA[c.regiao - 1];
+    const nome = REGIOES[c.regiao - 1];
+    if (tema) L.push('', `TEMA DA REGIÃO ${c.regiao} — ${nome}:`, `- Cena: ${tema.tema}.`, `- Cores dominantes: ${tema.tons}.`,
+      ...(c.regiao > 1 ? [`- Continuidade: a borda INFERIOR deve se fundir suavemente com a paisagem de "${REGIOES[c.regiao - 2]}" (a região logo abaixo) e a borda SUPERIOR com a de "${REGIOES[c.regiao] ?? 'o horizonte'}" quando houver; mesma luz, mesma escala dos elementos e o mesmo traço das ilustrações anteriores desta conversa.`] : ['- Esta é a primeira região (a de baixo): a parte inferior é a clareira de partida; a borda superior continua na região seguinte.']));
+    L.push('', 'COMPOSIÇÃO (siga o guia anexo e, se anexado, o layout de referência):',
       '- O cenário é o FUNDO do mapa. NÃO desenhe trilha, caminho, casas, círculos, números, faixas, placas nem texto: o aplicativo desenha tudo isso por cima.',
       '- Mantenha LIVRE e calmo (sem objetos grandes nem contrastes fortes) o corredor sinuoso e os 5 círculos marcados no guia; decoração só nas laterais e no fundo.',
       '- Iluminação suave vinda de cima, à esquerda. Bordas superior e inferior devem poder continuar nas regiões vizinhas (sem moldura, sem corte abrupto de cor).',

@@ -1,0 +1,104 @@
+{
+  "versao": 1,
+  "tipo": "cenarios-5-regioes",
+  "entrada": "art-work/entrada-cenarios",
+  "passos": [
+    {
+      "ordem": 1,
+      "lote": "cenario-regiao-1",
+      "regiao": "Floresta dos Sonhos",
+      "pasta": "art-work/pacote-cenarios/01-regiao-1",
+      "prompt": "art-work/pacote-cenarios/01-regiao-1/prompt.txt",
+      "guia": "art-work/pacote-cenarios/01-regiao-1/guia-regiao-1.png",
+      "anexos": [
+        "art-work/pacote-cenarios/00-anexos-comuns/folha-de-estilo.png",
+        "art-work/pacote-cenarios/01-regiao-1/guia-regiao-1.png"
+      ],
+      "proporcao": "800:1340",
+      "arquivoFinal": "800x1340",
+      "recursos": [
+        "map.region.1.bg",
+        "map.bottom.bg"
+      ],
+      "salvarComo": "art-work/entrada-cenarios/regiao-1.png",
+      "sha256Prompt": "3582d98e1b1f663fe9fd9c23eb0cc8697d6b6b9ae5ce404cfb7b012a3d088b36"
+    },
+    {
+      "ordem": 2,
+      "lote": "cenario-regiao-2",
+      "regiao": "Castelo das Fadas",
+      "pasta": "art-work/pacote-cenarios/02-regiao-2",
+      "prompt": "art-work/pacote-cenarios/02-regiao-2/prompt.txt",
+      "guia": "art-work/pacote-cenarios/02-regiao-2/guia-regiao-2.png",
+      "anexos": [
+        "art-work/pacote-cenarios/00-anexos-comuns/folha-de-estilo.png",
+        "art-work/pacote-cenarios/02-regiao-2/guia-regiao-2.png"
+      ],
+      "proporcao": "800:1080",
+      "arquivoFinal": "800x1080",
+      "recursos": [
+        "map.region.2.bg"
+      ],
+      "salvarComo": "art-work/entrada-cenarios/regiao-2.png",
+      "sha256Prompt": "c93a03961b891d32abaae9b12e2c4be4e1c165c6c1ae46c6a0fe862fcb6f5c48"
+    },
+    {
+      "ordem": 3,
+      "lote": "cenario-regiao-3",
+      "regiao": "Lago Cristalino",
+      "pasta": "art-work/pacote-cenarios/03-regiao-3",
+      "prompt": "art-work/pacote-cenarios/03-regiao-3/prompt.txt",
+      "guia": "art-work/pacote-cenarios/03-regiao-3/guia-regiao-3.png",
+      "anexos": [
+        "art-work/pacote-cenarios/00-anexos-comuns/folha-de-estilo.png",
+        "art-work/pacote-cenarios/03-regiao-3/guia-regiao-3.png"
+      ],
+      "proporcao": "800:1080",
+      "arquivoFinal": "800x1080",
+      "recursos": [
+        "map.region.3.bg"
+      ],
+      "salvarComo": "art-work/entrada-cenarios/regiao-3.png",
+      "sha256Prompt": "c6dfa388975616afa99a65aa1dd84f09c9501a25804bda764cee1c131779f34f"
+    },
+    {
+      "ordem": 4,
+      "lote": "cenario-regiao-4",
+      "regiao": "Montanhas da Coragem",
+      "pasta": "art-work/pacote-cenarios/04-regiao-4",
+      "prompt": "art-work/pacote-cenarios/04-regiao-4/prompt.txt",
+      "guia": "art-work/pacote-cenarios/04-regiao-4/guia-regiao-4.png",
+      "anexos": [
+        "art-work/pacote-cenarios/00-anexos-comuns/folha-de-estilo.png",
+        "art-work/pacote-cenarios/04-regiao-4/guia-regiao-4.png"
+      ],
+      "proporcao": "800:1080",
+      "arquivoFinal": "800x1080",
+      "recursos": [
+        "map.region.4.bg"
+      ],
+      "salvarComo": "art-work/entrada-cenarios/regiao-4.png",
+      "sha256Prompt": "79f806b116ffa5613891f98c20fd9666d6f1cbed5e206c741736925f02706435"
+    },
+    {
+      "ordem": 5,
+      "lote": "cenario-regiao-5",
+      "regiao": "Jardim da Magia",
+      "pasta": "art-work/pacote-cenarios/05-regiao-5",
+      "prompt": "art-work/pacote-cenarios/05-regiao-5/prompt.txt",
+      "guia": "art-work/pacote-cenarios/05-regiao-5/guia-regiao-5.png",
+      "anexos": [
+        "art-work/pacote-cenarios/00-anexos-comuns/folha-de-estilo.png",
+        "art-work/pacote-cenarios/05-regiao-5/guia-regiao-5.png"
+      ],
+      "proporcao": "800:1340",
+      "arquivoFinal": "800x1340",
+      "recursos": [
+        "map.region.5.bg",
+        "map.top.bg"
+      ],
+      "salvarComo": "art-work/entrada-cenarios/regiao-5.png",
+      "sha256Prompt": "a06b4b5294d3a2ffc892cbdca87e9d576358521757da8592e94bb1eaceaa59c5"
+    }
+  ]
+}

@@ -306,16 +306,17 @@ describe('interface de comandos e arquivos versionados', () => {
       expect(readFileSync(versionado, 'utf8'), f).toBe(readFileSync(join(r.pasta, f), 'utf8'));
     }
   });
-  it('o registro versionado cobre todos os lotes; o piloto avançou, mas nunca aprovado/integrado sem ordem', () => {
+  it('o registro versionado cobre todos os lotes; o piloto pode estar em qualquer estado do fluxo', () => {
     const reg = JSON.parse(readFileSync(join(__dirname, '../../art-work/registro.json'), 'utf8')) as { lotes: Array<{ id: string; estado: string }> };
     expect(reg.lotes.map((l) => l.id)).toEqual(plano.lotes.map((l) => l.id));
-    expect(['aguardando_geracao', 'recebido', 'processado', 'em_revisao']).toContain(reg.lotes.find((l) => l.id === PILOTO_ID)!.estado);
-    expect(reg.lotes.filter((l) => l.id !== PILOTO_ID).every((l) => l.estado === 'planejado')).toBe(true);
+    expect(['aguardando_geracao', 'recebido', 'processado', 'em_revisao', 'aprovado', 'integrado']).toContain(reg.lotes.find((l) => l.id === PILOTO_ID)!.estado);
+    expect(reg.lotes.filter((l) => l.id !== PILOTO_ID).every((l) => ['planejado', 'aguardando_geracao'].includes(l.estado))).toBe(true);
   });
-  it('nada foi integrado ao app: manifesto sem pacote e public/art inexistente', () => {
-    const man = JSON.parse(readFileSync(join(__dirname, '../../src/art/manifest.json'), 'utf8'));
-    expect(man).toEqual({ schema: 1, activePack: null, packs: {} });
-    expect(existsSync(join(__dirname, '../../public/art'))).toBe(false);
+  it('o manifesto integrado contém exatamente os seis recursos aprovados do piloto, com arquivos presentes', () => {
+    const man = JSON.parse(readFileSync(join(__dirname, '../../src/art/manifest.json'), 'utf8')) as { activePack: string; packs: Record<string, { dir: string; assets: Record<string, { file: string }> }> };
+    expect(man.activePack).toBe('v1');
+    expect(Object.keys(man.packs.v1.assets).sort()).toEqual([...PILOTO_IDS].sort());
+    for (const e of Object.values(man.packs.v1.assets)) expect(existsSync(join(__dirname, '../../public/art/v1', e.file)), e.file).toBe(true);
   });
 });
 

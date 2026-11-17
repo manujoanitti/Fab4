@@ -60,3 +60,7 @@ nenhuma imagem produzida, nada integrado ao app, manifesto sem pacote ativo.
   `art-work/lotes/piloto-marcos-regiao-1/ajustes.json` (escala por corpo com grupo, anel por vão, marco maior, faixa em fatias, áreas de texto).
 - Pipeline: `scripts/art/lib/corpo.ts` (disco inscrito, escala por grupo), `ajustes.ts`, limpeza de resíduo de fundo-chave, `textArea`/`slice`/`box`/`offset` no manifesto proposto.
 - Renderização no app (fatias, posição do texto, halo cedendo ao anel) **ainda não aplicada**: `proposta-app.patch` (aplica limpo em HEAD; golden do fallback inalterado). Aguarda aprovação.
+
+### Piloto aprovado e integrado (pacote `v1` ativo; nada publicado/mergeado)
+Seis recursos (`map.node.{locked,available,done,selected}`, `map.start`, `map.ribbon.1`) integrados em `public/art/v1` + `src/art/manifest.json`; `proposta-app.patch` aplicado (fatias, `textArea`, halo cede ao anel; fallback idêntico ao golden).
+Pendências **não bloqueantes**: (1) proximidade entre o marco Início e a fase 1.1 (~12 px); (2) possível distorção da textura da faixa (miolo esticado ~130→216 px); (3) adequar as faixas das demais regiões (largura por recurso; "Etapa 4 · Montanhas da Coragem" tem texto de ~245 px).

@@ -1,0 +1,12 @@
+{
+  "pacote": "v1",
+  "lote": "cenario-regiao-5",
+  "assets": {
+    "map.top.bg": {
+      "file": "map/top-bg@2x.webp"
+    },
+    "map.region.5.bg": {
+      "file": "map/region-5-bg@2x.webp"
+    }
+  }
+}

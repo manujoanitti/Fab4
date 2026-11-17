@@ -1,0 +1,58 @@
+{
+  "versao": 1,
+  "lote": {
+    "id": "cenario-regiao-4",
+    "titulo": "Cenário da Região 4 — Montanhas da Coragem",
+    "tipo": "cenario",
+    "prioridade": "P1",
+    "lote": 4,
+    "ordem": 5,
+    "dependeDe": [
+      "cenario-regiao-3"
+    ],
+    "ids": [
+      "map.region.4.bg"
+    ],
+    "pacote": "v1",
+    "referencias": [
+      {
+        "arquivo": "art-work/referencias/folha-de-estilo.png",
+        "descricao": "Folha de estilo visual aprovada (traço, paleta, atmosfera)",
+        "obrigatoria": true
+      },
+      {
+        "arquivo": "art-work/referencias/layout-regiao-4.png",
+        "descricao": "Layout de referência da Região 4 (opcional: use se você tiver)",
+        "obrigatoria": false
+      },
+      {
+        "arquivo": "docs/arte/guias/regiao-4.png",
+        "obrigatoria": true,
+        "descricao": "Guia de layout com a posição real das 5 casas, o corredor da trilha e as zonas livres"
+      }
+    ],
+    "cenario": {
+      "regiao": 4,
+      "comBase": false,
+      "comTopo": false,
+      "px": {
+        "w": 800,
+        "h": 1080
+      },
+      "partes": [
+        {
+          "id": "map.region.4.bg",
+          "arquivo": "map/region-4-bg@2x.webp",
+          "y": 0,
+          "h": 1080,
+          "formato": "webp",
+          "maxKB": 450
+        }
+      ]
+    },
+    "observacoes": [
+      "Entrega o cenário como camada de FUNDO: a trilha, as casas, a faixa e o véu continuam sendo desenhados pelo app.",
+      "A arte NÃO deve conter trilha, casas, números nem texto; deixe livres o corredor e os círculos das casas."
+    ]
+  }
+}

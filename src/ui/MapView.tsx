@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { SvgArt } from '../art/components';
+import { SvgArt, artTextSpot } from '../art/components';
 import { useArt, useArtEnv } from '../art/context';
 import { ART } from '../art/ids';
 import type { ArtStateName } from '../art/types';
@@ -210,7 +210,8 @@ function PhaseNode({ p, x, y, isDone, isNext, selected, priority, onSelect }: { 
       onClick={() => onSelect(p)}
       onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && onSelect(p)}
     >
-      {isNext && <circle r="30" className="pulse" fill={c} opacity=".35" />}
+      {/* com arte, o halo pulsante cede lugar ao anel de seleção (evita sobreposição de dois indicadores) */}
+      {isNext && !(selected && art) && <circle r="30" className="pulse" fill={c} opacity=".35" />}
       {art ? (
         <>
           <circle r="28" fill="transparent" />
@@ -226,6 +227,42 @@ function PhaseNode({ p, x, y, isDone, isNext, selected, priority, onSelect }: { 
       ) : <text y="5" textAnchor="middle" className="node-label" fill={locked ? '#9e9e9e' : '#37474f'}>{phaseLabel(p)}</text>}
       {isDone && <text y="-30" textAnchor="middle" className="node-mini">{phaseLabel(p)}</text>}
     </g>
+  );
+}
+
+/** Faixa do nome da região: arte (inclusive em fatias adaptáveis) com o texto desenhado pelo app dentro da área reservada. */
+function RegionRibbon({ stage, name, sub, priority }: { stage: number; name: string; sub: string; priority: 'high' | 'low' }) {
+  const art = useArt(ART.map.ribbon(stage), priority);
+  const c = STAGE_COLORS[stage - 1];
+  const spot = artTextSpot(art, { x: 0, y: 0 });
+  return (
+    <>
+      <SvgArt ids={ART.map.ribbon(stage)} at={{ x: 0, y: 0 }} priority={priority}
+        fallback={<rect x="-118" y="-17" width="236" height="34" rx="17" fill={c} stroke="#fff" strokeWidth="3" />} />
+      {spot ? (
+        <text textAnchor="middle" x={spot.cx} y={spot.cy + 5} className="ribbon-text" stroke="#a23d6b" strokeWidth="3" strokeLinejoin="round" paintOrder="stroke">Etapa {stage} · {name}</text>
+      ) : (
+        <text textAnchor="middle" y="5" className="ribbon-text">Etapa {stage} · {name}</text>
+      )}
+      <text textAnchor="middle" y="36" className="ribbon-sub">{sub}</text>
+    </>
+  );
+}
+
+/** Marco "Início": a base do poste é a âncora da arte; o texto vai para a área reservada na placa (ou na posição padrão sem arte). */
+function StartSign({ priority }: { priority: 'high' | 'low' }) {
+  const art = useArt(ART.map.start, priority);
+  const spot = artTextSpot(art, { x: 0, y: 46 });
+  return (
+    <>
+      <SvgArt ids={ART.map.start} at={{ x: 0, y: 46 }} priority={priority}
+        fallback={<><rect x="-4" y="0" width="8" height="46" fill="#8d6e63" /><rect x="-34" y="-8" width="72" height="30" rx="8" fill="#e8c28c" stroke="#a1743d" strokeWidth="2" /></>} />
+      {spot ? (
+        <text x={spot.cx} y={spot.cy + 5} textAnchor="middle" className="sign-text" stroke="#fff1d6" strokeWidth="3" strokeLinejoin="round" paintOrder="stroke">Início</text>
+      ) : (
+        <text x="2" y="12" textAnchor="middle" className="sign-text">Início</text>
+      )}
+    </>
   );
 }
 
@@ -355,13 +392,9 @@ export default function MapView({ state, onSelect, onBonus, selected = null }: M
         {RULES.stages.map((st) => {
           const unlocked = stageUnlocked(state, st.stage);
           const finished = stageCompleted(state, st.stage);
-          const c = STAGE_COLORS[st.stage - 1];
           return (
             <g key={st.stage} transform={`translate(200,${regionTop(st.stage) + 36})`} data-testid={`region-${st.stage}`} data-unlocked={unlocked} data-completed={finished}>
-              <SvgArt ids={ART.map.ribbon(st.stage)} at={{ x: 0, y: 0 }} priority={prio(st.stage)}
-                fallback={<rect x="-118" y="-17" width="236" height="34" rx="17" fill={c} stroke="#fff" strokeWidth="3" />} />
-              <text textAnchor="middle" y="5" className="ribbon-text">Etapa {st.stage} · {st.name}</text>
-              <text textAnchor="middle" y="36" className="ribbon-sub">{finished ? '✓ etapa concluída' : unlocked ? '' : '🔒 conclua a etapa anterior'}</text>
+              <RegionRibbon stage={st.stage} name={st.name} sub={finished ? '✓ etapa concluída' : unlocked ? '' : '🔒 conclua a etapa anterior'} priority={prio(st.stage)} />
             </g>
           );
         })}
@@ -373,9 +406,7 @@ export default function MapView({ state, onSelect, onBonus, selected = null }: M
 
         {/* Início (a base do poste é a âncora da arte; o texto é do app) */}
         <g transform={`translate(${START.x - 80},${START.y - 8})`}>
-          <SvgArt ids={ART.map.start} at={{ x: 0, y: 46 }} priority={prio(1)}
-            fallback={<><rect x="-4" y="0" width="8" height="46" fill="#8d6e63" /><rect x="-34" y="-8" width="72" height="30" rx="8" fill="#e8c28c" stroke="#a1743d" strokeWidth="2" /></>} />
-          <text x="2" y="12" textAnchor="middle" className="sign-text">Início</text>
+          <StartSign priority={prio(1)} />
         </g>
 
         {/* casas */}

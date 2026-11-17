@@ -83,6 +83,10 @@ arquivos gerados (`prompt*`, `processamento.json`): um arquivo opcional `art-wor
 Também há uma limpeza geral de **resíduo de fundo-chave** dentro do desenho (frestas entre folhas onde o verde vazou misturado pela compressão JPEG): só age perto do
 fundo já removido e em pixels com excesso de cor-chave > 40 (paletas pastel/oliva do projeto ficam abaixo de 35); manchas grandes no meio do objeto continuam sendo acusadas pelo QA.
 
+## Cenários das 5 regiões em lote
+`npm run art:cenarios -- pacote` monta `art-work/pacote-cenarios/` (prompts temáticos, guias, manifestos e LEIA-ME para gerar as 5 imagens numa única sessão do Gemini);
+`npm run art:cenarios -- processar` processa as imagens entregues em `art-work/entrada-cenarios/regiao-N.png` e gera os relatórios. Não aprova nem integra.
+
 ## Quando exige revisão humana
 Sempre: estilo, coerência com a folha de estilo e com a Bianca, legibilidade em tela pequena, sombras e brilhos delicados (o recorte por fundo chapado pode comê-los ou deixar halo),
 elementos que parecem com a cor do fundo, e qualquer ⚠️/⛔. A prancha `revisao/conferencia.png` mostra cada recurso sobre xadrez, fundo escuro e claro, com ID e status.

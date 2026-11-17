@@ -14,6 +14,7 @@ const AJUDA = `Pipeline de produção gráfica — comandos (npm run art:<comand
   art:integrate <lote>             copia o lote aprovado para public/art e atualiza o manifesto: --confirmar [--ativar]
   art:status  <lote>               estado, histórico e aprovações de um lote
   art:reopen  <lote>               volta o lote para "aguardando geração" (refazer a imagem)
+  art:cenarios pacote|processar     monta o pacote de produção dos 5 cenários / processa as 5 imagens entregues em art-work/entrada-cenarios
   art:validate                     valida o pacote final (manifesto × catálogo × arquivos)
 `;
 
@@ -45,6 +46,22 @@ async function main() {
       console.log('\n===== PROMPT (copie tudo abaixo) =====\n'); console.log(r.texto); console.log('\n===== FIM DO PROMPT =====');
       console.log(`\nDepois de gerar a imagem:  npm run art:process -- ${r.lote.id} caminho/da/imagem.png`);
       return;
+    }
+    case 'cenarios': {
+      const { cmdCenariosPacote, cmdCenariosProcessar } = await import('./lib/cenarios');
+      if (positionals[0] === 'pacote') {
+        const r = await cmdCenariosPacote(amb);
+        console.log(`Pacote pronto em ${r.raiz}/ (leia ${r.raiz}/LEIA-ME.md)`);
+        for (const p of r.passos) console.log(`  ${p.ordem}. ${p.regiao}: ${p.prompt}`);
+        return;
+      }
+      if (positionals[0] === 'processar') {
+        const r = await cmdCenariosProcessar(amb, undefined, { forcar: values.forcar });
+        for (const x of r) console.log(x.presente ? `  ${x.lote}: ${x.resumo!.ok} ok · ${x.resumo!.revisar} revisar · ${x.resumo!.falha} falha — ${x.relatorio}` : `  ${x.lote}: imagem NÃO entregue`);
+        console.log('\nNada foi aprovado nem integrado. Aprovação artística: npm run art:approve -- <lote> --todos');
+        return;
+      }
+      throw new Error('uso: npm run art:cenarios -- pacote | processar');
     }
     case 'process': {
       const [a, b] = positionals;

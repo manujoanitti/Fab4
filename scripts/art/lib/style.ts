@@ -24,3 +24,11 @@ export const FUNDOS: Array<{ hex: string; nome: string }> = [
 ];
 export const REGIOES = ['Floresta dos Sonhos', 'Castelo das Fadas', 'Lago Cristalino', 'Montanhas da Coragem', 'Jardim da Magia'];
 export const COR_REGIAO = ['rosa-framboesa (#EC6FA0)', 'lilás-ametista (#9B7FD4)', 'azul-lago (#4AAEE6)', 'dourado-âmbar (#F0B429)', 'rosa-magenta (#E8548C)'];
+/** Tema visual de cada região (cenário). `tons` espelham o degradê do visual atual (topo mais claro → base mais saturada) para as bordas das regiões se encontrarem. */
+export const REGIAO_TEMA: Array<{ tema: string; tons: string }> = [
+  { tema: 'floresta encantada de árvores arredondadas e frondosas, cogumelos grandes e delicados, flores silvestres e clareiras com vaga-lumes discretos', tons: 'verdes frescos e suaves (do verde-limão claro no alto ao verde-menta mais profundo embaixo), com toques de rosa e amarelo' },
+  { tema: 'castelo das fadas ao fundo, de torres finas em rosa e creme com telhados de ametista, bandeirinhas, árvores lilases, flores cor-de-rosa e nuvens como algodão', tons: 'lavanda e lilás-ametista (do lavanda quase branco no alto ao lilás mais profundo embaixo), com rosa e creme' },
+  { tema: 'lago cristalino de águas calmas azul-turquesa com vitórias-régias e flores, cristais translúcidos azulados e lilases nas margens e reflexos suaves', tons: 'azuis e turquesas (do azul-céu claro no alto ao azul-lago mais profundo embaixo), com toques de lilás' },
+  { tema: 'montanhas azul-acinzentadas de picos nevados, pinheiros, névoa baixa e, ao longe, uma bandeira dourada no ponto mais alto', tons: 'azul-acinzentados frios (do cinza-azulado muito claro no alto ao azul-aço suave embaixo), com pequenos toques de dourado' },
+  { tema: 'jardim mágico com um arco de flores cor-de-rosa, lanternas penduradas, árvores floridas em rosa e magenta e vaga-lumes; o horizonte do alto é um céu rosado de aurora, o final do reino', tons: 'rosas e magentas suaves (do rosa-pétala claro no alto ao rosa-framboesa mais profundo embaixo), com dourado nas lanternas' },
+];

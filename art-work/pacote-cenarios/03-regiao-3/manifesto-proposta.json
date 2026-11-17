@@ -1,0 +1,9 @@
+{
+  "pacote": "v1",
+  "lote": "cenario-regiao-3",
+  "assets": {
+    "map.region.3.bg": {
+      "file": "map/region-3-bg@2x.webp"
+    }
+  }
+}

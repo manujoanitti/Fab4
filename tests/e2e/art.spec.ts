@@ -16,7 +16,7 @@ test('carrega a arte do pacote com o caminho-base /Fab4/ (compatível com o GitH
   await expect(page.locator('html')).toHaveAttribute('data-art-pack', 'test');
   const bg = page.locator('[data-art="map.region.1.bg"]');
   await expect(bg).toBeAttached();
-  expect(await bg.getAttribute('href')).toBe('/Fab4/art/test/map/region-1-bg@2x.png');
+  expect((await bg.getAttribute('href'))!.replace(/\?v=[0-9a-f]+$/, '')).toBe('/Fab4/art/test/map/region-1-bg@2x.png'); // ?v= = hash de public/art (invalida cache)
   await expect(page.locator('[data-art="map.region.1.path"]')).toBeAttached();
   expect(artRequests.length).toBeGreaterThan(3);
   expect(artRequests.every((p) => p.startsWith('/Fab4/art/test/'))).toBe(true);

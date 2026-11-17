@@ -54,6 +54,8 @@ export function createArtRegistry({ manifest, defaults, base, packName, rev = ''
       anchor: e.anchor ?? d?.anchor ?? { x: 0.5, y: 0.5 },
       offset: e.offset ?? { x: 0, y: 0 },
       sprite: e.sprite ?? d?.sprite,
+      ...(e.textArea ? { textArea: e.textArea } : {}),
+      ...(e.slice ? { slice: e.slice, nativeBox: d?.box } : {}),
     };
   };
   const cache = new Map<string, ResolvedArt | null>();

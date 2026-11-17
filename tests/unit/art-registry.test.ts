@@ -81,8 +81,8 @@ describe('registro de recursos por ID lógico', () => {
 });
 
 describe('visual atual como fallback por padrão', () => {
-  it('o manifesto empacotado não tem pacote ativo (nenhuma arte externa até que seja registrada)', () => {
-    expect(bundledManifest).toMatchObject({ schema: 1, activePack: null });
-    expect(createArtRegistry({ manifest: bundledManifest, defaults, base: '/Fab4/' }).enabled).toBe(false);
+  it('sem pacote selecionado (?artpack=none) o app usa só o visual atual, mesmo com pacote integrado', () => {
+    expect(createArtRegistry({ manifest: bundledManifest, defaults, base: '/Fab4/', packName: null }).enabled).toBe(false);
+    expect(pickPack(bundledManifest, '?artpack=none')).toBeNull();
   });
 });

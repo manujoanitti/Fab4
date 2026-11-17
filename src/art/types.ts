@@ -21,6 +21,10 @@ export interface ArtEntry {
   /** Ajuste fino em unidades do mapa. */
   offset?: { x: number; y: number };
   sprite?: SpriteMeta;
+  /** Área reservada ao texto do app (frações do arquivo). Sem ela, o app usa a posição padrão do texto. */
+  textArea?: { x: number; y: number; w: number; h: number };
+  /** Recurso horizontal adaptável (3 fatias): frações da largura que são as pontas fixas (esquerda `l`, direita `r`); o miolo estica até a largura de `box`. */
+  slice?: { l: number; r: number };
 }
 /** Posições lógicas que um pacote pode redefinir (unidades do mapa; padrão = layout atual). */
 export interface LayoutOverride {
@@ -51,5 +55,9 @@ export interface ResolvedArt {
   anchor: ArtAnchor;
   offset: { x: number; y: number };
   sprite?: SpriteMeta;
+  textArea?: { x: number; y: number; w: number; h: number };
+  slice?: { l: number; r: number };
+  /** Tamanho nativo do catálogo (referência de escala das pontas de um recurso em fatias). */
+  nativeBox?: ArtBox;
 }
 export type ArtStatus = 'idle' | 'queued' | 'loading' | 'ok' | 'error';

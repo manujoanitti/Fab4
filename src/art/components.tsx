@@ -29,6 +29,35 @@ export function Icon({ id, fallback, fill, className, alt = '', priority }: { id
   return <img src={art.url} className={cls} alt={alt} aria-hidden={alt ? undefined : true} draggable={false} decoding="async" data-art={art.id} />;
 }
 
+/** Largura nativa (em unidades do mapa) do arquivo, na altura `h` da caixa: base da escala das pontas de um recurso em fatias. */
+const nativeWidth = (art: ResolvedArt, h: number) => (art.nativeBox ? (art.nativeBox.w / art.nativeBox.h) * h : h);
+/** Imagem horizontal adaptável: pontas na escala nativa, miolo esticado até a largura da caixa (sem mudar a altura). */
+function SlicedImage({ art, x, y, w, h, className, style, opacity, pointerEvents }: { art: ResolvedArt; x: number; y: number; w: number; h: number; className?: string; style?: CSSProperties; opacity?: number | string; pointerEvents?: 'none' | 'auto' }) {
+  const { l, r } = art.slice!;
+  const nat = nativeWidth(art, h);
+  const capL = l * nat, capR = r * nat, mid = Math.max(0, w - capL - capR);
+  const part = (f0: number, f1: number, px: number, pw: number, k: string) => (
+    <svg key={k} x={px} y={y} width={pw} height={h} viewBox={`${f0} 0 ${f1 - f0} 1`} preserveAspectRatio="none" overflow="hidden" className={className} style={style} opacity={opacity} pointerEvents={pointerEvents}>
+      <image href={art.url} x="0" y="0" width="1" height="1" preserveAspectRatio="none" />
+    </svg>
+  );
+  return <g data-art={art.id} data-sliced="true">{part(0, l, x, capL, 'l')}{part(l, 1 - r, x + capL, mid, 'm')}{part(1 - r, 1, x + capL + mid, capR, 'r')}</g>;
+}
+
+/** Centro e largura da área de texto do recurso (coordenadas do mapa), ou null se o recurso não declara `textArea`. */
+export function artTextSpot(art: ResolvedArt | null, at: { x: number; y: number }, box?: ArtBox): { cx: number; cy: number; w: number } | null {
+  const b = box ?? art?.box;
+  if (!art || !art.textArea || !b) return null;
+  const x0 = at.x - art.anchor.x * b.w + art.offset.x, y0 = at.y - art.anchor.y * b.h + art.offset.y;
+  const mapX = (f: number) => {
+    if (!art.slice) return f * b.w;
+    const { l, r } = art.slice, nat = nativeWidth(art, b.h), capL = l * nat, capR = r * nat, mid = Math.max(0, b.w - capL - capR);
+    return f <= l ? f * nat : f >= 1 - r ? b.w - (1 - f) * nat : capL + ((f - l) / (1 - l - r)) * mid;
+  };
+  const a = art.textArea, xa = mapX(a.x), xb = mapX(a.x + a.w);
+  return { cx: x0 + (xa + xb) / 2, cy: y0 + (a.y + a.h / 2) * b.h, w: xb - xa };
+}
+
 export interface SvgArtProps {
   ids: Ids;
   /** Ponto lógico + âncora/tamanho do recurso. */
@@ -54,6 +83,7 @@ export function SvgArt({ ids, at, rect, box, fallback = null, priority, classNam
   const x = rect ? rect.x : at!.x - art.anchor.x * w + art.offset.x;
   const y = rect ? rect.y : at!.y - art.anchor.y * h + art.offset.y;
   if (art.kind === 'sprite') return <SpriteStrip art={art} x={x} y={y} w={w} h={h} className={className} once={once} />;
+  if (art.slice && !rect) return <SlicedImage art={art} x={x} y={y} w={w} h={h} className={className} style={style} opacity={opacity} pointerEvents={pointerEvents} />;
   return <image href={art.url} x={x} y={y} width={w} height={h} preserveAspectRatio="none" className={className} style={style} opacity={opacity} pointerEvents={pointerEvents} data-art={art.id} />;
 }
 
