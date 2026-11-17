@@ -22,6 +22,24 @@ export function descreverEstrutura(f: Folha): string[] {
   return linhas;
 }
 
+/** Descrição geométrica das faixas (linhas) e áreas, derivada dos mesmos retângulos usados no guia e no processamento. */
+export function descreverFaixas(f: Folha): string[] {
+  const nomes = ['superior', 'do meio', 'inferior'];
+  const n = f.linhas.length;
+  const P = (v: number) => `${Math.round(v * 100)}%`;
+  const out: string[] = [`A imagem tem ${n} ${n === 1 ? 'faixa horizontal' : 'faixas horizontais'} empilhadas (de cima para baixo), com fundo livre entre elas. Posições em % da largura (x) e da altura (y) da imagem, medidas a partir do canto superior esquerdo:`];
+  f.linhas.forEach((l, i) => {
+    const cels = l.celulas.map((id) => f.celulas.find((c) => c.id === id)!);
+    const y0 = Math.min(...cels.map((c) => c.rect.y)), y1 = Math.max(...cels.map((c) => c.rect.y + c.rect.h));
+    const nome = n === 3 ? nomes[i] : `${i + 1}ª`;
+    const centrada = cels.length === 1 && Math.abs(cels[0].rect.x + cels[0].rect.w / 2 - 0.5) < 0.01;
+    out.push(`- FAIXA ${i + 1} (${nome}), y de ${P(y0)} a ${P(y1)}: ${cels.length} ${cels.length === 1 ? 'área' : 'áreas'}${cels.length > 1 ? ' lado a lado, igualmente espaçadas' : centrada ? ', centralizada horizontalmente' : ''}.`);
+    cels.forEach((c) => out.push(`    · área ${c.ordem}: x de ${P(c.rect.x)} a ${P(c.rect.x + c.rect.w)}, y de ${P(c.rect.y)} a ${P(c.rect.y + c.rect.h)}`));
+  });
+  out.push('- Todo o espaço fora dessas áreas é fundo chapado vazio.');
+  return out;
+}
+
 export function anexos(lote: LotePlano, existe: (arq: string) => boolean = existsSync): Array<Referencia & { presente: boolean | null }> {
   return lote.referencias.map((r) => ({ ...r, presente: r.gerada ? null : existe(r.arquivo) }));
 }
@@ -37,7 +55,8 @@ export function textoParaGemini(lote: LotePlano): string {
     L.push('', 'IDENTIDADE ARTÍSTICA (siga a folha de estilo anexa — mesmo traço, mesma paleta, mesma atmosfera):', identidade, '', 'EVITE:', evitar);
     L.push('', `ESTRUTURA DA PRANCHA (siga o guia de posições anexo; use-o SOMENTE como referência de posição — não reproduza linhas, cruzes, marcas nem números):`);
     L.push(`- Fundo: uma única cor chapada e uniforme, ${f.fundo} (${f.fundoNome}), em TODA a imagem, sem textura, sem gradiente, sem vinheta e sem sombra projetada no fundo.`);
-    L.push(`- A prancha tem ${f.linhas.length} ${f.linhas.length === 1 ? 'linha' : 'linhas'} e ${n} ${n === 1 ? 'célula' : 'células'}. Cada célula contém UM único elemento, centralizado, com folga livre de pelo menos ${pct(f.margemSeguranca)} do tamanho da célula em todos os lados.`);
+    L.push(`- A prancha tem ${n} ${n === 1 ? 'área de conteúdo' : 'áreas de conteúdo'} distribuídas em ${f.linhas.length} ${f.linhas.length === 1 ? 'faixa horizontal' : 'faixas horizontais'} (cada área é uma “célula”). Cada área contém UM único elemento, centralizado, com folga livre de pelo menos ${pct(f.margemSeguranca)} do tamanho da célula em todos os lados.`);
+    L.push('', ...descreverFaixas(f), '');
     L.push('- Nenhum elemento toca a borda da célula nem da imagem; nenhum elemento se sobrepõe a outro; cada elemento aparece por inteiro, sem cortes.');
     L.push('- NENHUM texto, letra, número, legenda, título, moldura, linha de grade ou marca d\'água em lugar algum da imagem.');
     L.push('', 'CONTEÚDO DAS CÉLULAS:', ...descreverEstrutura(f));

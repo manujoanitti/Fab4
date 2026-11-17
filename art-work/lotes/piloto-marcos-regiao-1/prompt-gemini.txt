@@ -14,7 +14,20 @@ EVITE:
 
 ESTRUTURA DA PRANCHA (siga o guia de posições anexo; use-o SOMENTE como referência de posição — não reproduza linhas, cruzes, marcas nem números):
 - Fundo: uma única cor chapada e uniforme, #00FF00 (verde puro), em TODA a imagem, sem textura, sem gradiente, sem vinheta e sem sombra projetada no fundo.
-- A prancha tem 3 linhas e 6 células. Cada célula contém UM único elemento, centralizado, com folga livre de pelo menos 10% do tamanho da célula em todos os lados.
+- A prancha tem 6 áreas de conteúdo distribuídas em 3 faixas horizontais (cada área é uma “célula”). Cada área contém UM único elemento, centralizado, com folga livre de pelo menos 10% do tamanho da célula em todos os lados.
+
+A imagem tem 3 faixas horizontais empilhadas (de cima para baixo), com fundo livre entre elas. Posições em % da largura (x) e da altura (y) da imagem, medidas a partir do canto superior esquerdo:
+- FAIXA 1 (superior), y de 6% a 27%: 4 áreas lado a lado, igualmente espaçadas.
+    · área 1: x de 3% a 24%, y de 6% a 27%
+    · área 2: x de 27% a 49%, y de 6% a 27%
+    · área 3: x de 52% a 73%, y de 6% a 27%
+    · área 4: x de 76% a 97%, y de 6% a 27%
+- FAIXA 2 (do meio), y de 33% a 69%: 1 área, centralizada horizontalmente.
+    · área 5: x de 23% a 77%, y de 33% a 69%
+- FAIXA 3 (inferior), y de 75% a 94%: 1 área, centralizada horizontalmente.
+    · área 6: x de 3% a 97%, y de 75% a 94%
+- Todo o espaço fora dessas áreas é fundo chapado vazio.
+
 - Nenhum elemento toca a borda da célula nem da imagem; nenhum elemento se sobrepõe a outro; cada elemento aparece por inteiro, sem cortes.
 - NENHUM texto, letra, número, legenda, título, moldura, linha de grade ou marca d'água em lugar algum da imagem.
 

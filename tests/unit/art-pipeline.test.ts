@@ -106,7 +106,13 @@ describe('prompt do Gemini', () => {
     const f = piloto.folha!;
     expect(texto).toContain(`${f.aspecto[0]}:${f.aspecto[1]}`);
     expect(texto).toContain(f.fundo);
-    expect(texto).toContain(`${f.linhas.length} linhas e ${f.celulas.length} células`);
+    expect(texto).toContain(`${f.celulas.length} áreas de conteúdo distribuídas em ${f.linhas.length} faixas horizontais`);
+    // as coordenadas do texto vêm dos mesmos retângulos do guia/processamento
+    const P = (v: number) => `${Math.round(v * 100)}%`;
+    for (const c of f.celulas) expect(texto).toContain(`área ${c.ordem}: x de ${P(c.rect.x)} a ${P(c.rect.x + c.rect.w)}, y de ${P(c.rect.y)} a ${P(c.rect.y + c.rect.h)}`);
+    expect(texto).toMatch(/FAIXA 1 \(superior\).*4 áreas lado a lado/);
+    expect(texto).toMatch(/FAIXA 2 \(do meio\).*1 área, centralizada/);
+    expect(texto).toMatch(/FAIXA 3 \(inferior\)/);
     expect(texto).toMatch(/NENHUM texto, letra, número/);
     expect(texto).toMatch(/folga livre de pelo menos 10%/);
     for (const c of f.celulas) expect(texto).toContain(`  ${c.ordem}. [célula`);
