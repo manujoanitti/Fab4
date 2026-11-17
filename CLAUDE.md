@@ -56,4 +56,5 @@ Repositório **público**: nunca commitar dados reais da criança, backups (`*re
 Só `VITE_SUPABASE_URL` e a chave `anon` no front-end. Todas as tabelas com RLS; escritas só por RPC; `anon` sem acesso.
 
 ## Continuidade
+0. Retomando de outra sessão: ler `docs/CONTINUIDADE_SESSAO.md` (estado, próximo passo exato, restrições).
 1. Ler `docs/progresso.md` (feito / pendente / problemas). 2. Rodar `npm test`. 3. Implementar o próximo item, testar, atualizar `progresso.md`, commitar.
