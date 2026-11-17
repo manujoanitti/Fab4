@@ -1,0 +1,271 @@
+{
+  "lote": "piloto-marcos-regiao-1",
+  "recursos": [
+    {
+      "id": "map.node.locked",
+      "arquivo": "map/node-locked@2x.webp",
+      "status": "revisar",
+      "problemas": [
+        {
+          "codigo": "invade-celula",
+          "severidade": "aviso",
+          "msg": "o elemento ultrapassa os limites da sua célula (pode invadir a vizinha)"
+        },
+        {
+          "codigo": "apertada",
+          "severidade": "aviso",
+          "msg": "elemento reduzido a 73% para caber na margem (célula apertada)"
+        }
+      ],
+      "metricas": {
+        "cobertura": 0.41412353515625,
+        "bytes": 4650,
+        "reducao": 0.7343412526997841,
+        "residuoFundo": 0,
+        "franja": 0,
+        "margemMin": 0.1015625,
+        "px": {
+          "w": 128,
+          "h": 128
+        }
+      },
+      "aprovacaoArtistica": "pendente"
+    },
+    {
+      "id": "map.node.available",
+      "arquivo": "map/node-available@2x.webp",
+      "status": "revisar",
+      "problemas": [
+        {
+          "codigo": "apertada",
+          "severidade": "aviso",
+          "msg": "elemento reduzido a 80% para caber na margem (célula apertada)"
+        }
+      ],
+      "metricas": {
+        "cobertura": 0.48504638671875,
+        "bytes": 5978,
+        "reducao": 0.7962529274004685,
+        "residuoFundo": 0,
+        "franja": 0,
+        "margemMin": 0.1015625,
+        "px": {
+          "w": 128,
+          "h": 128
+        }
+      },
+      "aprovacaoArtistica": "pendente"
+    },
+    {
+      "id": "map.node.done",
+      "arquivo": "map/node-done@2x.webp",
+      "status": "revisar",
+      "problemas": [
+        {
+          "codigo": "apertada",
+          "severidade": "aviso",
+          "msg": "elemento reduzido a 74% para caber na margem (célula apertada)"
+        }
+      ],
+      "metricas": {
+        "cobertura": 0.41650390625,
+        "bytes": 6806,
+        "reducao": 0.7359307359307361,
+        "residuoFundo": 0,
+        "franja": 0,
+        "margemMin": 0.1015625,
+        "px": {
+          "w": 128,
+          "h": 128
+        }
+      },
+      "aprovacaoArtistica": "pendente"
+    },
+    {
+      "id": "map.node.selected",
+      "arquivo": "map/node-selected@2x.webp",
+      "status": "revisar",
+      "problemas": [
+        {
+          "codigo": "apertada",
+          "severidade": "aviso",
+          "msg": "elemento reduzido a 74% para caber na margem (célula apertada)"
+        }
+      ],
+      "metricas": {
+        "cobertura": 0.12322541551246538,
+        "bytes": 10234,
+        "reducao": 0.7359307359307359,
+        "residuoFundo": 0,
+        "franja": 0,
+        "margemMin": 0.09868421052631579,
+        "px": {
+          "w": 152,
+          "h": 152
+        }
+      },
+      "aprovacaoArtistica": "pendente"
+    },
+    {
+      "id": "map.start",
+      "arquivo": "map/start@2x.webp",
+      "status": "revisar",
+      "problemas": [
+        {
+          "codigo": "invade-celula",
+          "severidade": "aviso",
+          "msg": "o elemento ultrapassa os limites da sua célula (pode invadir a vizinha)"
+        },
+        {
+          "codigo": "apertada",
+          "severidade": "aviso",
+          "msg": "elemento reduzido a 74% para caber na margem (célula apertada)"
+        }
+      ],
+      "metricas": {
+        "cobertura": 0.20231119791666666,
+        "bytes": 7942,
+        "reducao": 0.7431192660550459,
+        "residuoFundo": 0.00020112630732099757,
+        "franja": 0,
+        "margemMin": 0.1015625,
+        "px": {
+          "w": 192,
+          "h": 128
+        }
+      },
+      "aprovacaoArtistica": "pendente"
+    },
+    {
+      "id": "map.ribbon.1",
+      "arquivo": "map/ribbon-1@2x.webp",
+      "status": "revisar",
+      "problemas": [
+        {
+          "codigo": "invade-celula",
+          "severidade": "aviso",
+          "msg": "o elemento ultrapassa os limites da sua célula (pode invadir a vizinha)"
+        }
+      ],
+      "metricas": {
+        "cobertura": 0.3363064236111111,
+        "bytes": 14410,
+        "reducao": 0.8196185286103543,
+        "residuoFundo": 0,
+        "franja": 0,
+        "margemMin": 0.09375,
+        "px": {
+          "w": 480,
+          "h": 96
+        }
+      },
+      "aprovacaoArtistica": "pendente"
+    }
+  ],
+  "avisosGerais": [],
+  "deteccao": {
+    "largura": 2000,
+    "altura": 2000,
+    "celulas": [
+      {
+        "id": "map.node.locked",
+        "rect": {
+          "x": 60.00000000000006,
+          "y": 119.74999999999997,
+          "w": 425,
+          "h": 425
+        },
+        "bbox": {
+          "x0": 61,
+          "y0": 127,
+          "x1": 479,
+          "y1": 589
+        }
+      },
+      {
+        "id": "map.node.available",
+        "rect": {
+          "x": 545,
+          "y": 119.74999999999997,
+          "w": 425,
+          "h": 425
+        },
+        "bbox": {
+          "x0": 544,
+          "y0": 126,
+          "x1": 967,
+          "y1": 552
+        }
+      },
+      {
+        "id": "map.node.done",
+        "rect": {
+          "x": 1030,
+          "y": 119.74999999999997,
+          "w": 425,
+          "h": 425
+        },
+        "bbox": {
+          "x0": 1013,
+          "y0": 132,
+          "x1": 1474,
+          "y1": 554
+        }
+      },
+      {
+        "id": "map.node.selected",
+        "rect": {
+          "x": 1515.0000000000002,
+          "y": 119.74999999999997,
+          "w": 425,
+          "h": 425
+        },
+        "bbox": {
+          "x0": 1498,
+          "y0": 116,
+          "x1": 1959,
+          "y1": 565
+        }
+      },
+      {
+        "id": "map.start",
+        "rect": {
+          "x": 459.99999999999994,
+          "y": 664.4999999999999,
+          "w": 1080,
+          "h": 720
+        },
+        "bbox": {
+          "x0": 659,
+          "y0": 640,
+          "x1": 1360,
+          "y1": 1511
+        }
+      },
+      {
+        "id": "map.ribbon.1",
+        "rect": {
+          "x": 60.00000000000006,
+          "y": 1504.2499999999998,
+          "w": 1880,
+          "h": 376
+        },
+        "bbox": {
+          "x0": 217,
+          "y0": 1559,
+          "x1": 1787,
+          "y1": 1925
+        }
+      }
+    ]
+  },
+  "fundoDetectado": "#03FC04",
+  "arquivosSaida": [
+    "art-work/lotes/piloto-marcos-regiao-1/saida/art/v1/map/node-locked@2x.webp",
+    "art-work/lotes/piloto-marcos-regiao-1/saida/art/v1/map/node-available@2x.webp",
+    "art-work/lotes/piloto-marcos-regiao-1/saida/art/v1/map/node-done@2x.webp",
+    "art-work/lotes/piloto-marcos-regiao-1/saida/art/v1/map/node-selected@2x.webp",
+    "art-work/lotes/piloto-marcos-regiao-1/saida/art/v1/map/start@2x.webp",
+    "art-work/lotes/piloto-marcos-regiao-1/saida/art/v1/map/ribbon-1@2x.webp"
+  ]
+}

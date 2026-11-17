@@ -1,0 +1,24 @@
+{
+  "pacote": "v1",
+  "lote": "piloto-marcos-regiao-1",
+  "assets": {
+    "map.node.locked": {
+      "file": "map/node-locked@2x.webp"
+    },
+    "map.node.available": {
+      "file": "map/node-available@2x.webp"
+    },
+    "map.node.done": {
+      "file": "map/node-done@2x.webp"
+    },
+    "map.node.selected": {
+      "file": "map/node-selected@2x.webp"
+    },
+    "map.start": {
+      "file": "map/start@2x.webp"
+    },
+    "map.ribbon.1": {
+      "file": "map/ribbon-1@2x.webp"
+    }
+  }
+}
