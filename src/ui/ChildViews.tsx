@@ -96,7 +96,6 @@ export function MapScreen() {
   const [bonus, setBonus] = useState(false);
   return (
     <>
-      <Stats />
       <MapView state={state} onSelect={setPhase} onBonus={() => setBonus(true)} />
       {phase && <PhaseSheet phase={phase} onClose={() => setPhase(null)} />}
       {bonus && <BonusSheet onClose={() => setBonus(false)} />}

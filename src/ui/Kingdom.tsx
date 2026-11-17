@@ -4,7 +4,7 @@ import { RULES, phaseLabel } from '../domain/rules';
 import { campaignComplete, stageCompleted } from '../domain/selectors';
 import type { OpOutcome } from '../domain/types';
 import type { SyncManager } from '../sync/syncManager';
-import { AchievementsScreen, GoalsScreen, MapScreen } from './ChildViews';
+import { AchievementsScreen, GoalsScreen, MapScreen, Stats } from './ChildViews';
 import { Confetti } from './Celebration';
 import { Ctx, useSyncView, type AppCtx } from './ctx';
 import { GamesScreen } from './Games';
@@ -53,7 +53,7 @@ export default function Kingdom({ sm, isDemo, exit, signOut }: { sm: SyncManager
 
   const notify = useCallback((msg: string, kind: 'ok' | 'error' = 'ok') => {
     const id = ++toastId.current;
-    setToasts((t) => [...t, { id, msg, kind }]);
+    setToasts((t) => [...t.filter((x) => x.msg !== msg), { id, msg, kind }].slice(-2));
     setTimeout(() => setToasts((t) => t.filter((x) => x.id !== id)), 3500);
   }, []);
   const act = useCallback(async (input: OpInput): Promise<OpOutcome> => {
@@ -72,13 +72,14 @@ export default function Kingdom({ sm, isDemo, exit, signOut }: { sm: SyncManager
     const p = prev.current;
     prev.current = { phases, medals, complete };
     if (!p) return; // primeira carga: sem festa
-    if (phases > p.phases) {
+    const dPhases = phases - p.phases, dMedals = medals - p.medals;
+    if (dPhases > 0) {
       const last = state.phases.reduce((a, x) => Math.max(a, x.phase), 0);
       const stage = Math.ceil(last / RULES.phasesPerStage);
       if (complete && !p.complete) { setBurst((b) => ({ n: b.n + 1, big: true })); setBanner('🎉 O Reino da Bianca foi conquistado! Todas as 25 fases e o bônus final!'); }
       else if (last % RULES.phasesPerStage === 0 && stageCompleted(state, stage)) { setBurst((b) => ({ n: b.n + 1, big: true })); setBanner(`🏰 Etapa concluída: ${RULES.stages[stage - 1].name}! ${RULES.stages[stage - 1].coins} 🪙 + ${RULES.stages[stage - 1].bigStamps} 🏅 + uma recompensa!`); }
-      else { setBurst((b) => ({ n: b.n + 1, big: false })); notify(`⭐ Fase ${phaseLabel(last)} concluída!`); }
-    } else if (medals > p.medals) { setBurst((b) => ({ n: b.n + 1, big: false })); notify('🌟 Selo do dia conquistado! +1 crédito de jogo'); }
+      else { setBurst((b) => ({ n: b.n + 1, big: false })); notify(dPhases > 1 ? `⭐ ${dPhases} fases concluídas!` : `⭐ Fase ${phaseLabel(last)} concluída!`); }
+    } else if (dMedals > 0) { setBurst((b) => ({ n: b.n + 1, big: false })); notify(dMedals > 1 ? `🌟 ${dMedals} selos do dia!` : '🌟 Selo do dia conquistado! +1 crédito de jogo'); }
   }, [state, phases, medals, complete, notify]);
 
   const canBeGuardian = sv.role === 'guardian';
@@ -112,8 +113,9 @@ export default function Kingdom({ sm, isDemo, exit, signOut }: { sm: SyncManager
           <button className={`sync-badge ${sv.status}`} data-testid="sync-badge" data-status={sv.status} onClick={() => { if (ctx.guardianMode) setTab('more'); else void sm.sync(); }} aria-label={`Estado: ${SYNC_LABEL[sv.status]}`}>
             {SYNC_LABEL[sv.status]}{pendingN ? ` (${pendingN})` : ''}
           </button>
-          {canBeGuardian && <button className="btn mode" data-testid="mode-toggle" onClick={toggleMode}>{ctx.guardianMode ? '👧 Modo Bianca' : '🔒 Responsável'}</button>}
+          {canBeGuardian && <button className="btn mode" data-testid="mode-toggle" aria-label={ctx.guardianMode ? 'Voltar ao modo Bianca' : 'Entrar no modo responsável'} onClick={toggleMode}><span aria-hidden="true">{ctx.guardianMode ? '👧' : '🔒'}</span><span className="lbl"> {ctx.guardianMode ? 'Modo Bianca' : 'Responsável'}</span></button>}
         </header>
+        <Stats />
         <main className="content">
           {current === 'map' && <MapScreen />}
           {current === 'goals' && <GoalsScreen />}

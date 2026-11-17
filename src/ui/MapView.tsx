@@ -25,7 +25,7 @@ export function nodePos(phase: number): Pt {
   const s = stageOfPhase(phase);
   const i = (phase - 1) % RULES.phasesPerStage;
   const x = s % 2 ? XS[i] : MAP_W - XS[i];
-  return { x, y: regionTop(s) + RH - 80 - i * ((RH - 170) / 4) };
+  return { x, y: regionTop(s) + RH - 80 - i * ((RH - 205) / 4) };
 }
 const START: Pt = { x: 200, y: MAP_H - 85 };
 const BONUS: Pt = { x: 200, y: 62 };

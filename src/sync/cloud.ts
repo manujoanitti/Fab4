@@ -14,9 +14,9 @@ export function getClient(): SupabaseClient {
   return (client ??= createClient(url, anon, { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: false } }));
 }
 
-function mapError(e: { message?: string; code?: string; status?: number } | null): Error {
+export function mapError(e: { message?: string; code?: string; status?: number } | null): Error {
   const msg = e?.message ?? 'Erro desconhecido';
-  if (!navigator.onLine || /failed to fetch|networkerror|load failed|network request failed|fetch/i.test(msg) || e?.status === 0)
+  if ((typeof navigator !== 'undefined' && navigator.onLine === false) || /failed to fetch|networkerror|load failed|network request failed|fetch/i.test(msg) || e?.status === 0)
     return new NetworkError();
   if (/jwt|not authenticated|expired/i.test(msg) || e?.code === '28000') return new FatalSyncError('Sessão expirada. Entre novamente.', e?.code);
   if (e?.code === '42501') return new FatalSyncError('Você não participa desta campanha.', e.code);
