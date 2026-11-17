@@ -160,8 +160,10 @@ export class SyncManager {
     const pre = applyOp(view, op, { role: this.v.role, userId: this.backend.userId, now: op.at, optimistic: true });
     if (pre.outcome.status === 'rejected') return pre.outcome;
     if (pre.outcome.status === 'ok' && pre.outcome.duplicate) return pre.outcome; // nada a fazer
-    this.emit({ queue: [...this.v.queue, { op, status: 'pending', createdAt: op.at }] });
+    // Durabilidade primeiro: a fila é gravada (transação confirmada) ANTES de a tela mostrar o efeito otimista.
+    this.v = { ...this.v, queue: [...this.v.queue, { op, status: 'pending', createdAt: op.at }] };
     await this.persist();
+    this.emit({});
     void this.sync();
     return { status: 'ok' };
   }

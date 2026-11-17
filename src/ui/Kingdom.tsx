@@ -15,6 +15,9 @@ type Tab = 'map' | 'goals' | 'achv' | 'games' | 'review' | 'prizes' | 'credits' 
 const CHILD_TABS: [Tab, string, string][] = [['map', '🗺️', 'Mapa'], ['goals', '📝', 'Metas'], ['achv', '🏅', 'Conquistas'], ['games', '🎮', 'Jogos']];
 const GUARDIAN_TABS: [Tab, string, string][] = [['map', '🗺️', 'Mapa'], ['review', '📝', 'Hoje'], ['prizes', '🎁', 'Prêmios'], ['credits', '🎮', 'Créditos'], ['history', '📜', 'Histórico'], ['more', '⚙️', 'Mais']];
 
+/** Volta sozinho ao modo da Bianca após inatividade (proteção contra esquecimento em aparelho compartilhado). */
+const AUTO_LOCK_MS = 5 * 60 * 1000;
+
 const SYNC_LABEL: Record<string, string> = {
   loading: '⏳ Carregando', synced: '☁️ Sincronizado', syncing: '🔄 Sincronizando…', pending: '🕓 Alterações pendentes',
   offline: '📴 Offline', conflict: '⚠️ Conflito a resolver', error: '❌ Erro de sincronização',
@@ -30,7 +33,19 @@ export default function Kingdom({ sm, isDemo, exit, signOut }: { sm: SyncManager
   const [toasts, setToasts] = useState<{ id: number; msg: string; kind: 'ok' | 'error' }[]>([]);
   const [burst, setBurst] = useState({ n: 0, big: false });
   const [banner, setBanner] = useState<string | null>(null);
+  const [pinNoticeDismissed, setPinNoticeDismissed] = useState(false);
   const toastId = useRef(0);
+
+  // Bloqueio automático do modo responsável.
+  useEffect(() => {
+    if (!guardianMode) return;
+    let timer = setTimeout(lock, AUTO_LOCK_MS);
+    function lock() { setGuardianMode(false); setTab('map'); }
+    const reset = () => { clearTimeout(timer); timer = setTimeout(lock, AUTO_LOCK_MS); };
+    const evs = ['pointerdown', 'keydown', 'touchstart'] as const;
+    evs.forEach((e) => window.addEventListener(e, reset, { passive: true }));
+    return () => { clearTimeout(timer); evs.forEach((e) => window.removeEventListener(e, reset)); };
+  }, [guardianMode]);
 
   // Inicialização + atualização ao abrir, voltar ao app e recuperar conexão.
   useEffect(() => {
@@ -116,6 +131,12 @@ export default function Kingdom({ sm, isDemo, exit, signOut }: { sm: SyncManager
           {canBeGuardian && <button className="btn mode" data-testid="mode-toggle" aria-label={ctx.guardianMode ? 'Voltar ao modo Bianca' : 'Entrar no modo responsável'} onClick={toggleMode}><span aria-hidden="true">{ctx.guardianMode ? '👧' : '🔒'}</span><span className="lbl"> {ctx.guardianMode ? 'Modo Bianca' : 'Responsável'}</span></button>}
         </header>
         <Stats />
+        {ctx.guardianMode && !isDemo && !hasPin() && !pinNoticeDismissed && (
+          <div className="callout notice" data-testid="pin-notice">
+            🔐 Esta conta é usada por toda a família: defina um <b>PIN</b> neste aparelho para a Bianca não entrar no modo responsável sem querer.
+            <div className="row"><button className="btn primary" onClick={() => setTab('more')}>Definir PIN</button><button className="btn" onClick={() => setPinNoticeDismissed(true)}>Agora não</button></div>
+          </div>
+        )}
         <main className="content">
           {current === 'map' && <MapScreen />}
           {current === 'goals' && <GoalsScreen />}

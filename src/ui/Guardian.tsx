@@ -355,15 +355,15 @@ function InvitePanel() {
   const { state, notify } = useApp();
   const [code, setCode] = useState('');
   return (
-    <div>
-      <h3>Convidar para a campanha</h3>
-      <p className="muted small">Gere um código de uso único (válido por 7 dias). A conta da criança entra como "criança" (sem permissões do responsável).</p>
+    <details>
+      <summary><b>Convidar outra conta (opcional)</b></summary>
+      <p className="muted small">Não é necessário se a família usa uma conta só. Gere um código de uso único (válido por 7 dias). A conta da criança entra como "criança" (sem permissões do responsável).</p>
       <div className="row">
         <button className="btn" onClick={async () => { try { setCode(await cloud.createInvite(state.campaignId, 'child')); } catch (e) { notify((e as Error).message, 'error'); } }}>Código para criança</button>
         <button className="btn" onClick={async () => { try { setCode(await cloud.createInvite(state.campaignId, 'guardian')); } catch (e) { notify((e as Error).message, 'error'); } }}>Código para responsável</button>
       </div>
       {code && <p>Código: <code data-testid="invite-code">{code}</code></p>}
-    </div>
+    </details>
   );
 }
 

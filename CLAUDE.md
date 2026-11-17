@@ -27,6 +27,7 @@ npm test                    # Vitest: unidade + banco (PGlite)
 npm run test:e2e            # Playwright (compila e roda o preview). Neste ambiente: CHROMIUM_PATH=/opt/pw-browsers/chromium-1243/chrome-linux64/chrome
 npm run build               # VITE_BASE=/<repo>/ para GitHub Pages
 npm run icons               # regenera PNGs do PWA
+node scripts/check-dist.mjs /Fab4/   # confere o build do Pages (base, manifesto, SW, sem chaves secretas)
 ```
 Ao mudar SQL (`apply_op` etc.) ou `engine.ts`, rode `npm run test:db`: o teste de paridade deve continuar verde.
 
@@ -35,6 +36,7 @@ TypeScript estrito; sem dependências novas sem necessidade; UI mobile-first com
 dados de exemplo sempre fictícios; funções de domínio puras e testadas.
 
 ## Segurança
+O build (`prebuild`) recusa `sb_secret_`/`service_role` em `VITE_SUPABASE_ANON_KEY`. Conta única da família: o banco não distingue aparelhos (ver `docs/configuracao-supabase.md` e `docs/plano-atualizacao-banco.md`).
 Repositório **público**: nunca commitar dados reais da criança, backups (`*reino-backup*.json` é ignorado), senhas, tokens, `service_role`.
 Só `VITE_SUPABASE_URL` e a chave `anon` no front-end. Todas as tabelas com RLS; escritas só por RPC; `anon` sem acesso.
 

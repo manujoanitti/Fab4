@@ -18,6 +18,13 @@
 | `npm run build` (produção, com `VITE_BASE=/Fab4/`) | passou |
 Contagens exatas: ver saída de `npm test` / `npm run test:e2e`.
 
+## Verificação pré-publicação (Supabase configurado pela pessoa responsável)
+- Chave Publishable: supabase-js 2.119 envia `sb_publishable_…` só em `apikey` (Bearer = JWT do usuário); verificado por e2e com Supabase simulado. Build recusa `sb_secret_`/`service_role`.
+- Variáveis `VITE_*`: o workflow de deploy as lê via `vars.*`; guardas `check-env`/`check-dist` e resumo da execução indicam se o build saiu com nuvem.
+- Caminho-base `/Fab4/`: build servido em `/Fab4/` no e2e (projeto "cloud") + `check-dist`.
+- Conta única: fluxo criar campanha → metas → selo → offline → recarga testado; limites de segurança documentados; plano de reforço em `plano-atualizacao-banco.md`.
+- CI no GitHub (run 1) falhou em 1 teste e2e (`offline`): corrigida a durabilidade da fila (gravação confirmada antes de refletir na tela).
+
 ## Funcionalidades pendentes / limites conhecidos
 - **Supabase real não foi exercitado** (exige credenciais da pessoa responsável): migrações e RPC foram testadas em Postgres local (PGlite) e o cliente por mock. Passo a passo em `configuracao-supabase.md`.
 - **Deploy no GitHub Pages não foi realizado** (exige ativar Pages no repositório); workflows prontos em `.github/workflows`. Sem URL publicada.

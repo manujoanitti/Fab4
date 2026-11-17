@@ -150,3 +150,4 @@ input[type='checkbox'], input[type='radio'] { min-height: 0; width: 22px; height
   .bianca-bob, .pulse, .sparkle, .splash-crown, .star, .walker { animation: none !important; transition: none !important; }
 }
 @media (min-width: 700px) { body { font-size: 18px; } .game-cards { grid-template-columns: 1fr; } }
+.callout.notice { margin: 8px; }

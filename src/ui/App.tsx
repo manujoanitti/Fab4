@@ -17,6 +17,14 @@ const ls = {
   set: (k: string, v: string | null) => { try { v === null ? localStorage.removeItem(k) : localStorage.setItem(k, v); } catch { /* indisponível */ } },
 };
 const kv = defaultKV();
+// Cadastro público costuma ficar desativado no Supabase (conta única da família): o botão só aparece se pedido no build.
+const ALLOW_SIGNUP = import.meta.env.VITE_ALLOW_SIGNUP === 'true';
+const friendly = (m: string) =>
+  /invalid login credentials/i.test(m) ? 'E-mail ou senha incorretos.'
+  : /signups? (not allowed|are disabled|disabled)|signup.*disabled/i.test(m) ? 'O cadastro de novas contas está desativado. Use a conta já criada pela família.'
+  : /email not confirmed/i.test(m) ? 'Confirme o e-mail da conta antes de entrar.'
+  : /failed to fetch|network/i.test(m) ? 'Sem conexão. Verifique a internet e tente de novo.'
+  : m;
 
 export default function App() {
   const [screen, setScreen] = useState<Screen>({ k: 'boot' });
@@ -85,7 +93,7 @@ function Login({ onDone, onBack, err }: { onDone: () => void; onBack: () => void
   const [busy, setBusy] = useState(false);
   const run = (fn: () => Promise<void>) => async () => {
     setBusy(true); setMsg('');
-    try { await fn(); } catch (e) { setMsg((e as Error).message); } finally { setBusy(false); }
+    try { await fn(); } catch (e) { setMsg(friendly((e as Error).message)); } finally { setBusy(false); }
   };
   return (
     <form className="landing" data-testid="login" onSubmit={(e) => { e.preventDefault(); void run(async () => { await cloud.signIn(email, password); onDone(); })(); }}>
@@ -94,7 +102,7 @@ function Login({ onDone, onBack, err }: { onDone: () => void; onBack: () => void
       <input type="password" autoComplete="current-password" placeholder="senha" value={password} onChange={(e) => setPassword(e.target.value)} required minLength={6} aria-label="Senha" />
       {msg && <p className="error">{msg}</p>}
       <button className="btn primary big" type="submit" disabled={busy}>Entrar</button>
-      <button className="btn" type="button" disabled={busy} onClick={run(async () => { const r = await cloud.signUp(email, password); if (r.needsConfirmation) setMsg('Conta criada. Confirme o e-mail e entre.'); else onDone(); })}>Criar conta</button>
+      {ALLOW_SIGNUP && <button className="btn" type="button" disabled={busy} onClick={run(async () => { const r = await cloud.signUp(email, password); if (r.needsConfirmation) setMsg('Conta criada. Confirme o e-mail e entre.'); else onDone(); })}>Criar conta</button>}
       <button className="btn" type="button" onClick={onBack}>Voltar</button>
     </form>
   );
@@ -111,8 +119,9 @@ function Campaigns({ list, userId, onOpen, reload, signOut }: { list: CampaignRo
       {list.length === 0 && <p className="muted">Você ainda não participa de nenhuma campanha.</p>}
       <h3>Nova campanha familiar</h3>
       <div className="row"><input placeholder="Nome (ex.: Reino da família)" value={name} onChange={(e) => setName(e.target.value)} aria-label="Nome da campanha" /><button className="btn primary" disabled={!name.trim()} onClick={async () => { try { const id = await cloud.createCampaign(name); onOpen(id, userId); } catch (e) { setMsg((e as Error).message); } }}>Criar</button></div>
-      <h3>Tenho um convite</h3>
+      <details><summary>Tenho um convite (opcional)</summary>
       <div className="row"><input placeholder="código do convite" value={code} onChange={(e) => setCode(e.target.value)} aria-label="Código do convite" /><button className="btn" disabled={!code.trim()} onClick={async () => { try { const id = await cloud.redeemInvite(code); onOpen(id, userId); } catch (e) { setMsg((e as Error).message); reload(); } }}>Entrar</button></div>
+      </details>
       {msg && <p className="error">{msg}</p>}
       <button className="btn" onClick={signOut}>Sair da conta</button>
     </div>

@@ -28,12 +28,15 @@ export function idbKV(dbName = 'reino-bianca'): KV {
       r.onsuccess = () => res(r.result);
       r.onerror = () => rej(r.error);
     }));
+  // Escritas só resolvem quando a transação COMMITA (oncomplete): garante durabilidade antes de confirmar na tela.
   const tx = async <T>(mode: IDBTransactionMode, f: (s: IDBObjectStore) => IDBRequest<T>): Promise<T> => {
     const db = await open();
     return new Promise((res, rej) => {
-      const r = f(db.transaction(STORE, mode).objectStore(STORE));
-      r.onsuccess = () => res(r.result);
-      r.onerror = () => rej(r.error);
+      const t = db.transaction(STORE, mode);
+      const r = f(t.objectStore(STORE));
+      t.oncomplete = () => res(r.result);
+      t.onerror = () => rej(t.error ?? r.error);
+      t.onabort = () => rej(t.error ?? new Error('transação abortada'));
     });
   };
   return {

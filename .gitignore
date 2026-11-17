@@ -12,3 +12,4 @@ backup-*.json
 *reino-backup*.json
 supabase/.temp/
 .DS_Store
+dist-cloud/
