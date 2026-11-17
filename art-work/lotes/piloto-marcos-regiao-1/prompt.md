@@ -5,7 +5,7 @@
 
 ## 1. Anexe estes arquivos ao Gemini
 
-- **Obrigatório** — `art-work/referencias/folha-de-estilo.png` — Folha de estilo visual aprovada (traço, paleta, atmosfera) ⚠️ AINDA NÃO ENVIADO
+- **Obrigatório** — `art-work/referencias/folha-de-estilo.png` — Folha de estilo visual aprovada (traço, paleta, atmosfera) ✅ presente
 - **Obrigatório** — `guia-prancha.png` — Guia de posições desta prancha (gerado; usar só como referência de posição) (gerado junto com este prompt, na pasta do lote)
 
 ## 2. Cole este prompt no Gemini
