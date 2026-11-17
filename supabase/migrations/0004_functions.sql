@@ -337,6 +337,9 @@ begin
      or jsonb_typeof(p_payload->'state') is distinct from 'object' then
     raise exception 'invalid backup format' using errcode = '22023';
   end if;
+  if coalesce((p_payload->>'demo')::boolean, false) then
+    raise exception 'demo backups cannot be restored into a real campaign' using errcode = '22023';
+  end if;
   perform pg_advisory_xact_lock(hashtextextended(p_campaign::text, 0));
   s := p_payload->'state';
   select not exists (select 1 from phase_progress where campaign_id = p_campaign)
