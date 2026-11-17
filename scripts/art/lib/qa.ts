@@ -47,6 +47,12 @@ export function avaliarRecurso(final: Raw, spec: SaidaSpec, ctx: ContextoQa): Qa
   if (franja > 0.35 && semi > 40) add('franja', 'aviso', `borda com cor do fundo (${(franja * 100).toFixed(0)}% dos pixels semitransparentes)`);
   if (ctx.reducao !== undefined && ctx.reducao < 0.8) add('apertada', 'aviso', `elemento reduzido a ${(ctx.reducao * 100).toFixed(0)}% para caber na margem (célula apertada)`);
   if (ctx.bytes > spec.maxKB * 1024 || ctx.maxKBExcedido) add('peso', 'aviso', `${(ctx.bytes / 1024).toFixed(0)} KB excede o orçamento de ${spec.maxKB} KB`);
+  if (spec.areaTexto) {
+    const a = spec.areaTexto, x0 = Math.max(0, Math.floor(a.x * W)), x1 = Math.min(W, Math.ceil((a.x + a.w) * W)), y0 = Math.max(0, Math.floor(a.y * H)), y1 = Math.min(H, Math.ceil((a.y + a.h) * H));
+    let tot = 0, op = 0;
+    for (let y = y0; y < y1; y++) for (let x = x0; x < x1; x++) { tot++; if (data[(y * W + x) * 4 + 3] > 240) op++; }
+    if (!tot || op / tot < 0.97) add('area-texto', 'aviso', `a área reservada ao texto não está inteiramente sobre a arte (${tot ? ((op / tot) * 100).toFixed(0) : 0}% opaca): o texto do app pode ficar sobre o fundo do mapa`);
+  }
   const status: StatusQa = problemas.some((p) => p.severidade === 'erro') ? 'falha' : problemas.length ? 'revisar' : 'ok';
   return { id: ctx.id, arquivo: ctx.arquivo, status, problemas, metricas: { cobertura, bytes: ctx.bytes, reducao: ctx.reducao ?? 1, residuoFundo, franja, margemMin, px: { w: W, h: H } }, aprovacaoArtistica: 'pendente' };
 }

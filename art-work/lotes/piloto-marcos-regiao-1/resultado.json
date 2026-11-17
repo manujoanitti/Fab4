@@ -10,20 +10,15 @@
           "codigo": "invade-celula",
           "severidade": "aviso",
           "msg": "o elemento ultrapassa os limites da sua célula (pode invadir a vizinha)"
-        },
-        {
-          "codigo": "apertada",
-          "severidade": "aviso",
-          "msg": "elemento reduzido a 73% para caber na margem (célula apertada)"
         }
       ],
       "metricas": {
-        "cobertura": 0.41412353515625,
-        "bytes": 4650,
-        "reducao": 0.7343412526997841,
+        "cobertura": 0.4755859375,
+        "bytes": 5178,
+        "reducao": 1,
         "residuoFundo": 0,
         "franja": 0,
-        "margemMin": 0.1015625,
+        "margemMin": 0.03125,
         "px": {
           "w": 128,
           "h": 128
@@ -34,21 +29,15 @@
     {
       "id": "map.node.available",
       "arquivo": "map/node-available@2x.webp",
-      "status": "revisar",
-      "problemas": [
-        {
-          "codigo": "apertada",
-          "severidade": "aviso",
-          "msg": "elemento reduzido a 80% para caber na margem (célula apertada)"
-        }
-      ],
+      "status": "ok",
+      "problemas": [],
       "metricas": {
-        "cobertura": 0.48504638671875,
-        "bytes": 5978,
-        "reducao": 0.7962529274004685,
+        "cobertura": 0.461669921875,
+        "bytes": 5732,
+        "reducao": 1,
         "residuoFundo": 0,
         "franja": 0,
-        "margemMin": 0.1015625,
+        "margemMin": 0.109375,
         "px": {
           "w": 128,
           "h": 128
@@ -59,21 +48,15 @@
     {
       "id": "map.node.done",
       "arquivo": "map/node-done@2x.webp",
-      "status": "revisar",
-      "problemas": [
-        {
-          "codigo": "apertada",
-          "severidade": "aviso",
-          "msg": "elemento reduzido a 74% para caber na margem (célula apertada)"
-        }
-      ],
+      "status": "ok",
+      "problemas": [],
       "metricas": {
-        "cobertura": 0.41650390625,
-        "bytes": 6806,
-        "reducao": 0.7359307359307361,
+        "cobertura": 0.50103759765625,
+        "bytes": 8250,
+        "reducao": 1,
         "residuoFundo": 0,
         "franja": 0,
-        "margemMin": 0.1015625,
+        "margemMin": 0.0546875,
         "px": {
           "w": 128,
           "h": 128
@@ -84,24 +67,18 @@
     {
       "id": "map.node.selected",
       "arquivo": "map/node-selected@2x.webp",
-      "status": "revisar",
-      "problemas": [
-        {
-          "codigo": "apertada",
-          "severidade": "aviso",
-          "msg": "elemento reduzido a 74% para caber na margem (célula apertada)"
-        }
-      ],
+      "status": "ok",
+      "problemas": [],
       "metricas": {
-        "cobertura": 0.12322541551246538,
-        "bytes": 10234,
-        "reducao": 0.7359307359307359,
+        "cobertura": 0.16084966715976332,
+        "bytes": 18986,
+        "reducao": 1,
         "residuoFundo": 0,
         "franja": 0,
-        "margemMin": 0.09868421052631579,
+        "margemMin": 0.028846153846153848,
         "px": {
-          "w": 152,
-          "h": 152
+          "w": 208,
+          "h": 208
         }
       },
       "aprovacaoArtistica": "pendente"
@@ -115,23 +92,18 @@
           "codigo": "invade-celula",
           "severidade": "aviso",
           "msg": "o elemento ultrapassa os limites da sua célula (pode invadir a vizinha)"
-        },
-        {
-          "codigo": "apertada",
-          "severidade": "aviso",
-          "msg": "elemento reduzido a 74% para caber na margem (célula apertada)"
         }
       ],
       "metricas": {
-        "cobertura": 0.20231119791666666,
-        "bytes": 7942,
-        "reducao": 0.7431192660550459,
-        "residuoFundo": 0.00020112630732099757,
-        "franja": 0,
-        "margemMin": 0.1015625,
+        "cobertura": 0.23834228515625,
+        "bytes": 25222,
+        "reducao": 0.8009174311926605,
+        "residuoFundo": 0.00004268032437046522,
+        "franja": 0.0004253509145044662,
+        "margemMin": 0.03125,
         "px": {
-          "w": 192,
-          "h": 128
+          "w": 384,
+          "h": 256
         }
       },
       "aprovacaoArtistica": "pendente"
@@ -148,12 +120,12 @@
         }
       ],
       "metricas": {
-        "cobertura": 0.3363064236111111,
-        "bytes": 14410,
-        "reducao": 0.8196185286103543,
+        "cobertura": 0.4616753472222222,
+        "bytes": 17938,
+        "reducao": 0.9630517711171662,
         "residuoFundo": 0,
         "franja": 0,
-        "margemMin": 0.09375,
+        "margemMin": 0.03125,
         "px": {
           "w": 480,
           "h": 96
@@ -267,5 +239,43 @@
     "art-work/lotes/piloto-marcos-regiao-1/saida/art/v1/map/node-selected@2x.webp",
     "art-work/lotes/piloto-marcos-regiao-1/saida/art/v1/map/start@2x.webp",
     "art-work/lotes/piloto-marcos-regiao-1/saida/art/v1/map/ribbon-1@2x.webp"
+  ],
+  "escalas": [
+    {
+      "id": "map.node.locked",
+      "escala": 0.23737095524124638,
+      "diametroPx": 99.84,
+      "diametroRel": 0.78,
+      "limitadoPorOrnamento": false,
+      "alvoDeclarado": 0.78,
+      "alvoAplicado": 0.78
+    },
+    {
+      "id": "map.node.available",
+      "escala": 0.2343661971830986,
+      "diametroPx": 99.84,
+      "diametroRel": 0.78,
+      "limitadoPorOrnamento": false,
+      "alvoDeclarado": 0.78,
+      "alvoAplicado": 0.78
+    },
+    {
+      "id": "map.node.done",
+      "escala": 0.24393237625131062,
+      "diametroPx": 99.84,
+      "diametroRel": 0.78,
+      "limitadoPorOrnamento": false,
+      "alvoDeclarado": 0.78,
+      "alvoAplicado": 0.78
+    },
+    {
+      "id": "map.node.selected",
+      "escala": 0.410448343079922,
+      "diametroPx": 123.2470605659113,
+      "diametroRel": 0.5925339450284197,
+      "limitadoPorOrnamento": true,
+      "alvoDeclarado": 0.62,
+      "alvoAplicado": 0.5925339450284197
+    }
   ]
 }

@@ -1,0 +1,12 @@
+{
+  "versao": 1,
+  "nota": "Correções de escala/enquadramento do piloto após a prévia no mapa real (sem nova geração). Não altera o planejador nem o catálogo global: tamanhos de exibição, área de texto e fatias vão ao manifesto do pacote.",
+  "celulas": {
+    "map.node.locked":    { "margemSeguranca": 0.03, "escala": { "ref": "corpo", "diametro": 0.78, "grupo": "marco-fase" } },
+    "map.node.available": { "margemSeguranca": 0.03, "escala": { "ref": "corpo", "diametro": 0.78, "grupo": "marco-fase" } },
+    "map.node.done":      { "margemSeguranca": 0.03, "escala": { "ref": "corpo", "diametro": 0.78, "grupo": "marco-fase" } },
+    "map.node.selected":  { "px": { "w": 208, "h": 208 }, "margemSeguranca": 0.03, "escala": { "ref": "vao", "diametro": 0.62 }, "exibicao": { "box": { "w": 104, "h": 104 } } },
+    "map.start":          { "px": { "w": 384, "h": 256 }, "margemSeguranca": 0.03, "areaTexto": { "x": 0.40, "y": 0.16, "w": 0.24, "h": 0.27 }, "exibicao": { "box": { "w": 192, "h": 128 }, "offset": { "x": -14, "y": 0 } } },
+    "map.ribbon.1":       { "margemSeguranca": 0.03, "areaTexto": { "x": 0.27, "y": 0.25, "w": 0.46, "h": 0.38 }, "fatias": { "esq": 0.30, "dir": 0.30 }, "exibicao": { "box": { "w": 360, "h": 48 } } }
+  }
+}

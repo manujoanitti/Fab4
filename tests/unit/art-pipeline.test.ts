@@ -10,6 +10,7 @@ import { PILOTO_ID, PILOTO_IDS, planejar, empacotarGrupos } from '../../scripts/
 import { guiaSvg, promptMarkdown, textoParaGemini } from '../../scripts/art/lib/prompt';
 import { processarPrancha, pastaSaida } from '../../scripts/art/lib/process';
 import { montarProposta, aplicarProposta } from '../../scripts/art/lib/integrar';
+import { avaliarRecurso } from '../../scripts/art/lib/qa';
 import type { CatalogFile } from '../../scripts/art/lib/types';
 import { FORMAS_PILOTO, gravarPng, sintetizar, tmp } from './art-sinteticos';
 
@@ -260,11 +261,19 @@ describe('processamento de prancha (sintética)', () => {
     const r = await rodar({ ...FORMAS_PILOTO, 'map.node.done': { t: 'disco', cor: [235, 190, 60], frac: 1.22 } });
     expect(status(r, 'map.node.done').problemas.map((p) => p.codigo)).toContain('invade-celula');
   });
-  it('QA: resíduos da cor do fundo dentro do objeto geram aviso para revisão', async () => {
+  it('manchas minúsculas de cor-chave dentro do objeto (frestas) são limpas automaticamente', async () => {
     const r = await rodar({ ...FORMAS_PILOTO, 'map.node.locked': { t: 'disco-com-manchas', cor: [150, 140, 175], fundo: [0, 255, 0] } });
     const q = status(r, 'map.node.locked');
+    expect(q.problemas.map((p) => p.codigo)).not.toContain('residuo-fundo');
+    expect(q.metricas.residuoFundo).toBeLessThan(0.005);
+  });
+  it('QA: mancha grande da cor do fundo no meio do objeto continua gerando aviso para revisão (nada some em silêncio)', async () => {
+    const W = 128, data = new Uint8Array(W * W * 4);
+    for (let i = 0; i < W * W; i++) { data[i * 4] = 150; data[i * 4 + 1] = 140; data[i * 4 + 2] = 175; data[i * 4 + 3] = 255; }
+    for (let y = 50; y < 80; y++) for (let x = 50; x < 80; x++) { const o = (y * W + x) * 4; data[o] = 0; data[o + 1] = 255; data[o + 2] = 0; }
+    const spec = { arquivo: 'a@2x.webp', formato: 'webp' as const, px: { w: W, h: W }, alfa: false, alinhamento: 'centro' as const, ancora: { x: 0.5, y: 0.5 }, margemSeguranca: 0, maxKB: 60, dimMode: 'aspect' as const };
+    const q = avaliarRecurso({ data, width: W, height: W }, spec, { id: 'x', arquivo: spec.arquivo, bg: { r: 0, g: 255, b: 0 }, bytes: 1000 });
     expect(q.problemas.map((p) => p.codigo)).toContain('residuo-fundo');
-    expect(q.status).not.toBe('ok');
   });
   it('elemento fora da grade e resíduos pequenos são sinalizados sem derrubar os recursos', async () => {
     const r = await rodar(FORMAS_PILOTO, { extras: [{ x: 60, y: 520, r: 30, cor: [80, 80, 200] }, { x: 700, y: 420, r: 1.5, cor: [10, 10, 10] }] });

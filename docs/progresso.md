@@ -54,3 +54,9 @@ nenhuma imagem produzida, nada integrado ao app, manifesto sem pacote ativo.
 2. Ativar GitHub Pages e configurar as *Variables* `VITE_SUPABASE_URL` / `VITE_SUPABASE_ANON_KEY`.
 3. Revisar `pendencias-regras.md` com a família e ajustar Configurações.
 4. (Opcional) Realtime do Supabase; revogação de selo; e2e do painel de conflitos.
+
+## Pipeline gráfico — piloto `piloto-marcos-regiao-1` (em revisão, nada integrado)
+- Prancha real do Gemini processada; prévia no mapa mostrou problemas de escala/composição. Correções sem nova geração em
+  `art-work/lotes/piloto-marcos-regiao-1/ajustes.json` (escala por corpo com grupo, anel por vão, marco maior, faixa em fatias, áreas de texto).
+- Pipeline: `scripts/art/lib/corpo.ts` (disco inscrito, escala por grupo), `ajustes.ts`, limpeza de resíduo de fundo-chave, `textArea`/`slice`/`box`/`offset` no manifesto proposto.
+- Renderização no app (fatias, posição do texto, halo cedendo ao anel) **ainda não aplicada**: `proposta-app.patch` (aplica limpo em HEAD; golden do fallback inalterado). Aguarda aprovação.

@@ -11,6 +11,7 @@ import { gerarRevisao } from './review';
 import { processarCenario, processarIndividual } from './scenario';
 import { lerRaw, type Raw } from './imaging';
 import { resumirQa } from './qa';
+import { aplicarAjustes } from './ajustes';
 import type { CatalogFile, LotePlano, Plano, Registro } from './types';
 
 export interface Ambiente { workDir: string; publicDir: string; manifestoPath: string; catalogo: CatalogFile; agora: () => string; log: (s: string) => void; opcoes?: Partial<OpcoesPlano> }
@@ -32,8 +33,10 @@ export const proximoLote = (plano: Plano, reg: Registro): LotePlano | undefined 
 
 /** Plano efetivamente combinado (o salvo em processamento.json prevalece sobre o recalculado). */
 export function loteCombinado(a: Ambiente, plano: Plano, id: string): LotePlano {
-  const f = join(pastaLote(a.workDir, id), 'processamento.json');
-  return existsSync(f) ? (JSON.parse(readFileSync(f, 'utf8')) as { lote: LotePlano }).lote : lotePlano(plano, id);
+  const pasta = pastaLote(a.workDir, id);
+  const f = join(pasta, 'processamento.json');
+  const base = existsSync(f) ? (JSON.parse(readFileSync(f, 'utf8')) as { lote: LotePlano }).lote : lotePlano(plano, id);
+  return aplicarAjustes(base, join(pasta, 'ajustes.json'));
 }
 
 // ------------------------------------------------------------------ plan

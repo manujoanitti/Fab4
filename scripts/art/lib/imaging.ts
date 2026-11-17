@@ -72,20 +72,23 @@ export function removerFundo(raw: Raw, bg: RGB, tol: Tolerancia = TOLERANCIAS.me
   }
   // vãos internos
   const minVao = Math.max(60, Math.round(N * 0.00015));
+  const nucleo2 = (tol.duro * 0.35) ** 2;
   const visto = new Uint8Array(N);
   const lista = new Int32Array(N);
   let vaos = 0;
   for (let s = 0; s < N; s++) {
     if (fundo[s] || visto[s] || d2[s] > duro2) continue;
-    let n = 0, p = 0;
+    let n = 0, p = 0, nucleo = 0;
     visto[s] = 1; pilha[p++] = s;
     while (p) {
       const i = pilha[--p]; lista[n++] = i;
+      if (d2[i] <= nucleo2) nucleo++;
       const x = i % W, y = (i / W) | 0;
       const viz = [x > 0 ? i - 1 : -1, x < W - 1 ? i + 1 : -1, y > 0 ? i - W : -1, y < H - 1 ? i + W : -1];
       for (const j of viz) if (j >= 0 && !visto[j] && !fundo[j] && d2[j] <= duro2) { visto[j] = 1; pilha[p++] = j; }
     }
-    if (n >= minVao) { for (let k = 0; k < n; k++) fundo[lista[k]] = 1; vaos++; }
+    // bolsões pequenos (frestas entre folhas, p. ex.) só saem se tiverem um NÚCLEO de cor praticamente igual à do fundo
+    if (n >= minVao || (n >= 3 && nucleo >= 2)) { for (let k = 0; k < n; k++) fundo[lista[k]] = 1; vaos++; }
   }
   // faixa de borda (profundidade proporcional ao tamanho da imagem)
   const prof = Math.max(2, Math.round(Math.max(W, H) / 700));
@@ -151,6 +154,40 @@ export function removerFundo(raw: Raw, bg: RGB, tol: Tolerancia = TOLERANCIAS.me
     out[o + 3] = Math.round(a * 255);
   }
   return { rgba: out, fundo, vaos, semi };
+}
+/**
+ * Resíduo de fundo-chave DENTRO do desenho (frestas entre folhas onde o verde/magenta/ciano vazou misturado pela compressão JPEG).
+ * Só age quando o fundo é uma cor-chave saturada (canais dominantes ≥ 200, os demais ≤ 80). Para cada pixel: excesso = menor canal
+ * dominante − maior canal restante. excesso > 90 → o pixel era fundo (vira transparente); 40–90 → "despill" (traz o canal para perto dos demais).
+ * Paletas pastel/oliva do projeto ficam muito abaixo (excesso < 35). Devolve quantos pixels foram afetados.
+ */
+export function limparResiduoChave(rgba: Uint8Array, bg: RGB, largura: number, altura: number): { removidos: number; corrigidos: number } {
+  const c = [bg.r, bg.g, bg.b];
+  const dom = [0, 1, 2].filter((k) => c[k] >= 200), outros = [0, 1, 2].filter((k) => c[k] <= 80);
+  if (!dom.length || dom.length + outros.length !== 3) return { removidos: 0, corrigidos: 0 };
+  // Só frestas PRÓXIMAS do fundo já removido (entre folhas, junto ao contorno). Manchas grandes no meio do objeto não são tocadas:
+  // continuam visíveis para o QA ("residuo-fundo") em vez de virar um buraco silencioso.
+  const W = largura, H = altura, N = W * H, prox = Math.max(6, Math.round(Math.max(W, H) / 45));
+  let perto = new Uint8Array(N);
+  for (let i = 0; i < N; i++) perto[i] = rgba[i * 4 + 3] < 20 ? 1 : 0;
+  for (let passo = 0; passo < 2; passo++) { // dilatação separável (horizontal e vertical) com janela ±prox
+    const t = new Uint8Array(N), o = new Uint8Array(N);
+    for (let y = 0; y < H; y++) { let ult = -1e9; for (let x = 0; x < W; x++) { if (perto[y * W + x]) ult = x; if (x - ult <= prox) t[y * W + x] = 1; } ult = 1e9; for (let x = W - 1; x >= 0; x--) { if (perto[y * W + x]) ult = x; if (ult - x <= prox) t[y * W + x] = 1; } }
+    for (let x = 0; x < W; x++) { let ult = -1e9; for (let y = 0; y < H; y++) { if (t[y * W + x]) ult = y; if (y - ult <= prox) o[y * W + x] = 1; } ult = 1e9; for (let y = H - 1; y >= 0; y--) { if (t[y * W + x]) ult = y; if (ult - y <= prox) o[y * W + x] = 1; } }
+    perto = o; break;
+  }
+  let removidos = 0, corrigidos = 0;
+  for (let i = 0; i < rgba.length; i += 4) {
+    if (rgba[i + 3] < 20 || !perto[i / 4]) continue;
+    const exc = Math.min(...dom.map((k) => rgba[i + k])) - Math.max(...outros.map((k) => rgba[i + k]));
+    if (exc > 90) { rgba[i] = rgba[i + 1] = rgba[i + 2] = rgba[i + 3] = 0; removidos++; }
+    else if (exc > 40) {
+      const teto = Math.max(...outros.map((k) => rgba[i + k])) + 40;
+      for (const k of dom) rgba[i + k] = Math.min(rgba[i + k], teto);
+      corrigidos++;
+    }
+  }
+  return { removidos, corrigidos };
 }
 const clamp8 = (v: number) => (v < 0 ? 0 : v > 255 ? 255 : Math.round(v));
 

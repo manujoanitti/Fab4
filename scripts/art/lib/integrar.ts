@@ -5,7 +5,18 @@ import { validateArt } from '../../validate-art.mjs';
 import { pastaSaida } from './process';
 import type { CatalogFile, LotePlano } from './types';
 
-export interface EntradaProposta { file: string; sprite?: { frames: number; fps: number; loop: boolean; frameW: number; frameH: number } }
+export interface EntradaProposta {
+  file: string; sprite?: { frames: number; fps: number; loop: boolean; frameW: number; frameH: number };
+  box?: { w: number; h: number }; anchor?: { x: number; y: number }; offset?: { x: number; y: number };
+  textArea?: { x: number; y: number; w: number; h: number }; slice?: { l: number; r: number };
+}
+/** Campos opcionais do manifesto derivados da especificação de saída (só aparecem quando declarados). */
+export function extrasDaSaida(s: import('./types').SaidaSpec): Partial<EntradaProposta> {
+  return {
+    ...(s.exibicao?.box ? { box: s.exibicao.box } : {}), ...(s.exibicao?.anchor ? { anchor: s.exibicao.anchor } : {}), ...(s.exibicao?.offset ? { offset: s.exibicao.offset } : {}),
+    ...(s.areaTexto ? { textArea: s.areaTexto } : {}), ...(s.fatias ? { slice: { l: s.fatias.esq, r: s.fatias.dir } } : {}),
+  };
+}
 export interface Proposta { pacote: string; lote: string; assets: Record<string, EntradaProposta> }
 
 export function montarProposta(lote: LotePlano, apenas?: Set<string>): Proposta {
@@ -13,7 +24,7 @@ export function montarProposta(lote: LotePlano, apenas?: Set<string>): Proposta 
   if (lote.folha) for (const c of lote.folha.celulas) {
     if (apenas && !apenas.has(c.id)) continue;
     const s = c.saida;
-    assets[c.id] = { file: s.arquivo, ...(s.spriteUmQuadro ? { sprite: { frames: 1, fps: 1, loop: true, frameW: s.spriteUmQuadro.frameW, frameH: s.spriteUmQuadro.frameH } } : {}) };
+    assets[c.id] = { file: s.arquivo, ...extrasDaSaida(s), ...(s.spriteUmQuadro ? { sprite: { frames: 1, fps: 1, loop: true, frameW: s.spriteUmQuadro.frameW, frameH: s.spriteUmQuadro.frameH } } : {}) };
   }
   if (lote.cenario) for (const p of lote.cenario.partes) if (!apenas || apenas.has(p.id)) assets[p.id] = { file: p.arquivo };
   if (lote.individual && (!apenas || apenas.has(lote.individual.id))) assets[lote.individual.id] = { file: lote.individual.arquivo };

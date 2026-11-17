@@ -306,10 +306,10 @@ describe('interface de comandos e arquivos versionados', () => {
       expect(readFileSync(versionado, 'utf8'), f).toBe(readFileSync(join(r.pasta, f), 'utf8'));
     }
   });
-  it('o registro versionado cobre todos os lotes e o piloto aguarda geração', () => {
+  it('o registro versionado cobre todos os lotes; o piloto avançou, mas nunca aprovado/integrado sem ordem', () => {
     const reg = JSON.parse(readFileSync(join(__dirname, '../../art-work/registro.json'), 'utf8')) as { lotes: Array<{ id: string; estado: string }> };
     expect(reg.lotes.map((l) => l.id)).toEqual(plano.lotes.map((l) => l.id));
-    expect(reg.lotes.find((l) => l.id === PILOTO_ID)!.estado).toBe('aguardando_geracao');
+    expect(['aguardando_geracao', 'recebido', 'processado', 'em_revisao']).toContain(reg.lotes.find((l) => l.id === PILOTO_ID)!.estado);
     expect(reg.lotes.filter((l) => l.id !== PILOTO_ID).every((l) => l.estado === 'planejado')).toBe(true);
   });
   it('nada foi integrado ao app: manifesto sem pacote e public/art inexistente', () => {

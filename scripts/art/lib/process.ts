@@ -2,21 +2,25 @@
 import sharp from 'sharp';
 import { mkdirSync, writeFileSync, statSync } from 'node:fs';
 import { dirname, join } from 'node:path';
-import { alphaDe, atribuir, estimarFundo, extrair, hexRgb, jaTransparente, distRgb, lerRaw, paraPng, removerFundo, rotular, TOLERANCIAS, type CelulaPx, type Raw } from './imaging';
+import { alphaDe, atribuir, limparResiduoChave, estimarFundo, extrair, hexRgb, jaTransparente, distRgb, lerRaw, paraPng, removerFundo, rotular, TOLERANCIAS, type CelulaPx, type Raw } from './imaging';
 import { avaliarRecurso, verificarArquivo, type Problema, type QaRecurso } from './qa';
+import { medirCorpo, planejarEscalas, type Corpo, type MembroEscala, type PlanoEscala } from './corpo';
 import type { LotePlano, SaidaSpec } from './types';
 
 export interface ResultadoProcesso {
   lote: string; recursos: QaRecurso[]; avisosGerais: string[];
   deteccao?: { largura: number; altura: number; celulas: Array<{ id: string; rect: { x: number; y: number; w: number; h: number }; bbox: { x0: number; y0: number; x1: number; y1: number } | null }> };
   fundoDetectado?: string; arquivosSaida: string[];
+  /** Escala por corpo (somente recursos que a declaram): diâmetro do corpo no arquivo, antes/depois. */
+  escalas?: PlanoEscala[];
 }
 export const pastaSaida = (pastaLote: string, pacote: string) => join(pastaLote, 'saida', 'art', pacote);
 const hex2 = (n: number) => n.toString(16).padStart(2, '0');
 
 /** Escala uniforme célula→arquivo, centralização (ou base no chão) e redução automática para respeitar a margem. */
-export async function comporFinal(crop: Raw, celulaPx: { w: number; h: number }, spec: SaidaSpec): Promise<{ raw: Raw; reducao: number; escala: number }> {
+export async function comporFinal(crop: Raw, celulaPx: { w: number; h: number }, spec: SaidaSpec, porCorpo?: { escala: number; corpo: Corpo }): Promise<{ raw: Raw; reducao: number; escala: number }> {
   const { w: PW, h: PH } = spec.px;
+  if (porCorpo) return comporPorCorpo(crop, spec, porCorpo);
   const escala = Math.min(PW / celulaPx.w, PH / celulaPx.h);
   const sw = crop.width * escala, sh = crop.height * escala;
   const mx = spec.margemSeguranca * PW, my = spec.margemSeguranca * PH;
@@ -31,6 +35,21 @@ export async function comporFinal(crop: Raw, celulaPx: { w: number; h: number },
   const { data } = await sharp({ create: { width: PW, height: PH, channels: 4, background: { r: 0, g: 0, b: 0, alpha: 0 } } })
     .composite([{ input: redim, left, top }]).raw().toBuffer({ resolveWithObject: true });
   return { raw: { data: new Uint8Array(data.buffer, data.byteOffset, data.byteLength), width: PW, height: PH }, reducao, escala };
+}
+
+/** Escala dada pelo CORPO (não pelo bounding box); o centro do corpo vai para a âncora do arquivo; ornamentos preservados por inteiro. */
+async function comporPorCorpo(crop: Raw, spec: SaidaSpec, { escala, corpo }: { escala: number; corpo: Corpo }): Promise<{ raw: Raw; reducao: number; escala: number }> {
+  const { w: PW, h: PH } = spec.px;
+  const centrar = spec.escala?.centrar !== false;
+  const fw = Math.max(1, Math.round(crop.width * escala)), fh = Math.max(1, Math.round(crop.height * escala));
+  const left = Math.round(centrar ? spec.ancora.x * PW - corpo.cx * escala : (PW - fw) / 2);
+  const top = Math.round(centrar ? spec.ancora.y * PH - corpo.cy * escala : (PH - fh) / 2);
+  if (left < 0 || top < 0 || left + fw > PW || top + fh > PH) throw new Error('escala por corpo: os ornamentos não cabem no arquivo (reduza o diâmetro ou aumente o arquivo)');
+  const redim = await sharp(Buffer.from(crop.data.buffer, crop.data.byteOffset, crop.data.byteLength), { raw: { width: crop.width, height: crop.height, channels: 4 } })
+    .resize(fw, fh, { kernel: 'lanczos3', fit: 'fill' }).png().toBuffer();
+  const { data } = await sharp({ create: { width: PW, height: PH, channels: 4, background: { r: 0, g: 0, b: 0, alpha: 0 } } })
+    .composite([{ input: redim, left, top }]).raw().toBuffer({ resolveWithObject: true });
+  return { raw: { data: new Uint8Array(data.buffer, data.byteOffset, data.byteLength), width: PW, height: PH }, reducao: 1, escala };
 }
 
 /** Grava WebP/PNG respeitando o orçamento de peso (reduz a qualidade em passos). */
@@ -76,6 +95,8 @@ export async function processarPrancha(op: OpcoesPrancha): Promise<ResultadoProc
     const r = removerFundo(raw, bg, TOLERANCIAS[op.tolerancia ?? 'media']);
     rgba = r.rgba;
     log(`fundo removido (${r.vaos} vão(s) interno(s), ${r.semi} pixel(s) de borda suavizados)`);
+    const lr = limparResiduoChave(rgba, bg, W, H);
+    if (lr.removidos || lr.corrigidos) log(`resíduo de fundo-chave dentro do desenho: ${lr.removidos} pixel(s) removido(s), ${lr.corrigidos} corrigido(s)`);
   }
   const rot = rotular(alphaDe({ data: rgba, width: W, height: H }), W, H);
   const cel: CelulaPx[] = f.celulas.map((c) => ({ id: c.id, x: c.rect.x * W, y: c.rect.y * H, w: c.rect.w * W, h: c.rect.h * H }));
@@ -87,6 +108,8 @@ export async function processarPrancha(op: OpcoesPrancha): Promise<ResultadoProc
   const arquivosSaida: string[] = [];
   const det: NonNullable<ResultadoProcesso['deteccao']>['celulas'] = [];
   const saidaDir = pastaSaida(pastaLote, lote.pacote);
+  type Prep = { c: (typeof f.celulas)[number]; px: CelulaPx; crop: Raw; notas: Problema[]; corpo?: Corpo };
+  const preps: Prep[] = [];
   for (const c of f.celulas) {
     const px = cel.find((k) => k.id === c.id)!;
     const g = atr.porCelula.get(c.id);
@@ -106,7 +129,23 @@ export async function processarPrancha(op: OpcoesPrancha): Promise<ResultadoProc
     const crop = extrair(rgba, W, rot, new Set(g.comps.map((k) => k.id)), g);
     mkdirSync(join(pastaLote, 'celulas'), { recursive: true });
     writeFileSync(join(pastaLote, 'celulas', `${c.id}.png`), await paraPng(crop));
-    const { raw: final, reducao } = await comporFinal(crop, { w: px.w, h: px.h }, spec);
+    let corpo: Corpo | undefined;
+    if (spec.escala) {
+      corpo = medirCorpo(crop, spec.escala.ref) ?? undefined;
+      if (!corpo) notas.push({ codigo: 'corpo-nao-encontrado', severidade: 'erro', msg: `não foi possível medir o ${spec.escala.ref === 'vao' ? 'vão interno' : 'corpo'} deste recurso (a escala por corpo exige um disco inscrito)` });
+    }
+    preps.push({ c, px, crop, notas, corpo });
+  }
+  // Escala por corpo: calculada para o conjunto (grupos compartilham o mesmo diâmetro).
+  const membros: MembroEscala[] = preps.filter((p) => p.c.saida.escala && p.corpo).map((p) => ({ id: p.c.id, corpo: p.corpo!, cropW: p.crop.width, cropH: p.crop.height, spec: p.c.saida }));
+  const planos = planejarEscalas(membros);
+  for (const { c, px, crop, notas, corpo } of preps) {
+    const spec = c.saida;
+    const plano = planos.find((p) => p.id === c.id);
+    let final: Raw, reducao: number;
+    if (spec.escala && !corpo) { // corpo não medido: segue o caminho padrão e o aviso de erro acima fica no relatório
+      ({ raw: final, reducao } = await comporFinal(crop, { w: px.w, h: px.h }, spec));
+    } else ({ raw: final, reducao } = await comporFinal(crop, { w: px.w, h: px.h }, spec, plano && corpo ? { escala: plano.escala, corpo } : undefined));
     const alvo = join(saidaDir, spec.arquivo);
     const { bytes, excedeu } = await gravarImagem(final, alvo, spec);
     const qa = avaliarRecurso(final, spec, { id: c.id, arquivo: spec.arquivo, bg, bytes, reducao, maxKBExcedido: excedeu, notasCelula: notas, baseNoChao: spec.alinhamento === 'base' && spec.ancora.y >= 0.99 });
@@ -114,8 +153,8 @@ export async function processarPrancha(op: OpcoesPrancha): Promise<ResultadoProc
     if (integ) { qa.problemas.push(integ); qa.status = 'falha'; }
     recursos.push(qa);
     arquivosSaida.push(alvo);
-    log(`${c.id}: ${qa.status}${qa.problemas.length ? ` (${qa.problemas.map((p) => p.codigo).join(', ')})` : ''}`);
+    log(`${c.id}: ${qa.status}${qa.problemas.length ? ` (${qa.problemas.map((p) => p.codigo).join(', ')})` : ''}${plano ? ` · corpo ${plano.diametroPx.toFixed(1)} px (${(plano.diametroRel * 100).toFixed(0)}% do arquivo${plano.limitadoPorOrnamento ? ', limitado pelos ornamentos' : ''})` : ''}`);
   }
-  return { lote: lote.id, recursos, avisosGerais, deteccao: { largura: W, altura: H, celulas: det }, fundoDetectado: fundoHex, arquivosSaida };
+  return { lote: lote.id, recursos, avisosGerais, deteccao: { largura: W, altura: H, celulas: det }, fundoDetectado: fundoHex, arquivosSaida, ...(planos.length ? { escalas: planos } : {}) };
 }
 export const tamanhoArquivo = (p: string) => statSync(p).size;

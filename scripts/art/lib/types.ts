@@ -33,6 +33,21 @@ export interface SaidaSpec {
   dimMode: 'exact' | 'aspect';
   /** Sprite de 1 quadro (Bianca estática): o manifesto declara sprite.frames = 1. */
   spriteUmQuadro?: { frameW: number; frameH: number };
+  /**
+   * Escala visual por CORPO (opcional). Em vez de ajustar o bounding box inteiro (que inclui cadeado, folhas, flores),
+   * mede-se o corpo principal do objeto e dimensiona-se por ele; os ornamentos externos são preservados.
+   *  - ref "corpo": maior disco inscrito no opaco (medalhões, selos); ref "vao": maior disco inscrito no vazio interno (anéis).
+   *  - diametro: diâmetro do corpo/vão como fração do MENOR lado do arquivo.
+   *  - grupo: recursos do mesmo grupo recebem o MESMO diâmetro (o menor que ainda deixa os ornamentos de todos dentro da margem).
+   *  - centrar (padrão true): o centro do corpo, e não o da caixa, vai para o centro do arquivo.
+   */
+  escala?: { ref: 'corpo' | 'vao'; diametro: number; grupo?: string; centrar?: boolean };
+  /** Área reservada ao texto do app (frações do arquivo). O QA confere se está sobre superfície opaca; vai ao manifesto como `textArea`. */
+  areaTexto?: { x: number; y: number; w: number; h: number };
+  /** Recurso horizontal adaptável (3 fatias): frações da largura que são pontas fixas; o miolo estica. Vai ao manifesto como `slice`. */
+  fatias?: { esq: number; dir: number };
+  /** Ajustes de exibição no mapa (unidades do mapa), gravados no manifesto sem tocar no catálogo global. */
+  exibicao?: { box?: { w: number; h: number }; anchor?: { x: number; y: number }; offset?: { x: number; y: number } };
 }
 export interface Celula {
   id: string; ordem: number; linha: number; coluna: number;

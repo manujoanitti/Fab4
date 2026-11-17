@@ -12,13 +12,45 @@
       "file": "map/node-done@2x.webp"
     },
     "map.node.selected": {
-      "file": "map/node-selected@2x.webp"
+      "file": "map/node-selected@2x.webp",
+      "box": {
+        "w": 104,
+        "h": 104
+      }
     },
     "map.start": {
-      "file": "map/start@2x.webp"
+      "file": "map/start@2x.webp",
+      "box": {
+        "w": 192,
+        "h": 128
+      },
+      "offset": {
+        "x": -14,
+        "y": 0
+      },
+      "textArea": {
+        "x": 0.4,
+        "y": 0.16,
+        "w": 0.24,
+        "h": 0.27
+      }
     },
     "map.ribbon.1": {
-      "file": "map/ribbon-1@2x.webp"
+      "file": "map/ribbon-1@2x.webp",
+      "box": {
+        "w": 360,
+        "h": 48
+      },
+      "textArea": {
+        "x": 0.27,
+        "y": 0.25,
+        "w": 0.46,
+        "h": 0.38
+      },
+      "slice": {
+        "l": 0.3,
+        "r": 0.3
+      }
     }
   }
 }

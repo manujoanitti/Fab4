@@ -67,6 +67,22 @@ Planejado → Aguardando geração → Recebido → Processado → Em revisão �
 | peso | ⚠️ | acima do orçamento de KB do catálogo |
 **Aprovação artística nunca é automática.** `art:approve` recusa recursos com ⛔ (reprocesse, rejeite ou gere de novo).
 
+## Ajustes por lote (`ajustes.json`) — escala por corpo, texto e fatias
+Depois de ver a arte no mapa real, escala e enquadramento podem ser corrigidos **sem nova geração** e sem tocar no planejador, no catálogo global nem nos
+arquivos gerados (`prompt*`, `processamento.json`): um arquivo opcional `art-work/lotes/<lote>/ajustes.json` sobrepõe campos da saída de células específicas
+(`{ "versao": 1, "celulas": { "<id>": { … } } }`). Lotes sem o arquivo não mudam. Campos (todos opcionais):
+
+| Campo | Efeito |
+|---|---|
+| `escala: { ref, diametro, grupo?, centrar? }` | Dimensiona pelo **corpo** (disco inscrito: `corpo` = maior disco no opaco; `vao` = furo de um anel) em vez do bounding box, que inclui cadeado/folhas/flores. `diametro` = fração do menor lado do arquivo. Recursos do mesmo `grupo` recebem o **mesmo** diâmetro (o menor que ainda deixa os ornamentos de todos dentro da margem). `centrar` (padrão sim) leva o centro do corpo ao centro do arquivo — onde o app desenha o número. |
+| `margemSeguranca`, `px` | Margem livre e tamanho do arquivo desta célula (respeitando a proporção do catálogo; o validador confere). |
+| `exibicao: { box, anchor, offset }` | Tamanho/âncora/deslocamento no mapa, gravados no **manifesto do pacote** (o catálogo global não muda). |
+| `areaTexto: {x,y,w,h}` | Área (frações do arquivo) reservada ao texto do app. O QA acusa (`area-texto`) se não estiver 97% sobre a arte; vai ao manifesto como `textArea`. |
+| `fatias: {esq, dir}` | Recurso horizontal adaptável: pontas fixas (frações da largura) e miolo esticável. Vai ao manifesto como `slice` (renderização em fatias: ver `art-work/lotes/piloto-marcos-regiao-1/proposta-app.patch`, ainda não aplicada ao app). |
+
+Também há uma limpeza geral de **resíduo de fundo-chave** dentro do desenho (frestas entre folhas onde o verde vazou misturado pela compressão JPEG): só age perto do
+fundo já removido e em pixels com excesso de cor-chave > 40 (paletas pastel/oliva do projeto ficam abaixo de 35); manchas grandes no meio do objeto continuam sendo acusadas pelo QA.
+
 ## Quando exige revisão humana
 Sempre: estilo, coerência com a folha de estilo e com a Bianca, legibilidade em tela pequena, sombras e brilhos delicados (o recorte por fundo chapado pode comê-los ou deixar halo),
 elementos que parecem com a cor do fundo, e qualquer ⚠️/⛔. A prancha `revisao/conferencia.png` mostra cada recurso sobre xadrez, fundo escuro e claro, com ID e status.
