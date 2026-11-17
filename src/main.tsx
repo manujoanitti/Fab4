@@ -1,12 +1,14 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { registerSW } from 'virtual:pwa-register';
+import { ArtRuntime } from './art/components';
 import App from './ui/App';
 import './styles.css';
 
 registerSW({ immediate: true });
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
+    <ArtRuntime />
     <App />
   </StrictMode>,
 );

@@ -13,3 +13,4 @@ backup-*.json
 supabase/.temp/
 .DS_Store
 dist-cloud/
+dist-art/

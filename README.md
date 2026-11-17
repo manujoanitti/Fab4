@@ -6,6 +6,7 @@ selos, moedas, recompensas, minigames e sincronização entre aparelhos (Supabas
 - Experimente sem conta: `npm install && npm run dev` → <http://localhost:5173/?demo> (dados fictícios, só neste aparelho).
 - Regras do tabuleiro: [docs/regras-originais.md](docs/regras-originais.md) · Pendências: [docs/pendencias-regras.md](docs/pendencias-regras.md)
 - Arquitetura: [docs/arquitetura.md](docs/arquitetura.md) · Supabase: [docs/configuracao-supabase.md](docs/configuracao-supabase.md) · Publicação: [docs/publicacao.md](docs/publicacao.md)
+- Arte externa (novo visual): [docs/arte/contrato-integracao.md](docs/arte/contrato-integracao.md) · [catálogo](docs/arte/catalogo-recursos.md) · [plano de produção](docs/arte/plano-producao-gemini.md) · [procedimento](docs/arte/procedimento-integracao.md)
 - Estado do projeto: [docs/progresso.md](docs/progresso.md) · Guia de continuidade: [CLAUDE.md](CLAUDE.md)
 
 > O repositório é público: nunca inclua dados reais da criança, backups, senhas ou chaves privadas.

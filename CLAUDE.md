@@ -18,6 +18,13 @@ React + TS + Vite (PWA). Domínio puro em `src/domain` (engine = regras). `SyncM
 - Meta "não avaliada" ≠ "não cumprida".
 - Conflito nunca sobrescreve silenciosamente (versão otimista + reconciliação).
 
+## Camada gráfica (arte externa)
+- Telas pedem arte por **ID lógico** (`src/art/ids.ts` → `catalog.json`); nunca por caminho. Sem arte = visual atual (fallback). Contrato: `docs/arte/contrato-integracao.md`.
+- Geometria do mapa (posições, toque, trilha) em `src/ui/mapGeometry.ts`; **não** mudar posições sem decisão explícita.
+- Chaves persistidas dos minigames (emoji do Jardim) **não** mudam; a arte usa a tabela emoji → slug (`src/games/gardenCatalog.ts`).
+- Golden de aparência: `tests/golden/*.html`. Mudança visual intencional → `UPDATE_GOLDEN=1 npx vitest run tests/unit/golden`.
+- Integrar arte: arquivo em `public/art/<pacote>/…` → registrar em `src/art/manifest.json` → `npm run art:validate` → `npm run build`.
+
 ## Comandos
 ```
 npm install
@@ -27,6 +34,9 @@ npm test                    # Vitest: unidade + banco (PGlite)
 npm run test:e2e            # Playwright (compila e roda o preview). Neste ambiente: CHROMIUM_PATH=/opt/pw-browsers/chromium-1243/chrome-linux64/chrome
 npm run build               # VITE_BASE=/<repo>/ para GitHub Pages
 npm run icons               # regenera PNGs do PWA
+npm run art:validate        # confere manifesto × catálogo × arquivos de public/art (roda no prebuild)
+npm run art:docs            # regenera docs/arte/catalogo-recursos.md a partir de src/art/catalog.json
+npm run art:guides          # regenera os guias de layout (docs/arte/guias)
 node scripts/check-dist.mjs /Fab4/   # confere o build do Pages (base, manifesto, SW, sem chaves secretas)
 ```
 Ao mudar SQL (`apply_op` etc.) ou `engine.ts`, rode `npm run test:db`: o teste de paridade deve continuar verde.

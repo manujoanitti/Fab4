@@ -1,0 +1,4082 @@
+{
+ "version": 1,
+ "defaults": {
+  "map.region.1.bg": {
+   "kind": "image",
+   "box": {
+    "w": 400,
+    "h": 540
+   },
+   "anchor": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "map.region.1.mid": {
+   "kind": "image",
+   "box": {
+    "w": 400,
+    "h": 540
+   },
+   "anchor": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "map.region.1.path": {
+   "kind": "image",
+   "box": {
+    "w": 400,
+    "h": 540
+   },
+   "anchor": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "map.region.1.fg": {
+   "kind": "image",
+   "box": {
+    "w": 400,
+    "h": 540
+   },
+   "anchor": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "map.ribbon.1": {
+   "kind": "image",
+   "box": {
+    "w": 240,
+    "h": 48
+   },
+   "anchor": {
+    "x": 0.5,
+    "y": 0.5
+   }
+  },
+  "map.region.2.bg": {
+   "kind": "image",
+   "box": {
+    "w": 400,
+    "h": 540
+   },
+   "anchor": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "map.region.2.mid": {
+   "kind": "image",
+   "box": {
+    "w": 400,
+    "h": 540
+   },
+   "anchor": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "map.region.2.path": {
+   "kind": "image",
+   "box": {
+    "w": 400,
+    "h": 540
+   },
+   "anchor": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "map.region.2.fg": {
+   "kind": "image",
+   "box": {
+    "w": 400,
+    "h": 540
+   },
+   "anchor": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "map.ribbon.2": {
+   "kind": "image",
+   "box": {
+    "w": 240,
+    "h": 48
+   },
+   "anchor": {
+    "x": 0.5,
+    "y": 0.5
+   }
+  },
+  "map.region.3.bg": {
+   "kind": "image",
+   "box": {
+    "w": 400,
+    "h": 540
+   },
+   "anchor": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "map.region.3.mid": {
+   "kind": "image",
+   "box": {
+    "w": 400,
+    "h": 540
+   },
+   "anchor": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "map.region.3.path": {
+   "kind": "image",
+   "box": {
+    "w": 400,
+    "h": 540
+   },
+   "anchor": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "map.region.3.fg": {
+   "kind": "image",
+   "box": {
+    "w": 400,
+    "h": 540
+   },
+   "anchor": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "map.ribbon.3": {
+   "kind": "image",
+   "box": {
+    "w": 240,
+    "h": 48
+   },
+   "anchor": {
+    "x": 0.5,
+    "y": 0.5
+   }
+  },
+  "map.region.4.bg": {
+   "kind": "image",
+   "box": {
+    "w": 400,
+    "h": 540
+   },
+   "anchor": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "map.region.4.mid": {
+   "kind": "image",
+   "box": {
+    "w": 400,
+    "h": 540
+   },
+   "anchor": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "map.region.4.path": {
+   "kind": "image",
+   "box": {
+    "w": 400,
+    "h": 540
+   },
+   "anchor": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "map.region.4.fg": {
+   "kind": "image",
+   "box": {
+    "w": 400,
+    "h": 540
+   },
+   "anchor": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "map.ribbon.4": {
+   "kind": "image",
+   "box": {
+    "w": 240,
+    "h": 48
+   },
+   "anchor": {
+    "x": 0.5,
+    "y": 0.5
+   }
+  },
+  "map.region.5.bg": {
+   "kind": "image",
+   "box": {
+    "w": 400,
+    "h": 540
+   },
+   "anchor": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "map.region.5.mid": {
+   "kind": "image",
+   "box": {
+    "w": 400,
+    "h": 540
+   },
+   "anchor": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "map.region.5.path": {
+   "kind": "image",
+   "box": {
+    "w": 400,
+    "h": 540
+   },
+   "anchor": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "map.region.5.fg": {
+   "kind": "image",
+   "box": {
+    "w": 400,
+    "h": 540
+   },
+   "anchor": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "map.ribbon.5": {
+   "kind": "image",
+   "box": {
+    "w": 240,
+    "h": 48
+   },
+   "anchor": {
+    "x": 0.5,
+    "y": 0.5
+   }
+  },
+  "map.top.bg": {
+   "kind": "image",
+   "box": {
+    "w": 400,
+    "h": 130
+   },
+   "anchor": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "map.bottom.bg": {
+   "kind": "image",
+   "box": {
+    "w": 400,
+    "h": 130
+   },
+   "anchor": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "map.fog": {
+   "kind": "image",
+   "box": {
+    "w": 400,
+    "h": 540
+   },
+   "anchor": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  "map.start": {
+   "kind": "image",
+   "box": {
+    "w": 96,
+    "h": 64
+   },
+   "anchor": {
+    "x": 0.5,
+    "y": 1
+   }
+  },
+  "map.node.locked": {
+   "kind": "image",
+   "box": {
+    "w": 64,
+    "h": 64
+   },
+   "anchor": {
+    "x": 0.5,
+    "y": 0.5
+   }
+  },
+  "map.node.available": {
+   "kind": "image",
+   "box": {
+    "w": 64,
+    "h": 64
+   },
+   "anchor": {
+    "x": 0.5,
+    "y": 0.5
+   }
+  },
+  "map.node.done": {
+   "kind": "image",
+   "box": {
+    "w": 64,
+    "h": 64
+   },
+   "anchor": {
+    "x": 0.5,
+    "y": 0.5
+   }
+  },
+  "map.node.selected": {
+   "kind": "image",
+   "box": {
+    "w": 76,
+    "h": 76
+   },
+   "anchor": {
+    "x": 0.5,
+    "y": 0.5
+   }
+  },
+  "map.node.1.locked": {
+   "kind": "image",
+   "box": {
+    "w": 64,
+    "h": 64
+   },
+   "anchor": {
+    "x": 0.5,
+    "y": 0.5
+   }
+  },
+  "map.node.1.available": {
+   "kind": "image",
+   "box": {
+    "w": 64,
+    "h": 64
+   },
+   "anchor": {
+    "x": 0.5,
+    "y": 0.5
+   }
+  },
+  "map.node.1.done": {
+   "kind": "image",
+   "box": {
+    "w": 64,
+    "h": 64
+   },
+   "anchor": {
+    "x": 0.5,
+    "y": 0.5
+   }
+  },
+  "map.node.2.locked": {
+   "kind": "image",
+   "box": {
+    "w": 64,
+    "h": 64
+   },
+   "anchor": {
+    "x": 0.5,
+    "y": 0.5
+   }
+  },
+  "map.node.2.available": {
+   "kind": "image",
+   "box": {
+    "w": 64,
+    "h": 64
+   },
+   "anchor": {
+    "x": 0.5,
+    "y": 0.5
+   }
+  },
+  "map.node.2.done": {
+   "kind": "image",
+   "box": {
+    "w": 64,
+    "h": 64
+   },
+   "anchor": {
+    "x": 0.5,
+    "y": 0.5
+   }
+  },
+  "map.node.3.locked": {
+   "kind": "image",
+   "box": {
+    "w": 64,
+    "h": 64
+   },
+   "anchor": {
+    "x": 0.5,
+    "y": 0.5
+   }
+  },
+  "map.node.3.available": {
+   "kind": "image",
+   "box": {
+    "w": 64,
+    "h": 64
+   },
+   "anchor": {
+    "x": 0.5,
+    "y": 0.5
+   }
+  },
+  "map.node.3.done": {
+   "kind": "image",
+   "box": {
+    "w": 64,
+    "h": 64
+   },
+   "anchor": {
+    "x": 0.5,
+    "y": 0.5
+   }
+  },
+  "map.node.4.locked": {
+   "kind": "image",
+   "box": {
+    "w": 64,
+    "h": 64
+   },
+   "anchor": {
+    "x": 0.5,
+    "y": 0.5
+   }
+  },
+  "map.node.4.available": {
+   "kind": "image",
+   "box": {
+    "w": 64,
+    "h": 64
+   },
+   "anchor": {
+    "x": 0.5,
+    "y": 0.5
+   }
+  },
+  "map.node.4.done": {
+   "kind": "image",
+   "box": {
+    "w": 64,
+    "h": 64
+   },
+   "anchor": {
+    "x": 0.5,
+    "y": 0.5
+   }
+  },
+  "map.node.5.locked": {
+   "kind": "image",
+   "box": {
+    "w": 64,
+    "h": 64
+   },
+   "anchor": {
+    "x": 0.5,
+    "y": 0.5
+   }
+  },
+  "map.node.5.available": {
+   "kind": "image",
+   "box": {
+    "w": 64,
+    "h": 64
+   },
+   "anchor": {
+    "x": 0.5,
+    "y": 0.5
+   }
+  },
+  "map.node.5.done": {
+   "kind": "image",
+   "box": {
+    "w": 64,
+    "h": 64
+   },
+   "anchor": {
+    "x": 0.5,
+    "y": 0.5
+   }
+  },
+  "map.bonus.locked": {
+   "kind": "image",
+   "box": {
+    "w": 80,
+    "h": 80
+   },
+   "anchor": {
+    "x": 0.5,
+    "y": 0.5
+   }
+  },
+  "map.bonus.unlocked": {
+   "kind": "image",
+   "box": {
+    "w": 80,
+    "h": 80
+   },
+   "anchor": {
+    "x": 0.5,
+    "y": 0.5
+   }
+  },
+  "char.bianca.idle": {
+   "kind": "sprite",
+   "box": {
+    "w": 72,
+    "h": 72
+   },
+   "anchor": {
+    "x": 0.5,
+    "y": 0.875
+   },
+   "sprite": {
+    "frames": 6,
+    "fps": 8,
+    "loop": true,
+    "frameW": 256,
+    "frameH": 256
+   }
+  },
+  "char.bianca.walk": {
+   "kind": "sprite",
+   "box": {
+    "w": 72,
+    "h": 72
+   },
+   "anchor": {
+    "x": 0.5,
+    "y": 0.875
+   },
+   "sprite": {
+    "frames": 8,
+    "fps": 12,
+    "loop": true,
+    "frameW": 256,
+    "frameH": 256
+   }
+  },
+  "char.bianca.celebrate": {
+   "kind": "sprite",
+   "box": {
+    "w": 72,
+    "h": 72
+   },
+   "anchor": {
+    "x": 0.5,
+    "y": 0.875
+   },
+   "sprite": {
+    "frames": 8,
+    "fps": 10,
+    "loop": true,
+    "frameW": 256,
+    "frameH": 256
+   }
+  },
+  "fx.sparkle": {
+   "kind": "image",
+   "box": {
+    "w": 24,
+    "h": 24
+   },
+   "anchor": {
+    "x": 0.5,
+    "y": 0.5
+   }
+  },
+  "fx.node.complete": {
+   "kind": "sprite",
+   "box": {
+    "w": 96,
+    "h": 96
+   },
+   "anchor": {
+    "x": 0.5,
+    "y": 0.5
+   },
+   "sprite": {
+    "frames": 8,
+    "fps": 14,
+    "loop": false,
+    "frameW": 192,
+    "frameH": 192
+   }
+  },
+  "ui.icon.stamp-small": {
+   "kind": "image"
+  },
+  "ui.icon.coin": {
+   "kind": "image"
+  },
+  "ui.icon.stamp-big": {
+   "kind": "image"
+  },
+  "ui.icon.stamp-day": {
+   "kind": "image"
+  },
+  "ui.icon.credit": {
+   "kind": "image"
+  },
+  "ui.brand.crown": {
+   "kind": "image"
+  },
+  "ui.icon.mode-child": {
+   "kind": "image"
+  },
+  "ui.icon.mode-guardian": {
+   "kind": "image"
+  },
+  "ui.tab.map": {
+   "kind": "image"
+  },
+  "ui.tab.goals": {
+   "kind": "image"
+  },
+  "ui.tab.achievements": {
+   "kind": "image"
+  },
+  "ui.tab.games": {
+   "kind": "image"
+  },
+  "ui.tab.review": {
+   "kind": "image"
+  },
+  "ui.tab.prizes": {
+   "kind": "image"
+  },
+  "ui.tab.credits": {
+   "kind": "image"
+  },
+  "ui.tab.history": {
+   "kind": "image"
+  },
+  "ui.tab.more": {
+   "kind": "image"
+  },
+  "ui.status.pending": {
+   "kind": "image"
+  },
+  "ui.status.done": {
+   "kind": "image"
+  },
+  "ui.status.not-done": {
+   "kind": "image"
+  },
+  "ui.status.not-evaluated": {
+   "kind": "image"
+  },
+  "ui.sync.loading": {
+   "kind": "image"
+  },
+  "ui.sync.synced": {
+   "kind": "image"
+  },
+  "ui.sync.syncing": {
+   "kind": "image"
+  },
+  "ui.sync.pending": {
+   "kind": "image"
+  },
+  "ui.sync.offline": {
+   "kind": "image"
+  },
+  "ui.sync.conflict": {
+   "kind": "image"
+  },
+  "ui.sync.error": {
+   "kind": "image"
+  },
+  "ui.celebration.stage": {
+   "kind": "image"
+  },
+  "ui.celebration.final": {
+   "kind": "image"
+  },
+  "ui.bg.app": {
+   "kind": "image"
+  },
+  "ui.bg.topbar": {
+   "kind": "image"
+  },
+  "ui.button.primary": {
+   "kind": "image"
+  },
+  "ui.panel.sheet": {
+   "kind": "image"
+  },
+  "game.stars.bg": {
+   "kind": "image"
+  },
+  "game.garden.bg": {
+   "kind": "image"
+  },
+  "game.stars.star": {
+   "kind": "image"
+  },
+  "game.stars.star.hit": {
+   "kind": "image"
+  },
+  "game.crystals.back": {
+   "kind": "image"
+  },
+  "game.crystals.symbol.crystal": {
+   "kind": "image"
+  },
+  "game.crystals.symbol.orb": {
+   "kind": "image"
+  },
+  "game.crystals.symbol.moon": {
+   "kind": "image"
+  },
+  "game.crystals.symbol.star": {
+   "kind": "image"
+  },
+  "game.crystals.symbol.unicorn": {
+   "kind": "image"
+  },
+  "game.crystals.symbol.blossom": {
+   "kind": "image"
+  },
+  "game.crystals.symbol.mushroom": {
+   "kind": "image"
+  },
+  "game.crystals.symbol.butterfly": {
+   "kind": "image"
+  },
+  "game.garden.item.tulip": {
+   "kind": "image"
+  },
+  "game.garden.item.blossom": {
+   "kind": "image"
+  },
+  "game.garden.item.sunflower": {
+   "kind": "image"
+  },
+  "game.garden.item.tree": {
+   "kind": "image"
+  },
+  "game.garden.item.mushroom": {
+   "kind": "image"
+  },
+  "game.garden.item.butterfly": {
+   "kind": "image"
+  },
+  "game.garden.item.rabbit": {
+   "kind": "image"
+  },
+  "game.garden.item.rainbow": {
+   "kind": "image"
+  },
+  "game.garden.item.unicorn": {
+   "kind": "image"
+  },
+  "game.garden.item.castle": {
+   "kind": "image"
+  },
+  "game.garden.item.fairy": {
+   "kind": "image"
+  },
+  "game.icon.stars": {
+   "kind": "image"
+  },
+  "game.icon.crystals": {
+   "kind": "image"
+  },
+  "game.icon.garden": {
+   "kind": "image"
+  }
+ },
+ "catalog": [
+  {
+   "id": "map.region.1.bg",
+   "category": "map",
+   "group": "Mapa · Região 1 — Floresta dos Sonhos",
+   "stem": "map/region-1-bg",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 800,
+    "h": 1080
+   },
+   "dimMode": "exact",
+   "transparent": false,
+   "aspect": "800:1080",
+   "orientation": "retrato",
+   "variants": "1",
+   "desc": "Fundo opaco da região 1 (Floresta dos Sonhos): terreno, céu/água/montanha e iluminação. Sem trilha, sem casas, sem texto.",
+   "placement": "Faixa 400×540 unidades do mapa em x=0, y=2290 (de cima para baixo: região 5 no topo, região 1 embaixo). Sem sobreposição com as faixas vizinhas.",
+   "relations": "Base de mid, path e fg da mesma região — gerar em conjunto com .mid/.path/.fg e o guia de layout; bordas superior e inferior devem casar com as regiões vizinhas.",
+   "priority": "P0",
+   "lot": 0,
+   "usedIn": "MapView › fundo da região (src/ui/MapView.tsx)",
+   "maxKB": 450
+  },
+  {
+   "id": "map.region.1.mid",
+   "category": "map",
+   "group": "Mapa · Região 1 — Floresta dos Sonhos",
+   "stem": "map/region-1-mid",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 800,
+    "h": 1080
+   },
+   "dimMode": "exact",
+   "transparent": true,
+   "aspect": "800:1080",
+   "orientation": "retrato",
+   "variants": "1",
+   "desc": "Elementos decorativos de segundo plano (árvores, rochas, flores, construções) ATRÁS da trilha. Fundo transparente.",
+   "placement": "Mesma faixa 400×540 do fundo. Manter as faixas laterais; não cobrir o corredor da trilha nem as posições das casas (ver guia).",
+   "relations": "Desenhada sobre .bg e sob .path; coordenada com .fg (mesma iluminação).",
+   "priority": "P0",
+   "lot": 0,
+   "usedIn": "MapView › decoração da região",
+   "maxKB": 500
+  },
+  {
+   "id": "map.region.1.path",
+   "category": "map",
+   "group": "Mapa · Região 1 — Floresta dos Sonhos",
+   "stem": "map/region-1-path",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 800,
+    "h": 1080
+   },
+   "dimMode": "exact",
+   "transparent": true,
+   "aspect": "800:1080",
+   "orientation": "retrato",
+   "variants": "1",
+   "desc": "Trilha (caminho de pedras/areia) da região, com bordas e relevo. Fundo transparente.",
+   "placement": "Mesma faixa 400×540. A linha central da trilha DEVE passar pelos centros das 5 casas da região (guia de layout) e encontrar as regiões vizinhas nas bordas (x=200 no topo da região).",
+   "relations": "Substitui o traçado padrão da trilha nesta região; casas e personagem ficam por cima.",
+   "priority": "P0",
+   "lot": 0,
+   "usedIn": "MapView › trilha",
+   "maxKB": 400
+  },
+  {
+   "id": "map.region.1.fg",
+   "category": "map",
+   "group": "Mapa · Região 1 — Floresta dos Sonhos",
+   "stem": "map/region-1-fg",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 800,
+    "h": 1080
+   },
+   "dimMode": "exact",
+   "transparent": true,
+   "aspect": "800:1080",
+   "orientation": "retrato",
+   "variants": "1",
+   "desc": "Elementos de primeiro plano (copas, arcos, folhagem) que passam À FRENTE da personagem. Fundo transparente, esparso.",
+   "placement": "Mesma faixa 400×540. Não cobrir as casas (toque) nem o texto das faixas; elementos pequenos e nas bordas.",
+   "relations": "Desenhado por último (acima da personagem), sem capturar toques.",
+   "priority": "P0",
+   "lot": 0,
+   "usedIn": "MapView › primeiro plano",
+   "maxKB": 300
+  },
+  {
+   "id": "map.ribbon.1",
+   "category": "map",
+   "group": "Mapa · Região 1 — Floresta dos Sonhos",
+   "stem": "map/ribbon-1",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 480,
+    "h": 96
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "480:96",
+   "orientation": "paisagem",
+   "variants": "1",
+   "desc": "Faixa/fita do título da região 1, SEM texto (o nome é desenhado pelo app).",
+   "placement": "Centro em x=200, y=2326 (36 unidades abaixo do topo da região). Tamanho exibido 240×48. Espaço livre no centro para o texto.",
+   "relations": "Usa a cor de destaque da região; texto branco sobreposto pelo app.",
+   "priority": "P1",
+   "lot": 0,
+   "usedIn": "MapView › faixa da região",
+   "maxKB": 60
+  },
+  {
+   "id": "map.region.2.bg",
+   "category": "map",
+   "group": "Mapa · Região 2 — Castelo das Fadas",
+   "stem": "map/region-2-bg",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 800,
+    "h": 1080
+   },
+   "dimMode": "exact",
+   "transparent": false,
+   "aspect": "800:1080",
+   "orientation": "retrato",
+   "variants": "1",
+   "desc": "Fundo opaco da região 2 (Castelo das Fadas): terreno, céu/água/montanha e iluminação. Sem trilha, sem casas, sem texto.",
+   "placement": "Faixa 400×540 unidades do mapa em x=0, y=1750 (de cima para baixo: região 5 no topo, região 1 embaixo). Sem sobreposição com as faixas vizinhas.",
+   "relations": "Base de mid, path e fg da mesma região — gerar em conjunto com .mid/.path/.fg e o guia de layout; bordas superior e inferior devem casar com as regiões vizinhas.",
+   "priority": "P1",
+   "lot": 2,
+   "usedIn": "MapView › fundo da região (src/ui/MapView.tsx)",
+   "maxKB": 450
+  },
+  {
+   "id": "map.region.2.mid",
+   "category": "map",
+   "group": "Mapa · Região 2 — Castelo das Fadas",
+   "stem": "map/region-2-mid",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 800,
+    "h": 1080
+   },
+   "dimMode": "exact",
+   "transparent": true,
+   "aspect": "800:1080",
+   "orientation": "retrato",
+   "variants": "1",
+   "desc": "Elementos decorativos de segundo plano (árvores, rochas, flores, construções) ATRÁS da trilha. Fundo transparente.",
+   "placement": "Mesma faixa 400×540 do fundo. Manter as faixas laterais; não cobrir o corredor da trilha nem as posições das casas (ver guia).",
+   "relations": "Desenhada sobre .bg e sob .path; coordenada com .fg (mesma iluminação).",
+   "priority": "P1",
+   "lot": 2,
+   "usedIn": "MapView › decoração da região",
+   "maxKB": 500
+  },
+  {
+   "id": "map.region.2.path",
+   "category": "map",
+   "group": "Mapa · Região 2 — Castelo das Fadas",
+   "stem": "map/region-2-path",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 800,
+    "h": 1080
+   },
+   "dimMode": "exact",
+   "transparent": true,
+   "aspect": "800:1080",
+   "orientation": "retrato",
+   "variants": "1",
+   "desc": "Trilha (caminho de pedras/areia) da região, com bordas e relevo. Fundo transparente.",
+   "placement": "Mesma faixa 400×540. A linha central da trilha DEVE passar pelos centros das 5 casas da região (guia de layout) e encontrar as regiões vizinhas nas bordas (x=200 no topo da região).",
+   "relations": "Substitui o traçado padrão da trilha nesta região; casas e personagem ficam por cima.",
+   "priority": "P1",
+   "lot": 2,
+   "usedIn": "MapView › trilha",
+   "maxKB": 400
+  },
+  {
+   "id": "map.region.2.fg",
+   "category": "map",
+   "group": "Mapa · Região 2 — Castelo das Fadas",
+   "stem": "map/region-2-fg",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 800,
+    "h": 1080
+   },
+   "dimMode": "exact",
+   "transparent": true,
+   "aspect": "800:1080",
+   "orientation": "retrato",
+   "variants": "1",
+   "desc": "Elementos de primeiro plano (copas, arcos, folhagem) que passam À FRENTE da personagem. Fundo transparente, esparso.",
+   "placement": "Mesma faixa 400×540. Não cobrir as casas (toque) nem o texto das faixas; elementos pequenos e nas bordas.",
+   "relations": "Desenhado por último (acima da personagem), sem capturar toques.",
+   "priority": "P1",
+   "lot": 2,
+   "usedIn": "MapView › primeiro plano",
+   "maxKB": 300
+  },
+  {
+   "id": "map.ribbon.2",
+   "category": "map",
+   "group": "Mapa · Região 2 — Castelo das Fadas",
+   "stem": "map/ribbon-2",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 480,
+    "h": 96
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "480:96",
+   "orientation": "paisagem",
+   "variants": "1",
+   "desc": "Faixa/fita do título da região 2, SEM texto (o nome é desenhado pelo app).",
+   "placement": "Centro em x=200, y=1786 (36 unidades abaixo do topo da região). Tamanho exibido 240×48. Espaço livre no centro para o texto.",
+   "relations": "Usa a cor de destaque da região; texto branco sobreposto pelo app.",
+   "priority": "P1",
+   "lot": 2,
+   "usedIn": "MapView › faixa da região",
+   "maxKB": 60
+  },
+  {
+   "id": "map.region.3.bg",
+   "category": "map",
+   "group": "Mapa · Região 3 — Lago Cristalino",
+   "stem": "map/region-3-bg",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 800,
+    "h": 1080
+   },
+   "dimMode": "exact",
+   "transparent": false,
+   "aspect": "800:1080",
+   "orientation": "retrato",
+   "variants": "1",
+   "desc": "Fundo opaco da região 3 (Lago Cristalino): terreno, céu/água/montanha e iluminação. Sem trilha, sem casas, sem texto.",
+   "placement": "Faixa 400×540 unidades do mapa em x=0, y=1210 (de cima para baixo: região 5 no topo, região 1 embaixo). Sem sobreposição com as faixas vizinhas.",
+   "relations": "Base de mid, path e fg da mesma região — gerar em conjunto com .mid/.path/.fg e o guia de layout; bordas superior e inferior devem casar com as regiões vizinhas.",
+   "priority": "P1",
+   "lot": 3,
+   "usedIn": "MapView › fundo da região (src/ui/MapView.tsx)",
+   "maxKB": 450
+  },
+  {
+   "id": "map.region.3.mid",
+   "category": "map",
+   "group": "Mapa · Região 3 — Lago Cristalino",
+   "stem": "map/region-3-mid",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 800,
+    "h": 1080
+   },
+   "dimMode": "exact",
+   "transparent": true,
+   "aspect": "800:1080",
+   "orientation": "retrato",
+   "variants": "1",
+   "desc": "Elementos decorativos de segundo plano (árvores, rochas, flores, construções) ATRÁS da trilha. Fundo transparente.",
+   "placement": "Mesma faixa 400×540 do fundo. Manter as faixas laterais; não cobrir o corredor da trilha nem as posições das casas (ver guia).",
+   "relations": "Desenhada sobre .bg e sob .path; coordenada com .fg (mesma iluminação).",
+   "priority": "P1",
+   "lot": 3,
+   "usedIn": "MapView › decoração da região",
+   "maxKB": 500
+  },
+  {
+   "id": "map.region.3.path",
+   "category": "map",
+   "group": "Mapa · Região 3 — Lago Cristalino",
+   "stem": "map/region-3-path",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 800,
+    "h": 1080
+   },
+   "dimMode": "exact",
+   "transparent": true,
+   "aspect": "800:1080",
+   "orientation": "retrato",
+   "variants": "1",
+   "desc": "Trilha (caminho de pedras/areia) da região, com bordas e relevo. Fundo transparente.",
+   "placement": "Mesma faixa 400×540. A linha central da trilha DEVE passar pelos centros das 5 casas da região (guia de layout) e encontrar as regiões vizinhas nas bordas (x=200 no topo da região).",
+   "relations": "Substitui o traçado padrão da trilha nesta região; casas e personagem ficam por cima.",
+   "priority": "P1",
+   "lot": 3,
+   "usedIn": "MapView › trilha",
+   "maxKB": 400
+  },
+  {
+   "id": "map.region.3.fg",
+   "category": "map",
+   "group": "Mapa · Região 3 — Lago Cristalino",
+   "stem": "map/region-3-fg",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 800,
+    "h": 1080
+   },
+   "dimMode": "exact",
+   "transparent": true,
+   "aspect": "800:1080",
+   "orientation": "retrato",
+   "variants": "1",
+   "desc": "Elementos de primeiro plano (copas, arcos, folhagem) que passam À FRENTE da personagem. Fundo transparente, esparso.",
+   "placement": "Mesma faixa 400×540. Não cobrir as casas (toque) nem o texto das faixas; elementos pequenos e nas bordas.",
+   "relations": "Desenhado por último (acima da personagem), sem capturar toques.",
+   "priority": "P1",
+   "lot": 3,
+   "usedIn": "MapView › primeiro plano",
+   "maxKB": 300
+  },
+  {
+   "id": "map.ribbon.3",
+   "category": "map",
+   "group": "Mapa · Região 3 — Lago Cristalino",
+   "stem": "map/ribbon-3",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 480,
+    "h": 96
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "480:96",
+   "orientation": "paisagem",
+   "variants": "1",
+   "desc": "Faixa/fita do título da região 3, SEM texto (o nome é desenhado pelo app).",
+   "placement": "Centro em x=200, y=1246 (36 unidades abaixo do topo da região). Tamanho exibido 240×48. Espaço livre no centro para o texto.",
+   "relations": "Usa a cor de destaque da região; texto branco sobreposto pelo app.",
+   "priority": "P1",
+   "lot": 3,
+   "usedIn": "MapView › faixa da região",
+   "maxKB": 60
+  },
+  {
+   "id": "map.region.4.bg",
+   "category": "map",
+   "group": "Mapa · Região 4 — Montanhas da Coragem",
+   "stem": "map/region-4-bg",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 800,
+    "h": 1080
+   },
+   "dimMode": "exact",
+   "transparent": false,
+   "aspect": "800:1080",
+   "orientation": "retrato",
+   "variants": "1",
+   "desc": "Fundo opaco da região 4 (Montanhas da Coragem): terreno, céu/água/montanha e iluminação. Sem trilha, sem casas, sem texto.",
+   "placement": "Faixa 400×540 unidades do mapa em x=0, y=670 (de cima para baixo: região 5 no topo, região 1 embaixo). Sem sobreposição com as faixas vizinhas.",
+   "relations": "Base de mid, path e fg da mesma região — gerar em conjunto com .mid/.path/.fg e o guia de layout; bordas superior e inferior devem casar com as regiões vizinhas.",
+   "priority": "P1",
+   "lot": 4,
+   "usedIn": "MapView › fundo da região (src/ui/MapView.tsx)",
+   "maxKB": 450
+  },
+  {
+   "id": "map.region.4.mid",
+   "category": "map",
+   "group": "Mapa · Região 4 — Montanhas da Coragem",
+   "stem": "map/region-4-mid",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 800,
+    "h": 1080
+   },
+   "dimMode": "exact",
+   "transparent": true,
+   "aspect": "800:1080",
+   "orientation": "retrato",
+   "variants": "1",
+   "desc": "Elementos decorativos de segundo plano (árvores, rochas, flores, construções) ATRÁS da trilha. Fundo transparente.",
+   "placement": "Mesma faixa 400×540 do fundo. Manter as faixas laterais; não cobrir o corredor da trilha nem as posições das casas (ver guia).",
+   "relations": "Desenhada sobre .bg e sob .path; coordenada com .fg (mesma iluminação).",
+   "priority": "P1",
+   "lot": 4,
+   "usedIn": "MapView › decoração da região",
+   "maxKB": 500
+  },
+  {
+   "id": "map.region.4.path",
+   "category": "map",
+   "group": "Mapa · Região 4 — Montanhas da Coragem",
+   "stem": "map/region-4-path",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 800,
+    "h": 1080
+   },
+   "dimMode": "exact",
+   "transparent": true,
+   "aspect": "800:1080",
+   "orientation": "retrato",
+   "variants": "1",
+   "desc": "Trilha (caminho de pedras/areia) da região, com bordas e relevo. Fundo transparente.",
+   "placement": "Mesma faixa 400×540. A linha central da trilha DEVE passar pelos centros das 5 casas da região (guia de layout) e encontrar as regiões vizinhas nas bordas (x=200 no topo da região).",
+   "relations": "Substitui o traçado padrão da trilha nesta região; casas e personagem ficam por cima.",
+   "priority": "P1",
+   "lot": 4,
+   "usedIn": "MapView › trilha",
+   "maxKB": 400
+  },
+  {
+   "id": "map.region.4.fg",
+   "category": "map",
+   "group": "Mapa · Região 4 — Montanhas da Coragem",
+   "stem": "map/region-4-fg",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 800,
+    "h": 1080
+   },
+   "dimMode": "exact",
+   "transparent": true,
+   "aspect": "800:1080",
+   "orientation": "retrato",
+   "variants": "1",
+   "desc": "Elementos de primeiro plano (copas, arcos, folhagem) que passam À FRENTE da personagem. Fundo transparente, esparso.",
+   "placement": "Mesma faixa 400×540. Não cobrir as casas (toque) nem o texto das faixas; elementos pequenos e nas bordas.",
+   "relations": "Desenhado por último (acima da personagem), sem capturar toques.",
+   "priority": "P1",
+   "lot": 4,
+   "usedIn": "MapView › primeiro plano",
+   "maxKB": 300
+  },
+  {
+   "id": "map.ribbon.4",
+   "category": "map",
+   "group": "Mapa · Região 4 — Montanhas da Coragem",
+   "stem": "map/ribbon-4",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 480,
+    "h": 96
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "480:96",
+   "orientation": "paisagem",
+   "variants": "1",
+   "desc": "Faixa/fita do título da região 4, SEM texto (o nome é desenhado pelo app).",
+   "placement": "Centro em x=200, y=706 (36 unidades abaixo do topo da região). Tamanho exibido 240×48. Espaço livre no centro para o texto.",
+   "relations": "Usa a cor de destaque da região; texto branco sobreposto pelo app.",
+   "priority": "P1",
+   "lot": 4,
+   "usedIn": "MapView › faixa da região",
+   "maxKB": 60
+  },
+  {
+   "id": "map.region.5.bg",
+   "category": "map",
+   "group": "Mapa · Região 5 — Jardim da Magia",
+   "stem": "map/region-5-bg",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 800,
+    "h": 1080
+   },
+   "dimMode": "exact",
+   "transparent": false,
+   "aspect": "800:1080",
+   "orientation": "retrato",
+   "variants": "1",
+   "desc": "Fundo opaco da região 5 (Jardim da Magia): terreno, céu/água/montanha e iluminação. Sem trilha, sem casas, sem texto.",
+   "placement": "Faixa 400×540 unidades do mapa em x=0, y=130 (de cima para baixo: região 5 no topo, região 1 embaixo). Sem sobreposição com as faixas vizinhas.",
+   "relations": "Base de mid, path e fg da mesma região — gerar em conjunto com .mid/.path/.fg e o guia de layout; bordas superior e inferior devem casar com as regiões vizinhas.",
+   "priority": "P1",
+   "lot": 5,
+   "usedIn": "MapView › fundo da região (src/ui/MapView.tsx)",
+   "maxKB": 450
+  },
+  {
+   "id": "map.region.5.mid",
+   "category": "map",
+   "group": "Mapa · Região 5 — Jardim da Magia",
+   "stem": "map/region-5-mid",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 800,
+    "h": 1080
+   },
+   "dimMode": "exact",
+   "transparent": true,
+   "aspect": "800:1080",
+   "orientation": "retrato",
+   "variants": "1",
+   "desc": "Elementos decorativos de segundo plano (árvores, rochas, flores, construções) ATRÁS da trilha. Fundo transparente.",
+   "placement": "Mesma faixa 400×540 do fundo. Manter as faixas laterais; não cobrir o corredor da trilha nem as posições das casas (ver guia).",
+   "relations": "Desenhada sobre .bg e sob .path; coordenada com .fg (mesma iluminação).",
+   "priority": "P1",
+   "lot": 5,
+   "usedIn": "MapView › decoração da região",
+   "maxKB": 500
+  },
+  {
+   "id": "map.region.5.path",
+   "category": "map",
+   "group": "Mapa · Região 5 — Jardim da Magia",
+   "stem": "map/region-5-path",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 800,
+    "h": 1080
+   },
+   "dimMode": "exact",
+   "transparent": true,
+   "aspect": "800:1080",
+   "orientation": "retrato",
+   "variants": "1",
+   "desc": "Trilha (caminho de pedras/areia) da região, com bordas e relevo. Fundo transparente.",
+   "placement": "Mesma faixa 400×540. A linha central da trilha DEVE passar pelos centros das 5 casas da região (guia de layout) e encontrar as regiões vizinhas nas bordas (x=200 no topo da região).",
+   "relations": "Substitui o traçado padrão da trilha nesta região; casas e personagem ficam por cima.",
+   "priority": "P1",
+   "lot": 5,
+   "usedIn": "MapView › trilha",
+   "maxKB": 400
+  },
+  {
+   "id": "map.region.5.fg",
+   "category": "map",
+   "group": "Mapa · Região 5 — Jardim da Magia",
+   "stem": "map/region-5-fg",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 800,
+    "h": 1080
+   },
+   "dimMode": "exact",
+   "transparent": true,
+   "aspect": "800:1080",
+   "orientation": "retrato",
+   "variants": "1",
+   "desc": "Elementos de primeiro plano (copas, arcos, folhagem) que passam À FRENTE da personagem. Fundo transparente, esparso.",
+   "placement": "Mesma faixa 400×540. Não cobrir as casas (toque) nem o texto das faixas; elementos pequenos e nas bordas.",
+   "relations": "Desenhado por último (acima da personagem), sem capturar toques.",
+   "priority": "P1",
+   "lot": 5,
+   "usedIn": "MapView › primeiro plano",
+   "maxKB": 300
+  },
+  {
+   "id": "map.ribbon.5",
+   "category": "map",
+   "group": "Mapa · Região 5 — Jardim da Magia",
+   "stem": "map/ribbon-5",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 480,
+    "h": 96
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "480:96",
+   "orientation": "paisagem",
+   "variants": "1",
+   "desc": "Faixa/fita do título da região 5, SEM texto (o nome é desenhado pelo app).",
+   "placement": "Centro em x=200, y=166 (36 unidades abaixo do topo da região). Tamanho exibido 240×48. Espaço livre no centro para o texto.",
+   "relations": "Usa a cor de destaque da região; texto branco sobreposto pelo app.",
+   "priority": "P1",
+   "lot": 5,
+   "usedIn": "MapView › faixa da região",
+   "maxKB": 60
+  },
+  {
+   "id": "map.top.bg",
+   "category": "map",
+   "group": "Mapa · Topo e base",
+   "stem": "map/top-bg",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 800,
+    "h": 260
+   },
+   "dimMode": "exact",
+   "transparent": false,
+   "aspect": "800:260",
+   "orientation": "paisagem",
+   "variants": "1",
+   "desc": "Faixa superior do mapa: céu e horizonte do \"final do reino\" (atrás do bônus final).",
+   "placement": "Faixa 400×130 em x=0, y=0 (topo do mapa).",
+   "relations": "Deve casar com a borda superior da Região 5.",
+   "priority": "P1",
+   "lot": 5,
+   "usedIn": "MapView › topo",
+   "maxKB": 150
+  },
+  {
+   "id": "map.bottom.bg",
+   "category": "map",
+   "group": "Mapa · Topo e base",
+   "stem": "map/bottom-bg",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 800,
+    "h": 260
+   },
+   "dimMode": "exact",
+   "transparent": false,
+   "aspect": "800:260",
+   "orientation": "paisagem",
+   "variants": "1",
+   "desc": "Faixa inferior do mapa: ponto de partida (\"Início\"), chão e entrada do reino.",
+   "placement": "Faixa 400×130 em x=0, y=2830 (rodapé do mapa).",
+   "relations": "Deve casar com a borda inferior da Região 1.",
+   "priority": "P0",
+   "lot": 0,
+   "usedIn": "MapView › base",
+   "maxKB": 150
+  },
+  {
+   "id": "map.fog",
+   "category": "map",
+   "group": "Mapa · Topo e base",
+   "stem": "map/fog",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 800,
+    "h": 1080
+   },
+   "dimMode": "exact",
+   "transparent": true,
+   "aspect": "800:1080",
+   "orientation": "retrato",
+   "variants": "1",
+   "desc": "Véu/névoa mágica sobre regiões ainda bloqueadas. Semitransparente.",
+   "placement": "Faixa 400×540; desenhada sobre a região bloqueada, sem capturar toques; as casas continuam legíveis.",
+   "relations": "Aplicada às regiões 2–5 enquanto a anterior não estiver concluída.",
+   "priority": "P1",
+   "lot": 2,
+   "usedIn": "MapView › véu de região bloqueada",
+   "maxKB": 250
+  },
+  {
+   "id": "map.start",
+   "category": "map",
+   "group": "Mapa · Marcos",
+   "stem": "map/start",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 192,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "192:128",
+   "orientation": "paisagem",
+   "variants": "1",
+   "desc": "Placa/marco \"Início\" (poste e placa), SEM texto.",
+   "placement": "Base do poste no ponto (120, 2913); âncora na base (x=.5,y=1). Tamanho exibido 96×64.",
+   "relations": "Fica ao lado da casa 1.1; o app escreve \"Início\" sobre a placa.",
+   "priority": "P0",
+   "lot": 0,
+   "usedIn": "MapView › marco de início",
+   "maxKB": 80
+  },
+  {
+   "id": "map.node.locked",
+   "category": "map",
+   "group": "Mapa · Marcos das fases",
+   "stem": "map/node-locked",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "3 estados (locked, available, done)",
+   "desc": "Marco de fase — casa BLOQUEADA (ainda não alcançável): apagada/cinza/com cadeado discreto. SEM número (o app desenha o número).",
+   "placement": "Centrado na posição da casa; tamanho exibido 64×64 (a área de toque do app é 56×56 e não muda).",
+   "relations": "Mesmo contorno nos 3 estados para troca sem \"pulo\"; 3 arquivos coordenados.",
+   "priority": "P0",
+   "lot": 0,
+   "usedIn": "MapView › casas (25)",
+   "maxKB": 60
+  },
+  {
+   "id": "map.node.available",
+   "category": "map",
+   "group": "Mapa · Marcos das fases",
+   "stem": "map/node-available",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "3 estados (locked, available, done)",
+   "desc": "Marco de fase — casa DISPONÍVEL (próxima fase): viva, convidativa, com brilho. SEM número (o app desenha o número).",
+   "placement": "Centrado na posição da casa; tamanho exibido 64×64 (a área de toque do app é 56×56 e não muda).",
+   "relations": "Mesmo contorno nos 3 estados para troca sem \"pulo\"; 3 arquivos coordenados.",
+   "priority": "P0",
+   "lot": 0,
+   "usedIn": "MapView › casas (25)",
+   "maxKB": 60
+  },
+  {
+   "id": "map.node.done",
+   "category": "map",
+   "group": "Mapa · Marcos das fases",
+   "stem": "map/node-done",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "3 estados (locked, available, done)",
+   "desc": "Marco de fase — casa CONCLUÍDA: carimbo/selo dourado já conquistado. SEM número (o app desenha o número).",
+   "placement": "Centrado na posição da casa; tamanho exibido 64×64 (a área de toque do app é 56×56 e não muda).",
+   "relations": "Mesmo contorno nos 3 estados para troca sem \"pulo\"; 3 arquivos coordenados.",
+   "priority": "P0",
+   "lot": 0,
+   "usedIn": "MapView › casas (25)",
+   "maxKB": 60
+  },
+  {
+   "id": "map.node.selected",
+   "category": "map",
+   "group": "Mapa · Marcos das fases",
+   "stem": "map/node-selected",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 152,
+    "h": 152
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "152:152",
+   "orientation": "quadrado",
+   "variants": "1",
+   "desc": "Anel/halo de SELEÇÃO sobreposto à casa tocada (overlay, não substitui o estado).",
+   "placement": "Centrado na casa; tamanho exibido 76×76; desenhado sobre o marco e sob o número.",
+   "relations": "Combina com qualquer estado de casa.",
+   "priority": "P1",
+   "lot": 0,
+   "usedIn": "MapView › casa selecionada",
+   "maxKB": 60
+  },
+  {
+   "id": "map.node.1.locked",
+   "category": "map",
+   "group": "Mapa · Marcos por região (opcional)",
+   "stem": "map/node-1-locked",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "opcional",
+   "desc": "Variante do marco locked com a identidade da região 1. Opcional: se ausente, usa map.node.locked.",
+   "placement": "Idem map.node.locked",
+   "relations": "Substitui map.node.locked apenas nas casas da região 1",
+   "priority": "P2",
+   "lot": 9,
+   "usedIn": "MapView › casas da região",
+   "maxKB": 60
+  },
+  {
+   "id": "map.node.1.available",
+   "category": "map",
+   "group": "Mapa · Marcos por região (opcional)",
+   "stem": "map/node-1-available",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "opcional",
+   "desc": "Variante do marco available com a identidade da região 1. Opcional: se ausente, usa map.node.available.",
+   "placement": "Idem map.node.available",
+   "relations": "Substitui map.node.available apenas nas casas da região 1",
+   "priority": "P2",
+   "lot": 9,
+   "usedIn": "MapView › casas da região",
+   "maxKB": 60
+  },
+  {
+   "id": "map.node.1.done",
+   "category": "map",
+   "group": "Mapa · Marcos por região (opcional)",
+   "stem": "map/node-1-done",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "opcional",
+   "desc": "Variante do marco done com a identidade da região 1. Opcional: se ausente, usa map.node.done.",
+   "placement": "Idem map.node.done",
+   "relations": "Substitui map.node.done apenas nas casas da região 1",
+   "priority": "P2",
+   "lot": 9,
+   "usedIn": "MapView › casas da região",
+   "maxKB": 60
+  },
+  {
+   "id": "map.node.2.locked",
+   "category": "map",
+   "group": "Mapa · Marcos por região (opcional)",
+   "stem": "map/node-2-locked",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "opcional",
+   "desc": "Variante do marco locked com a identidade da região 2. Opcional: se ausente, usa map.node.locked.",
+   "placement": "Idem map.node.locked",
+   "relations": "Substitui map.node.locked apenas nas casas da região 2",
+   "priority": "P2",
+   "lot": 9,
+   "usedIn": "MapView › casas da região",
+   "maxKB": 60
+  },
+  {
+   "id": "map.node.2.available",
+   "category": "map",
+   "group": "Mapa · Marcos por região (opcional)",
+   "stem": "map/node-2-available",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "opcional",
+   "desc": "Variante do marco available com a identidade da região 2. Opcional: se ausente, usa map.node.available.",
+   "placement": "Idem map.node.available",
+   "relations": "Substitui map.node.available apenas nas casas da região 2",
+   "priority": "P2",
+   "lot": 9,
+   "usedIn": "MapView › casas da região",
+   "maxKB": 60
+  },
+  {
+   "id": "map.node.2.done",
+   "category": "map",
+   "group": "Mapa · Marcos por região (opcional)",
+   "stem": "map/node-2-done",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "opcional",
+   "desc": "Variante do marco done com a identidade da região 2. Opcional: se ausente, usa map.node.done.",
+   "placement": "Idem map.node.done",
+   "relations": "Substitui map.node.done apenas nas casas da região 2",
+   "priority": "P2",
+   "lot": 9,
+   "usedIn": "MapView › casas da região",
+   "maxKB": 60
+  },
+  {
+   "id": "map.node.3.locked",
+   "category": "map",
+   "group": "Mapa · Marcos por região (opcional)",
+   "stem": "map/node-3-locked",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "opcional",
+   "desc": "Variante do marco locked com a identidade da região 3. Opcional: se ausente, usa map.node.locked.",
+   "placement": "Idem map.node.locked",
+   "relations": "Substitui map.node.locked apenas nas casas da região 3",
+   "priority": "P2",
+   "lot": 9,
+   "usedIn": "MapView › casas da região",
+   "maxKB": 60
+  },
+  {
+   "id": "map.node.3.available",
+   "category": "map",
+   "group": "Mapa · Marcos por região (opcional)",
+   "stem": "map/node-3-available",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "opcional",
+   "desc": "Variante do marco available com a identidade da região 3. Opcional: se ausente, usa map.node.available.",
+   "placement": "Idem map.node.available",
+   "relations": "Substitui map.node.available apenas nas casas da região 3",
+   "priority": "P2",
+   "lot": 9,
+   "usedIn": "MapView › casas da região",
+   "maxKB": 60
+  },
+  {
+   "id": "map.node.3.done",
+   "category": "map",
+   "group": "Mapa · Marcos por região (opcional)",
+   "stem": "map/node-3-done",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "opcional",
+   "desc": "Variante do marco done com a identidade da região 3. Opcional: se ausente, usa map.node.done.",
+   "placement": "Idem map.node.done",
+   "relations": "Substitui map.node.done apenas nas casas da região 3",
+   "priority": "P2",
+   "lot": 9,
+   "usedIn": "MapView › casas da região",
+   "maxKB": 60
+  },
+  {
+   "id": "map.node.4.locked",
+   "category": "map",
+   "group": "Mapa · Marcos por região (opcional)",
+   "stem": "map/node-4-locked",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "opcional",
+   "desc": "Variante do marco locked com a identidade da região 4. Opcional: se ausente, usa map.node.locked.",
+   "placement": "Idem map.node.locked",
+   "relations": "Substitui map.node.locked apenas nas casas da região 4",
+   "priority": "P2",
+   "lot": 9,
+   "usedIn": "MapView › casas da região",
+   "maxKB": 60
+  },
+  {
+   "id": "map.node.4.available",
+   "category": "map",
+   "group": "Mapa · Marcos por região (opcional)",
+   "stem": "map/node-4-available",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "opcional",
+   "desc": "Variante do marco available com a identidade da região 4. Opcional: se ausente, usa map.node.available.",
+   "placement": "Idem map.node.available",
+   "relations": "Substitui map.node.available apenas nas casas da região 4",
+   "priority": "P2",
+   "lot": 9,
+   "usedIn": "MapView › casas da região",
+   "maxKB": 60
+  },
+  {
+   "id": "map.node.4.done",
+   "category": "map",
+   "group": "Mapa · Marcos por região (opcional)",
+   "stem": "map/node-4-done",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "opcional",
+   "desc": "Variante do marco done com a identidade da região 4. Opcional: se ausente, usa map.node.done.",
+   "placement": "Idem map.node.done",
+   "relations": "Substitui map.node.done apenas nas casas da região 4",
+   "priority": "P2",
+   "lot": 9,
+   "usedIn": "MapView › casas da região",
+   "maxKB": 60
+  },
+  {
+   "id": "map.node.5.locked",
+   "category": "map",
+   "group": "Mapa · Marcos por região (opcional)",
+   "stem": "map/node-5-locked",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "opcional",
+   "desc": "Variante do marco locked com a identidade da região 5. Opcional: se ausente, usa map.node.locked.",
+   "placement": "Idem map.node.locked",
+   "relations": "Substitui map.node.locked apenas nas casas da região 5",
+   "priority": "P2",
+   "lot": 9,
+   "usedIn": "MapView › casas da região",
+   "maxKB": 60
+  },
+  {
+   "id": "map.node.5.available",
+   "category": "map",
+   "group": "Mapa · Marcos por região (opcional)",
+   "stem": "map/node-5-available",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "opcional",
+   "desc": "Variante do marco available com a identidade da região 5. Opcional: se ausente, usa map.node.available.",
+   "placement": "Idem map.node.available",
+   "relations": "Substitui map.node.available apenas nas casas da região 5",
+   "priority": "P2",
+   "lot": 9,
+   "usedIn": "MapView › casas da região",
+   "maxKB": 60
+  },
+  {
+   "id": "map.node.5.done",
+   "category": "map",
+   "group": "Mapa · Marcos por região (opcional)",
+   "stem": "map/node-5-done",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "opcional",
+   "desc": "Variante do marco done com a identidade da região 5. Opcional: se ausente, usa map.node.done.",
+   "placement": "Idem map.node.done",
+   "relations": "Substitui map.node.done apenas nas casas da região 5",
+   "priority": "P2",
+   "lot": 9,
+   "usedIn": "MapView › casas da região",
+   "maxKB": 60
+  },
+  {
+   "id": "map.bonus.locked",
+   "category": "map",
+   "group": "Mapa · Marcos",
+   "stem": "map/bonus-locked",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 160,
+    "h": 160
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "160:160",
+   "orientation": "quadrado",
+   "variants": "2 estados",
+   "desc": "Bônus final ainda bloqueado: presente/baú fechado e discreto. SEM texto.",
+   "placement": "Centrado em (200, 62); exibido 80×80.",
+   "relations": "Par coordenado (locked/unlocked); o app escreve \"Bônus final\" abaixo.",
+   "priority": "P1",
+   "lot": 5,
+   "usedIn": "MapView › bônus final",
+   "maxKB": 80
+  },
+  {
+   "id": "map.bonus.unlocked",
+   "category": "map",
+   "group": "Mapa · Marcos",
+   "stem": "map/bonus-unlocked",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 160,
+    "h": 160
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "160:160",
+   "orientation": "quadrado",
+   "variants": "2 estados",
+   "desc": "Bônus final conquistado: coroa/baú aberto, radiante. SEM texto.",
+   "placement": "Centrado em (200, 62); exibido 80×80.",
+   "relations": "Par coordenado (locked/unlocked); o app escreve \"Bônus final\" abaixo.",
+   "priority": "P1",
+   "lot": 5,
+   "usedIn": "MapView › bônus final",
+   "maxKB": 80
+  },
+  {
+   "id": "char.bianca.idle",
+   "category": "char",
+   "group": "Personagem · Bianca",
+   "stem": "char/bianca-idle",
+   "kind": "sprite",
+   "formats": [
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 256,
+    "h": 256
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "256:256",
+   "orientation": "quadrado",
+   "variants": "6 quadros",
+   "desc": "Bianca — animação \"idle\": respiração/balanço leve em pé. Tira horizontal (6 quadros 256×256).",
+   "placement": "Âncora nos pés (x=.5, y=.875 do quadro). Exibida 72×72 unidades. Mesma escala, proporção e linha dos pés em TODAS as animações.",
+   "relations": "Mesmo personagem/traje em idle, walk e celebrate — gerar na mesma sessão com folha de modelo.",
+   "priority": "P0",
+   "lot": 0,
+   "usedIn": "MapView › personagem",
+   "maxKB": 700,
+   "sprite": {
+    "frames": 6,
+    "fps": 8,
+    "loop": true,
+    "frameW": 256,
+    "frameH": 256
+   },
+   "sheet": {
+    "w": 1536,
+    "h": 256
+   }
+  },
+  {
+   "id": "char.bianca.walk",
+   "category": "char",
+   "group": "Personagem · Bianca",
+   "stem": "char/bianca-walk",
+   "kind": "sprite",
+   "formats": [
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 256,
+    "h": 256
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "256:256",
+   "orientation": "quadrado",
+   "variants": "8 quadros",
+   "desc": "Bianca — animação \"walk\": caminhada (para a direita; o app não espelha). Tira horizontal (8 quadros 256×256).",
+   "placement": "Âncora nos pés (x=.5, y=.875 do quadro). Exibida 72×72 unidades. Mesma escala, proporção e linha dos pés em TODAS as animações.",
+   "relations": "Mesmo personagem/traje em idle, walk e celebrate — gerar na mesma sessão com folha de modelo.",
+   "priority": "P0",
+   "lot": 0,
+   "usedIn": "MapView › personagem",
+   "maxKB": 700,
+   "sprite": {
+    "frames": 8,
+    "fps": 12,
+    "loop": true,
+    "frameW": 256,
+    "frameH": 256
+   },
+   "sheet": {
+    "w": 2048,
+    "h": 256
+   }
+  },
+  {
+   "id": "char.bianca.celebrate",
+   "category": "char",
+   "group": "Personagem · Bianca",
+   "stem": "char/bianca-celebrate",
+   "kind": "sprite",
+   "formats": [
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 256,
+    "h": 256
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "256:256",
+   "orientation": "quadrado",
+   "variants": "8 quadros",
+   "desc": "Bianca — animação \"celebrate\": comemoração ao concluir o reino. Tira horizontal (8 quadros 256×256).",
+   "placement": "Âncora nos pés (x=.5, y=.875 do quadro). Exibida 72×72 unidades. Mesma escala, proporção e linha dos pés em TODAS as animações.",
+   "relations": "Mesmo personagem/traje em idle, walk e celebrate — gerar na mesma sessão com folha de modelo.",
+   "priority": "P1",
+   "lot": 0,
+   "usedIn": "MapView › personagem",
+   "maxKB": 700,
+   "sprite": {
+    "frames": 8,
+    "fps": 10,
+    "loop": true,
+    "frameW": 256,
+    "frameH": 256
+   },
+   "sheet": {
+    "w": 2048,
+    "h": 256
+   }
+  },
+  {
+   "id": "fx.sparkle",
+   "category": "fx",
+   "group": "Efeitos",
+   "stem": "fx/sparkle",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 96,
+    "h": 96
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "96:96",
+   "orientation": "quadrado",
+   "variants": "1",
+   "desc": "Brilho mágico decorativo (substitui o ✨ espalhado pelo mapa).",
+   "placement": "Centro no ponto do brilho; exibido 24×24; o app aplica o piscar (opacidade).",
+   "relations": "Independente das regiões.",
+   "priority": "P2",
+   "lot": 8,
+   "usedIn": "MapView › brilhos",
+   "maxKB": 30
+  },
+  {
+   "id": "fx.node.complete",
+   "category": "fx",
+   "group": "Efeitos",
+   "stem": "fx/node-complete",
+   "kind": "sprite",
+   "formats": [
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 192,
+    "h": 192
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "192:192",
+   "orientation": "quadrado",
+   "variants": "1",
+   "desc": "Explosão de estrelas/pétalas ao chegar a uma casa concluída (toca uma vez).",
+   "placement": "Centrada na casa; exibida 96×96; 8 quadros 192×192, sem repetição.",
+   "relations": "Toca quando a personagem alcança uma fase recém-concluída.",
+   "priority": "P2",
+   "lot": 8,
+   "usedIn": "MapView › efeito de progressão",
+   "maxKB": 400,
+   "sprite": {
+    "frames": 8,
+    "fps": 14,
+    "loop": false,
+    "frameW": 192,
+    "frameH": 192
+   },
+   "sheet": {
+    "w": 1536,
+    "h": 192
+   }
+  },
+  {
+   "id": "ui.icon.stamp-small",
+   "category": "ui",
+   "group": "UI · Indicadores",
+   "stem": "ui/icon-stamp-small",
+   "kind": "image",
+   "formats": [
+    "svg",
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "1",
+   "desc": "Selo pequeno (1 por fase) (substitui ⭐).",
+   "placement": "Quadrado, centrado, com respiro de 6%; exibido em 1em (acompanha o texto).",
+   "relations": "Mesmo estilo e traço dos demais ícones do conjunto.",
+   "priority": "P0",
+   "lot": 1,
+   "usedIn": "Stats, Conquistas",
+   "maxKB": 40
+  },
+  {
+   "id": "ui.icon.coin",
+   "category": "ui",
+   "group": "UI · Indicadores",
+   "stem": "ui/icon-coin",
+   "kind": "image",
+   "formats": [
+    "svg",
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "1",
+   "desc": "Moeda (substitui 🪙).",
+   "placement": "Quadrado, centrado, com respiro de 6%; exibido em 1em (acompanha o texto).",
+   "relations": "Mesmo estilo e traço dos demais ícones do conjunto.",
+   "priority": "P0",
+   "lot": 1,
+   "usedIn": "Stats",
+   "maxKB": 40
+  },
+  {
+   "id": "ui.icon.stamp-big",
+   "category": "ui",
+   "group": "UI · Indicadores",
+   "stem": "ui/icon-stamp-big",
+   "kind": "image",
+   "formats": [
+    "svg",
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "1",
+   "desc": "Selo grande (por etapa) (substitui 🏅).",
+   "placement": "Quadrado, centrado, com respiro de 6%; exibido em 1em (acompanha o texto).",
+   "relations": "Mesmo estilo e traço dos demais ícones do conjunto.",
+   "priority": "P0",
+   "lot": 1,
+   "usedIn": "Stats",
+   "maxKB": 40
+  },
+  {
+   "id": "ui.icon.stamp-day",
+   "category": "ui",
+   "group": "UI · Indicadores",
+   "stem": "ui/icon-stamp-day",
+   "kind": "image",
+   "formats": [
+    "svg",
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "1",
+   "desc": "Selo do dia (medalha diária) (substitui 🌟).",
+   "placement": "Quadrado, centrado, com respiro de 6%; exibido em 1em (acompanha o texto).",
+   "relations": "Mesmo estilo e traço dos demais ícones do conjunto.",
+   "priority": "P0",
+   "lot": 1,
+   "usedIn": "Stats",
+   "maxKB": 40
+  },
+  {
+   "id": "ui.icon.credit",
+   "category": "ui",
+   "group": "UI · Indicadores",
+   "stem": "ui/icon-credit",
+   "kind": "image",
+   "formats": [
+    "svg",
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "1",
+   "desc": "Crédito de minigame (substitui 🎮).",
+   "placement": "Quadrado, centrado, com respiro de 6%; exibido em 1em (acompanha o texto).",
+   "relations": "Mesmo estilo e traço dos demais ícones do conjunto.",
+   "priority": "P0",
+   "lot": 1,
+   "usedIn": "Stats",
+   "maxKB": 40
+  },
+  {
+   "id": "ui.brand.crown",
+   "category": "ui",
+   "group": "UI · Marca",
+   "stem": "ui/brand-crown",
+   "kind": "image",
+   "formats": [
+    "svg",
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "1",
+   "desc": "Coroa da marca (cabeçalho e abertura) (substitui 👑).",
+   "placement": "Quadrado, centrado, com respiro de 6%; exibido em 1em (acompanha o texto).",
+   "relations": "Mesmo estilo e traço dos demais ícones do conjunto.",
+   "priority": "P0",
+   "lot": 1,
+   "usedIn": "Cabeçalho, abertura",
+   "maxKB": 40
+  },
+  {
+   "id": "ui.icon.mode-child",
+   "category": "ui",
+   "group": "UI · Navegação",
+   "stem": "ui/icon-mode-child",
+   "kind": "image",
+   "formats": [
+    "svg",
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "1",
+   "desc": "Alternar para o modo da Bianca (substitui 👧).",
+   "placement": "Quadrado, centrado, com respiro de 6%; exibido em 1em (acompanha o texto).",
+   "relations": "Mesmo estilo e traço dos demais ícones do conjunto.",
+   "priority": "P1",
+   "lot": 1,
+   "usedIn": "Cabeçalho",
+   "maxKB": 40
+  },
+  {
+   "id": "ui.icon.mode-guardian",
+   "category": "ui",
+   "group": "UI · Navegação",
+   "stem": "ui/icon-mode-guardian",
+   "kind": "image",
+   "formats": [
+    "svg",
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "1",
+   "desc": "Alternar para o modo responsável (cadeado) (substitui 🔒).",
+   "placement": "Quadrado, centrado, com respiro de 6%; exibido em 1em (acompanha o texto).",
+   "relations": "Mesmo estilo e traço dos demais ícones do conjunto.",
+   "priority": "P1",
+   "lot": 1,
+   "usedIn": "Cabeçalho",
+   "maxKB": 40
+  },
+  {
+   "id": "ui.tab.map",
+   "category": "ui",
+   "group": "UI · Navegação",
+   "stem": "ui/tab-map",
+   "kind": "image",
+   "formats": [
+    "svg",
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "1",
+   "desc": "Aba \"Mapa\" (substitui 🗺️).",
+   "placement": "Quadrado, centrado, com respiro de 6%; exibido em 1em (acompanha o texto).",
+   "relations": "Mesmo estilo e traço dos demais ícones do conjunto.",
+   "priority": "P1",
+   "lot": 1,
+   "usedIn": "Barra de abas",
+   "maxKB": 40
+  },
+  {
+   "id": "ui.tab.goals",
+   "category": "ui",
+   "group": "UI · Navegação",
+   "stem": "ui/tab-goals",
+   "kind": "image",
+   "formats": [
+    "svg",
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "1",
+   "desc": "Aba \"Metas\" (substitui 📝).",
+   "placement": "Quadrado, centrado, com respiro de 6%; exibido em 1em (acompanha o texto).",
+   "relations": "Mesmo estilo e traço dos demais ícones do conjunto.",
+   "priority": "P1",
+   "lot": 1,
+   "usedIn": "Barra de abas",
+   "maxKB": 40
+  },
+  {
+   "id": "ui.tab.achievements",
+   "category": "ui",
+   "group": "UI · Navegação",
+   "stem": "ui/tab-achievements",
+   "kind": "image",
+   "formats": [
+    "svg",
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "1",
+   "desc": "Aba \"Conquistas\" (substitui 🏅).",
+   "placement": "Quadrado, centrado, com respiro de 6%; exibido em 1em (acompanha o texto).",
+   "relations": "Mesmo estilo e traço dos demais ícones do conjunto.",
+   "priority": "P1",
+   "lot": 1,
+   "usedIn": "Barra de abas",
+   "maxKB": 40
+  },
+  {
+   "id": "ui.tab.games",
+   "category": "ui",
+   "group": "UI · Navegação",
+   "stem": "ui/tab-games",
+   "kind": "image",
+   "formats": [
+    "svg",
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "1",
+   "desc": "Aba \"Jogos\" (substitui 🎮).",
+   "placement": "Quadrado, centrado, com respiro de 6%; exibido em 1em (acompanha o texto).",
+   "relations": "Mesmo estilo e traço dos demais ícones do conjunto.",
+   "priority": "P1",
+   "lot": 1,
+   "usedIn": "Barra de abas",
+   "maxKB": 40
+  },
+  {
+   "id": "ui.tab.review",
+   "category": "ui",
+   "group": "UI · Navegação",
+   "stem": "ui/tab-review",
+   "kind": "image",
+   "formats": [
+    "svg",
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "1",
+   "desc": "Aba \"Hoje (revisão)\" (substitui 📝).",
+   "placement": "Quadrado, centrado, com respiro de 6%; exibido em 1em (acompanha o texto).",
+   "relations": "Mesmo estilo e traço dos demais ícones do conjunto.",
+   "priority": "P1",
+   "lot": 1,
+   "usedIn": "Barra de abas",
+   "maxKB": 40
+  },
+  {
+   "id": "ui.tab.prizes",
+   "category": "ui",
+   "group": "UI · Navegação",
+   "stem": "ui/tab-prizes",
+   "kind": "image",
+   "formats": [
+    "svg",
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "1",
+   "desc": "Aba \"Prêmios\" (substitui 🎁).",
+   "placement": "Quadrado, centrado, com respiro de 6%; exibido em 1em (acompanha o texto).",
+   "relations": "Mesmo estilo e traço dos demais ícones do conjunto.",
+   "priority": "P1",
+   "lot": 1,
+   "usedIn": "Barra de abas",
+   "maxKB": 40
+  },
+  {
+   "id": "ui.tab.credits",
+   "category": "ui",
+   "group": "UI · Navegação",
+   "stem": "ui/tab-credits",
+   "kind": "image",
+   "formats": [
+    "svg",
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "1",
+   "desc": "Aba \"Créditos\" (substitui 🎮).",
+   "placement": "Quadrado, centrado, com respiro de 6%; exibido em 1em (acompanha o texto).",
+   "relations": "Mesmo estilo e traço dos demais ícones do conjunto.",
+   "priority": "P1",
+   "lot": 1,
+   "usedIn": "Barra de abas",
+   "maxKB": 40
+  },
+  {
+   "id": "ui.tab.history",
+   "category": "ui",
+   "group": "UI · Navegação",
+   "stem": "ui/tab-history",
+   "kind": "image",
+   "formats": [
+    "svg",
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "1",
+   "desc": "Aba \"Histórico\" (substitui 📜).",
+   "placement": "Quadrado, centrado, com respiro de 6%; exibido em 1em (acompanha o texto).",
+   "relations": "Mesmo estilo e traço dos demais ícones do conjunto.",
+   "priority": "P1",
+   "lot": 1,
+   "usedIn": "Barra de abas",
+   "maxKB": 40
+  },
+  {
+   "id": "ui.tab.more",
+   "category": "ui",
+   "group": "UI · Navegação",
+   "stem": "ui/tab-more",
+   "kind": "image",
+   "formats": [
+    "svg",
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "1",
+   "desc": "Aba \"Mais\" (substitui ⚙️).",
+   "placement": "Quadrado, centrado, com respiro de 6%; exibido em 1em (acompanha o texto).",
+   "relations": "Mesmo estilo e traço dos demais ícones do conjunto.",
+   "priority": "P1",
+   "lot": 1,
+   "usedIn": "Barra de abas",
+   "maxKB": 40
+  },
+  {
+   "id": "ui.status.pending",
+   "category": "ui",
+   "group": "UI · Estados das metas",
+   "stem": "ui/status-pending",
+   "kind": "image",
+   "formats": [
+    "svg",
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "1",
+   "desc": "Meta pendente (substitui ⏳).",
+   "placement": "Quadrado, centrado, com respiro de 6%; exibido em 1em (acompanha o texto).",
+   "relations": "Mesmo estilo e traço dos demais ícones do conjunto.",
+   "priority": "P0",
+   "lot": 1,
+   "usedIn": "Metas (criança e responsável)",
+   "maxKB": 40
+  },
+  {
+   "id": "ui.status.done",
+   "category": "ui",
+   "group": "UI · Estados das metas",
+   "stem": "ui/status-done",
+   "kind": "image",
+   "formats": [
+    "svg",
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "1",
+   "desc": "Meta cumprida (substitui ✅).",
+   "placement": "Quadrado, centrado, com respiro de 6%; exibido em 1em (acompanha o texto).",
+   "relations": "Mesmo estilo e traço dos demais ícones do conjunto.",
+   "priority": "P0",
+   "lot": 1,
+   "usedIn": "Metas (criança e responsável)",
+   "maxKB": 40
+  },
+  {
+   "id": "ui.status.not-done",
+   "category": "ui",
+   "group": "UI · Estados das metas",
+   "stem": "ui/status-not-done",
+   "kind": "image",
+   "formats": [
+    "svg",
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "1",
+   "desc": "Meta não cumprida (substitui ❌).",
+   "placement": "Quadrado, centrado, com respiro de 6%; exibido em 1em (acompanha o texto).",
+   "relations": "Mesmo estilo e traço dos demais ícones do conjunto.",
+   "priority": "P0",
+   "lot": 1,
+   "usedIn": "Metas (criança e responsável)",
+   "maxKB": 40
+  },
+  {
+   "id": "ui.status.not-evaluated",
+   "category": "ui",
+   "group": "UI · Estados das metas",
+   "stem": "ui/status-not-evaluated",
+   "kind": "image",
+   "formats": [
+    "svg",
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "1",
+   "desc": "Meta não avaliada (substitui ➖).",
+   "placement": "Quadrado, centrado, com respiro de 6%; exibido em 1em (acompanha o texto).",
+   "relations": "Mesmo estilo e traço dos demais ícones do conjunto.",
+   "priority": "P0",
+   "lot": 1,
+   "usedIn": "Metas (criança e responsável)",
+   "maxKB": 40
+  },
+  {
+   "id": "ui.sync.loading",
+   "category": "ui",
+   "group": "UI · Sincronização",
+   "stem": "ui/sync-loading",
+   "kind": "image",
+   "formats": [
+    "svg",
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "1",
+   "desc": "Carregando (substitui ⏳).",
+   "placement": "Quadrado, centrado, com respiro de 6%; exibido em 1em (acompanha o texto).",
+   "relations": "Mesmo estilo e traço dos demais ícones do conjunto.",
+   "priority": "P2",
+   "lot": 1,
+   "usedIn": "Selo de sincronização",
+   "maxKB": 40
+  },
+  {
+   "id": "ui.sync.synced",
+   "category": "ui",
+   "group": "UI · Sincronização",
+   "stem": "ui/sync-synced",
+   "kind": "image",
+   "formats": [
+    "svg",
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "1",
+   "desc": "Sincronizado (substitui ☁️).",
+   "placement": "Quadrado, centrado, com respiro de 6%; exibido em 1em (acompanha o texto).",
+   "relations": "Mesmo estilo e traço dos demais ícones do conjunto.",
+   "priority": "P2",
+   "lot": 1,
+   "usedIn": "Selo de sincronização",
+   "maxKB": 40
+  },
+  {
+   "id": "ui.sync.syncing",
+   "category": "ui",
+   "group": "UI · Sincronização",
+   "stem": "ui/sync-syncing",
+   "kind": "image",
+   "formats": [
+    "svg",
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "1",
+   "desc": "Sincronizando (substitui 🔄).",
+   "placement": "Quadrado, centrado, com respiro de 6%; exibido em 1em (acompanha o texto).",
+   "relations": "Mesmo estilo e traço dos demais ícones do conjunto.",
+   "priority": "P2",
+   "lot": 1,
+   "usedIn": "Selo de sincronização",
+   "maxKB": 40
+  },
+  {
+   "id": "ui.sync.pending",
+   "category": "ui",
+   "group": "UI · Sincronização",
+   "stem": "ui/sync-pending",
+   "kind": "image",
+   "formats": [
+    "svg",
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "1",
+   "desc": "Alterações pendentes (substitui 🕓).",
+   "placement": "Quadrado, centrado, com respiro de 6%; exibido em 1em (acompanha o texto).",
+   "relations": "Mesmo estilo e traço dos demais ícones do conjunto.",
+   "priority": "P2",
+   "lot": 1,
+   "usedIn": "Selo de sincronização",
+   "maxKB": 40
+  },
+  {
+   "id": "ui.sync.offline",
+   "category": "ui",
+   "group": "UI · Sincronização",
+   "stem": "ui/sync-offline",
+   "kind": "image",
+   "formats": [
+    "svg",
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "1",
+   "desc": "Offline (substitui 📴).",
+   "placement": "Quadrado, centrado, com respiro de 6%; exibido em 1em (acompanha o texto).",
+   "relations": "Mesmo estilo e traço dos demais ícones do conjunto.",
+   "priority": "P2",
+   "lot": 1,
+   "usedIn": "Selo de sincronização",
+   "maxKB": 40
+  },
+  {
+   "id": "ui.sync.conflict",
+   "category": "ui",
+   "group": "UI · Sincronização",
+   "stem": "ui/sync-conflict",
+   "kind": "image",
+   "formats": [
+    "svg",
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "1",
+   "desc": "Conflito a resolver (substitui ⚠️).",
+   "placement": "Quadrado, centrado, com respiro de 6%; exibido em 1em (acompanha o texto).",
+   "relations": "Mesmo estilo e traço dos demais ícones do conjunto.",
+   "priority": "P2",
+   "lot": 1,
+   "usedIn": "Selo de sincronização",
+   "maxKB": 40
+  },
+  {
+   "id": "ui.sync.error",
+   "category": "ui",
+   "group": "UI · Sincronização",
+   "stem": "ui/sync-error",
+   "kind": "image",
+   "formats": [
+    "svg",
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 128,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "128:128",
+   "orientation": "quadrado",
+   "variants": "1",
+   "desc": "Erro de sincronização (substitui ❌).",
+   "placement": "Quadrado, centrado, com respiro de 6%; exibido em 1em (acompanha o texto).",
+   "relations": "Mesmo estilo e traço dos demais ícones do conjunto.",
+   "priority": "P2",
+   "lot": 1,
+   "usedIn": "Selo de sincronização",
+   "maxKB": 40
+  },
+  {
+   "id": "ui.celebration.stage",
+   "category": "ui",
+   "group": "UI · Celebração",
+   "stem": "ui/celebration-stage",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 384,
+    "h": 384
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "384:384",
+   "orientation": "quadrado",
+   "variants": "1",
+   "desc": "Celebração de etapa concluída (substitui 🎉 no aviso).",
+   "placement": "Centrado no topo do aviso; exibido ~3rem×3rem na versão atual (pode crescer no futuro).",
+   "relations": "Par coordenado.",
+   "priority": "P2",
+   "lot": 9,
+   "usedIn": "Aviso de celebração",
+   "maxKB": 120
+  },
+  {
+   "id": "ui.celebration.final",
+   "category": "ui",
+   "group": "UI · Celebração",
+   "stem": "ui/celebration-final",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 384,
+    "h": 384
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "384:384",
+   "orientation": "quadrado",
+   "variants": "1",
+   "desc": "Celebração do reino conquistado (substitui 🎉 no aviso).",
+   "placement": "Centrado no topo do aviso; exibido ~3rem×3rem na versão atual (pode crescer no futuro).",
+   "relations": "Par coordenado.",
+   "priority": "P2",
+   "lot": 9,
+   "usedIn": "Aviso de celebração",
+   "maxKB": 120
+  },
+  {
+   "id": "ui.bg.app",
+   "category": "css",
+   "group": "UI · Fundos (CSS)",
+   "stem": "ui/bg-app",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 1080,
+    "h": 1920
+   },
+   "dimMode": "aspect",
+   "transparent": false,
+   "aspect": "1080:1920",
+   "orientation": "retrato",
+   "variants": "1",
+   "desc": "Fundo geral do app (atrás das telas), sutil, sem elementos no centro.",
+   "placement": "Aplicado como fundo CSS (cover; botões: esticado). Variável --art-ui-bg-app.",
+   "relations": "Substitui o gradiente atual somente quando existe.",
+   "priority": "P2",
+   "lot": 8,
+   "usedIn": "Container do app",
+   "maxKB": 350
+  },
+  {
+   "id": "ui.bg.topbar",
+   "category": "css",
+   "group": "UI · Fundos (CSS)",
+   "stem": "ui/bg-topbar",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 1080,
+    "h": 192
+   },
+   "dimMode": "aspect",
+   "transparent": false,
+   "aspect": "1080:192",
+   "orientation": "paisagem",
+   "variants": "1",
+   "desc": "Fundo do cabeçalho (faixa superior).",
+   "placement": "Aplicado como fundo CSS (cover; botões: esticado). Variável --art-ui-bg-topbar.",
+   "relations": "Substitui o gradiente atual somente quando existe.",
+   "priority": "P2",
+   "lot": 8,
+   "usedIn": "Cabeçalho",
+   "maxKB": 350
+  },
+  {
+   "id": "ui.button.primary",
+   "category": "css",
+   "group": "UI · Fundos (CSS)",
+   "stem": "ui/button-primary",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 640,
+    "h": 128
+   },
+   "dimMode": "aspect",
+   "transparent": false,
+   "aspect": "640:128",
+   "orientation": "paisagem",
+   "variants": "1",
+   "desc": "Fundo do botão principal (esticado, sem 9-slice nesta versão): sem texto, bordas arredondadas completas.",
+   "placement": "Aplicado como fundo CSS (cover; botões: esticado). Variável --art-ui-button-primary.",
+   "relations": "Substitui o gradiente atual somente quando existe.",
+   "priority": "P2",
+   "lot": 8,
+   "usedIn": "Botões .btn.primary",
+   "maxKB": 350
+  },
+  {
+   "id": "ui.panel.sheet",
+   "category": "css",
+   "group": "UI · Fundos (CSS)",
+   "stem": "ui/panel-sheet",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 1080,
+    "h": 1440
+   },
+   "dimMode": "aspect",
+   "transparent": false,
+   "aspect": "1080:1440",
+   "orientation": "retrato",
+   "variants": "1",
+   "desc": "Fundo das folhas (bottom sheet): papel/pergaminho suave.",
+   "placement": "Aplicado como fundo CSS (cover; botões: esticado). Variável --art-ui-panel-sheet.",
+   "relations": "Substitui o gradiente atual somente quando existe.",
+   "priority": "P2",
+   "lot": 8,
+   "usedIn": "Folhas e diálogos",
+   "maxKB": 350
+  },
+  {
+   "id": "game.stars.bg",
+   "category": "css",
+   "group": "Minigames · Fundos",
+   "stem": "game/stars-bg",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 1080,
+    "h": 1920
+   },
+   "dimMode": "aspect",
+   "transparent": false,
+   "aspect": "1080:1920",
+   "orientation": "retrato",
+   "variants": "1",
+   "desc": "Céu noturno do jogo Caça às Estrelas (sem estrelas; elas vêm do jogo).",
+   "placement": "Aplicado como fundo CSS (cover; botões: esticado). Variável --art-game-stars-bg.",
+   "relations": "Substitui o gradiente atual somente quando existe.",
+   "priority": "P1",
+   "lot": 6,
+   "usedIn": "Minigame Estrelas",
+   "maxKB": 350
+  },
+  {
+   "id": "game.garden.bg",
+   "category": "css",
+   "group": "Minigames · Fundos",
+   "stem": "game/garden-bg",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png"
+   ],
+   "px": {
+    "w": 1080,
+    "h": 1350
+   },
+   "dimMode": "aspect",
+   "transparent": false,
+   "aspect": "1080:1350",
+   "orientation": "retrato",
+   "variants": "1",
+   "desc": "Cenário do Jardim Encantado: céu e gramado vazios (proporção 4:5).",
+   "placement": "Aplicado como fundo CSS (cover; botões: esticado). Variável --art-game-garden-bg.",
+   "relations": "Substitui o gradiente atual somente quando existe.",
+   "priority": "P1",
+   "lot": 7,
+   "usedIn": "Minigame Jardim",
+   "maxKB": 350
+  },
+  {
+   "id": "game.stars.star",
+   "category": "game",
+   "group": "Minigame · Caça às Estrelas",
+   "stem": "game/stars-star",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 192,
+    "h": 192
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "192:192",
+   "orientation": "quadrado",
+   "variants": "1",
+   "desc": "Estrela tocável (substitui ⭐).",
+   "placement": "Centrada; tamanho decidido pelo jogo (44–70 px); borda sem corte.",
+   "relations": "Par com game.stars.star.hit.",
+   "priority": "P1",
+   "lot": 6,
+   "usedIn": "StarHunt",
+   "maxKB": 60
+  },
+  {
+   "id": "game.stars.star.hit",
+   "category": "game",
+   "group": "Minigame · Caça às Estrelas",
+   "stem": "game/stars-star-hit",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 192,
+    "h": 192
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "192:192",
+   "orientation": "quadrado",
+   "variants": "1",
+   "desc": "Estrela atingida (brilho/explosão curta) (substitui ✨).",
+   "placement": "Mesmo centro e tamanho de game.stars.star.",
+   "relations": "Par com game.stars.star.",
+   "priority": "P1",
+   "lot": 6,
+   "usedIn": "StarHunt",
+   "maxKB": 60
+  },
+  {
+   "id": "game.crystals.back",
+   "category": "game",
+   "group": "Minigame · Memória dos Cristais",
+   "stem": "game/crystals-back",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 256,
+    "h": 256
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "256:256",
+   "orientation": "quadrado",
+   "variants": "1",
+   "desc": "Verso da carta virada (substitui ❔).",
+   "placement": "Preenche a carta (quadrada); cantos arredondados do app recortam.",
+   "relations": "Mesmo estilo das faces.",
+   "priority": "P1",
+   "lot": 6,
+   "usedIn": "CrystalMemory",
+   "maxKB": 80
+  },
+  {
+   "id": "game.crystals.symbol.crystal",
+   "category": "game",
+   "group": "Minigame · Memória dos Cristais",
+   "stem": "game/crystals-symbol-crystal",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 256,
+    "h": 256
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "256:256",
+   "orientation": "quadrado",
+   "variants": "8 símbolos",
+   "desc": "Símbolo da carta: Cristal (substitui 💎).",
+   "placement": "Quadrado centrado com respiro; legível em ~64 px.",
+   "relations": "Conjunto de 8 símbolos com estilo e paleta coerentes e silhuetas distintas.",
+   "priority": "P1",
+   "lot": 6,
+   "usedIn": "CrystalMemory",
+   "maxKB": 80
+  },
+  {
+   "id": "game.crystals.symbol.orb",
+   "category": "game",
+   "group": "Minigame · Memória dos Cristais",
+   "stem": "game/crystals-symbol-orb",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 256,
+    "h": 256
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "256:256",
+   "orientation": "quadrado",
+   "variants": "8 símbolos",
+   "desc": "Símbolo da carta: Orbe mágico (substitui 🔮).",
+   "placement": "Quadrado centrado com respiro; legível em ~64 px.",
+   "relations": "Conjunto de 8 símbolos com estilo e paleta coerentes e silhuetas distintas.",
+   "priority": "P1",
+   "lot": 6,
+   "usedIn": "CrystalMemory",
+   "maxKB": 80
+  },
+  {
+   "id": "game.crystals.symbol.moon",
+   "category": "game",
+   "group": "Minigame · Memória dos Cristais",
+   "stem": "game/crystals-symbol-moon",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 256,
+    "h": 256
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "256:256",
+   "orientation": "quadrado",
+   "variants": "8 símbolos",
+   "desc": "Símbolo da carta: Lua (substitui 🌙).",
+   "placement": "Quadrado centrado com respiro; legível em ~64 px.",
+   "relations": "Conjunto de 8 símbolos com estilo e paleta coerentes e silhuetas distintas.",
+   "priority": "P1",
+   "lot": 6,
+   "usedIn": "CrystalMemory",
+   "maxKB": 80
+  },
+  {
+   "id": "game.crystals.symbol.star",
+   "category": "game",
+   "group": "Minigame · Memória dos Cristais",
+   "stem": "game/crystals-symbol-star",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 256,
+    "h": 256
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "256:256",
+   "orientation": "quadrado",
+   "variants": "8 símbolos",
+   "desc": "Símbolo da carta: Estrela (substitui ⭐).",
+   "placement": "Quadrado centrado com respiro; legível em ~64 px.",
+   "relations": "Conjunto de 8 símbolos com estilo e paleta coerentes e silhuetas distintas.",
+   "priority": "P1",
+   "lot": 6,
+   "usedIn": "CrystalMemory",
+   "maxKB": 80
+  },
+  {
+   "id": "game.crystals.symbol.unicorn",
+   "category": "game",
+   "group": "Minigame · Memória dos Cristais",
+   "stem": "game/crystals-symbol-unicorn",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 256,
+    "h": 256
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "256:256",
+   "orientation": "quadrado",
+   "variants": "8 símbolos",
+   "desc": "Símbolo da carta: Unicórnio (substitui 🦄).",
+   "placement": "Quadrado centrado com respiro; legível em ~64 px.",
+   "relations": "Conjunto de 8 símbolos com estilo e paleta coerentes e silhuetas distintas.",
+   "priority": "P1",
+   "lot": 6,
+   "usedIn": "CrystalMemory",
+   "maxKB": 80
+  },
+  {
+   "id": "game.crystals.symbol.blossom",
+   "category": "game",
+   "group": "Minigame · Memória dos Cristais",
+   "stem": "game/crystals-symbol-blossom",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 256,
+    "h": 256
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "256:256",
+   "orientation": "quadrado",
+   "variants": "8 símbolos",
+   "desc": "Símbolo da carta: Flor de cerejeira (substitui 🌸).",
+   "placement": "Quadrado centrado com respiro; legível em ~64 px.",
+   "relations": "Conjunto de 8 símbolos com estilo e paleta coerentes e silhuetas distintas.",
+   "priority": "P1",
+   "lot": 6,
+   "usedIn": "CrystalMemory",
+   "maxKB": 80
+  },
+  {
+   "id": "game.crystals.symbol.mushroom",
+   "category": "game",
+   "group": "Minigame · Memória dos Cristais",
+   "stem": "game/crystals-symbol-mushroom",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 256,
+    "h": 256
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "256:256",
+   "orientation": "quadrado",
+   "variants": "8 símbolos",
+   "desc": "Símbolo da carta: Cogumelo (substitui 🍄).",
+   "placement": "Quadrado centrado com respiro; legível em ~64 px.",
+   "relations": "Conjunto de 8 símbolos com estilo e paleta coerentes e silhuetas distintas.",
+   "priority": "P1",
+   "lot": 6,
+   "usedIn": "CrystalMemory",
+   "maxKB": 80
+  },
+  {
+   "id": "game.crystals.symbol.butterfly",
+   "category": "game",
+   "group": "Minigame · Memória dos Cristais",
+   "stem": "game/crystals-symbol-butterfly",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 256,
+    "h": 256
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "256:256",
+   "orientation": "quadrado",
+   "variants": "8 símbolos",
+   "desc": "Símbolo da carta: Borboleta (substitui 🦋).",
+   "placement": "Quadrado centrado com respiro; legível em ~64 px.",
+   "relations": "Conjunto de 8 símbolos com estilo e paleta coerentes e silhuetas distintas.",
+   "priority": "P1",
+   "lot": 6,
+   "usedIn": "CrystalMemory",
+   "maxKB": 80
+  },
+  {
+   "id": "game.garden.item.tulip",
+   "category": "game",
+   "group": "Minigame · Jardim Encantado",
+   "stem": "game/garden-item-tulip",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 192,
+    "h": 192
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "192:192",
+   "orientation": "quadrado",
+   "variants": "11 itens",
+   "desc": "Item de decoração: Tulipa (substitui 🌷).",
+   "placement": "Quadrado, objeto centrado e apoiado na metade inferior; sem sombra queimada.",
+   "relations": "Conjunto de 11 itens com a mesma escala visual.",
+   "priority": "P1",
+   "lot": 7,
+   "usedIn": "EnchantedGarden, Palette",
+   "maxKB": 80
+  },
+  {
+   "id": "game.garden.item.blossom",
+   "category": "game",
+   "group": "Minigame · Jardim Encantado",
+   "stem": "game/garden-item-blossom",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 192,
+    "h": 192
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "192:192",
+   "orientation": "quadrado",
+   "variants": "11 itens",
+   "desc": "Item de decoração: Flor de cerejeira (substitui 🌸).",
+   "placement": "Quadrado, objeto centrado e apoiado na metade inferior; sem sombra queimada.",
+   "relations": "Conjunto de 11 itens com a mesma escala visual.",
+   "priority": "P1",
+   "lot": 7,
+   "usedIn": "EnchantedGarden, Palette",
+   "maxKB": 80
+  },
+  {
+   "id": "game.garden.item.sunflower",
+   "category": "game",
+   "group": "Minigame · Jardim Encantado",
+   "stem": "game/garden-item-sunflower",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 192,
+    "h": 192
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "192:192",
+   "orientation": "quadrado",
+   "variants": "11 itens",
+   "desc": "Item de decoração: Girassol (substitui 🌻).",
+   "placement": "Quadrado, objeto centrado e apoiado na metade inferior; sem sombra queimada.",
+   "relations": "Conjunto de 11 itens com a mesma escala visual.",
+   "priority": "P1",
+   "lot": 7,
+   "usedIn": "EnchantedGarden, Palette",
+   "maxKB": 80
+  },
+  {
+   "id": "game.garden.item.tree",
+   "category": "game",
+   "group": "Minigame · Jardim Encantado",
+   "stem": "game/garden-item-tree",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 192,
+    "h": 192
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "192:192",
+   "orientation": "quadrado",
+   "variants": "11 itens",
+   "desc": "Item de decoração: Árvore (substitui 🌳).",
+   "placement": "Quadrado, objeto centrado e apoiado na metade inferior; sem sombra queimada.",
+   "relations": "Conjunto de 11 itens com a mesma escala visual.",
+   "priority": "P1",
+   "lot": 7,
+   "usedIn": "EnchantedGarden, Palette",
+   "maxKB": 80
+  },
+  {
+   "id": "game.garden.item.mushroom",
+   "category": "game",
+   "group": "Minigame · Jardim Encantado",
+   "stem": "game/garden-item-mushroom",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 192,
+    "h": 192
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "192:192",
+   "orientation": "quadrado",
+   "variants": "11 itens",
+   "desc": "Item de decoração: Cogumelo (substitui 🍄).",
+   "placement": "Quadrado, objeto centrado e apoiado na metade inferior; sem sombra queimada.",
+   "relations": "Conjunto de 11 itens com a mesma escala visual.",
+   "priority": "P1",
+   "lot": 7,
+   "usedIn": "EnchantedGarden, Palette",
+   "maxKB": 80
+  },
+  {
+   "id": "game.garden.item.butterfly",
+   "category": "game",
+   "group": "Minigame · Jardim Encantado",
+   "stem": "game/garden-item-butterfly",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 192,
+    "h": 192
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "192:192",
+   "orientation": "quadrado",
+   "variants": "11 itens",
+   "desc": "Item de decoração: Borboleta (substitui 🦋).",
+   "placement": "Quadrado, objeto centrado e apoiado na metade inferior; sem sombra queimada.",
+   "relations": "Conjunto de 11 itens com a mesma escala visual.",
+   "priority": "P1",
+   "lot": 7,
+   "usedIn": "EnchantedGarden, Palette",
+   "maxKB": 80
+  },
+  {
+   "id": "game.garden.item.rabbit",
+   "category": "game",
+   "group": "Minigame · Jardim Encantado",
+   "stem": "game/garden-item-rabbit",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 192,
+    "h": 192
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "192:192",
+   "orientation": "quadrado",
+   "variants": "11 itens",
+   "desc": "Item de decoração: Coelhinho (substitui 🐰).",
+   "placement": "Quadrado, objeto centrado e apoiado na metade inferior; sem sombra queimada.",
+   "relations": "Conjunto de 11 itens com a mesma escala visual.",
+   "priority": "P1",
+   "lot": 7,
+   "usedIn": "EnchantedGarden, Palette",
+   "maxKB": 80
+  },
+  {
+   "id": "game.garden.item.rainbow",
+   "category": "game",
+   "group": "Minigame · Jardim Encantado",
+   "stem": "game/garden-item-rainbow",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 192,
+    "h": 192
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "192:192",
+   "orientation": "quadrado",
+   "variants": "11 itens",
+   "desc": "Item de decoração: Arco-íris (substitui 🌈).",
+   "placement": "Quadrado, objeto centrado e apoiado na metade inferior; sem sombra queimada.",
+   "relations": "Conjunto de 11 itens com a mesma escala visual.",
+   "priority": "P1",
+   "lot": 7,
+   "usedIn": "EnchantedGarden, Palette",
+   "maxKB": 80
+  },
+  {
+   "id": "game.garden.item.unicorn",
+   "category": "game",
+   "group": "Minigame · Jardim Encantado",
+   "stem": "game/garden-item-unicorn",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 192,
+    "h": 192
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "192:192",
+   "orientation": "quadrado",
+   "variants": "11 itens",
+   "desc": "Item de decoração: Unicórnio (bônus da etapa 5) (substitui 🦄).",
+   "placement": "Quadrado, objeto centrado e apoiado na metade inferior; sem sombra queimada.",
+   "relations": "Conjunto de 11 itens com a mesma escala visual.",
+   "priority": "P1",
+   "lot": 7,
+   "usedIn": "EnchantedGarden, Palette",
+   "maxKB": 80
+  },
+  {
+   "id": "game.garden.item.castle",
+   "category": "game",
+   "group": "Minigame · Jardim Encantado",
+   "stem": "game/garden-item-castle",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 192,
+    "h": 192
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "192:192",
+   "orientation": "quadrado",
+   "variants": "11 itens",
+   "desc": "Item de decoração: Castelo (bônus da etapa 5) (substitui 🏰).",
+   "placement": "Quadrado, objeto centrado e apoiado na metade inferior; sem sombra queimada.",
+   "relations": "Conjunto de 11 itens com a mesma escala visual.",
+   "priority": "P1",
+   "lot": 7,
+   "usedIn": "EnchantedGarden, Palette",
+   "maxKB": 80
+  },
+  {
+   "id": "game.garden.item.fairy",
+   "category": "game",
+   "group": "Minigame · Jardim Encantado",
+   "stem": "game/garden-item-fairy",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 192,
+    "h": 192
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "192:192",
+   "orientation": "quadrado",
+   "variants": "11 itens",
+   "desc": "Item de decoração: Fada (bônus da etapa 5) (substitui 🧚).",
+   "placement": "Quadrado, objeto centrado e apoiado na metade inferior; sem sombra queimada.",
+   "relations": "Conjunto de 11 itens com a mesma escala visual.",
+   "priority": "P1",
+   "lot": 7,
+   "usedIn": "EnchantedGarden, Palette",
+   "maxKB": 80
+  },
+  {
+   "id": "game.icon.stars",
+   "category": "game",
+   "group": "Minigames · Cartões do hub",
+   "stem": "game/icon-stars",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 256,
+    "h": 256
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "256:256",
+   "orientation": "quadrado",
+   "variants": "3 ícones",
+   "desc": "Ícone do cartão do jogo Caça às Estrelas (substitui ⭐).",
+   "placement": "Quadrado; exibido ~2.4rem.",
+   "relations": "Trio coerente.",
+   "priority": "P1",
+   "lot": 6,
+   "usedIn": "Hub de jogos",
+   "maxKB": 80
+  },
+  {
+   "id": "game.icon.crystals",
+   "category": "game",
+   "group": "Minigames · Cartões do hub",
+   "stem": "game/icon-crystals",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 256,
+    "h": 256
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "256:256",
+   "orientation": "quadrado",
+   "variants": "3 ícones",
+   "desc": "Ícone do cartão do jogo Memória dos Cristais (substitui 💎).",
+   "placement": "Quadrado; exibido ~2.4rem.",
+   "relations": "Trio coerente.",
+   "priority": "P1",
+   "lot": 6,
+   "usedIn": "Hub de jogos",
+   "maxKB": 80
+  },
+  {
+   "id": "game.icon.garden",
+   "category": "game",
+   "group": "Minigames · Cartões do hub",
+   "stem": "game/icon-garden",
+   "kind": "image",
+   "formats": [
+    "webp",
+    "png",
+    "svg"
+   ],
+   "px": {
+    "w": 256,
+    "h": 256
+   },
+   "dimMode": "aspect",
+   "transparent": true,
+   "aspect": "256:256",
+   "orientation": "quadrado",
+   "variants": "3 ícones",
+   "desc": "Ícone do cartão do jogo Jardim Encantado (substitui 🌷).",
+   "placement": "Quadrado; exibido ~2.4rem.",
+   "relations": "Trio coerente.",
+   "priority": "P1",
+   "lot": 7,
+   "usedIn": "Hub de jogos",
+   "maxKB": 80
+  }
+ ]
+}

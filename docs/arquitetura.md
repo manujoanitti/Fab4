@@ -26,12 +26,20 @@ React + TypeScript + Vite (PWA)                       Supabase (Free)
 - **Mapa:** SVG 2,5D (5 regiões, 25 casas, trilha em curva, personagem que caminha casa a casa, véu em regiões bloqueadas, confete em CSS). Sem biblioteca de jogos.
 - **Minigames:** DOM + CSS; lógica pura testável (`memoryLogic`, `gardenLogic`).
 
+## Camada gráfica (arte externa)
+A apresentação visual é substituível por **pacotes de arte** sem tocar nas regras: telas pedem arte por **ID lógico** (`src/art/ids.ts`),
+o **manifesto** (`src/art/manifest.json`) diz qual arquivo de `public/art/<pacote>/` atende cada ID, e cada componente cai no **desenho atual**
+(SVG/CSS/emoji) quando não há arte (ou ela não carregou). Geometria (casas, áreas de toque, trilha) fica em `src/ui/mapGeometry.ts`.
+Contrato, catálogo (116 recursos), plano de produção e procedimento: `docs/arte/`. Validação: `npm run art:validate` (também no `prebuild`).
+Cache offline: runtime caching `art-assets` + pré-aquecimento (a arte não entra no precache de instalação).
+
 ## Estrutura do repositório
 ```
 src/domain     regras originais, tipos, motor, seletores, backup, construtores de operação
 src/sync       backends, SyncManager (cache/fila/conflitos), cliente Supabase
 src/storage    IndexedDB (com fallback em memória)
-src/ui, games  telas, mapa, minigames
+src/art        camada gráfica: manifesto, catálogo (JSON), registro, carregador, componentes (Icon/SvgArt/SpriteStrip)
+src/ui, games  telas, mapa (geometria separada), minigames
 supabase/      migrations 0001–0004 + seed fictício
 tests/         unit (Vitest), db (PGlite), e2e (Playwright)
 docs/          regras, pendências, arquitetura, Supabase, publicação, progresso

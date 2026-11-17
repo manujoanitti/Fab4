@@ -1,11 +1,12 @@
+import { GARDEN_ITEMS } from './gardenCatalog';
 // Lógica pura do "Jardim Encantado": decoração salva no perfil (game_state).
 export interface GardenItem { id: string; kind: string; x: number; y: number } // x,y em % do canvas
 export interface GardenData { items: GardenItem[] }
 export const MAX_ITEMS = 60;
 
-export const BASE_ITEMS = ['🌷', '🌸', '🌻', '🌳', '🍄', '🦋', '🐰', '🌈'];
+export const BASE_ITEMS = GARDEN_ITEMS.filter((i) => !i.bonus).map((i) => i.emoji);
 /** Elementos extras (lúdico adicional): liberados ao concluir a etapa 5. */
-export const BONUS_ITEMS = ['🦄', '🏰', '🧚'];
+export const BONUS_ITEMS = GARDEN_ITEMS.filter((i) => i.bonus).map((i) => i.emoji);
 export const availableItems = (stage5Done: boolean) => (stage5Done ? [...BASE_ITEMS, ...BONUS_ITEMS] : BASE_ITEMS);
 
 export const emptyGarden = (): GardenData => ({ items: [] });

@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "activePack": "test",
+  "packs": {
+    "test": {
+      "label": "Pacote sintético de testes",
+      "dir": "test",
+      "layout": { "nodes": { "1": { "x": 100, "y": 2700 } } },
+      "assets": {
+        "map.region.1.bg": { "file": "map/region-1-bg@2x.png" },
+        "map.region.1.path": { "file": "map/region-1-path@2x.png" },
+        "map.node.locked": { "file": "map/node-locked@2x.png" },
+        "map.node.available": { "file": "map/node-available@2x.png" },
+        "map.node.done": { "file": "map/node-done@2x.png" },
+        "char.bianca.idle": { "file": "char/bianca-idle@2x.png" },
+        "game.stars.star": { "file": "game/stars-star@2x.png" },
+        "game.garden.item.tulip": { "file": "game/garden-item-tulip@2x.png" },
+        "ui.icon.stamp-small": { "file": "ui/icon-stamp-small.svg" },
+        "ui.tab.map": { "file": "ui/tab-map.svg" },
+        "ui.sync.synced": { "file": "ui/sync-synced.svg" }
+      }
+    },
+    "alt": {
+      "label": "Segundo pacote (troca/reversão)",
+      "dir": "alt",
+      "assets": { "ui.icon.coin": { "file": "ui/icon-coin.svg" } }
+    }
+  }
+}

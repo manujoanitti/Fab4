@@ -1,14 +1,17 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
+import { SvgArt } from '../art/components';
+import { useArt, useArtEnv } from '../art/context';
+import { ART } from '../art/ids';
+import type { ArtStateName } from '../art/types';
 import { RULES, TOTAL_PHASES, phaseLabel, stageOfPhase } from '../domain/rules';
 import { campaignComplete, completedPhases, nextPhase, phaseDone, stageCompleted, stageUnlocked } from '../domain/selectors';
 import type { CampaignState } from '../domain/types';
+import { MAP_H, MAP_W, RH, SPARKLES, TOP, buildLayout, regionRect, regionTop, smoothPath, type Pt } from './mapGeometry';
 
 // Mapa 2,5D em SVG: 5 regiões empilhadas (etapa 1 embaixo → etapa 5 no topo), 25 casas interativas.
-export const MAP_W = 400;
-const RH = 540; // altura de cada região
-const TOP = 130;
-const MAP_H = TOP + 5 * RH + 130;
-const regionTop = (s: number) => TOP + (5 - s) * RH;
+// A GEOMETRIA (posições, áreas clicáveis, trilha) vem de ./mapGeometry; a ARTE vem da camada src/art (por ID lógico),
+// sempre com o desenho vetorial abaixo como fallback.
+export { MAP_W, nodePos, WALK } from './mapGeometry';
 
 export const STAGE_COLORS = ['#ec6fa0', '#9b7fd4', '#4aaee6', '#f0b429', '#e8548c'];
 const THEMES = [
@@ -19,27 +22,6 @@ const THEMES = [
   ['#ffe6f0', '#fbc2d8'],
 ];
 
-interface Pt { x: number; y: number }
-const XS = [110, 275, 125, 280, 200];
-export function nodePos(phase: number): Pt {
-  const s = stageOfPhase(phase);
-  const i = (phase - 1) % RULES.phasesPerStage;
-  const x = s % 2 ? XS[i] : MAP_W - XS[i];
-  return { x, y: regionTop(s) + RH - 80 - i * ((RH - 205) / 4) };
-}
-const START: Pt = { x: 200, y: MAP_H - 85 };
-const BONUS: Pt = { x: 200, y: 62 };
-/** Posições percorridas pela personagem: 0 = início, 1..25 = casas, 26 = bônus final. */
-export const WALK: Pt[] = [START, ...Array.from({ length: TOTAL_PHASES }, (_, i) => nodePos(i + 1)), BONUS];
-
-function smoothPath(pts: Pt[]): string {
-  let d = `M${pts[0].x},${pts[0].y}`;
-  for (let i = 0; i < pts.length - 1; i++) {
-    const p0 = pts[i - 1] ?? pts[i], p1 = pts[i], p2 = pts[i + 1], p3 = pts[i + 2] ?? p2;
-    d += ` C${p1.x + (p2.x - p0.x) / 6},${p1.y + (p2.y - p0.y) / 6} ${p2.x - (p3.x - p1.x) / 6},${p2.y - (p3.y - p1.y) / 6} ${p2.x},${p2.y}`;
-  }
-  return d;
-}
 const wavyTop = (y: number, h: number) => {
   let d = `M0,${y + 14}`;
   for (let x = 0; x <= MAP_W; x += 50) d += ` Q${x + 25},${y - 4 + ((x / 50) % 2 ? 14 : 0)} ${x + 50},${y + 14}`;
@@ -204,9 +186,86 @@ export interface MapViewProps {
   state: CampaignState;
   onSelect: (phase: number) => void;
   onBonus: () => void;
+  /** Fase com a folha de detalhes aberta (estado visual "selecionado"). */
+  selected?: number | null;
 }
 
-export default function MapView({ state, onSelect, onBonus }: MapViewProps) {
+/** Casa de fase: área clicável própria (inalterada) + arte por estado (ou o círculo vetorial de fallback). */
+function PhaseNode({ p, x, y, isDone, isNext, selected, priority, onSelect }: { p: number; x: number; y: number; isDone: boolean; isNext: boolean; selected: boolean; priority: 'high' | 'low'; onSelect: (p: number) => void }) {
+  const s = stageOfPhase(p);
+  const locked = !isDone && !isNext;
+  const c = STAGE_COLORS[s - 1];
+  const artState: ArtStateName = isDone ? 'done' : isNext ? 'available' : 'locked';
+  const art = useArt(ART.map.node(s, artState), priority);
+  return (
+    <g
+      transform={`translate(${x},${y})`}
+      className={`node ${isDone ? 'done' : ''} ${isNext ? 'next' : ''} ${locked ? 'locked' : ''}`}
+      data-testid={`phase-${p}`}
+      data-state={isDone ? 'done' : isNext ? 'next' : 'locked'}
+      data-selected={selected ? 'true' : undefined}
+      role="button"
+      tabIndex={0}
+      aria-label={`Fase ${phaseLabel(p)}${isDone ? ', concluída' : isNext ? ', próxima fase' : ', bloqueada'}`}
+      onClick={() => onSelect(p)}
+      onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && onSelect(p)}
+    >
+      {isNext && <circle r="30" className="pulse" fill={c} opacity=".35" />}
+      {art ? (
+        <>
+          <circle r="28" fill="transparent" />
+          <SvgArt ids={ART.map.node(s, artState)} at={{ x: 0, y: 0 }} priority={priority} />
+        </>
+      ) : (
+        <circle r="25" fill={isDone ? '#fff8e1' : '#fff'} stroke={isDone ? '#ffb300' : c} strokeWidth={isDone ? 5 : 4} />
+      )}
+      {selected && <SvgArt ids={ART.map.nodeSelected(s)} at={{ x: 0, y: 0 }} priority={priority} pointerEvents="none" />}
+      {isDone ? (art ? null : <text y="8" textAnchor="middle" className="node-star">⭐</text>) : art ? (
+        // Com arte externa o número precisa ser legível sobre QUALQUER cor: texto escuro com contorno branco.
+        <text y="5" textAnchor="middle" className="node-label" fill="#37474f" stroke="#fff" strokeWidth="3" strokeLinejoin="round" paintOrder="stroke">{phaseLabel(p)}</text>
+      ) : <text y="5" textAnchor="middle" className="node-label" fill={locked ? '#9e9e9e' : '#37474f'}>{phaseLabel(p)}</text>}
+      {isDone && <text y="-30" textAnchor="middle" className="node-mini">{phaseLabel(p)}</text>}
+    </g>
+  );
+}
+
+function BonusNode({ at, complete, onBonus }: { at: Pt; complete: boolean; onBonus: () => void }) {
+  const art = useArt(ART.map.bonus(complete), 'low');
+  return (
+    <g transform={`translate(${at.x},${at.y})`} className={`bonus ${complete ? 'unlocked' : ''}`} role="button" tabIndex={0} aria-label="Bônus final" data-testid="bonus-node" onClick={onBonus} onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && onBonus()}>
+      {art ? (
+        <>
+          <circle r="34" fill="transparent" />
+          <SvgArt ids={ART.map.bonus(complete)} at={{ x: 0, y: 0 }} priority="low" />
+        </>
+      ) : (
+        <>
+          <circle r="34" fill="#fff8e1" stroke="#ffb300" strokeWidth="5" opacity={complete ? 1 : 0.7} />
+          <text y="12" textAnchor="middle" fontSize="34">{complete ? '👑' : '🎁'}</text>
+        </>
+      )}
+      <text y="52" textAnchor="middle" className="node-mini">Bônus final</text>
+    </g>
+  );
+}
+
+/** Personagem: sprite da animação atual (cai para idle enquanto a nova carrega) ou o vetor atual. */
+function BiancaActor({ anim }: { anim: 'idle' | 'walk' | 'celebrate' }) {
+  const ids = anim === 'idle' ? [ART.char.bianca('idle')] : [ART.char.bianca(anim), ART.char.bianca('idle')];
+  return <SvgArt ids={ids} at={{ x: 0, y: 22 }} priority="high" fallback={<Bianca />} />;
+}
+
+function Sparkle({ x, y, i }: { x: number; y: number; i: number }) {
+  return (
+    <SvgArt ids={ART.fx.sparkle} at={{ x: x + 9, y: y - 5 }} priority="low" className="sparkle" style={{ animationDelay: `${i * 0.4}s` }}
+      fallback={<text x={x} y={y} className="sparkle" style={{ animationDelay: `${i * 0.4}s` }}>✨</text>} />
+  );
+}
+
+export default function MapView({ state, onSelect, onBonus, selected = null }: MapViewProps) {
+  const { registry } = useArtEnv();
+  const layout = useMemo(() => buildLayout(registry.layout()), [registry]);
+  const { start: START, bonus: BONUS, walk: WALK } = layout;
   const done = completedPhases(state);
   const complete = campaignComplete(state);
   const walkTarget = complete ? 26 : done;
@@ -214,8 +273,30 @@ export default function MapView({ state, onSelect, onBonus }: MapViewProps) {
   const pos = WALK[at];
   const next = nextPhase(state);
   const scroller = useRef<HTMLDivElement>(null);
-  const path = useMemo(() => smoothPath(WALK), []);
+  const path = useMemo(() => smoothPath(WALK), [WALK]);
   const progressRatio = at / 26;
+  const curStage = stageOfPhase(Math.min(TOTAL_PHASES, done + 1));
+  /** Regiões próximas da posição atual carregam primeiro; as demais em segundo plano. */
+  const prio = (s: number): 'high' | 'low' => (Math.abs(s - curStage) <= 1 ? 'high' : 'low');
+  const stages = [1, 2, 3, 4, 5];
+  // Há arte de trilha em alguma região? Então o traçado padrão é recortado nessas regiões.
+  const pathArt = stages.map((s) => useArt(ART.map.regionPath(s), prio(s)));
+  const anyPathArt = pathArt.some(Boolean);
+
+  // Efeito de progressão: ao chegar a uma casa recém-concluída (só existe com arte; sem arte nada muda).
+  const burstArt = useArt(ART.fx.nodeComplete, 'low');
+  const [burst, setBurst] = useState<{ phase: number; key: number } | null>(null);
+  const prevAt = useRef(at);
+  useEffect(() => {
+    if (at > prevAt.current && at >= 1 && at <= TOTAL_PHASES) setBurst({ phase: at, key: Date.now() });
+    prevAt.current = at;
+  }, [at]);
+  useEffect(() => {
+    if (!burst || !burstArt) return;
+    const sp = burstArt.sprite;
+    const t = setTimeout(() => setBurst(null), (sp ? (sp.frames / sp.fps) * 1000 : 1000) + 150);
+    return () => clearTimeout(t);
+  }, [burst, burstArt]);
 
   // Rola para a posição atual ao abrir e quando a personagem avança.
   useEffect(() => {
@@ -224,6 +305,14 @@ export default function MapView({ state, onSelect, onBonus }: MapViewProps) {
     const scale = el.clientWidth / MAP_W;
     el.scrollTo({ top: Math.max(0, pos.y * scale - el.clientHeight * 0.55), behavior: 'smooth' });
   }, [pos.y]);
+
+  const trail = (
+    <>
+      <path d={path} fill="none" stroke="#f3d9b1" strokeWidth="46" strokeLinecap="round" strokeLinejoin="round" />
+      <path d={path} fill="none" stroke="#fff5e4" strokeWidth="38" strokeLinecap="round" strokeLinejoin="round" />
+      <path d={path} fill="none" stroke="#e7c58f" strokeWidth="3" strokeDasharray="2 12" strokeLinecap="round" />
+    </>
+  );
 
   return (
     <div className="map-scroll" ref={scroller} data-testid="map">
@@ -235,27 +324,42 @@ export default function MapView({ state, onSelect, onBonus }: MapViewProps) {
           <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#bfe3ff" /><stop offset="1" stopColor="#fff0f7" /></linearGradient>
         </defs>
         <rect width={MAP_W} height={MAP_H} fill="url(#sky)" />
-        {/* regiões, da etapa 5 (topo) para a 1 */}
+        {/* regiões, da etapa 5 (topo) para a 1: fundo e decoração de segundo plano */}
         {[5, 4, 3, 2, 1].map((s) => (
           <g key={s} data-region={s}>
-            <path d={wavyTop(regionTop(s) - 14, RH + 14 + (s === 1 ? 130 : 0))} fill={`url(#rg${s})`} />
-            <g transform={`translate(0,${regionTop(s)})`}><Decor stage={s} /></g>
+            <SvgArt ids={ART.map.regionBg(s)} rect={regionRect(s)} priority={prio(s)}
+              fallback={<path d={wavyTop(regionTop(s) - 14, RH + 14 + (s === 1 ? 130 : 0))} fill={`url(#rg${s})`} />} />
+            <SvgArt ids={ART.map.regionMid(s)} rect={regionRect(s)} priority={prio(s)}
+              fallback={<g transform={`translate(0,${regionTop(s)})`}><Decor stage={s} /></g>} />
           </g>
         ))}
-        {/* trilha */}
-        <path d={path} fill="none" stroke="#f3d9b1" strokeWidth="46" strokeLinecap="round" strokeLinejoin="round" />
-        <path d={path} fill="none" stroke="#fff5e4" strokeWidth="38" strokeLinecap="round" strokeLinejoin="round" />
-        <path d={path} fill="none" stroke="#e7c58f" strokeWidth="3" strokeDasharray="2 12" strokeLinecap="round" />
+        <SvgArt ids={ART.map.topBg} rect={{ x: 0, y: 0, w: MAP_W, h: TOP }} priority={prio(5)} />
+        <SvgArt ids={ART.map.bottomBg} rect={{ x: 0, y: TOP + 5 * RH, w: MAP_W, h: MAP_H - TOP - 5 * RH }} priority={prio(1)} />
+        {/* trilha (traçado padrão; recortado onde há arte de trilha) */}
+        {anyPathArt ? (
+          <>
+            <defs>
+              <clipPath id="trail-clip">
+                <rect x="0" y="0" width={MAP_W} height={TOP} />
+                <rect x="0" y={TOP + 5 * RH} width={MAP_W} height={MAP_H - TOP - 5 * RH} />
+                {stages.filter((s) => !pathArt[s - 1]).map((s) => <rect key={s} {...regionRect(s)} width={MAP_W} height={RH} />)}
+              </clipPath>
+            </defs>
+            <g clipPath="url(#trail-clip)">{trail}</g>
+          </>
+        ) : trail}
+        {stages.map((s) => <SvgArt key={s} ids={ART.map.regionPath(s)} rect={regionRect(s)} priority={prio(s)} />)}
         <path d={path} fill="none" stroke="#ffd54f" strokeWidth="7" strokeLinecap="round" pathLength={1} strokeDasharray={`${progressRatio} 1`} opacity=".85" />
 
-        {/* faixas com o nome das regiões */}
+        {/* faixas com o nome das regiões (o texto é sempre desenhado pelo app) */}
         {RULES.stages.map((st) => {
           const unlocked = stageUnlocked(state, st.stage);
           const finished = stageCompleted(state, st.stage);
           const c = STAGE_COLORS[st.stage - 1];
           return (
             <g key={st.stage} transform={`translate(200,${regionTop(st.stage) + 36})`} data-testid={`region-${st.stage}`} data-unlocked={unlocked} data-completed={finished}>
-              <rect x="-118" y="-17" width="236" height="34" rx="17" fill={c} stroke="#fff" strokeWidth="3" />
+              <SvgArt ids={ART.map.ribbon(st.stage)} at={{ x: 0, y: 0 }} priority={prio(st.stage)}
+                fallback={<rect x="-118" y="-17" width="236" height="34" rx="17" fill={c} stroke="#fff" strokeWidth="3" />} />
               <text textAnchor="middle" y="5" className="ribbon-text">Etapa {st.stage} · {st.name}</text>
               <text textAnchor="middle" y="36" className="ribbon-sub">{finished ? '✓ etapa concluída' : unlocked ? '' : '🔒 conclua a etapa anterior'}</text>
             </g>
@@ -263,60 +367,36 @@ export default function MapView({ state, onSelect, onBonus }: MapViewProps) {
         })}
         {/* véu nas regiões bloqueadas */}
         {RULES.stages.filter((st) => !stageUnlocked(state, st.stage)).map((st) => (
-          <rect key={st.stage} x="0" y={regionTop(st.stage)} width={MAP_W} height={RH} fill="#fff" opacity=".38" pointerEvents="none" />
+          <SvgArt key={st.stage} ids={ART.map.fog} rect={regionRect(st.stage)} pointerEvents="none" priority={prio(st.stage)}
+            fallback={<rect x="0" y={regionTop(st.stage)} width={MAP_W} height={RH} fill="#fff" opacity=".38" pointerEvents="none" />} />
         ))}
 
-        {/* Início */}
+        {/* Início (a base do poste é a âncora da arte; o texto é do app) */}
         <g transform={`translate(${START.x - 80},${START.y - 8})`}>
-          <rect x="-4" y="0" width="8" height="46" fill="#8d6e63" />
-          <rect x="-34" y="-8" width="72" height="30" rx="8" fill="#e8c28c" stroke="#a1743d" strokeWidth="2" />
+          <SvgArt ids={ART.map.start} at={{ x: 0, y: 46 }} priority={prio(1)}
+            fallback={<><rect x="-4" y="0" width="8" height="46" fill="#8d6e63" /><rect x="-34" y="-8" width="72" height="30" rx="8" fill="#e8c28c" stroke="#a1743d" strokeWidth="2" /></>} />
           <text x="2" y="12" textAnchor="middle" className="sign-text">Início</text>
         </g>
 
         {/* casas */}
-        {Array.from({ length: TOTAL_PHASES }, (_, i) => i + 1).map((p) => {
-          const { x, y } = nodePos(p);
-          const s = stageOfPhase(p);
-          const isDone = phaseDone(state, p);
-          const isNext = p === next;
-          const locked = !isDone && !isNext;
-          const c = STAGE_COLORS[s - 1];
-          return (
-            <g
-              key={p}
-              transform={`translate(${x},${y})`}
-              className={`node ${isDone ? 'done' : ''} ${isNext ? 'next' : ''} ${locked ? 'locked' : ''}`}
-              data-testid={`phase-${p}`}
-              data-state={isDone ? 'done' : isNext ? 'next' : 'locked'}
-              role="button"
-              tabIndex={0}
-              aria-label={`Fase ${phaseLabel(p)}${isDone ? ', concluída' : isNext ? ', próxima fase' : ', bloqueada'}`}
-              onClick={() => onSelect(p)}
-              onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && onSelect(p)}
-            >
-              {isNext && <circle r="30" className="pulse" fill={c} opacity=".35" />}
-              <circle r="25" fill={isDone ? '#fff8e1' : '#fff'} stroke={isDone ? '#ffb300' : c} strokeWidth={isDone ? 5 : 4} />
-              {isDone ? <text y="8" textAnchor="middle" className="node-star">⭐</text> : <text y="5" textAnchor="middle" className="node-label" fill={locked ? '#9e9e9e' : '#37474f'}>{phaseLabel(p)}</text>}
-              {isDone && <text y="-30" textAnchor="middle" className="node-mini">{phaseLabel(p)}</text>}
-            </g>
-          );
-        })}
+        {Array.from({ length: TOTAL_PHASES }, (_, i) => i + 1).map((p) => (
+          <PhaseNode key={p} p={p} x={layout.nodes[p - 1].x} y={layout.nodes[p - 1].y} isDone={phaseDone(state, p)} isNext={p === next} selected={selected === p} priority={prio(stageOfPhase(p))} onSelect={onSelect} />
+        ))}
 
         {/* Bônus final */}
-        <g transform={`translate(${BONUS.x},${BONUS.y})`} className={`bonus ${complete ? 'unlocked' : ''}`} role="button" tabIndex={0} aria-label="Bônus final" data-testid="bonus-node" onClick={onBonus} onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && onBonus()}>
-          <circle r="34" fill="#fff8e1" stroke="#ffb300" strokeWidth="5" opacity={complete ? 1 : 0.7} />
-          <text y="12" textAnchor="middle" fontSize="34">{complete ? '👑' : '🎁'}</text>
-          <text y="52" textAnchor="middle" className="node-mini">Bônus final</text>
-        </g>
+        <BonusNode at={BONUS} complete={complete} onBonus={onBonus} />
+
+        {/* efeito de progressão (somente com arte) */}
+        {burst && burstArt && <SvgArt key={burst.key} ids={ART.fx.nodeComplete} at={layout.nodes[burst.phase - 1]} pointerEvents="none" once />}
 
         {/* personagem */}
         <g className="walker" style={{ transform: `translate(${pos.x}px,${pos.y - 10}px)` }} data-testid="bianca" data-at={at}>
-          <Bianca />
+          <BiancaActor anim={at !== walkTarget ? 'walk' : complete && at === 26 ? 'celebrate' : 'idle'} />
         </g>
+        {/* primeiro plano (à frente da personagem; sem capturar toques) */}
+        {stages.map((s) => <SvgArt key={s} ids={ART.map.regionFg(s)} rect={regionRect(s)} pointerEvents="none" priority={prio(s)} />)}
         {/* brilhos */}
-        {[[60, 40], [330, 90], [110, 300], [300, 700], [80, 1100], [320, 1500], [90, 1900], [310, 2300]].map(([x, y], i) => (
-          <text key={i} x={x} y={y} className="sparkle" style={{ animationDelay: `${i * 0.4}s` }}>✨</text>
-        ))}
+        {SPARKLES.map(({ x, y }, i) => <Sparkle key={i} x={x} y={y} i={i} />)}
       </svg>
     </div>
   );

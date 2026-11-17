@@ -25,6 +25,12 @@ Contagens exatas: ver saída de `npm test` / `npm run test:e2e`.
 - Conta única: fluxo criar campanha → metas → selo → offline → recarga testado; limites de segurança documentados; plano de reforço em `plano-atualizacao-banco.md`.
 - CI no GitHub (run 1) falhou em 1 teste e2e (`offline`): corrigida a durabilidade da fila (gravação confirmada antes de refletir na tela).
 
+## Preparação da arquitetura gráfica (etapa 1 do redesign)
+Camada `src/art` (manifesto, catálogo de 116 recursos, registro com bases do Pages, carregador com prioridade, `Icon`/`SvgArt`/`SpriteStrip`),
+geometria do mapa separada (`src/ui/mapGeometry.ts`, com `layout` opcional por pacote), cache offline `art-assets`, validador de pacotes,
+guias de layout e documentação em `docs/arte/`. **Nenhuma arte nova foi criada; o visual atual é o fallback** (golden de aparência idêntico).
+Banco, migrações, RPC, regras e dados persistidos: sem alteração.
+
 ## Funcionalidades pendentes / limites conhecidos
 - **Supabase real não foi exercitado** (exige credenciais da pessoa responsável): migrações e RPC foram testadas em Postgres local (PGlite) e o cliente por mock. Passo a passo em `configuracao-supabase.md`.
 - **Deploy no GitHub Pages não foi realizado** (exige ativar Pages no repositório); workflows prontos em `.github/workflows`. Sem URL publicada.
@@ -34,6 +40,7 @@ Contagens exatas: ver saída de `npm test` / `npm run test:e2e`.
 - Sincronização por *polling* (abrir, voltar ao app, reconectar, a cada 30 s, após cada alteração); sem Realtime.
 - Reconciliação de conflitos testada em unidade; não há teste e2e do painel de conflitos.
 - Interpretações operacionais (selo = 8 de 8 metas etc.) em `pendencias-regras.md` — conferir com o tabuleiro físico.
+- Redesign: aguardando os primeiros recursos (Lote 0, ver `docs/arte/plano-producao-gemini.md`). Sprites só em tira horizontal; fundos CSS sem 9-slice; emojis dentro de frases de texto continuam texto.
 - Ilustrações são vetoriais originais (inspiradas no tabuleiro), não reproduzem a arte do tabuleiro.
 
 ## Próximas ações

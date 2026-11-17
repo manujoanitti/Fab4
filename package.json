@@ -14,8 +14,11 @@
     "test:db": "vitest run tests/db",
     "test:e2e": "playwright test --trace off",
     "icons": "node scripts/gen-icons.mjs",
-    "prebuild": "node scripts/check-env.mjs",
-    "check:dist": "node scripts/check-dist.mjs"
+    "prebuild": "node scripts/check-env.mjs && node scripts/validate-art.mjs",
+    "check:dist": "node scripts/check-dist.mjs",
+    "art:validate": "node scripts/validate-art.mjs",
+    "art:docs": "vite-node scripts/gen-art-docs.ts",
+    "art:guides": "vite-node scripts/gen-art-guides.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.119.0",

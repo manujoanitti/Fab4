@@ -10,6 +10,8 @@ import { Ctx, useSyncView, type AppCtx } from './ctx';
 import { GamesScreen } from './Games';
 import { CreditsScreen, HistoryScreen, MoreScreen, PrizesScreen, ReviewScreen } from './Guardian';
 import { checkPin, hasPin } from './pin';
+import { Icon } from '../art/components';
+import { ART } from '../art/ids';
 
 type Tab = 'map' | 'goals' | 'achv' | 'games' | 'review' | 'prizes' | 'credits' | 'history' | 'more';
 const CHILD_TABS: [Tab, string, string][] = [['map', '🗺️', 'Mapa'], ['goals', '📝', 'Metas'], ['achv', '🏅', 'Conquistas'], ['games', '🎮', 'Jogos']];
@@ -18,10 +20,16 @@ const GUARDIAN_TABS: [Tab, string, string][] = [['map', '🗺️', 'Mapa'], ['re
 /** Volta sozinho ao modo da Bianca após inatividade (proteção contra esquecimento em aparelho compartilhado). */
 const AUTO_LOCK_MS = 5 * 60 * 1000;
 
+/** Aba (chave interna) → id lógico da arte. */
+const TAB_ART: Record<Tab, string> = { map: 'map', goals: 'goals', achv: 'achievements', games: 'games', review: 'review', prizes: 'prizes', credits: 'credits', history: 'history', more: 'more' };
+
 const SYNC_LABEL: Record<string, string> = {
   loading: '⏳ Carregando', synced: '☁️ Sincronizado', syncing: '🔄 Sincronizando…', pending: '🕓 Alterações pendentes',
   offline: '📴 Offline', conflict: '⚠️ Conflito a resolver', error: '❌ Erro de sincronização',
 };
+
+/** "☁️ Sincronizado" → ['☁️', 'Sincronizado'] (ícone substituível + texto). */
+const syncParts = (s: string): [string, string] => { const full = SYNC_LABEL[s] ?? s; const i = full.indexOf(' '); return [full.slice(0, i), full.slice(i + 1)]; };
 
 export default function Kingdom({ sm, isDemo, exit, signOut }: { sm: SyncManager; isDemo: boolean; exit: () => void; signOut?: () => Promise<void> }) {
   const sv = useSyncView(sm);
@@ -33,6 +41,7 @@ export default function Kingdom({ sm, isDemo, exit, signOut }: { sm: SyncManager
   const [toasts, setToasts] = useState<{ id: number; msg: string; kind: 'ok' | 'error' }[]>([]);
   const [burst, setBurst] = useState({ n: 0, big: false });
   const [banner, setBanner] = useState<string | null>(null);
+  const [bannerKind, setBannerKind] = useState<'stage' | 'final'>('stage');
   const [pinNoticeDismissed, setPinNoticeDismissed] = useState(false);
   const toastId = useRef(0);
 
@@ -91,8 +100,8 @@ export default function Kingdom({ sm, isDemo, exit, signOut }: { sm: SyncManager
     if (dPhases > 0) {
       const last = state.phases.reduce((a, x) => Math.max(a, x.phase), 0);
       const stage = Math.ceil(last / RULES.phasesPerStage);
-      if (complete && !p.complete) { setBurst((b) => ({ n: b.n + 1, big: true })); setBanner('🎉 O Reino da Bianca foi conquistado! Todas as 25 fases e o bônus final!'); }
-      else if (last % RULES.phasesPerStage === 0 && stageCompleted(state, stage)) { setBurst((b) => ({ n: b.n + 1, big: true })); setBanner(`🏰 Etapa concluída: ${RULES.stages[stage - 1].name}! ${RULES.stages[stage - 1].coins} 🪙 + ${RULES.stages[stage - 1].bigStamps} 🏅 + uma recompensa!`); }
+      if (complete && !p.complete) { setBurst((b) => ({ n: b.n + 1, big: true })); setBannerKind('final'); setBanner('🎉 O Reino da Bianca foi conquistado! Todas as 25 fases e o bônus final!'); }
+      else if (last % RULES.phasesPerStage === 0 && stageCompleted(state, stage)) { setBurst((b) => ({ n: b.n + 1, big: true })); setBannerKind('stage'); setBanner(`🏰 Etapa concluída: ${RULES.stages[stage - 1].name}! ${RULES.stages[stage - 1].coins} 🪙 + ${RULES.stages[stage - 1].bigStamps} 🏅 + uma recompensa!`); }
       else { setBurst((b) => ({ n: b.n + 1, big: false })); notify(dPhases > 1 ? `⭐ ${dPhases} fases concluídas!` : `⭐ Fase ${phaseLabel(last)} concluída!`); }
     } else if (dMedals > 0) { setBurst((b) => ({ n: b.n + 1, big: false })); notify(dMedals > 1 ? `🌟 ${dMedals} selos do dia!` : '🌟 Selo do dia conquistado! +1 crédito de jogo'); }
   }, [state, phases, medals, complete, notify]);
@@ -111,7 +120,7 @@ export default function Kingdom({ sm, isDemo, exit, signOut }: { sm: SyncManager
   if (!ctx) {
     return (
       <div className="splash" data-testid="loading">
-        <div className="splash-crown">👑</div>
+        <div className="splash-crown"><Icon id={ART.crown} fallback="👑" /></div>
         {sv.error ? <><p>{sv.error}</p><button className="btn primary" onClick={() => sm.sync()}>Tentar de novo</button><button className="btn" onClick={exit}>Voltar</button></> : sv.status === 'offline' ? <><p>Sem conexão e nenhum dado salvo neste aparelho ainda.</p><button className="btn primary" onClick={() => sm.sync()}>Tentar de novo</button></> : <p>Abrindo o reino…</p>}
       </div>
     );
@@ -124,11 +133,11 @@ export default function Kingdom({ sm, isDemo, exit, signOut }: { sm: SyncManager
     <Ctx.Provider value={ctx}>
       <div className={`app ${ctx.guardianMode ? 'guardian' : 'child'}`} data-mode={ctx.guardianMode ? 'guardian' : 'child'}>
         <header className="topbar">
-          <div className="brand">👑 <span>Reino da Bianca</span>{isDemo && <em className="demo-tag" data-testid="demo-tag">demonstração</em>}</div>
+          <div className="brand"><Icon id={ART.crown} fallback="👑" /> <span>Reino da Bianca</span>{isDemo && <em className="demo-tag" data-testid="demo-tag">demonstração</em>}</div>
           <button className={`sync-badge ${sv.status}`} data-testid="sync-badge" data-status={sv.status} onClick={() => { if (ctx.guardianMode) setTab('more'); else void sm.sync(); }} aria-label={`Estado: ${SYNC_LABEL[sv.status]}`}>
-            {SYNC_LABEL[sv.status]}{pendingN ? ` (${pendingN})` : ''}
+            <Icon id={ART.sync(sv.status)} fallback={syncParts(sv.status)[0]} /> {syncParts(sv.status)[1]}{pendingN ? ` (${pendingN})` : ''}
           </button>
-          {canBeGuardian && <button className="btn mode" data-testid="mode-toggle" aria-label={ctx.guardianMode ? 'Voltar ao modo Bianca' : 'Entrar no modo responsável'} onClick={toggleMode}><span aria-hidden="true">{ctx.guardianMode ? '👧' : '🔒'}</span><span className="lbl"> {ctx.guardianMode ? 'Modo Bianca' : 'Responsável'}</span></button>}
+          {canBeGuardian && <button className="btn mode" data-testid="mode-toggle" aria-label={ctx.guardianMode ? 'Voltar ao modo Bianca' : 'Entrar no modo responsável'} onClick={toggleMode}><span aria-hidden="true">{ctx.guardianMode ? <Icon id={ART.icon.modeChild} fallback="👧" /> : <Icon id={ART.icon.modeGuardian} fallback="🔒" />}</span><span className="lbl"> {ctx.guardianMode ? 'Modo Bianca' : 'Responsável'}</span></button>}
         </header>
         <Stats />
         {ctx.guardianMode && !isDemo && !hasPin() && !pinNoticeDismissed && (
@@ -150,7 +159,7 @@ export default function Kingdom({ sm, isDemo, exit, signOut }: { sm: SyncManager
         </main>
         <nav className="tabbar" aria-label="Navegação">
           {tabs.map(([t, icon, label]) => (
-            <button key={t} className={current === t ? 'on' : ''} data-testid={`tab-${t}`} onClick={() => setTab(t)}><span>{icon}</span>{label}</button>
+            <button key={t} className={current === t ? 'on' : ''} data-testid={`tab-${t}`} onClick={() => setTab(t)}><span><Icon id={ART.tab(TAB_ART[t])} fallback={icon} /></span>{label}</button>
           ))}
         </nav>
         <Confetti burst={burst.n} big={burst.big} />
@@ -158,7 +167,7 @@ export default function Kingdom({ sm, isDemo, exit, signOut }: { sm: SyncManager
         {banner && (
           <div className="sheet-backdrop" onClick={() => setBanner(null)}>
             <div className="sheet celebrate" role="dialog" data-testid="celebration" onClick={(e) => e.stopPropagation()}>
-              <p className="big-emoji">🎉</p><h3>{banner}</h3>
+              <p className="big-emoji"><Icon id={ART.celebration(bannerKind)} fallback="🎉" /></p><h3>{banner}</h3>
               <button className="btn primary" onClick={() => setBanner(null)}>Que maravilha!</button>
             </div>
           </div>

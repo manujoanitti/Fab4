@@ -3,6 +3,11 @@ import { saveGameStateOp, newId } from '../domain/ops';
 import { gameState, stageCompleted } from '../domain/selectors';
 import { useApp } from '../ui/ctx';
 import { addItem, availableItems, moveItem, parseGarden, removeItem, type GardenData } from './gardenLogic';
+import { Icon } from '../art/components';
+import { ART } from '../art/ids';
+import { gardenSlug } from './gardenCatalog';
+
+const itemArt = (kind: string) => { const slug = gardenSlug(kind); return slug ? ART.game.gardenItem(slug) : null; };
 
 /** Jardim Encantado: decore o jardim; o resultado é salvo no perfil e sincronizado. Sem compras nem anúncios. */
 export default function EnchantedGarden({ onExit, readOnly = false }: { onExit?: () => void; readOnly?: boolean }) {
@@ -70,7 +75,7 @@ export default function EnchantedGarden({ onExit, readOnly = false }: { onExit?:
             onPointerDown={(e) => { if (readOnly) return; drag.current = { id: it.id, moved: false }; (e.target as HTMLElement).setPointerCapture?.(e.pointerId); }}
             onPointerMove={(e) => { if (drag.current?.id === it.id && e.buttons) { drag.current.moved = true; const p = pos(e); edit((g) => moveItem(g, it.id, p.x, p.y)); } }}
             onPointerUp={() => setTimeout(() => (drag.current = null), 0)}
-          >{it.kind}</span>
+          ><Icon id={itemArt(it.kind)} fallback={it.kind} /></span>
         ))}
         {data.items.length === 0 && <div className="garden-hint">{readOnly ? 'Seu jardim ainda está vazio.' : 'Escolha um item e toque no jardim ✨'}</div>}
       </div>
@@ -78,7 +83,7 @@ export default function EnchantedGarden({ onExit, readOnly = false }: { onExit?:
         <>
           <div className="palette" role="radiogroup" aria-label="Elementos">
             {items.map((k) => (
-              <button key={k} role="radio" aria-checked={kind === k} className={`pal ${kind === k ? 'on' : ''}`} data-testid="palette-item" onClick={() => { setKind(kind === k ? null : k); setSel(null); }}>{k}</button>
+              <button key={k} role="radio" aria-checked={kind === k} className={`pal ${kind === k ? 'on' : ''}`} data-testid="palette-item" onClick={() => { setKind(kind === k ? null : k); setSel(null); }}><Icon id={itemArt(k)} fallback={k} /></button>
             ))}
           </div>
           <div className="row">

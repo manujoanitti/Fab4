@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
+import { Icon } from '../art/components';
+import { ART } from '../art/ids';
 
 interface Star { id: number; x: number; y: number; size: number; hit?: boolean }
 
@@ -41,7 +43,7 @@ export default function StarHunt({ duration = 30, onExit }: { duration?: number;
       <div className="sky-field">
         {!over && stars.map((s) => (
           <button key={s.id} data-testid="star" className={`star ${s.hit ? 'hit' : ''}`} style={{ left: `${s.x}%`, top: `${s.y}%`, fontSize: s.size }} onPointerDown={() => !s.hit && tap(s.id)} aria-label="Estrela">
-            {s.hit ? '✨' : '⭐'}
+            {s.hit ? <Icon id={ART.game.starsHit} fallback="✨" /> : <Icon id={ART.game.starsStar} fallback="⭐" />}
           </button>
         ))}
         {over && (
