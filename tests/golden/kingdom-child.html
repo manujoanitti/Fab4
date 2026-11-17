@@ -1,0 +1,909 @@
+<div class="app child" data-mode="child">
+<header class="topbar">
+<div class="brand">👑 <span>Reino da Bianca</span>
+<em class="demo-tag" data-testid="demo-tag">demonstração</em>
+</div>
+<button class="sync-badge synced" data-testid="sync-badge" data-status="synced" aria-label="Estado: ☁️ Sincronizado">☁️ Sincronizado</button>
+<button class="btn mode" data-testid="mode-toggle" aria-label="Entrar no modo responsável">
+<span aria-hidden="true">🔒</span>
+<span class="lbl"> Responsável</span>
+</button>
+</header>
+<div class="stats" data-testid="stats">
+<span title="Selos pequenos (1 por fase)">⭐ <b data-testid="stat-small">7</b>/25</span>
+<span title="Moedas">🪙 <b data-testid="stat-coins">1</b>/15</span>
+<span title="Selos grandes">🏅 <b data-testid="stat-big">1</b>/9</span>
+<span title="Selos do dia">🌟 <b data-testid="stat-daily">0</b>
+</span>
+<span title="Créditos de minigame">🎮 <b data-testid="stat-credits">3</b>
+</span>
+</div>
+<main class="content">
+<div class="map-scroll" data-testid="map">
+<svg viewBox="0 0 400 2960" class="map-svg" role="img" aria-label="Mapa do Reino da Bianca">
+<defs>
+<linearGradient id="rg1" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#c9ecb0">
+</stop>
+<stop offset="1" stop-color="#8fd194">
+</stop>
+</linearGradient>
+<linearGradient id="rg2" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#ece3fa">
+</stop>
+<stop offset="1" stop-color="#cfbcf0">
+</stop>
+</linearGradient>
+<linearGradient id="rg3" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#c4eafc">
+</stop>
+<stop offset="1" stop-color="#90d2f4">
+</stop>
+</linearGradient>
+<linearGradient id="rg4" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#e4ecf8">
+</stop>
+<stop offset="1" stop-color="#b9cae7">
+</stop>
+</linearGradient>
+<linearGradient id="rg5" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#ffe6f0">
+</stop>
+<stop offset="1" stop-color="#fbc2d8">
+</stop>
+</linearGradient>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#bfe3ff">
+</stop>
+<stop offset="1" stop-color="#fff0f7">
+</stop>
+</linearGradient>
+</defs>
+<rect width="400" height="2960" fill="url(#sky)">
+</rect>
+<g data-region="5">
+<path d="M0,130 Q25,112 50,130 Q75,126 100,130 Q125,112 150,130 Q175,126 200,130 Q225,112 250,130 Q275,126 300,130 Q325,112 350,130 Q375,126 400,130 Q425,112 450,130 L400,670 L0,670 Z" fill="url(#rg5)">
+</path>
+<g transform="translate(0,130)">
+<g>
+<path d="M140,140 v-70 a60,60 0 0 1 120,0 v70" fill="none" stroke="#f48fb1" stroke-width="10">
+</path>
+<g transform="translate(150,80) scale(0.9)">
+<circle cx="6" cy="0" r="5" fill="#fff">
+</circle>
+<circle cx="1.8541019662496847" cy="5.706339097770921" r="5" fill="#fff">
+</circle>
+<circle cx="-4.854101966249684" cy="3.5267115137548393" r="5" fill="#fff">
+</circle>
+<circle cx="-4.854101966249685" cy="-3.5267115137548384" r="5" fill="#fff">
+</circle>
+<circle cx="1.8541019662496834" cy="-5.706339097770922" r="5" fill="#fff">
+</circle>
+<circle r="3.5" fill="#ffe27a">
+</circle>
+</g>
+<g transform="translate(170,38) scale(0.9)">
+<circle cx="6" cy="0" r="5" fill="#ff80ab">
+</circle>
+<circle cx="1.8541019662496847" cy="5.706339097770921" r="5" fill="#ff80ab">
+</circle>
+<circle cx="-4.854101966249684" cy="3.5267115137548393" r="5" fill="#ff80ab">
+</circle>
+<circle cx="-4.854101966249685" cy="-3.5267115137548384" r="5" fill="#ff80ab">
+</circle>
+<circle cx="1.8541019662496834" cy="-5.706339097770922" r="5" fill="#ff80ab">
+</circle>
+<circle r="3.5" fill="#ffe27a">
+</circle>
+</g>
+<g transform="translate(200,24) scale(0.9)">
+<circle cx="6" cy="0" r="5" fill="#fff">
+</circle>
+<circle cx="1.8541019662496847" cy="5.706339097770921" r="5" fill="#fff">
+</circle>
+<circle cx="-4.854101966249684" cy="3.5267115137548393" r="5" fill="#fff">
+</circle>
+<circle cx="-4.854101966249685" cy="-3.5267115137548384" r="5" fill="#fff">
+</circle>
+<circle cx="1.8541019662496834" cy="-5.706339097770922" r="5" fill="#fff">
+</circle>
+<circle r="3.5" fill="#ffe27a">
+</circle>
+</g>
+<g transform="translate(230,38) scale(0.9)">
+<circle cx="6" cy="0" r="5" fill="#ff80ab">
+</circle>
+<circle cx="1.8541019662496847" cy="5.706339097770921" r="5" fill="#ff80ab">
+</circle>
+<circle cx="-4.854101966249684" cy="3.5267115137548393" r="5" fill="#ff80ab">
+</circle>
+<circle cx="-4.854101966249685" cy="-3.5267115137548384" r="5" fill="#ff80ab">
+</circle>
+<circle cx="1.8541019662496834" cy="-5.706339097770922" r="5" fill="#ff80ab">
+</circle>
+<circle r="3.5" fill="#ffe27a">
+</circle>
+</g>
+<g transform="translate(250,80) scale(0.9)">
+<circle cx="6" cy="0" r="5" fill="#fff">
+</circle>
+<circle cx="1.8541019662496847" cy="5.706339097770921" r="5" fill="#fff">
+</circle>
+<circle cx="-4.854101966249684" cy="3.5267115137548393" r="5" fill="#fff">
+</circle>
+<circle cx="-4.854101966249685" cy="-3.5267115137548384" r="5" fill="#fff">
+</circle>
+<circle cx="1.8541019662496834" cy="-5.706339097770922" r="5" fill="#fff">
+</circle>
+<circle r="3.5" fill="#ffe27a">
+</circle>
+</g>
+<g transform="translate(128,80)">
+<line y1="-20" y2="0" stroke="#795548" stroke-width="2">
+</line>
+<rect x="-6" y="0" width="12" height="16" rx="4" fill="#ffd54f">
+</rect>
+<circle cy="8" r="14" fill="#ffe082" opacity=".35">
+</circle>
+</g>
+<g transform="translate(272,80)">
+<line y1="-20" y2="0" stroke="#795548" stroke-width="2">
+</line>
+<rect x="-6" y="0" width="12" height="16" rx="4" fill="#ffd54f">
+</rect>
+<circle cy="8" r="14" fill="#ffe082" opacity=".35">
+</circle>
+</g>
+<g transform="translate(45,210) scale(1.1)">
+<ellipse cx="0" cy="24" rx="20" ry="5" fill="#000" opacity=".1">
+</ellipse>
+<rect x="-4" y="0" width="8" height="24" rx="3" fill="#8d6e63">
+</rect>
+<circle cy="-6" r="22" fill="#f48fb1">
+</circle>
+<circle cx="-8" cy="-13" r="9" fill="#fff" opacity=".2">
+</circle>
+</g>
+<g transform="translate(355,230) scale(1.2)">
+<ellipse cx="0" cy="24" rx="20" ry="5" fill="#000" opacity=".1">
+</ellipse>
+<rect x="-4" y="0" width="8" height="24" rx="3" fill="#8d6e63">
+</rect>
+<circle cy="-6" r="22" fill="#f8bbd0">
+</circle>
+<circle cx="-8" cy="-13" r="9" fill="#fff" opacity=".2">
+</circle>
+</g>
+<g transform="translate(50,430) scale(1.2)">
+<ellipse cx="0" cy="24" rx="20" ry="5" fill="#000" opacity=".1">
+</ellipse>
+<rect x="-4" y="0" width="8" height="24" rx="3" fill="#8d6e63">
+</rect>
+<circle cy="-6" r="22" fill="#f06292">
+</circle>
+<circle cx="-8" cy="-13" r="9" fill="#fff" opacity=".2">
+</circle>
+</g>
+<g transform="translate(330,330) scale(1)">
+<circle cx="6" cy="0" r="5" fill="#ff80ab">
+</circle>
+<circle cx="1.8541019662496847" cy="5.706339097770921" r="5" fill="#ff80ab">
+</circle>
+<circle cx="-4.854101966249684" cy="3.5267115137548393" r="5" fill="#ff80ab">
+</circle>
+<circle cx="-4.854101966249685" cy="-3.5267115137548384" r="5" fill="#ff80ab">
+</circle>
+<circle cx="1.8541019662496834" cy="-5.706339097770922" r="5" fill="#ff80ab">
+</circle>
+<circle r="3.5" fill="#ffe27a">
+</circle>
+</g>
+<g transform="translate(70,330) scale(1)">
+<circle cx="6" cy="0" r="5" fill="#ce93d8">
+</circle>
+<circle cx="1.8541019662496847" cy="5.706339097770921" r="5" fill="#ce93d8">
+</circle>
+<circle cx="-4.854101966249684" cy="3.5267115137548393" r="5" fill="#ce93d8">
+</circle>
+<circle cx="-4.854101966249685" cy="-3.5267115137548384" r="5" fill="#ce93d8">
+</circle>
+<circle cx="1.8541019662496834" cy="-5.706339097770922" r="5" fill="#ce93d8">
+</circle>
+<circle r="3.5" fill="#ffe27a">
+</circle>
+</g>
+<g transform="translate(320,470) scale(1)">
+<circle cx="6" cy="0" r="5" fill="#fff">
+</circle>
+<circle cx="1.8541019662496847" cy="5.706339097770921" r="5" fill="#fff">
+</circle>
+<circle cx="-4.854101966249684" cy="3.5267115137548393" r="5" fill="#fff">
+</circle>
+<circle cx="-4.854101966249685" cy="-3.5267115137548384" r="5" fill="#fff">
+</circle>
+<circle cx="1.8541019662496834" cy="-5.706339097770922" r="5" fill="#fff">
+</circle>
+<circle r="3.5" fill="#ffe27a">
+</circle>
+</g>
+<g transform="translate(90,500) scale(1)">
+<circle cx="6" cy="0" r="5" fill="#ffd54f">
+</circle>
+<circle cx="1.8541019662496847" cy="5.706339097770921" r="5" fill="#ffd54f">
+</circle>
+<circle cx="-4.854101966249684" cy="3.5267115137548393" r="5" fill="#ffd54f">
+</circle>
+<circle cx="-4.854101966249685" cy="-3.5267115137548384" r="5" fill="#ffd54f">
+</circle>
+<circle cx="1.8541019662496834" cy="-5.706339097770922" r="5" fill="#ffd54f">
+</circle>
+<circle r="3.5" fill="#ffe27a">
+</circle>
+</g>
+<g transform="translate(340,140) scale(1)">
+<circle cx="6" cy="0" r="5" fill="#ff80ab">
+</circle>
+<circle cx="1.8541019662496847" cy="5.706339097770921" r="5" fill="#ff80ab">
+</circle>
+<circle cx="-4.854101966249684" cy="3.5267115137548393" r="5" fill="#ff80ab">
+</circle>
+<circle cx="-4.854101966249685" cy="-3.5267115137548384" r="5" fill="#ff80ab">
+</circle>
+<circle cx="1.8541019662496834" cy="-5.706339097770922" r="5" fill="#ff80ab">
+</circle>
+<circle r="3.5" fill="#ffe27a">
+</circle>
+</g>
+<g transform="translate(60,160) scale(1)">
+<circle cx="6" cy="0" r="5" fill="#ce93d8">
+</circle>
+<circle cx="1.8541019662496847" cy="5.706339097770921" r="5" fill="#ce93d8">
+</circle>
+<circle cx="-4.854101966249684" cy="3.5267115137548393" r="5" fill="#ce93d8">
+</circle>
+<circle cx="-4.854101966249685" cy="-3.5267115137548384" r="5" fill="#ce93d8">
+</circle>
+<circle cx="1.8541019662496834" cy="-5.706339097770922" r="5" fill="#ce93d8">
+</circle>
+<circle r="3.5" fill="#ffe27a">
+</circle>
+</g>
+</g>
+</g>
+</g>
+<g data-region="4">
+<path d="M0,670 Q25,652 50,670 Q75,666 100,670 Q125,652 150,670 Q175,666 200,670 Q225,652 250,670 Q275,666 300,670 Q325,652 350,670 Q375,666 400,670 Q425,652 450,670 L400,1210 L0,1210 Z" fill="url(#rg4)">
+</path>
+<g transform="translate(0,670)">
+<g>
+<g>
+<polygon points="-15,160 70,20 155,160" fill="#8aa4cf">
+</polygon>
+<polygon points="70,20 155,160 87,160" fill="#6f8bbd" opacity=".6">
+</polygon>
+<polygon points="46.2,59.2 70,20 93.8,59.2 78.5,48 63.2,62" fill="#fff">
+</polygon>
+</g>
+<g>
+<polygon points="235,120 330,-30 425,120" fill="#8aa4cf">
+</polygon>
+<polygon points="330,-30 425,120 349,120" fill="#6f8bbd" opacity=".6">
+</polygon>
+<polygon points="303.4,12 330,-30 356.6,12 339.5,0 322.4,15" fill="#fff">
+</polygon>
+</g>
+<g>
+<polygon points="-15,420 60,300 135,420" fill="#8aa4cf">
+</polygon>
+<polygon points="60,300 135,420 75,420" fill="#6f8bbd" opacity=".6">
+</polygon>
+<polygon points="39,333.6 60,300 81,333.6 67.5,324 54,336" fill="#fff">
+</polygon>
+</g>
+<g>
+<polygon points="265,470 345,360 425,470" fill="#8aa4cf">
+</polygon>
+<polygon points="345,360 425,470 361,470" fill="#6f8bbd" opacity=".6">
+</polygon>
+<polygon points="322.6,390.8 345,360 367.4,390.8 353,382 338.6,393" fill="#fff">
+</polygon>
+</g>
+<g transform="translate(30,250) scale(0.9)">
+<rect x="-3" y="14" width="6" height="12" fill="#795548">
+</rect>
+<polygon points="0,-34 -20,2 20,2" fill="#3f8f5c">
+</polygon>
+<polygon points="0,-18 -24,16 24,16" fill="#4aa56b">
+</polygon>
+</g>
+<g transform="translate(372,260) scale(1)">
+<rect x="-3" y="14" width="6" height="12" fill="#795548">
+</rect>
+<polygon points="0,-34 -20,2 20,2" fill="#3f8f5c">
+</polygon>
+<polygon points="0,-18 -24,16 24,16" fill="#4aa56b">
+</polygon>
+</g>
+<g transform="translate(40,320) scale(0.8)">
+<rect x="-3" y="14" width="6" height="12" fill="#795548">
+</rect>
+<polygon points="0,-34 -20,2 20,2" fill="#3f8f5c">
+</polygon>
+<polygon points="0,-18 -24,16 24,16" fill="#4aa56b">
+</polygon>
+</g>
+<g transform="translate(365,340) scale(0.9)">
+<rect x="-3" y="14" width="6" height="12" fill="#795548">
+</rect>
+<polygon points="0,-34 -20,2 20,2" fill="#3f8f5c">
+</polygon>
+<polygon points="0,-18 -24,16 24,16" fill="#4aa56b">
+</polygon>
+</g>
+<line x1="200" y1="40" x2="200" y2="75" stroke="#795548" stroke-width="3">
+</line>
+<polygon points="200,40 228,50 200,60" fill="#f0b429">
+</polygon>
+</g>
+</g>
+</g>
+<g data-region="3">
+<path d="M0,1210 Q25,1192 50,1210 Q75,1206 100,1210 Q125,1192 150,1210 Q175,1206 200,1210 Q225,1192 250,1210 Q275,1206 300,1210 Q325,1192 350,1210 Q375,1206 400,1210 Q425,1192 450,1210 L400,1750 L0,1750 Z" fill="url(#rg3)">
+</path>
+<g transform="translate(0,1210)">
+<g>
+<ellipse cx="200" cy="260" rx="170" ry="210" fill="#7fcdf2" opacity=".6">
+</ellipse>
+<path d="M40,200 q20,-8 40,0 M290,320 q20,-8 40,0 M60,400 q20,-8 40,0 M250,120 q20,-8 40,0" stroke="#fff" stroke-width="2.5" fill="none" opacity=".8">
+</path>
+<g transform="translate(60,300)">
+<ellipse rx="16" ry="6" fill="#5cb85c">
+</ellipse>
+<circle cy="-3" r="5" fill="#ff9ec7">
+</circle>
+</g>
+<g transform="translate(340,210)">
+<ellipse rx="16" ry="6" fill="#5cb85c">
+</ellipse>
+<circle cy="-3" r="5" fill="#ff9ec7">
+</circle>
+</g>
+<g transform="translate(330,430)">
+<ellipse rx="16" ry="6" fill="#5cb85c">
+</ellipse>
+<circle cy="-3" r="5" fill="#ff9ec7">
+</circle>
+</g>
+<g transform="translate(70,130)">
+<ellipse rx="16" ry="6" fill="#5cb85c">
+</ellipse>
+<circle cy="-3" r="5" fill="#ff9ec7">
+</circle>
+</g>
+<g transform="translate(36,80) scale(0.9)">
+<polygon points="0,-40 10,-10 0,10 -10,-10" fill="#b39ddb">
+</polygon>
+<polygon points="-16,-20 -8,0 -16,12 -24,0" fill="#b39ddb" opacity=".8">
+</polygon>
+<polygon points="16,-14 24,6 16,14 8,6" fill="#b39ddb" opacity=".8">
+</polygon>
+<polygon points="0,-40 10,-10 0,-14" fill="#fff" opacity=".4">
+</polygon>
+</g>
+<g transform="translate(366,470) scale(1)">
+<polygon points="0,-40 10,-10 0,10 -10,-10" fill="#90caf9">
+</polygon>
+<polygon points="-16,-20 -8,0 -16,12 -24,0" fill="#90caf9" opacity=".8">
+</polygon>
+<polygon points="16,-14 24,6 16,14 8,6" fill="#90caf9" opacity=".8">
+</polygon>
+<polygon points="0,-40 10,-10 0,-14" fill="#fff" opacity=".4">
+</polygon>
+</g>
+<g transform="translate(30,480) scale(0.8)">
+<polygon points="0,-40 10,-10 0,10 -10,-10" fill="#ce93d8">
+</polygon>
+<polygon points="-16,-20 -8,0 -16,12 -24,0" fill="#ce93d8" opacity=".8">
+</polygon>
+<polygon points="16,-14 24,6 16,14 8,6" fill="#ce93d8" opacity=".8">
+</polygon>
+<polygon points="0,-40 10,-10 0,-14" fill="#fff" opacity=".4">
+</polygon>
+</g>
+</g>
+</g>
+</g>
+<g data-region="2">
+<path d="M0,1750 Q25,1732 50,1750 Q75,1746 100,1750 Q125,1732 150,1750 Q175,1746 200,1750 Q225,1732 250,1750 Q275,1746 300,1750 Q325,1732 350,1750 Q375,1746 400,1750 Q425,1732 450,1750 L400,2290 L0,2290 Z" fill="url(#rg2)">
+</path>
+<g transform="translate(0,1750)">
+<g>
+<g transform="translate(200,150) scale(0.8)">
+<ellipse cx="0" cy="70" rx="80" ry="9" fill="#000" opacity=".1">
+</ellipse>
+<g>
+<rect x="-68" y="0" width="24" height="70" fill="#fbe9f0" stroke="#e6c5d6">
+</rect>
+<polygon points="-72,0 -56,-38 -40,0" fill="#9575cd">
+</polygon>
+<rect x="-59" y="16" width="6" height="10" rx="3" fill="#ffd54f">
+</rect>
+</g>
+<g>
+<rect x="44" y="0" width="24" height="70" fill="#fbe9f0" stroke="#e6c5d6">
+</rect>
+<polygon points="40,0 56,-38 72,0" fill="#9575cd">
+</polygon>
+<rect x="53" y="16" width="6" height="10" rx="3" fill="#ffd54f">
+</rect>
+</g>
+<g>
+<rect x="-42" y="24" width="24" height="46" fill="#fbe9f0" stroke="#e6c5d6">
+</rect>
+<polygon points="-46,24 -30,-14 -14,24" fill="#9575cd">
+</polygon>
+<rect x="-33" y="40" width="6" height="10" rx="3" fill="#ffd54f">
+</rect>
+</g>
+<g>
+<rect x="18" y="24" width="24" height="46" fill="#fbe9f0" stroke="#e6c5d6">
+</rect>
+<polygon points="14,24 30,-14 46,24" fill="#9575cd">
+</polygon>
+<rect x="27" y="40" width="6" height="10" rx="3" fill="#ffd54f">
+</rect>
+</g>
+<rect x="-34" y="-8" width="68" height="78" fill="#fff3f8" stroke="#e6c5d6">
+</rect>
+<polygon points="-40,-8 0,-62 40,-8" fill="#7e57c2">
+</polygon>
+<path d="M-12,70 v-26 a12,12 0 0 1 24,0 v26 z" fill="#8d6e63">
+</path>
+<line x1="0" y1="-62" x2="0" y2="-82" stroke="#795548" stroke-width="2">
+</line>
+<polygon points="0,-82 16,-77 0,-72" fill="#ec6fa0">
+</polygon>
+</g>
+<g transform="translate(45,240) scale(0.9)">
+<ellipse cx="0" cy="24" rx="20" ry="5" fill="#000" opacity=".1">
+</ellipse>
+<rect x="-4" y="0" width="8" height="24" rx="3" fill="#8d6e63">
+</rect>
+<circle cy="-6" r="22" fill="#b39ddb">
+</circle>
+<circle cx="-8" cy="-13" r="9" fill="#fff" opacity=".2">
+</circle>
+</g>
+<g transform="translate(355,300) scale(1)">
+<ellipse cx="0" cy="24" rx="20" ry="5" fill="#000" opacity=".1">
+</ellipse>
+<rect x="-4" y="0" width="8" height="24" rx="3" fill="#8d6e63">
+</rect>
+<circle cy="-6" r="22" fill="#ce93d8">
+</circle>
+<circle cx="-8" cy="-13" r="9" fill="#fff" opacity=".2">
+</circle>
+</g>
+<g transform="translate(60,120) scale(1)">
+<circle cx="6" cy="0" r="5" fill="#f48fb1">
+</circle>
+<circle cx="1.8541019662496847" cy="5.706339097770921" r="5" fill="#f48fb1">
+</circle>
+<circle cx="-4.854101966249684" cy="3.5267115137548393" r="5" fill="#f48fb1">
+</circle>
+<circle cx="-4.854101966249685" cy="-3.5267115137548384" r="5" fill="#f48fb1">
+</circle>
+<circle cx="1.8541019662496834" cy="-5.706339097770922" r="5" fill="#f48fb1">
+</circle>
+<circle r="3.5" fill="#ffe27a">
+</circle>
+</g>
+<g transform="translate(340,90) scale(1)">
+<circle cx="6" cy="0" r="5" fill="#f48fb1">
+</circle>
+<circle cx="1.8541019662496847" cy="5.706339097770921" r="5" fill="#f48fb1">
+</circle>
+<circle cx="-4.854101966249684" cy="3.5267115137548393" r="5" fill="#f48fb1">
+</circle>
+<circle cx="-4.854101966249685" cy="-3.5267115137548384" r="5" fill="#f48fb1">
+</circle>
+<circle cx="1.8541019662496834" cy="-5.706339097770922" r="5" fill="#f48fb1">
+</circle>
+<circle r="3.5" fill="#ffe27a">
+</circle>
+</g>
+<g transform="translate(70,400) scale(1)">
+<circle cx="6" cy="0" r="5" fill="#f48fb1">
+</circle>
+<circle cx="1.8541019662496847" cy="5.706339097770921" r="5" fill="#f48fb1">
+</circle>
+<circle cx="-4.854101966249684" cy="3.5267115137548393" r="5" fill="#f48fb1">
+</circle>
+<circle cx="-4.854101966249685" cy="-3.5267115137548384" r="5" fill="#f48fb1">
+</circle>
+<circle cx="1.8541019662496834" cy="-5.706339097770922" r="5" fill="#f48fb1">
+</circle>
+<circle r="3.5" fill="#ffe27a">
+</circle>
+</g>
+<g transform="translate(335,460) scale(1)">
+<circle cx="6" cy="0" r="5" fill="#f48fb1">
+</circle>
+<circle cx="1.8541019662496847" cy="5.706339097770921" r="5" fill="#f48fb1">
+</circle>
+<circle cx="-4.854101966249684" cy="3.5267115137548393" r="5" fill="#f48fb1">
+</circle>
+<circle cx="-4.854101966249685" cy="-3.5267115137548384" r="5" fill="#f48fb1">
+</circle>
+<circle cx="1.8541019662496834" cy="-5.706339097770922" r="5" fill="#f48fb1">
+</circle>
+<circle r="3.5" fill="#ffe27a">
+</circle>
+</g>
+<path d="M30,60 q10,-14 20,0 q10,-14 20,0" fill="none" stroke="#fff" stroke-width="3" opacity=".7">
+</path>
+</g>
+</g>
+</g>
+<g data-region="1">
+<path d="M0,2290 Q25,2272 50,2290 Q75,2286 100,2290 Q125,2272 150,2290 Q175,2286 200,2290 Q225,2272 250,2290 Q275,2286 300,2290 Q325,2272 350,2290 Q375,2286 400,2290 Q425,2272 450,2290 L400,2960 L0,2960 Z" fill="url(#rg1)">
+</path>
+<g transform="translate(0,2290)">
+<g>
+<g transform="translate(40,90) scale(1.3)">
+<ellipse cx="0" cy="24" rx="20" ry="5" fill="#000" opacity=".1">
+</ellipse>
+<rect x="-4" y="0" width="8" height="24" rx="3" fill="#8d6e63">
+</rect>
+<circle cy="-6" r="22" fill="#5fb36b">
+</circle>
+<circle cx="-8" cy="-13" r="9" fill="#fff" opacity=".2">
+</circle>
+</g>
+<g transform="translate(360,150) scale(1.1)">
+<ellipse cx="0" cy="24" rx="20" ry="5" fill="#000" opacity=".1">
+</ellipse>
+<rect x="-4" y="0" width="8" height="24" rx="3" fill="#8d6e63">
+</rect>
+<circle cy="-6" r="22" fill="#6bc17a">
+</circle>
+<circle cx="-8" cy="-13" r="9" fill="#fff" opacity=".2">
+</circle>
+</g>
+<g transform="translate(50,300) scale(1)">
+<ellipse cx="0" cy="24" rx="20" ry="5" fill="#000" opacity=".1">
+</ellipse>
+<rect x="-4" y="0" width="8" height="24" rx="3" fill="#8d6e63">
+</rect>
+<circle cy="-6" r="22" fill="#58a867">
+</circle>
+<circle cx="-8" cy="-13" r="9" fill="#fff" opacity=".2">
+</circle>
+</g>
+<g transform="translate(355,400) scale(1.4)">
+<ellipse cx="0" cy="24" rx="20" ry="5" fill="#000" opacity=".1">
+</ellipse>
+<rect x="-4" y="0" width="8" height="24" rx="3" fill="#8d6e63">
+</rect>
+<circle cy="-6" r="22" fill="#5fb36b">
+</circle>
+<circle cx="-8" cy="-13" r="9" fill="#fff" opacity=".2">
+</circle>
+</g>
+<g transform="translate(42,470) scale(1.2)">
+<ellipse cx="0" cy="24" rx="20" ry="5" fill="#000" opacity=".1">
+</ellipse>
+<rect x="-4" y="0" width="8" height="24" rx="3" fill="#8d6e63">
+</rect>
+<circle cy="-6" r="22" fill="#6bc17a">
+</circle>
+<circle cx="-8" cy="-13" r="9" fill="#fff" opacity=".2">
+</circle>
+</g>
+<circle cx="330" cy="260" r="11" fill="#ffb3c7">
+</circle>
+<rect x="326" y="266" width="8" height="12" fill="#fff4e0">
+</rect>
+<g transform="translate(70,200) scale(1)">
+<circle cx="6" cy="0" r="5" fill="#ff8fb8">
+</circle>
+<circle cx="1.8541019662496847" cy="5.706339097770921" r="5" fill="#ff8fb8">
+</circle>
+<circle cx="-4.854101966249684" cy="3.5267115137548393" r="5" fill="#ff8fb8">
+</circle>
+<circle cx="-4.854101966249685" cy="-3.5267115137548384" r="5" fill="#ff8fb8">
+</circle>
+<circle cx="1.8541019662496834" cy="-5.706339097770922" r="5" fill="#ff8fb8">
+</circle>
+<circle r="3.5" fill="#ffe27a">
+</circle>
+</g>
+<g transform="translate(330,330) scale(1)">
+<circle cx="6" cy="0" r="5" fill="#fff">
+</circle>
+<circle cx="1.8541019662496847" cy="5.706339097770921" r="5" fill="#fff">
+</circle>
+<circle cx="-4.854101966249684" cy="3.5267115137548393" r="5" fill="#fff">
+</circle>
+<circle cx="-4.854101966249685" cy="-3.5267115137548384" r="5" fill="#fff">
+</circle>
+<circle cx="1.8541019662496834" cy="-5.706339097770922" r="5" fill="#fff">
+</circle>
+<circle r="3.5" fill="#ffe27a">
+</circle>
+</g>
+<g transform="translate(90,420) scale(1)">
+<circle cx="6" cy="0" r="5" fill="#ffd54f">
+</circle>
+<circle cx="1.8541019662496847" cy="5.706339097770921" r="5" fill="#ffd54f">
+</circle>
+<circle cx="-4.854101966249684" cy="3.5267115137548393" r="5" fill="#ffd54f">
+</circle>
+<circle cx="-4.854101966249685" cy="-3.5267115137548384" r="5" fill="#ffd54f">
+</circle>
+<circle cx="1.8541019662496834" cy="-5.706339097770922" r="5" fill="#ffd54f">
+</circle>
+<circle r="3.5" fill="#ffe27a">
+</circle>
+</g>
+<g transform="translate(320,80) scale(1)">
+<circle cx="6" cy="0" r="5" fill="#ce93d8">
+</circle>
+<circle cx="1.8541019662496847" cy="5.706339097770921" r="5" fill="#ce93d8">
+</circle>
+<circle cx="-4.854101966249684" cy="3.5267115137548393" r="5" fill="#ce93d8">
+</circle>
+<circle cx="-4.854101966249685" cy="-3.5267115137548384" r="5" fill="#ce93d8">
+</circle>
+<circle cx="1.8541019662496834" cy="-5.706339097770922" r="5" fill="#ce93d8">
+</circle>
+<circle r="3.5" fill="#ffe27a">
+</circle>
+</g>
+</g>
+</g>
+</g>
+<path d="M200,2875 C185,2854.1666666666665 97.5,2784.7916666666665 110,2750 C122.5,2715.2083333333335 272.5,2694.1666666666665 275,2666.25 C277.5,2638.3333333333335 124.16666666666667,2610.4166666666665 125,2582.5 C125.83333333333333,2554.5833333333335 267.5,2526.6666666666665 280,2498.75 C292.5,2470.8333333333335 198.33333333333334,2463.125 200,2415 C201.66666666666666,2366.875 302.5,2258.125 290,2210 C277.5,2161.875 127.5,2154.1666666666665 125,2126.25 C122.5,2098.3333333333335 275.8333333333333,2070.4166666666665 275,2042.5 C274.1666666666667,2014.5833333333333 132.5,1986.6666666666667 120,1958.75 C107.5,1930.8333333333333 201.66666666666666,1923.125 200,1875 C198.33333333333334,1826.875 97.5,1718.125 110,1670 C122.5,1621.875 272.5,1614.1666666666667 275,1586.25 C277.5,1558.3333333333333 124.16666666666667,1530.4166666666667 125,1502.5 C125.83333333333333,1474.5833333333333 267.5,1446.6666666666667 280,1418.75 C292.5,1390.8333333333333 198.33333333333334,1383.125 200,1335 C201.66666666666666,1286.875 302.5,1178.125 290,1130 C277.5,1081.875 127.5,1074.1666666666667 125,1046.25 C122.5,1018.3333333333334 275.8333333333333,990.4166666666666 275,962.5 C274.1666666666667,934.5833333333334 132.5,906.6666666666666 120,878.75 C107.5,850.8333333333334 201.66666666666666,843.125 200,795 C198.33333333333334,746.875 97.5,638.125 110,590 C122.5,541.875 272.5,534.1666666666666 275,506.25 C277.5,478.3333333333333 124.16666666666667,450.4166666666667 125,422.5 C125.83333333333333,394.5833333333333 267.5,366.6666666666667 280,338.75 C292.5,310.8333333333333 213.33333333333334,301.125 200,255 C186.66666666666666,208.875 200,94.16666666666666 200,62" fill="none" stroke="#f3d9b1" stroke-width="46" stroke-linecap="round" stroke-linejoin="round">
+</path>
+<path d="M200,2875 C185,2854.1666666666665 97.5,2784.7916666666665 110,2750 C122.5,2715.2083333333335 272.5,2694.1666666666665 275,2666.25 C277.5,2638.3333333333335 124.16666666666667,2610.4166666666665 125,2582.5 C125.83333333333333,2554.5833333333335 267.5,2526.6666666666665 280,2498.75 C292.5,2470.8333333333335 198.33333333333334,2463.125 200,2415 C201.66666666666666,2366.875 302.5,2258.125 290,2210 C277.5,2161.875 127.5,2154.1666666666665 125,2126.25 C122.5,2098.3333333333335 275.8333333333333,2070.4166666666665 275,2042.5 C274.1666666666667,2014.5833333333333 132.5,1986.6666666666667 120,1958.75 C107.5,1930.8333333333333 201.66666666666666,1923.125 200,1875 C198.33333333333334,1826.875 97.5,1718.125 110,1670 C122.5,1621.875 272.5,1614.1666666666667 275,1586.25 C277.5,1558.3333333333333 124.16666666666667,1530.4166666666667 125,1502.5 C125.83333333333333,1474.5833333333333 267.5,1446.6666666666667 280,1418.75 C292.5,1390.8333333333333 198.33333333333334,1383.125 200,1335 C201.66666666666666,1286.875 302.5,1178.125 290,1130 C277.5,1081.875 127.5,1074.1666666666667 125,1046.25 C122.5,1018.3333333333334 275.8333333333333,990.4166666666666 275,962.5 C274.1666666666667,934.5833333333334 132.5,906.6666666666666 120,878.75 C107.5,850.8333333333334 201.66666666666666,843.125 200,795 C198.33333333333334,746.875 97.5,638.125 110,590 C122.5,541.875 272.5,534.1666666666666 275,506.25 C277.5,478.3333333333333 124.16666666666667,450.4166666666667 125,422.5 C125.83333333333333,394.5833333333333 267.5,366.6666666666667 280,338.75 C292.5,310.8333333333333 213.33333333333334,301.125 200,255 C186.66666666666666,208.875 200,94.16666666666666 200,62" fill="none" stroke="#fff5e4" stroke-width="38" stroke-linecap="round" stroke-linejoin="round">
+</path>
+<path d="M200,2875 C185,2854.1666666666665 97.5,2784.7916666666665 110,2750 C122.5,2715.2083333333335 272.5,2694.1666666666665 275,2666.25 C277.5,2638.3333333333335 124.16666666666667,2610.4166666666665 125,2582.5 C125.83333333333333,2554.5833333333335 267.5,2526.6666666666665 280,2498.75 C292.5,2470.8333333333335 198.33333333333334,2463.125 200,2415 C201.66666666666666,2366.875 302.5,2258.125 290,2210 C277.5,2161.875 127.5,2154.1666666666665 125,2126.25 C122.5,2098.3333333333335 275.8333333333333,2070.4166666666665 275,2042.5 C274.1666666666667,2014.5833333333333 132.5,1986.6666666666667 120,1958.75 C107.5,1930.8333333333333 201.66666666666666,1923.125 200,1875 C198.33333333333334,1826.875 97.5,1718.125 110,1670 C122.5,1621.875 272.5,1614.1666666666667 275,1586.25 C277.5,1558.3333333333333 124.16666666666667,1530.4166666666667 125,1502.5 C125.83333333333333,1474.5833333333333 267.5,1446.6666666666667 280,1418.75 C292.5,1390.8333333333333 198.33333333333334,1383.125 200,1335 C201.66666666666666,1286.875 302.5,1178.125 290,1130 C277.5,1081.875 127.5,1074.1666666666667 125,1046.25 C122.5,1018.3333333333334 275.8333333333333,990.4166666666666 275,962.5 C274.1666666666667,934.5833333333334 132.5,906.6666666666666 120,878.75 C107.5,850.8333333333334 201.66666666666666,843.125 200,795 C198.33333333333334,746.875 97.5,638.125 110,590 C122.5,541.875 272.5,534.1666666666666 275,506.25 C277.5,478.3333333333333 124.16666666666667,450.4166666666667 125,422.5 C125.83333333333333,394.5833333333333 267.5,366.6666666666667 280,338.75 C292.5,310.8333333333333 213.33333333333334,301.125 200,255 C186.66666666666666,208.875 200,94.16666666666666 200,62" fill="none" stroke="#e7c58f" stroke-width="3" stroke-dasharray="2 12" stroke-linecap="round">
+</path>
+<path d="M200,2875 C185,2854.1666666666665 97.5,2784.7916666666665 110,2750 C122.5,2715.2083333333335 272.5,2694.1666666666665 275,2666.25 C277.5,2638.3333333333335 124.16666666666667,2610.4166666666665 125,2582.5 C125.83333333333333,2554.5833333333335 267.5,2526.6666666666665 280,2498.75 C292.5,2470.8333333333335 198.33333333333334,2463.125 200,2415 C201.66666666666666,2366.875 302.5,2258.125 290,2210 C277.5,2161.875 127.5,2154.1666666666665 125,2126.25 C122.5,2098.3333333333335 275.8333333333333,2070.4166666666665 275,2042.5 C274.1666666666667,2014.5833333333333 132.5,1986.6666666666667 120,1958.75 C107.5,1930.8333333333333 201.66666666666666,1923.125 200,1875 C198.33333333333334,1826.875 97.5,1718.125 110,1670 C122.5,1621.875 272.5,1614.1666666666667 275,1586.25 C277.5,1558.3333333333333 124.16666666666667,1530.4166666666667 125,1502.5 C125.83333333333333,1474.5833333333333 267.5,1446.6666666666667 280,1418.75 C292.5,1390.8333333333333 198.33333333333334,1383.125 200,1335 C201.66666666666666,1286.875 302.5,1178.125 290,1130 C277.5,1081.875 127.5,1074.1666666666667 125,1046.25 C122.5,1018.3333333333334 275.8333333333333,990.4166666666666 275,962.5 C274.1666666666667,934.5833333333334 132.5,906.6666666666666 120,878.75 C107.5,850.8333333333334 201.66666666666666,843.125 200,795 C198.33333333333334,746.875 97.5,638.125 110,590 C122.5,541.875 272.5,534.1666666666666 275,506.25 C277.5,478.3333333333333 124.16666666666667,450.4166666666667 125,422.5 C125.83333333333333,394.5833333333333 267.5,366.6666666666667 280,338.75 C292.5,310.8333333333333 213.33333333333334,301.125 200,255 C186.66666666666666,208.875 200,94.16666666666666 200,62" fill="none" stroke="#ffd54f" stroke-width="7" stroke-linecap="round" pathLength="1" stroke-dasharray="0.2692307692307692 1" opacity=".85">
+</path>
+<g transform="translate(200,2326)" data-testid="region-1" data-unlocked="true" data-completed="true">
+<rect x="-118" y="-17" width="236" height="34" rx="17" fill="#ec6fa0" stroke="#fff" stroke-width="3">
+</rect>
+<text text-anchor="middle" y="5" class="ribbon-text">Etapa 1 · Floresta dos Sonhos</text>
+<text text-anchor="middle" y="36" class="ribbon-sub">✓ etapa concluída</text>
+</g>
+<g transform="translate(200,1786)" data-testid="region-2" data-unlocked="true" data-completed="false">
+<rect x="-118" y="-17" width="236" height="34" rx="17" fill="#9b7fd4" stroke="#fff" stroke-width="3">
+</rect>
+<text text-anchor="middle" y="5" class="ribbon-text">Etapa 2 · Castelo das Fadas</text>
+<text text-anchor="middle" y="36" class="ribbon-sub">
+</text>
+</g>
+<g transform="translate(200,1246)" data-testid="region-3" data-unlocked="false" data-completed="false">
+<rect x="-118" y="-17" width="236" height="34" rx="17" fill="#4aaee6" stroke="#fff" stroke-width="3">
+</rect>
+<text text-anchor="middle" y="5" class="ribbon-text">Etapa 3 · Lago Cristalino</text>
+<text text-anchor="middle" y="36" class="ribbon-sub">🔒 conclua a etapa anterior</text>
+</g>
+<g transform="translate(200,706)" data-testid="region-4" data-unlocked="false" data-completed="false">
+<rect x="-118" y="-17" width="236" height="34" rx="17" fill="#f0b429" stroke="#fff" stroke-width="3">
+</rect>
+<text text-anchor="middle" y="5" class="ribbon-text">Etapa 4 · Montanhas da Coragem</text>
+<text text-anchor="middle" y="36" class="ribbon-sub">🔒 conclua a etapa anterior</text>
+</g>
+<g transform="translate(200,166)" data-testid="region-5" data-unlocked="false" data-completed="false">
+<rect x="-118" y="-17" width="236" height="34" rx="17" fill="#e8548c" stroke="#fff" stroke-width="3">
+</rect>
+<text text-anchor="middle" y="5" class="ribbon-text">Etapa 5 · Jardim da Magia</text>
+<text text-anchor="middle" y="36" class="ribbon-sub">🔒 conclua a etapa anterior</text>
+</g>
+<rect x="0" y="1210" width="400" height="540" fill="#fff" opacity=".38" pointer-events="none">
+</rect>
+<rect x="0" y="670" width="400" height="540" fill="#fff" opacity=".38" pointer-events="none">
+</rect>
+<rect x="0" y="130" width="400" height="540" fill="#fff" opacity=".38" pointer-events="none">
+</rect>
+<g transform="translate(120,2867)">
+<rect x="-4" y="0" width="8" height="46" fill="#8d6e63">
+</rect>
+<rect x="-34" y="-8" width="72" height="30" rx="8" fill="#e8c28c" stroke="#a1743d" stroke-width="2">
+</rect>
+<text x="2" y="12" text-anchor="middle" class="sign-text">Início</text>
+</g>
+<g transform="translate(110,2750)" class="node done  " data-testid="phase-1" data-state="done" role="button" tabindex="0" aria-label="Fase 1.1, concluída">
+<circle r="25" fill="#fff8e1" stroke="#ffb300" stroke-width="5">
+</circle>
+<text y="8" text-anchor="middle" class="node-star">⭐</text>
+<text y="-30" text-anchor="middle" class="node-mini">1.1</text>
+</g>
+<g transform="translate(275,2666.25)" class="node done  " data-testid="phase-2" data-state="done" role="button" tabindex="0" aria-label="Fase 1.2, concluída">
+<circle r="25" fill="#fff8e1" stroke="#ffb300" stroke-width="5">
+</circle>
+<text y="8" text-anchor="middle" class="node-star">⭐</text>
+<text y="-30" text-anchor="middle" class="node-mini">1.2</text>
+</g>
+<g transform="translate(125,2582.5)" class="node done  " data-testid="phase-3" data-state="done" role="button" tabindex="0" aria-label="Fase 1.3, concluída">
+<circle r="25" fill="#fff8e1" stroke="#ffb300" stroke-width="5">
+</circle>
+<text y="8" text-anchor="middle" class="node-star">⭐</text>
+<text y="-30" text-anchor="middle" class="node-mini">1.3</text>
+</g>
+<g transform="translate(280,2498.75)" class="node done  " data-testid="phase-4" data-state="done" role="button" tabindex="0" aria-label="Fase 1.4, concluída">
+<circle r="25" fill="#fff8e1" stroke="#ffb300" stroke-width="5">
+</circle>
+<text y="8" text-anchor="middle" class="node-star">⭐</text>
+<text y="-30" text-anchor="middle" class="node-mini">1.4</text>
+</g>
+<g transform="translate(200,2415)" class="node done  " data-testid="phase-5" data-state="done" role="button" tabindex="0" aria-label="Fase 1.5, concluída">
+<circle r="25" fill="#fff8e1" stroke="#ffb300" stroke-width="5">
+</circle>
+<text y="8" text-anchor="middle" class="node-star">⭐</text>
+<text y="-30" text-anchor="middle" class="node-mini">1.5</text>
+</g>
+<g transform="translate(290,2210)" class="node done  " data-testid="phase-6" data-state="done" role="button" tabindex="0" aria-label="Fase 2.1, concluída">
+<circle r="25" fill="#fff8e1" stroke="#ffb300" stroke-width="5">
+</circle>
+<text y="8" text-anchor="middle" class="node-star">⭐</text>
+<text y="-30" text-anchor="middle" class="node-mini">2.1</text>
+</g>
+<g transform="translate(125,2126.25)" class="node done  " data-testid="phase-7" data-state="done" role="button" tabindex="0" aria-label="Fase 2.2, concluída">
+<circle r="25" fill="#fff8e1" stroke="#ffb300" stroke-width="5">
+</circle>
+<text y="8" text-anchor="middle" class="node-star">⭐</text>
+<text y="-30" text-anchor="middle" class="node-mini">2.2</text>
+</g>
+<g transform="translate(275,2042.5)" class="node  next " data-testid="phase-8" data-state="next" role="button" tabindex="0" aria-label="Fase 2.3, próxima fase">
+<circle r="30" class="pulse" fill="#9b7fd4" opacity=".35">
+</circle>
+<circle r="25" fill="#fff" stroke="#9b7fd4" stroke-width="4">
+</circle>
+<text y="5" text-anchor="middle" class="node-label" fill="#37474f">2.3</text>
+</g>
+<g transform="translate(120,1958.75)" class="node   locked" data-testid="phase-9" data-state="locked" role="button" tabindex="0" aria-label="Fase 2.4, bloqueada">
+<circle r="25" fill="#fff" stroke="#9b7fd4" stroke-width="4">
+</circle>
+<text y="5" text-anchor="middle" class="node-label" fill="#9e9e9e">2.4</text>
+</g>
+<g transform="translate(200,1875)" class="node   locked" data-testid="phase-10" data-state="locked" role="button" tabindex="0" aria-label="Fase 2.5, bloqueada">
+<circle r="25" fill="#fff" stroke="#9b7fd4" stroke-width="4">
+</circle>
+<text y="5" text-anchor="middle" class="node-label" fill="#9e9e9e">2.5</text>
+</g>
+<g transform="translate(110,1670)" class="node   locked" data-testid="phase-11" data-state="locked" role="button" tabindex="0" aria-label="Fase 3.1, bloqueada">
+<circle r="25" fill="#fff" stroke="#4aaee6" stroke-width="4">
+</circle>
+<text y="5" text-anchor="middle" class="node-label" fill="#9e9e9e">3.1</text>
+</g>
+<g transform="translate(275,1586.25)" class="node   locked" data-testid="phase-12" data-state="locked" role="button" tabindex="0" aria-label="Fase 3.2, bloqueada">
+<circle r="25" fill="#fff" stroke="#4aaee6" stroke-width="4">
+</circle>
+<text y="5" text-anchor="middle" class="node-label" fill="#9e9e9e">3.2</text>
+</g>
+<g transform="translate(125,1502.5)" class="node   locked" data-testid="phase-13" data-state="locked" role="button" tabindex="0" aria-label="Fase 3.3, bloqueada">
+<circle r="25" fill="#fff" stroke="#4aaee6" stroke-width="4">
+</circle>
+<text y="5" text-anchor="middle" class="node-label" fill="#9e9e9e">3.3</text>
+</g>
+<g transform="translate(280,1418.75)" class="node   locked" data-testid="phase-14" data-state="locked" role="button" tabindex="0" aria-label="Fase 3.4, bloqueada">
+<circle r="25" fill="#fff" stroke="#4aaee6" stroke-width="4">
+</circle>
+<text y="5" text-anchor="middle" class="node-label" fill="#9e9e9e">3.4</text>
+</g>
+<g transform="translate(200,1335)" class="node   locked" data-testid="phase-15" data-state="locked" role="button" tabindex="0" aria-label="Fase 3.5, bloqueada">
+<circle r="25" fill="#fff" stroke="#4aaee6" stroke-width="4">
+</circle>
+<text y="5" text-anchor="middle" class="node-label" fill="#9e9e9e">3.5</text>
+</g>
+<g transform="translate(290,1130)" class="node   locked" data-testid="phase-16" data-state="locked" role="button" tabindex="0" aria-label="Fase 4.1, bloqueada">
+<circle r="25" fill="#fff" stroke="#f0b429" stroke-width="4">
+</circle>
+<text y="5" text-anchor="middle" class="node-label" fill="#9e9e9e">4.1</text>
+</g>
+<g transform="translate(125,1046.25)" class="node   locked" data-testid="phase-17" data-state="locked" role="button" tabindex="0" aria-label="Fase 4.2, bloqueada">
+<circle r="25" fill="#fff" stroke="#f0b429" stroke-width="4">
+</circle>
+<text y="5" text-anchor="middle" class="node-label" fill="#9e9e9e">4.2</text>
+</g>
+<g transform="translate(275,962.5)" class="node   locked" data-testid="phase-18" data-state="locked" role="button" tabindex="0" aria-label="Fase 4.3, bloqueada">
+<circle r="25" fill="#fff" stroke="#f0b429" stroke-width="4">
+</circle>
+<text y="5" text-anchor="middle" class="node-label" fill="#9e9e9e">4.3</text>
+</g>
+<g transform="translate(120,878.75)" class="node   locked" data-testid="phase-19" data-state="locked" role="button" tabindex="0" aria-label="Fase 4.4, bloqueada">
+<circle r="25" fill="#fff" stroke="#f0b429" stroke-width="4">
+</circle>
+<text y="5" text-anchor="middle" class="node-label" fill="#9e9e9e">4.4</text>
+</g>
+<g transform="translate(200,795)" class="node   locked" data-testid="phase-20" data-state="locked" role="button" tabindex="0" aria-label="Fase 4.5, bloqueada">
+<circle r="25" fill="#fff" stroke="#f0b429" stroke-width="4">
+</circle>
+<text y="5" text-anchor="middle" class="node-label" fill="#9e9e9e">4.5</text>
+</g>
+<g transform="translate(110,590)" class="node   locked" data-testid="phase-21" data-state="locked" role="button" tabindex="0" aria-label="Fase 5.1, bloqueada">
+<circle r="25" fill="#fff" stroke="#e8548c" stroke-width="4">
+</circle>
+<text y="5" text-anchor="middle" class="node-label" fill="#9e9e9e">5.1</text>
+</g>
+<g transform="translate(275,506.25)" class="node   locked" data-testid="phase-22" data-state="locked" role="button" tabindex="0" aria-label="Fase 5.2, bloqueada">
+<circle r="25" fill="#fff" stroke="#e8548c" stroke-width="4">
+</circle>
+<text y="5" text-anchor="middle" class="node-label" fill="#9e9e9e">5.2</text>
+</g>
+<g transform="translate(125,422.5)" class="node   locked" data-testid="phase-23" data-state="locked" role="button" tabindex="0" aria-label="Fase 5.3, bloqueada">
+<circle r="25" fill="#fff" stroke="#e8548c" stroke-width="4">
+</circle>
+<text y="5" text-anchor="middle" class="node-label" fill="#9e9e9e">5.3</text>
+</g>
+<g transform="translate(280,338.75)" class="node   locked" data-testid="phase-24" data-state="locked" role="button" tabindex="0" aria-label="Fase 5.4, bloqueada">
+<circle r="25" fill="#fff" stroke="#e8548c" stroke-width="4">
+</circle>
+<text y="5" text-anchor="middle" class="node-label" fill="#9e9e9e">5.4</text>
+</g>
+<g transform="translate(200,255)" class="node   locked" data-testid="phase-25" data-state="locked" role="button" tabindex="0" aria-label="Fase 5.5, bloqueada">
+<circle r="25" fill="#fff" stroke="#e8548c" stroke-width="4">
+</circle>
+<text y="5" text-anchor="middle" class="node-label" fill="#9e9e9e">5.5</text>
+</g>
+<g transform="translate(200,62)" class="bonus " role="button" tabindex="0" aria-label="Bônus final" data-testid="bonus-node">
+<circle r="34" fill="#fff8e1" stroke="#ffb300" stroke-width="5" opacity="0.7">
+</circle>
+<text y="12" text-anchor="middle" font-size="34">🎁</text>
+<text y="52" text-anchor="middle" class="node-mini">Bônus final</text>
+</g>
+<g class="walker" style="transform:translate(125px,2116.25px)" data-testid="bianca" data-at="7">
+<g class="bianca">
+<ellipse cx="0" cy="22" rx="16" ry="5" fill="#000" opacity=".18">
+</ellipse>
+<g class="bianca-bob">
+<ellipse cx="-17" cy="-4" rx="12" ry="7" fill="#b3e5fc" opacity=".75" transform="rotate(-25 -17 -4)">
+</ellipse>
+<ellipse cx="17" cy="-4" rx="12" ry="7" fill="#b3e5fc" opacity=".75" transform="rotate(25 17 -4)">
+</ellipse>
+<circle cy="-24" r="13" fill="#8d5524">
+</circle>
+<path d="M-9,0 L9,0 L15,22 L-15,22 Z" fill="#f48fb1">
+</path>
+<circle cy="-1" r="9" fill="#ffd9b8" transform="translate(0,-12)">
+</circle>
+<path d="M-10,-26 q10,-14 20,0 q-3,-4 -10,-4 q-7,0 -10,4z" fill="#8d5524">
+</path>
+<circle cx="-3.5" cy="-14" r="1.5" fill="#4e342e">
+</circle>
+<circle cx="3.5" cy="-14" r="1.5" fill="#4e342e">
+</circle>
+<path d="M-3,-9 q3,3 6,0" stroke="#c2185b" stroke-width="1.5" fill="none">
+</path>
+<polygon points="-6,-33 -3,-40 0,-34 3,-40 6,-33" fill="#ffd54f">
+</polygon>
+</g>
+</g>
+</g>
+<text x="60" y="40" class="sparkle" style="animation-delay:0s">✨</text>
+<text x="330" y="90" class="sparkle" style="animation-delay:0.4s">✨</text>
+<text x="110" y="300" class="sparkle" style="animation-delay:0.8s">✨</text>
+<text x="300" y="700" class="sparkle" style="animation-delay:1.2000000000000002s">✨</text>
+<text x="80" y="1100" class="sparkle" style="animation-delay:1.6s">✨</text>
+<text x="320" y="1500" class="sparkle" style="animation-delay:2s">✨</text>
+<text x="90" y="1900" class="sparkle" style="animation-delay:2.4000000000000004s">✨</text>
+<text x="310" y="2300" class="sparkle" style="animation-delay:2.8000000000000003s">✨</text>
+</svg>
+</div>
+</main>
+<nav class="tabbar" aria-label="Navegação">
+<button class="on" data-testid="tab-map">
+<span>🗺️</span>Mapa</button>
+<button class="" data-testid="tab-goals">
+<span>📝</span>Metas</button>
+<button class="" data-testid="tab-achv">
+<span>🏅</span>Conquistas</button>
+<button class="" data-testid="tab-games">
+<span>🎮</span>Jogos</button>
+</nav>
+<div class="toasts" aria-live="polite">
+</div>
+</div>

@@ -8,6 +8,8 @@ import { RULES } from '../domain/rules';
 import { creditBalance, gameUnlocked, pendingCredits } from '../domain/selectors';
 import type { GameId } from '../domain/types';
 import { useApp } from './ctx';
+import { Icon } from '../art/components';
+import { ART } from '../art/ids';
 
 export function GamesScreen() {
   const { state, act, notify } = useApp();
@@ -33,7 +35,7 @@ export function GamesScreen() {
           const unlocked = gameUnlocked(state, g.id);
           return (
             <div key={g.id} className={`card game-card ${unlocked ? '' : 'locked'}`} data-testid={`game-card-${g.id}`} data-unlocked={unlocked}>
-              <div className="game-icon">{g.icon}</div>
+              <div className="game-icon"><Icon id={ART.game.icon(g.id)} fallback={g.icon} /></div>
               <div>
                 <b>{g.name}</b>
                 {unlocked ? (

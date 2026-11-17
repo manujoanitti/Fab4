@@ -1,5 +1,10 @@
 import { useEffect, useState } from 'react';
 import { closeOpen, columnsForPairs, flip, isWon, newGame, pairsForLevel, type MemoryState } from './memoryLogic';
+import { Icon } from '../art/components';
+import { ART } from '../art/ids';
+import { symbolSlug } from './crystalSymbols';
+
+const symbolArt = (emoji: string) => { const slug = symbolSlug(emoji); return slug ? ART.game.crystalsSymbol(slug) : null; };
 
 /** Memória dos Cristais: encontre os pares. A dificuldade aumenta a cada nível. */
 export default function CrystalMemory({ onExit }: { onExit: () => void }) {
@@ -22,7 +27,7 @@ export default function CrystalMemory({ onExit }: { onExit: () => void }) {
           const up = c.matched || g.open.includes(i);
           return (
             <button key={c.id} className={`mcard ${up ? 'up' : ''} ${c.matched ? 'matched' : ''}`} data-testid="mcard" data-symbol={c.symbol} aria-label={up ? c.symbol : 'carta virada'} onClick={() => setG((s) => flip(s, i))}>
-              <span>{up ? c.symbol : '❔'}</span>
+              <span>{up ? <Icon id={symbolArt(c.symbol)} fallback={c.symbol} fill /> : <Icon id={ART.game.crystalsBack} fallback="❔" fill />}</span>
             </button>
           );
         })}

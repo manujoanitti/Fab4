@@ -4,6 +4,8 @@ import { cloud, cloudConfigured, getClient, SupabaseBackend, type CampaignRow } 
 import { defaultKV } from '../storage/kv';
 import { SyncManager } from '../sync/syncManager';
 import Kingdom from './Kingdom';
+import { Icon } from '../art/components';
+import { ART } from '../art/ids';
 
 type Screen =
   | { k: 'boot' }
@@ -66,13 +68,13 @@ export default function App() {
   const exit = () => { ls.set('rb:mode', null); ls.set('rb:campaign', null); setScreen({ k: 'start' }); };
   const signOut = async () => { await cloud.signOut(); exit(); };
 
-  if (screen.k === 'boot') return <div className="splash"><div className="splash-crown">👑</div><p>Abrindo o reino…</p></div>;
+  if (screen.k === 'boot') return <div className="splash"><div className="splash-crown"><Icon id={ART.crown} fallback="👑" /></div><p>Abrindo o reino…</p></div>;
   if (screen.k === 'main') return <Kingdom key={screen.demo ? 'demo' : 'cloud'} sm={screen.sm} isDemo={screen.demo} exit={exit} signOut={screen.demo ? undefined : signOut} />;
 
   if (screen.k === 'start')
     return (
       <div className="landing" data-testid="landing">
-        <div className="splash-crown">👑</div>
+        <div className="splash-crown"><Icon id={ART.crown} fallback="👑" /></div>
         <h1>Reino da Bianca</h1>
         <p>A trilha encantada das metas, agora em um jogo.</p>
         <button className="btn primary big" data-testid="start-login" disabled={!cloudConfigured} onClick={() => setScreen({ k: 'login' })}>Entrar (responsáveis e Bianca)</button>

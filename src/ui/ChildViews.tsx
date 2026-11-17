@@ -8,6 +8,8 @@ import {
 import { useApp } from './ctx';
 import { SIZE_LABEL, STATUS_META, fmtDate, fmtDateTime } from './format';
 import MapView from './MapView';
+import { Icon } from '../art/components';
+import { ART } from '../art/ids';
 
 export function Stats() {
   const { state } = useApp();
@@ -15,11 +17,11 @@ export function Stats() {
   const bal = creditBalance(state), pend = pendingCredits(state);
   return (
     <div className="stats" data-testid="stats">
-      <span title="Selos pequenos (1 por fase)">⭐ <b data-testid="stat-small">{t.smallStamps}</b>/{TOTAL_PHASES}</span>
-      <span title="Moedas">🪙 <b data-testid="stat-coins">{t.coins}</b>/{RULES.finalBonus.coinsRequired}</span>
-      <span title="Selos grandes">🏅 <b data-testid="stat-big">{t.bigStamps}</b>/{RULES.finalBonus.bigStampsRequired}</span>
-      <span title="Selos do dia">🌟 <b data-testid="stat-daily">{t.dailyStamps}</b></span>
-      <span title="Créditos de minigame">🎮 <b data-testid="stat-credits">{bal}</b>{pend ? <small> (+{pend} a confirmar)</small> : null}</span>
+      <span title="Selos pequenos (1 por fase)"><Icon id={ART.icon.stampSmall} fallback="⭐" /> <b data-testid="stat-small">{t.smallStamps}</b>/{TOTAL_PHASES}</span>
+      <span title="Moedas"><Icon id={ART.icon.coin} fallback="🪙" /> <b data-testid="stat-coins">{t.coins}</b>/{RULES.finalBonus.coinsRequired}</span>
+      <span title="Selos grandes"><Icon id={ART.icon.stampBig} fallback="🏅" /> <b data-testid="stat-big">{t.bigStamps}</b>/{RULES.finalBonus.bigStampsRequired}</span>
+      <span title="Selos do dia"><Icon id={ART.icon.stampDay} fallback="🌟" /> <b data-testid="stat-daily">{t.dailyStamps}</b></span>
+      <span title="Créditos de minigame"><Icon id={ART.icon.credit} fallback="🎮" /> <b data-testid="stat-credits">{bal}</b>{pend ? <small> (+{pend} a confirmar)</small> : null}</span>
     </div>
   );
 }
@@ -96,7 +98,7 @@ export function MapScreen() {
   const [bonus, setBonus] = useState(false);
   return (
     <>
-      <MapView state={state} onSelect={setPhase} onBonus={() => setBonus(true)} />
+      <MapView state={state} onSelect={setPhase} onBonus={() => setBonus(true)} selected={phase} />
       {phase && <PhaseSheet phase={phase} onClose={() => setPhase(null)} />}
       {bonus && <BonusSheet onClose={() => setBonus(false)} />}
     </>
@@ -116,7 +118,7 @@ export function GoalsScreen() {
           const st = goalStatus(state, date, g.id);
           return (
             <li key={g.id} className={`goal ${st}`} data-testid={`child-goal-${g.id}`} data-status={st}>
-              <span className="goal-icon" aria-label={STATUS_META[st].label}>{STATUS_META[st].icon}</span>
+              <span className="goal-icon" aria-label={STATUS_META[st].label}><Icon id={ART.status(st)} fallback={STATUS_META[st].icon} /></span>
               <span>{g.text}</span>
             </li>
           );
@@ -150,7 +152,7 @@ export function AchievementsScreen() {
       <h3>Selos pequenos ({t.smallStamps}/{TOTAL_PHASES})</h3>
       <div className="stamp-grid">
         {Array.from({ length: TOTAL_PHASES }, (_, i) => i + 1).map((p) => (
-          <span key={p} className={`stamp ${phaseDone(state, p) ? 'on' : ''}`} title={phaseLabel(p)}>{phaseDone(state, p) ? '⭐' : phaseLabel(p)}</span>
+          <span key={p} className={`stamp ${phaseDone(state, p) ? 'on' : ''}`} title={phaseLabel(p)}>{phaseDone(state, p) ? <Icon id={ART.icon.stampSmall} fallback="⭐" /> : phaseLabel(p)}</span>
         ))}
       </div>
       <h3>Etapas</h3>
@@ -164,7 +166,7 @@ export function AchievementsScreen() {
       <p>🪙 Moedas: <b>{t.coins}/{RULES.finalBonus.coinsRequired}</b> · 🏅 Selos grandes: <b>{t.bigStamps}</b> · 🌟 Selos do dia: <b>{t.dailyStamps}</b></p>
       <h3>Selos dos últimos 28 dias</h3>
       <div className="cal">
-        {days.map((d) => <span key={d} className={`day ${hasMedal(state, d) ? 'on' : ''} ${d === today ? 'today' : ''}`} title={fmtDate(d)}>{hasMedal(state, d) ? '🌟' : d.slice(8)}</span>)}
+        {days.map((d) => <span key={d} className={`day ${hasMedal(state, d) ? 'on' : ''} ${d === today ? 'today' : ''}`} title={fmtDate(d)}>{hasMedal(state, d) ? <Icon id={ART.icon.stampDay} fallback="🌟" /> : d.slice(8)}</span>)}
       </div>
       <h3>Recompensas</h3>
       <ul className="reward-list">

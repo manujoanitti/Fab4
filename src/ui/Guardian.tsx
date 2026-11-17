@@ -17,6 +17,8 @@ import { defaultKV } from '../storage/kv';
 import { useApp } from './ctx';
 import { CREDIT_KIND, SIZE_LABEL, STATUS_META, fmtDate, fmtDateTime } from './format';
 import { hasPin, setPin } from './pin';
+import { Icon } from '../art/components';
+import { ART } from '../art/ids';
 
 // ---------------------------------------------------------------- Revisão diária
 export function ReviewScreen() {
@@ -106,7 +108,7 @@ function GoalRow({ id, text, status, onSet, special, note }: { id: string; text:
             className={status === s ? 'on' : ''}
             data-testid={`goal-${id}-${s}`}
             onClick={() => status !== s && onSet(s)}
-          >{STATUS_META[s].icon}</button>
+          ><Icon id={ART.status(s)} fallback={STATUS_META[s].icon} /></button>
         ))}
       </div>
     </li>
