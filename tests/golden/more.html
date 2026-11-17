@@ -1,0 +1,56 @@
+<section class="panel" data-testid="more">
+<h2>Mais opções</h2>
+<div data-testid="sync-panel">
+<h3>Sincronização</h3>
+<p>Estado: <b data-testid="sync-status-text">synced</b> · última atualização 03/03, 12:00</p>
+<button class="btn" data-testid="sync-now">Atualizar agora</button>
+<p class="muted">Nenhuma alteração pendente.</p>
+<ul class="log">
+</ul>
+<p class="muted small">Campanha: Campanha Fictícia</p>
+</div>
+<hr/>
+<div data-testid="settings-panel">
+<h3>Parâmetros operacionais</h3>
+<p class="muted small">Não estão no tabuleiro; valores padrão e justificativas em <code>docs/pendencias-regras.md</code>.</p>
+<label class="field">Metas diárias cumpridas para o selo do dia (1–8)<input type="number" min="1" max="8" data-testid="set-min" value="8"/>
+</label>
+<label class="field check">
+<input type="checkbox" data-testid="set-special"/> Metas especiais também são exigidas nos dias em que aparecem</label>
+<label class="field">Sugestão de selos do dia por fase (opcional, só informativa)<input type="number" min="1" max="31" placeholder="sem sugestão" value=""/>
+</label>
+<button class="btn primary" data-testid="save-settings">Salvar</button>
+</div>
+<hr/>
+<div data-testid="backup-panel">
+<h3>Backup</h3>
+<p class="muted small">Formato <code>reino-bianca-backup</code> v1. Contém dados reais da família: guarde em local privado e <b>nunca</b> publique no GitHub.</p>
+<button class="btn" data-testid="export-backup">Exportar backup (JSON)</button>
+<label class="btn" style="margin-left:8px">Restaurar de arquivo…<input type="file" accept="application/json,.json" hidden="" data-testid="import-file"/>
+</label>
+</div>
+<hr/>
+<div>
+<h3>PIN do modo responsável (neste aparelho)</h3>
+<p class="muted small">Evita que a criança troque de modo sem querer. A proteção real dos dados é feita no banco de dados.</p>
+<div class="row">
+<input inputMode="numeric" maxLength="6" placeholder="4 a 6 dígitos" aria-label="Novo PIN" value=""/>
+<button class="btn">Definir PIN</button>
+</div>
+</div>
+<hr/>
+<details>
+<summary>
+<b>Convidar outra conta (opcional)</b>
+</summary>
+<p class="muted small">Não é necessário se a família usa uma conta só. Gere um código de uso único (válido por 7 dias). A conta da criança entra como &quot;criança&quot; (sem permissões do responsável).</p>
+<div class="row">
+<button class="btn">Código para criança</button>
+<button class="btn">Código para responsável</button>
+</div>
+</details>
+<hr/>
+<div class="row">
+<button class="btn">Trocar de campanha / sair do reino</button>
+</div>
+</section>

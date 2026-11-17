@@ -19,4 +19,4 @@ export interface AppCtx {
 }
 export const Ctx = createContext<AppCtx>(null as never);
 export const useApp = () => useContext(Ctx);
-export const useSyncView = (sm: SyncManager) => useSyncExternalStore(sm.subscribe, sm.getView);
+export const useSyncView = (sm: SyncManager) => useSyncExternalStore(sm.subscribe, sm.getView, sm.getView);
