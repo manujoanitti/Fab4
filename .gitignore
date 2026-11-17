@@ -1,0 +1,14 @@
+node_modules/
+dist/
+dev-dist/
+coverage/
+playwright-report/
+test-results/
+.env
+.env.*
+!.env.example
+*.local
+backup-*.json
+*reino-backup*.json
+supabase/.temp/
+.DS_Store
