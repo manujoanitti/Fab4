@@ -25,6 +25,11 @@ React + TS + Vite (PWA). Domínio puro em `src/domain` (engine = regras). `SyncM
 - Golden de aparência: `tests/golden/*.html`. Mudança visual intencional → `UPDATE_GOLDEN=1 npx vitest run tests/unit/golden`.
 - Integrar arte: arquivo em `public/art/<pacote>/…` → registrar em `src/art/manifest.json` → `npm run art:validate` → `npm run build`.
 
+## Pipeline de produção gráfica (Gemini → app)
+- Geração no Gemini é manual (sem API/custo); o resto é local: `npm run art:plan | art:prompt | art:process | art:review | art:approve | art:integrate` (ver `docs/arte/fluxo-producao-automatizado.md`).
+- Código em `scripts/art/` (planejador, prompts, processador `sharp`, QA, revisão, cenários, integração); estado em `art-work/registro.json`.
+- Validação técnica ≠ aprovação artística (sempre manual). Integrar ao app e publicar só com autorização do usuário; originais do Gemini ficam em `art-work/lotes/*/recebido/`.
+
 ## Comandos
 ```
 npm install

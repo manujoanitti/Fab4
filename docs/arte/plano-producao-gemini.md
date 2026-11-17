@@ -1,5 +1,7 @@
 # Plano de produção no Gemini — lotes pequenos e sequenciais
 
+> **Atualização:** o planejamento agora é automático e é a fonte vigente dos lotes: `npm run art:plan` (25 lotes: 14 pranchas, 5 cenários, 6 fundos individuais; 34 recursos adiados com motivo). Prompts, guias e processamento: [fluxo-producao-automatizado.md](fluxo-producao-automatizado.md). A tabela abaixo é o plano original (referência de raciocínio).
+
 Objetivo: produzir a nova identidade visual **sem interromper o app publicado**. Cada lote é integrado e aprovado antes do próximo.
 Lista completa de recursos (IDs, tamanhos, prioridades): [catalogo-recursos.md](catalogo-recursos.md). Gabaritos para enviar como referência ao Gemini: [guias/](guias/) (PNG/SVG).
 

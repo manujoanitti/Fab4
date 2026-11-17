@@ -31,6 +31,12 @@ geometria do mapa separada (`src/ui/mapGeometry.ts`, com `layout` opcional por p
 guias de layout e documentação em `docs/arte/`. **Nenhuma arte nova foi criada; o visual atual é o fallback** (golden de aparência idêntico).
 Banco, migrações, RPC, regras e dados persistidos: sem alteração.
 
+## Pipeline de produção gráfica (automação)
+`scripts/art/` + `art-work/`: planejador (25 lotes: 14 pranchas, 5 cenários, 6 fundos; 34 adiados com motivo), geração de prompts/guias para o Gemini, processador local (`sharp`: recorte por componentes,
+remoção de fundo chapado com vãos e borda descontaminada, escala uniforme, WebP com alfa, nomes oficiais, proposta de manifesto), QA técnico, relatório/prancha de conferência,
+fluxo de cenários (prévia com a geometria real do app), registro de estados com retomada e integração controlada (aprovado + validação + reversão). **Piloto preparado** (`piloto-marcos-regiao-1`: prompt e manifesto de processamento);
+nenhuma imagem produzida, nada integrado ao app, manifesto sem pacote ativo.
+
 ## Funcionalidades pendentes / limites conhecidos
 - **Supabase real não foi exercitado** (exige credenciais da pessoa responsável): migrações e RPC foram testadas em Postgres local (PGlite) e o cliente por mock. Passo a passo em `configuracao-supabase.md`.
 - **Deploy no GitHub Pages não foi realizado** (exige ativar Pages no repositório); workflows prontos em `.github/workflows`. Sem URL publicada.

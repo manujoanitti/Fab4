@@ -1,0 +1,4 @@
+# Intermediários regeneráveis (o original recebido, o prompt, o manifesto de processamento e o resultado ficam versionados para auditoria)
+lotes/*/celulas/
+lotes/*/revisao/
+lotes/*/saida/

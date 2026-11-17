@@ -18,7 +18,16 @@
     "check:dist": "node scripts/check-dist.mjs",
     "art:validate": "node scripts/validate-art.mjs",
     "art:docs": "vite-node scripts/gen-art-docs.ts",
-    "art:guides": "vite-node scripts/gen-art-guides.ts"
+    "art:guides": "vite-node scripts/gen-art-guides.ts",
+    "art:plan": "vite-node scripts/art/cli.ts plan",
+    "art:prompt": "vite-node scripts/art/cli.ts prompt",
+    "art:process": "vite-node scripts/art/cli.ts process",
+    "art:review": "vite-node scripts/art/cli.ts review",
+    "art:approve": "vite-node scripts/art/cli.ts approve",
+    "art:integrate": "vite-node scripts/art/cli.ts integrate",
+    "art:status": "vite-node scripts/art/cli.ts status",
+    "art:reopen": "vite-node scripts/art/cli.ts reopen",
+    "art:ajuda": "vite-node scripts/art/cli.ts help"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.119.0",
@@ -33,6 +42,7 @@
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
     "fake-indexeddb": "^6.0.0",
+    "sharp": "^0.35.5",
     "typescript": "^5.5.4",
     "vite": "^5.4.2",
     "vite-plugin-pwa": "^0.20.5",

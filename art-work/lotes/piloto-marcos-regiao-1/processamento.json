@@ -1,0 +1,253 @@
+{
+  "versao": 1,
+  "lote": {
+    "id": "piloto-marcos-regiao-1",
+    "titulo": "Piloto — marcos do mapa e faixa da Região 1",
+    "tipo": "prancha",
+    "prioridade": "P0",
+    "lote": 0,
+    "ordem": 1,
+    "dependeDe": [],
+    "ids": [
+      "map.node.locked",
+      "map.node.available",
+      "map.node.done",
+      "map.node.selected",
+      "map.start",
+      "map.ribbon.1"
+    ],
+    "pacote": "v1",
+    "referencias": [
+      {
+        "arquivo": "art-work/referencias/folha-de-estilo.png",
+        "descricao": "Folha de estilo visual aprovada (traço, paleta, atmosfera)",
+        "obrigatoria": true
+      },
+      {
+        "arquivo": "guia-prancha.png",
+        "obrigatoria": true,
+        "gerada": true,
+        "descricao": "Guia de posições desta prancha (gerado; usar só como referência de posição)"
+      }
+    ],
+    "folha": {
+      "aspecto": [
+        1,
+        1
+      ],
+      "largura": 1,
+      "fundo": "#00FF00",
+      "fundoNome": "verde puro",
+      "margemSeguranca": 0.1,
+      "celulas": [
+        {
+          "id": "map.node.locked",
+          "ordem": 1,
+          "linha": 1,
+          "coluna": 1,
+          "rect": {
+            "x": 0.030000000000000027,
+            "y": 0.059874999999999984,
+            "w": 0.2125,
+            "h": 0.2125
+          },
+          "descricao": "Marco de fase BLOQUEADA — medalhão circular APAGADO: lavanda-acinzentado dessaturado, aquarela quase seca; um pequeno cadeado delicado na parte inferior do medalhão. Centro calmo e livre para receber um número.",
+          "saida": {
+            "arquivo": "map/node-locked@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 128,
+              "h": 128
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 60,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "map.node.available",
+          "ordem": 2,
+          "linha": 1,
+          "coluna": 2,
+          "rect": {
+            "x": 0.2725,
+            "y": 0.059874999999999984,
+            "w": 0.2125,
+            "h": 0.2125
+          },
+          "descricao": "Marco de fase DISPONÍVEL (a próxima) — medalhão circular VIVO e convidativo: rosa e dourado luminosos, pétalas ou pontos de luz sutis no próprio aro; o brilho fica DENTRO do contorno. Centro calmo e livre para receber um número.",
+          "saida": {
+            "arquivo": "map/node-available@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 128,
+              "h": 128
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 60,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "map.node.done",
+          "ordem": 3,
+          "linha": 1,
+          "coluna": 3,
+          "rect": {
+            "x": 0.515,
+            "y": 0.059874999999999984,
+            "w": 0.2125,
+            "h": 0.2125
+          },
+          "descricao": "Marco de fase CONCLUÍDA — selo/medalhão DOURADO já conquistado: estrela ou flor de cinco pontas pintada ao centro, aro de ouro em aquarela, pequenas folhas. Mesmo tamanho e mesmo contorno dos outros dois medalhões.",
+          "saida": {
+            "arquivo": "map/node-done@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 128,
+              "h": 128
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 60,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "map.node.selected",
+          "ordem": 4,
+          "linha": 1,
+          "coluna": 4,
+          "rect": {
+            "x": 0.7575000000000001,
+            "y": 0.059874999999999984,
+            "w": 0.2125,
+            "h": 0.2125
+          },
+          "descricao": "Anel de seleção — anel FINO: aro de lápis de cor dourado-rosado com delicadas pétalas/folhas ao redor. Ocupa a célula do mesmo modo que os medalhões (o aumento relativo é aplicado depois, automaticamente). O vão central deve ser EXATAMENTE a cor de fundo (vazado).",
+          "saida": {
+            "arquivo": "map/node-selected@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 152,
+              "h": 152
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 60,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "map.start",
+          "ordem": 5,
+          "linha": 2,
+          "coluna": 1,
+          "rect": {
+            "x": 0.22999999999999998,
+            "y": 0.33224999999999993,
+            "w": 0.54,
+            "h": 0.36
+          },
+          "descricao": "Marco \"Início\" — poste de madeira quente com uma placa VAZIA (sem letras) e uma trepadeira com flores pequenas; verde-oliva suave (nunca verde puro). A base do poste assenta no chão; sem sombra projetada.",
+          "saida": {
+            "arquivo": "map/start@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 192,
+              "h": 128
+            },
+            "alfa": true,
+            "alinhamento": "base",
+            "ancora": {
+              "x": 0.5,
+              "y": 1
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 80,
+            "dimMode": "aspect"
+          }
+        },
+        {
+          "id": "map.ribbon.1",
+          "ordem": 6,
+          "linha": 3,
+          "coluna": 1,
+          "rect": {
+            "x": 0.030000000000000027,
+            "y": 0.7521249999999999,
+            "w": 0.94,
+            "h": 0.188
+          },
+          "descricao": "Faixa do título da Região 1 — fita horizontal de pontas onduladas na cor rosa-framboesa (#EC6FA0) (Floresta dos Sonhos), textura de aquarela, pequenas flores nas extremidades. O centro fica VAZIO e liso (o texto será escrito depois).",
+          "saida": {
+            "arquivo": "map/ribbon-1@2x.webp",
+            "formato": "webp",
+            "px": {
+              "w": 480,
+              "h": 96
+            },
+            "alfa": true,
+            "alinhamento": "centro",
+            "ancora": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "margemSeguranca": 0.1,
+            "maxKB": 60,
+            "dimMode": "aspect"
+          }
+        }
+      ],
+      "linhas": [
+        {
+          "y": 0.059874999999999984,
+          "celulas": [
+            "map.node.locked",
+            "map.node.available",
+            "map.node.done",
+            "map.node.selected"
+          ]
+        },
+        {
+          "y": 0.33224999999999993,
+          "celulas": [
+            "map.start"
+          ]
+        },
+        {
+          "y": 0.7521249999999999,
+          "celulas": [
+            "map.ribbon.1"
+          ]
+        }
+      ]
+    },
+    "observacoes": [
+      "Define a família de formas dos marcos do mapa (referência para os demais lotes).",
+      "O número da casa, o nome da região e o texto \"Início\" são desenhados pelo app: nada de texto nas imagens."
+    ]
+  }
+}

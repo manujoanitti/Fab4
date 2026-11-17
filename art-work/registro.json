@@ -1,0 +1,316 @@
+{
+  "versao": 1,
+  "pacote": "v1",
+  "lotes": [
+    {
+      "id": "piloto-marcos-regiao-1",
+      "estado": "aguardando_geracao",
+      "historico": [
+        {
+          "estado": "planejado",
+          "em": "2026-11-17T15:17:56.851Z"
+        },
+        {
+          "estado": "aguardando_geracao",
+          "em": "2026-11-17T15:17:57.720Z",
+          "nota": "prompt gerado"
+        }
+      ],
+      "etapas": {
+        "prompt": {
+          "em": "2026-11-17T15:18:31.043Z",
+          "chave": "7256a71f2b54ae28a6fcb8e288c234182cadd7531e1590210849476420e055de"
+        }
+      },
+      "aprovacao": {}
+    },
+    {
+      "id": "cenario-regiao-1",
+      "estado": "planejado",
+      "historico": [
+        {
+          "estado": "planejado",
+          "em": "2026-11-17T15:17:56.852Z"
+        }
+      ],
+      "etapas": {},
+      "aprovacao": {}
+    },
+    {
+      "id": "cenario-regiao-2",
+      "estado": "planejado",
+      "historico": [
+        {
+          "estado": "planejado",
+          "em": "2026-11-17T15:17:56.852Z"
+        }
+      ],
+      "etapas": {},
+      "aprovacao": {}
+    },
+    {
+      "id": "cenario-regiao-3",
+      "estado": "planejado",
+      "historico": [
+        {
+          "estado": "planejado",
+          "em": "2026-11-17T15:17:56.852Z"
+        }
+      ],
+      "etapas": {},
+      "aprovacao": {}
+    },
+    {
+      "id": "cenario-regiao-4",
+      "estado": "planejado",
+      "historico": [
+        {
+          "estado": "planejado",
+          "em": "2026-11-17T15:17:56.852Z"
+        }
+      ],
+      "etapas": {},
+      "aprovacao": {}
+    },
+    {
+      "id": "cenario-regiao-5",
+      "estado": "planejado",
+      "historico": [
+        {
+          "estado": "planejado",
+          "em": "2026-11-17T15:17:56.852Z"
+        }
+      ],
+      "etapas": {},
+      "aprovacao": {}
+    },
+    {
+      "id": "bianca-estatica",
+      "estado": "planejado",
+      "historico": [
+        {
+          "estado": "planejado",
+          "em": "2026-11-17T15:17:56.852Z"
+        }
+      ],
+      "etapas": {},
+      "aprovacao": {}
+    },
+    {
+      "id": "icones-ui-1",
+      "estado": "planejado",
+      "historico": [
+        {
+          "estado": "planejado",
+          "em": "2026-11-17T15:17:56.852Z"
+        }
+      ],
+      "etapas": {},
+      "aprovacao": {}
+    },
+    {
+      "id": "icones-ui-2",
+      "estado": "planejado",
+      "historico": [
+        {
+          "estado": "planejado",
+          "em": "2026-11-17T15:17:56.852Z"
+        }
+      ],
+      "etapas": {},
+      "aprovacao": {}
+    },
+    {
+      "id": "icones-ui-3",
+      "estado": "planejado",
+      "historico": [
+        {
+          "estado": "planejado",
+          "em": "2026-11-17T15:17:56.852Z"
+        }
+      ],
+      "etapas": {},
+      "aprovacao": {}
+    },
+    {
+      "id": "icones-ui-4",
+      "estado": "planejado",
+      "historico": [
+        {
+          "estado": "planejado",
+          "em": "2026-11-17T15:17:56.852Z"
+        }
+      ],
+      "etapas": {},
+      "aprovacao": {}
+    },
+    {
+      "id": "faixas-regioes-2-5",
+      "estado": "planejado",
+      "historico": [
+        {
+          "estado": "planejado",
+          "em": "2026-11-17T15:17:56.852Z"
+        }
+      ],
+      "etapas": {},
+      "aprovacao": {}
+    },
+    {
+      "id": "bonus-final",
+      "estado": "planejado",
+      "historico": [
+        {
+          "estado": "planejado",
+          "em": "2026-11-17T15:17:56.852Z"
+        }
+      ],
+      "etapas": {},
+      "aprovacao": {}
+    },
+    {
+      "id": "jogos-l6-1",
+      "estado": "planejado",
+      "historico": [
+        {
+          "estado": "planejado",
+          "em": "2026-11-17T15:17:56.852Z"
+        }
+      ],
+      "etapas": {},
+      "aprovacao": {}
+    },
+    {
+      "id": "jogos-l6-2",
+      "estado": "planejado",
+      "historico": [
+        {
+          "estado": "planejado",
+          "em": "2026-11-17T15:17:56.852Z"
+        }
+      ],
+      "etapas": {},
+      "aprovacao": {}
+    },
+    {
+      "id": "jogos-l7-1",
+      "estado": "planejado",
+      "historico": [
+        {
+          "estado": "planejado",
+          "em": "2026-11-17T15:17:56.852Z"
+        }
+      ],
+      "etapas": {},
+      "aprovacao": {}
+    },
+    {
+      "id": "jogos-l7-2",
+      "estado": "planejado",
+      "historico": [
+        {
+          "estado": "planejado",
+          "em": "2026-11-17T15:17:56.852Z"
+        }
+      ],
+      "etapas": {},
+      "aprovacao": {}
+    },
+    {
+      "id": "fundo-game-stars-bg",
+      "estado": "planejado",
+      "historico": [
+        {
+          "estado": "planejado",
+          "em": "2026-11-17T15:17:56.852Z"
+        }
+      ],
+      "etapas": {},
+      "aprovacao": {}
+    },
+    {
+      "id": "fundo-game-garden-bg",
+      "estado": "planejado",
+      "historico": [
+        {
+          "estado": "planejado",
+          "em": "2026-11-17T15:17:56.852Z"
+        }
+      ],
+      "etapas": {},
+      "aprovacao": {}
+    },
+    {
+      "id": "fundo-ui-bg-app",
+      "estado": "planejado",
+      "historico": [
+        {
+          "estado": "planejado",
+          "em": "2026-11-17T15:17:56.852Z"
+        }
+      ],
+      "etapas": {},
+      "aprovacao": {}
+    },
+    {
+      "id": "fundo-ui-bg-topbar",
+      "estado": "planejado",
+      "historico": [
+        {
+          "estado": "planejado",
+          "em": "2026-11-17T15:17:56.852Z"
+        }
+      ],
+      "etapas": {},
+      "aprovacao": {}
+    },
+    {
+      "id": "fundo-ui-button-primary",
+      "estado": "planejado",
+      "historico": [
+        {
+          "estado": "planejado",
+          "em": "2026-11-17T15:17:56.852Z"
+        }
+      ],
+      "etapas": {},
+      "aprovacao": {}
+    },
+    {
+      "id": "fundo-ui-panel-sheet",
+      "estado": "planejado",
+      "historico": [
+        {
+          "estado": "planejado",
+          "em": "2026-11-17T15:17:56.852Z"
+        }
+      ],
+      "etapas": {},
+      "aprovacao": {}
+    },
+    {
+      "id": "efeitos-brilho",
+      "estado": "planejado",
+      "historico": [
+        {
+          "estado": "planejado",
+          "em": "2026-11-17T15:17:56.852Z"
+        }
+      ],
+      "etapas": {},
+      "aprovacao": {}
+    },
+    {
+      "id": "celebracoes",
+      "estado": "planejado",
+      "historico": [
+        {
+          "estado": "planejado",
+          "em": "2026-11-17T15:17:56.852Z"
+        }
+      ],
+      "etapas": {},
+      "aprovacao": {}
+    }
+  ]
+}

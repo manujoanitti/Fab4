@@ -23,6 +23,8 @@ Nomes **exatamente** como no [catálogo](catalogo-recursos.md) (regra: `<categor
 | Montar a tira de quadros | ImageMagick | `magick frame-*.png +append bianca-walk@2x.png` |
 Confira: dimensões, alfa onde exigido, sem franja de cor, orçamento de peso.
 
+> **Atalho automatizado:** os lotes processados por `npm run art:process` já saem nomeados, validados e com proposta de manifesto; `npm run art:integrate -- <lote> --confirmar` (somente lote aprovado) faz os passos 1–4 abaixo com validação e reversão. Veja [fluxo-producao-automatizado.md](fluxo-producao-automatizado.md).
+
 ## 3. Integração no repositório (branch de desenvolvimento)
 1. **Copie** os arquivos para `public/art/<pacote>/…` (pacote novo ou o existente do lote).
 2. **Registre** cada arquivo em `src/art/manifest.json` (mínimo: o `file` de cada ID; exemplo no contrato, seção 6). Para tamanho, âncora e quadros, o catálogo já fornece os padrões.
