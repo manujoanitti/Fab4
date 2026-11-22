@@ -1,0 +1,46 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+@import "@xyflow/react/dist/style.css";
+
+/* Atlas histórico contemporâneo: papel, tinta, azul profundo, sépia e dourado. */
+:root {
+  --paper: #f6f1e6; --paper-2: #efe8d8; --card: #fffdf7; --ink: #1d2733; --ink-2: #4a5663; --line: #d9cfb8;
+  --blue: #1e3a5f; --blue-2: #2c5282; --sepia: #8a5a2b; --gold: #b08a2e; --ok: #2f6b45; --warn: #9a6a12; --bad: #9b2c2c; --grid: #e4dcc7;
+}
+:root[data-theme='dark'] {
+  --paper: #121820; --paper-2: #18212b; --card: #1c2733; --ink: #e8e2d2; --ink-2: #a9b3bf; --line: #34414f;
+  --blue: #8db4e8; --blue-2: #a8c8f0; --sepia: #d9a86a; --gold: #e0bf6a; --ok: #7fc59a; --warn: #e2b455; --bad: #e88a8a; --grid: #24303d;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --paper: #121820; --paper-2: #18212b; --card: #1c2733; --ink: #e8e2d2; --ink-2: #a9b3bf; --line: #34414f;
+    --blue: #8db4e8; --blue-2: #a8c8f0; --sepia: #d9a86a; --gold: #e0bf6a; --ok: #7fc59a; --warn: #e2b455; --bad: #e88a8a; --grid: #24303d;
+  }
+}
+@theme inline {
+  --color-paper: var(--paper); --color-paper2: var(--paper-2); --color-card: var(--card); --color-ink: var(--ink); --color-ink2: var(--ink-2);
+  --color-line: var(--line); --color-blue: var(--blue); --color-blue2: var(--blue-2); --color-sepia: var(--sepia); --color-gold: var(--gold);
+  --color-ok: var(--ok); --color-warn: var(--warn); --color-bad: var(--bad);
+  --font-serif: ui-serif, 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, 'Times New Roman', serif;
+}
+html, body, #root { height: 100%; }
+body { background: var(--paper); color: var(--ink); font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; -webkit-font-smoothing: antialiased; }
+.serif { font-family: var(--font-serif); }
+.atlas-bg { background-image: radial-gradient(var(--grid) 1px, transparent 1px); background-size: 22px 22px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 1px 0 rgba(0,0,0,.03); }
+.btn { display:inline-flex; align-items:center; gap:.4rem; border:1px solid var(--line); background: var(--card); padding:.4rem .75rem; border-radius:10px; font-size:.875rem; cursor:pointer; transition: all .15s; }
+.btn:hover { border-color: var(--blue); color: var(--blue); }
+.btn-primary { background: var(--blue); color: var(--card); border-color: var(--blue); }
+.btn-primary:hover { color: var(--card); filter: brightness(1.1); }
+.btn-danger:hover { border-color: var(--bad); color: var(--bad); }
+.input { width:100%; border:1px solid var(--line); background: var(--card); color: var(--ink); padding:.45rem .65rem; border-radius:10px; font-size:.9rem; }
+.input:focus { outline: 2px solid var(--blue); outline-offset: 1px; }
+.label { font-size:.72rem; letter-spacing:.04em; text-transform:uppercase; color: var(--ink-2); }
+.chip { display:inline-flex; align-items:center; gap:.3rem; font-size:.72rem; padding:.1rem .5rem; border-radius:999px; border:1px solid var(--line); background: var(--paper-2); color: var(--ink-2); }
+.fade-in { animation: fade .25s ease both; } @keyframes fade { from { opacity:0; transform: translateY(4px) } to { opacity:1; transform:none } }
+.react-flow__attribution { display:none; }
+.rf-node-person { transition: box-shadow .15s, opacity .2s; }
+.leaflet-container { font-family: inherit; background: var(--paper-2); }
+.pin { width: 22px; height: 22px; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); border: 2px solid var(--card); box-shadow: 0 1px 4px rgba(0,0,0,.4); }
+@media print { header, nav, .no-print { display:none !important; } body { background: white; } }
+:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }

@@ -10,3 +10,8 @@ selos, moedas, recompensas, minigames e sincronização entre aparelhos (Supabas
 - Estado do projeto: [docs/progresso.md](docs/progresso.md) · Guia de continuidade: [CLAUDE.md](CLAUDE.md)
 
 > O repositório é público: nunca inclua dados reais da criança, backups, senhas ou chaves privadas.
+
+---
+
+## Outro projeto neste repositório
+[`joanitti-atlas/`](joanitti-atlas/README.md) — Atlas genealógico e histórico da família Joanitti (React + Fastify + SQLite). Independente do app acima; os dados reais ficam fora do git.

@@ -1,0 +1,474 @@
+{
+  "format": "joanitti-atlas-extraction",
+  "version": 1,
+  "id": "rossi-teste",
+  "report": {
+    "title": "Relatório fictício",
+    "origin": "teste"
+  },
+  "nuclei": [
+    {
+      "key": "rossi",
+      "name": "Família Rossi",
+      "kind": "documental"
+    },
+    {
+      "key": "indice",
+      "name": "Grupo indexado",
+      "kind": "documental"
+    }
+  ],
+  "places": [
+    {
+      "key": "it",
+      "level": "pais",
+      "name": "Itália"
+    },
+    {
+      "key": "lazio",
+      "parent": "it",
+      "level": "regiao",
+      "name": "Lácio"
+    },
+    {
+      "key": "roma",
+      "parent": "lazio",
+      "level": "municipio",
+      "name": "Roma",
+      "lat": 41.9,
+      "lon": 12.5,
+      "precision": "municipio"
+    },
+    {
+      "key": "br",
+      "level": "pais",
+      "name": "Brasil"
+    },
+    {
+      "key": "campinas",
+      "parent": "br",
+      "level": "municipio",
+      "name": "Campinas",
+      "lat": -22.9,
+      "lon": -47.06,
+      "precision": "municipio"
+    }
+  ],
+  "persons": [
+    {
+      "key": "giuseppe",
+      "name": "Giuseppe Rossi",
+      "living": "falecido",
+      "sex": "M",
+      "birth": {
+        "from": "1850",
+        "precision": "ano"
+      },
+      "death": {
+        "from": "1910",
+        "precision": "ano"
+      },
+      "status": "documentado",
+      "nuclei": [
+        "rossi"
+      ],
+      "names": [
+        {
+          "name": "Giuseppe Rosi",
+          "kind": "variante"
+        }
+      ],
+      "prov": {
+        "sec": "1",
+        "quote": "Giuseppe Rossi (1850–1910) casou com Maria Bianchi em Roma"
+      }
+    },
+    {
+      "key": "maria",
+      "name": "Maria Bianchi",
+      "living": "falecido",
+      "sex": "F",
+      "status": "fortemente_corroborado",
+      "nuclei": [
+        "rossi"
+      ]
+    },
+    {
+      "key": "antonio1",
+      "name": "Antonio Rossi",
+      "living": "falecido",
+      "sex": "M",
+      "birth": {
+        "from": "1880",
+        "precision": "ano"
+      },
+      "status": "documentado",
+      "nuclei": [
+        "rossi"
+      ],
+      "prov": {
+        "quote": "O filho Antonio Rossi nasceu em 1880"
+      }
+    },
+    {
+      "key": "antonio2",
+      "name": "Antonio Rossi",
+      "living": "falecido",
+      "birth": {
+        "from": "1925",
+        "precision": "ano"
+      },
+      "birthPlace": "campinas",
+      "status": "hipotese_plausivel",
+      "nuclei": [
+        "indice"
+      ],
+      "identityNote": "Homônimo de Antonio Rossi (1880)",
+      "prov": {
+        "quote": "outro Antonio Rossi, nascido em 1925 em Campinas"
+      }
+    },
+    {
+      "key": "luigi",
+      "name": "Luigi Rossi",
+      "living": "falecido",
+      "status": "nao_confirmado",
+      "nuclei": [
+        "indice"
+      ],
+      "prov": {
+        "quote": "Luigi Rossi aparece no mesmo índice que Giuseppe, sem relação indicada"
+      }
+    },
+    {
+      "key": "paola",
+      "name": "Paola Rossi",
+      "living": "vivo",
+      "status": "documentado",
+      "nuclei": [
+        "indice"
+      ],
+      "birth": {
+        "from": "1990",
+        "precision": "ano"
+      },
+      "notes": "dado privado"
+    }
+  ],
+  "groups": [
+    {
+      "key": "indice",
+      "nucleus": "indice",
+      "name": "Mesmo índice",
+      "members": [
+        "luigi",
+        "giuseppe"
+      ],
+      "description": "Coexistem no índice; sem relação."
+    }
+  ],
+  "relationships": [
+    {
+      "key": "g_a",
+      "type": "filiacao",
+      "subtype": "biologica",
+      "a": "giuseppe",
+      "b": "antonio1",
+      "status": "documentado"
+    },
+    {
+      "key": "m_a",
+      "type": "filiacao",
+      "subtype": "biologica",
+      "a": "maria",
+      "b": "antonio1",
+      "status": "documentado"
+    },
+    {
+      "key": "g_m",
+      "type": "casamento",
+      "a": "giuseppe",
+      "b": "maria",
+      "status": "documentado",
+      "date": {
+        "from": "1878",
+        "precision": "ano"
+      },
+      "place": "roma"
+    }
+  ],
+  "identityLinks": [
+    {
+      "key": "ant",
+      "a": "antonio1",
+      "b": "antonio2",
+      "status": "nao_confirmado",
+      "note": "homônimos"
+    }
+  ],
+  "events": [
+    {
+      "key": "emig",
+      "type": "emigracao",
+      "title": "Emigração de Antonio (hipotética)",
+      "date": {
+        "from": "1890",
+        "to": "1895",
+        "precision": "intervalo"
+      },
+      "place": "roma",
+      "routeTo": "campinas",
+      "speculative": true,
+      "status": "hipotese_plausivel",
+      "persons": [
+        {
+          "person": "antonio1"
+        }
+      ],
+      "prov": {
+        "quote": "teria ocorrido entre 1890 e 1895"
+      }
+    },
+    {
+      "key": "nasc_a",
+      "type": "nascimento",
+      "title": "Nascimento de Antonio Rossi",
+      "date": {
+        "from": "1880",
+        "precision": "circa",
+        "text": "c. 1880"
+      },
+      "place": "roma",
+      "status": "documentado",
+      "persons": [
+        {
+          "person": "antonio1",
+          "role": "nascido"
+        }
+      ]
+    },
+    {
+      "key": "sem_data",
+      "type": "residencia",
+      "title": "Residência sem data",
+      "date": {
+        "precision": "desconhecida"
+      },
+      "status": "nao_confirmado",
+      "persons": [
+        {
+          "person": "luigi"
+        }
+      ]
+    },
+    {
+      "key": "paola_ev",
+      "type": "residencia",
+      "title": "Paola trabalha em Campinas",
+      "date": {
+        "from": "2020",
+        "precision": "ano"
+      },
+      "place": "campinas",
+      "status": "documentado",
+      "persons": [
+        {
+          "person": "paola"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "key": "arq",
+      "kind": "primaria",
+      "docType": "acervo",
+      "title": "Arquivo de Roma, livro 12",
+      "access": "para_consulta_futura",
+      "reliability": 3,
+      "persons": [
+        "giuseppe",
+        "luigi"
+      ]
+    },
+    {
+      "key": "ind",
+      "kind": "colaborativa",
+      "docType": "perfil_arvore",
+      "title": "Índice colaborativo",
+      "url": "https://exemplo.invalid/i",
+      "access": "apenas_indexada",
+      "reliability": 2,
+      "persons": [
+        "luigi",
+        "giuseppe"
+      ]
+    },
+    {
+      "key": "cert",
+      "kind": "primaria",
+      "docType": "certidao_nascimento",
+      "title": "Certidão de Antonio",
+      "access": "examinada_integral",
+      "reliability": 5,
+      "persons": [
+        "antonio1"
+      ]
+    },
+    {
+      "key": "priv",
+      "kind": "oficial",
+      "docType": "registro_administrativo",
+      "title": "Registro sobre Paola",
+      "access": "examinada_extrato",
+      "reliability": 4,
+      "persons": [
+        "paola"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "key": "h1",
+      "code": "H1",
+      "kind": "hipotese",
+      "content": "Luigi seria irmão de Giuseppe",
+      "status": "nao_confirmado",
+      "reportedStatus": "plausível",
+      "entities": [
+        {
+          "type": "person",
+          "key": "luigi"
+        },
+        {
+          "type": "person",
+          "key": "giuseppe"
+        }
+      ],
+      "prov": {
+        "quote": "Luigi seria irmão de Giuseppe"
+      }
+    },
+    {
+      "key": "h2",
+      "code": "H2",
+      "kind": "hipotese",
+      "content": "Paola descende de Antonio",
+      "status": "hipotese_plausivel",
+      "entities": [
+        {
+          "type": "person",
+          "key": "paola"
+        },
+        {
+          "type": "person",
+          "key": "antonio1"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "key": "e1",
+      "subject": "claim:h1",
+      "source": "ind",
+      "stance": "contexto"
+    },
+    {
+      "key": "e2",
+      "subject": "person:giuseppe",
+      "source": "arq"
+    },
+    {
+      "key": "e3",
+      "subject": "person:antonio1",
+      "source": "cert"
+    },
+    {
+      "key": "e4",
+      "subject": "relationship:g_a",
+      "source": "cert"
+    },
+    {
+      "key": "e5",
+      "subject": "person:paola",
+      "source": "priv"
+    },
+    {
+      "key": "e6",
+      "subject": "event:nasc_a",
+      "source": "cert"
+    },
+    {
+      "key": "e7",
+      "subject": "event:paola_ev",
+      "source": "priv"
+    },
+    {
+      "key": "e8",
+      "subject": "relationship:g_m",
+      "source": "arq"
+    },
+    {
+      "key": "e9",
+      "subject": "relationship:m_a",
+      "source": "cert"
+    }
+  ],
+  "investigations": [
+    {
+      "key": "inv",
+      "title": "Luigi é irmão de Giuseppe?",
+      "question": "Qual a relação entre Luigi e Giuseppe?",
+      "status": "aberta",
+      "priority": 2,
+      "hypotheses": [
+        {
+          "claim": "h1",
+          "label": "A"
+        }
+      ],
+      "entities": [
+        {
+          "type": "person",
+          "key": "luigi"
+        }
+      ],
+      "tasks": [
+        {
+          "key": "t",
+          "kind": "documento_pendente",
+          "text": "Certidão de Luigi",
+          "claim": "h1"
+        }
+      ]
+    },
+    {
+      "key": "inv2",
+      "title": "Paola e Antonio",
+      "question": "Paola descende de Antonio?",
+      "status": "aberta",
+      "priority": 3,
+      "hypotheses": [
+        {
+          "claim": "h2",
+          "label": "A"
+        }
+      ],
+      "entities": [
+        {
+          "type": "person",
+          "key": "paola"
+        }
+      ]
+    }
+  ],
+  "reviewItems": [
+    {
+      "key": "r1",
+      "kind": "ambiguidade",
+      "title": "Homônimos Antonio Rossi",
+      "detail": "Duas pessoas com o mesmo nome."
+    }
+  ]
+}
